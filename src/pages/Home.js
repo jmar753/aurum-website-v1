@@ -17,7 +17,7 @@ export default function Home(){
             </div>
 
             {/* Video */}
-            <video className=' w-full' autoPlay muted>
+            <video className='h-screen w-screen object-cover' autoPlay muted>
                 <source src={ShortVideo} type='video/mp4'/>
             </video>
         </div>
