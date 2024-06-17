@@ -11,13 +11,13 @@ export default function Home(){
         
         <div className="text-white relative">
             {/* Words*/}
-            <div className="absolute px-8">
-                <h1>Somthing About Aurum</h1>
-                <p>Somthing idk</p>
+            <div className="absolute flex flex-col items-center justify-center">
+                <h1>Logo</h1>
+                <p>Old School Values With A New School Touch</p>
             </div>
 
             {/* Video */}
-            <video className='px-8 w-full' autoPlay muted>
+            <video className=' w-full' autoPlay muted>
                 <source src={ShortVideo} type='video/mp4'/>
             </video>
         </div>
