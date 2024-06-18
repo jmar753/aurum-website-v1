@@ -1,6 +1,7 @@
 import ShortVideo from "../RoughAssets/RoughMain.mp4"
-import TreePhoto from "../RoughAssets/image2vector.svg"
+import TreePhoto from "../RoughAssets/TreeGold.svg"
 import LoadReveal from "../animations/LoadReveal"
+import Reveal from "../animations/Reveal"
 
 export default function Home(){
 
@@ -10,6 +11,9 @@ export default function Home(){
 
     return(
         <div className="text-white relative">
+
+
+            {/* Animated Intro */}
             <div className="min-h-screen">
                     {/* Words*/}
                     <div className="absolute text-white flex flex-col gap-8 items-center justify-center z-30 h-screen w-1/2 sm:w-1/3 pl-3 sm:pl-16 text-xl font-bold">
@@ -25,8 +29,28 @@ export default function Home(){
                 </video>
             </div>
 
-            <div className="min-h-screen">
+
+            {/* Who Are We? */}
+            <div className="flex flex-col py-48 items-center justify-center px-3">
+                <Reveal>
+                    <div className="">
+                        <img src={TreePhoto} className="h-32"/>
+                    </div>
+                </Reveal>
+
+                <Reveal>           
+                    <h1 className="font-bold text-4xl">Why <span className="text-logogreen">Aurum</span>?</h1>
+                </Reveal>
                 
+                <Reveal>
+                    <p className="pt-3">Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity. </p>
+                </Reveal>
+            </div>
+
+
+            {/* Banner */}
+            <div>
+                <img src="https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/marker.png" className="text-green-800"></img>
             </div>
         </div>
     )
