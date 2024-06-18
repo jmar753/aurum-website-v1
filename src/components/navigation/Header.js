@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom"
+import { IconContext } from "react-icons";
+import { HiMenu } from "react-icons/hi";
 import { useState, useEffect, useRef } from "react";
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
@@ -21,7 +23,7 @@ export default function Header(){
     };
 
     return(
-        <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-8 grid grid-cols-8 items-center fixed top-0 z-40 w-full">
+        <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-8 flex justify-between items-center fixed top-0 z-40 w-full">
             {check ? 
                 <>
                     <div className="bg-neutral-950 w-screen h-screen absolute left-0 top-0 opacity-40 sm:hidden"></div>
@@ -41,10 +43,10 @@ export default function Header(){
                 :
                 null
             }
-            <div className="col-span-3">
+            <div className="">
                 <img src={logo} className="h-16"/>
             </div>
-            <div className="flex justify-between col-span-2">
+            <div className="sm:flex hidden justify-between">
                 {/* <p><NavLink to="/">Products</NavLink></p>
                 <p><NavLink to="/">Buisness</NavLink></p>
                 <p><NavLink to="/">Guides</NavLink></p>
@@ -56,7 +58,12 @@ export default function Header(){
                     </button>
                 ))}
             </div>
-            <p className="text-right col-span-3">
+            <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100' }}>
+                <div className="sm:hidden flex" onClick={() => {setCheck(true)}}>
+                    <HiMenu/>
+                </div>
+            </IconContext.Provider>
+            <p className="text-right sm:flex hidden ">
                 EN
             </p>
         </header>
