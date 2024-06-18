@@ -62,7 +62,7 @@ export default function Home(){
             {/* Banner */}
             <div className="">
                 {BannerArray.map((item, index) => (
-                    <IconContext.Provider value={{ className: 'text-xl text-[#9c8c64] size-[1.5rem] ' }}>
+                    <IconContext.Provider value={{ className: 'text-xl text-aurumgold size-[1.5rem] ' }}>
                         <div className="flex justify-center items-center gap-x-2">
                             <item.icon/>
                             <p className="">{item.description}</p>

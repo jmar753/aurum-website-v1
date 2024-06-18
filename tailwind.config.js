@@ -8,6 +8,7 @@ module.exports = {
       colors: {
       'aurumblack': '#050505',
       'aurumgrey' : '#0f0f0f',
+      'aurumgold' : '#9c8c64',
       'logogreen' : '#059c5c',
       'mantis': {
         '50': '#f2f9ec',
