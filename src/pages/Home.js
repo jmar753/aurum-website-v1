@@ -3,10 +3,21 @@ import TreePhoto from "../RoughAssets/TreeGold.svg"
 import LoadReveal from "../animations/LoadReveal"
 import Reveal from "../animations/Reveal"
 
+//react-icons library: https://react-icons.github.io/react-icons/
+import { SiAircanada } from "react-icons/si";
+import { FaRegHandshake, FaTree, FaRegThumbsUp  } from "react-icons/fa";
+import { GiAchievement } from "react-icons/gi";
+import { IconContext } from "react-icons";
+import { DiEnvato } from "react-icons/di";
+
 export default function Home(){
 
-    const websiteArray = [
-        {name:1},
+    const BannerArray = [
+        {icon: SiAircanada, description:"Canadian Based Manufacturer"},
+        {icon: FaRegHandshake, description:"Trusted by Property Managers & Trade Technicians "},
+        {icon: FaTree, description:"A Family Business With Over 40 years Experience"},
+        {icon: FaRegThumbsUp , description:"100% Satisfaction Guaranteed"},
+        {icon: GiAchievement, description:"Made With The Highest Quality & Craftsmanship"},
     ]
 
     return(
@@ -18,7 +29,7 @@ export default function Home(){
                     {/* Words*/}
                     <div className="absolute text-white flex flex-col gap-8 items-center justify-center z-30 h-screen w-1/2 sm:w-1/3 pl-3 sm:pl-16 text-xl font-bold">
                         <LoadReveal propDelay={8.0} className="">
-                            <p className="">Old School Values With A New School Touch</p>
+                            <p className="text-2xl">Old School Values With A New School Touch</p>
                             <p className="">View Products</p>
                         </LoadReveal>
                     </div>
@@ -49,9 +60,16 @@ export default function Home(){
 
 
             {/* Banner */}
-            <div>
-                <img src="https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/marker.png" className="text-green-800"></img>
-            </div>
+            <div className="">
+                {BannerArray.map((item, index) => (
+                    <IconContext.Provider value={{ className: 'text-xl size-[1.5rem] ' }}>
+                        <div className="flex justify-center items-center gap-x-2">
+                            <item.icon/>
+                            <p className="">{item.description}</p>
+                        </div>
+                </IconContext.Provider>
+        ))}
+            </div> 
         </div>
     )
 }
