@@ -23,13 +23,16 @@ export default function Header(){
     };
 
     return(
-        <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-8 flex justify-between items-center fixed top-0 z-40 w-full">
+        <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-3 sm:px-8 flex justify-between items-center fixed top-0 z-40 w-full">
             {check ? 
                 <>
                     <div className="bg-neutral-950 w-screen h-screen absolute left-0 top-0 opacity-40 sm:hidden"></div>
                     <div className="text-base text-white text-left absolute left-0 top-0 z-40 w-3/4 p-6 h-screen bg-neutral-900 opacity-100 :hidden" ref={newRef}>
+                        <div className="">
+                            <img src={logo} className="h-16"/>
+                        </div>
                         <button 
-                        className="text-left  w-full py-3 pr-3  text-2xl my-1">
+                            className="text-left  w-full py-3 pr-3  text-2xl my-1">
                             Home
                         </button>
                         {navArray.map((item, index) => (

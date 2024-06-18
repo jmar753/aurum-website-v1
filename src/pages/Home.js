@@ -12,12 +12,10 @@ export default function Home(){
         <div className="text-white relative">
             <div className="min-h-screen">
                     {/* Words*/}
-                    <div className="absolute text-white text-center pl-16 flex flex-col items-center justify-center z-30 h-screen w-1/3">
-                        <LoadReveal propDelay={8.0}>
-                            <h1>Logo</h1>
-                            <p>Old School Values With A New School Touch</p>
-                            <p>Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity. </p>
-                            <p>Learn More</p>
+                    <div className="absolute text-white flex flex-col gap-8 items-center justify-center z-30 h-screen w-1/2 sm:w-1/3 pl-3 sm:pl-16 text-xl font-bold">
+                        <LoadReveal propDelay={8.0} className="">
+                            <p className="">Old School Values With A New School Touch</p>
+                            <p className="">View Products</p>
                         </LoadReveal>
                     </div>
 

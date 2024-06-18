@@ -21,7 +21,7 @@ module.exports = {
         '900': '#2b4621',
         '950': '#13260d',
       },
-      'reno-sand': {
+      'renosand': {
         '50': '#faf7ec',
         '100': '#f4ebcd',
         '200': '#e9d69f',
