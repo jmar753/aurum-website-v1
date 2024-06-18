@@ -1,7 +1,7 @@
 import {useEffect, useRef} from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-export default function DownReveal({children, propDelay=0.25}){
+export default function Reveal({children, propDelay=0.25}){
     const ref = useRef(null);
     const isInView = useInView(ref)
 
@@ -17,12 +17,12 @@ export default function DownReveal({children, propDelay=0.25}){
         <div ref={ref}>
             <motion.div
                 variants={{
-                    hidden: {opacity: 0},
-                    visible: {opacity: 1},
+                    hidden: {opacity: 0, y:75},
+                    visible: {opacity: 1, y:0},
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 2.0, delay: propDelay}}
+                transition={{ duration: 0.5, delay: propDelay}}
             >
                 {children}
             </motion.div>

@@ -7,6 +7,7 @@ module.exports = {
     extend: {    
       colors: {
       'aurumblack': '#050505',
+      'aurumgrey' : '#0f0f0f'
     },},
   },
   plugins: [],
