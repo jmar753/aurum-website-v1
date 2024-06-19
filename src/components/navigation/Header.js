@@ -7,7 +7,7 @@ import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 export default function Header(){
     const [check, setCheck] = useState(false)
     const newRef = useRef(null)
-    const navArray = [{name:"AC Units"},{name:"Buisness"},{name:"Guides"},{name:"Contact"},]
+    const navArray = [{name:"About", nav:"/"}, {name:"Products"},{name:"Buisness"},{name:"Guides"},{name:"Contact"},]
 
     useEffect(() => {
         document.addEventListener("mousedown", handleOutsideClick)
@@ -47,7 +47,9 @@ export default function Header(){
                 null
             }
             <div className="">
-                <img src={logo} className="h-16"/>
+                <NavLink to="/">
+                    <img src={logo} className="h-16"/>
+                </NavLink>
             </div>
             <div className="sm:flex hidden justify-between">
                 {/* <p><NavLink to="/">Products</NavLink></p>
@@ -55,10 +57,11 @@ export default function Header(){
                 <p><NavLink to="/">Guides</NavLink></p>
                 <p><NavLink to="/">Contact</NavLink></p> */}
                 {navArray.map((item, index) => (
-                    <button 
-                        className="text-left  w-full py-3 pr-3 my-1" key={index}>
+                    <NavLink>
+                        <button className="text-left  w-full py-3 pr-3 my-1" key={index}>
                             {item.name}
-                    </button>
+                        </button>
+                    </NavLink>
                 ))}
             </div>
             <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100' }}>

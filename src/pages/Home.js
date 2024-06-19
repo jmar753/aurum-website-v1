@@ -26,14 +26,16 @@ export default function Home(){
             {/* Animated Intro */}
             <div className="min-h-screen">
                     {/* Words*/}
-                    <div className="absolute text-white flex flex-col gap-8 items-center justify-center z-30 h-screen w-1/2 sm:w-1/3 pl-3 sm:pl-16 text-xl font-bold">
-                        {/* <LoadReveal propDelay={8.0} className=""> */}
-                            <p className="text-2xl">Old School Values With A New School Touch</p>
-                            <div>
-                                <p className="">View Fan Coil Line</p>
-                                <FaArrowRight/>
+                    <div className="absolute text-white flex flex-col gap-8 items-center justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
+                        <LoadReveal propDelay={8.0} className="">
+                            <div className="space-y-12">
+                                <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-aurumgold">Values</span> With A New School <span className="text-logogreen">Touch</span></p>
+                                <div className="flex items-center space-x-3">
+                                    <p className="font-semibold">View Fan Coil Line</p>
+                                    <FaArrowRight/>
+                                </div>
                             </div>
-                        {/* </LoadReveal> */}
+                        </LoadReveal>
                     </div>
 
                 {/* Video */}

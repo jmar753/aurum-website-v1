@@ -7,7 +7,7 @@ module.exports = {
     extend: {    
       colors: {
       'aurumblack': '#050505',
-      'aurumgrey' : '#0f0f0f',
+      'aurumgrey' : '#0e0e0e',
       'aurumgold' : '#9c8c64',
       'logogreen' : '#059c5c',
       'mantis': {
