@@ -4,7 +4,7 @@ import { HiMenu } from "react-icons/hi";
 import { useState, useEffect, useRef } from "react";
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
-export default function Header(){
+export default function Footer(){
     const [check, setCheck] = useState(false)
     const newRef = useRef(null)
     const navArray = [{name:"AC Units"},{name:"Buisness"},{name:"Guides"},{name:"Contact"},]
@@ -23,7 +23,7 @@ export default function Header(){
     };
 
     return(
-        <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-3 sm:px-8 flex justify-between items-center fixed top-0 z-40 w-full">
+        <header className="bg-neutral-800 text-white h-[4rem] px-3 sm:px-8 flex justify-between items-center z-40 w-full">
             {check ? 
                 <>
                     <div className="bg-neutral-950 w-screen h-screen absolute left-0 top-0 opacity-40 sm:hidden"></div>
