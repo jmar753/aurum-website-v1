@@ -7,7 +7,7 @@ import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 export default function Header(){
     const [check, setCheck] = useState(false)
     const newRef = useRef(null)
-    const navArray = [{name:"About", nav:"/"}, {name:"Products"},{name:"Buisness"},{name:"Guides"},{name:"Contact"},]
+    const navArray = [{name:"About", nav:"/"}, {name:"Products"},{name:"Resources"},{name:"Contact"}]
 
     useEffect(() => {
         document.addEventListener("mousedown", handleOutsideClick)
@@ -23,7 +23,7 @@ export default function Header(){
     };
 
     return(
-        <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-3 sm:px-8 flex justify-between items-center fixed top-0 z-40 w-full">
+        <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-3 sm:px-8 flex sm:grid sm:grid-cols-8 justify-between items-center fixed top-0 z-40 w-full">
             {check ? 
                 <>
                     <div className="bg-neutral-950 w-screen h-screen absolute left-0 top-0 opacity-40 sm:hidden"></div>
@@ -46,12 +46,12 @@ export default function Header(){
                 :
                 null
             }
-            <div className="">
+            <div className="col-span-3">
                 <NavLink to="/">
                     <img src={logo} className="h-16"/>
                 </NavLink>
             </div>
-            <div className="sm:flex hidden justify-between">
+            <div className="sm:flex hidden justify-between col-span-2">
                 {/* <p><NavLink to="/">Products</NavLink></p>
                 <p><NavLink to="/">Buisness</NavLink></p>
                 <p><NavLink to="/">Guides</NavLink></p>
@@ -69,7 +69,7 @@ export default function Header(){
                     <HiMenu/>
                 </div>
             </IconContext.Provider>
-            <p className="text-right sm:flex hidden ">
+            <p className="text-right sm:block hidden col-span-3">
                 EN
             </p>
         </header>

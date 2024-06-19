@@ -77,7 +77,7 @@ export default function Footer(){
             <hr/>
 
             {/* Bottom */}
-            <div className="flex justify-between items-center py-8">
+            <div className="grid grid-cols-3 justify-between items-center py-8">
                 {/* Logo */}
                 <div className="">
                     <img src={logo} className="h-16"/>
@@ -87,7 +87,7 @@ export default function Footer(){
                 <p>Copyright © 2024 Aurum Manufacturing Inc. All Rights Reserved</p>
 
                 {/* Socials */}
-                <div className="flex gap-4">
+                <div className="flex flex-row-reverse gap-4 text-right">
                     <FaFacebook/>
                     <FaInstagram/>
                     <FaLinkedin/>
