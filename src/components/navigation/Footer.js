@@ -1,26 +1,7 @@
-import { NavLink } from "react-router-dom"
-import { useState, useEffect, useRef } from "react";
-
 import { FaFacebook, FaInstagram, FaLinkedin} from "react-icons/fa";
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
 export default function Footer(){
-    const [check, setCheck] = useState(false)
-    const newRef = useRef(null)
-    const navArray = [{name:"AC Units"},{name:"Buisness"},{name:"Guides"},{name:"Contact"},]
-
-    useEffect(() => {
-        document.addEventListener("mousedown", handleOutsideClick)
-        return () => {
-          document.removeEventListener("mousedown", handleOutsideClick)
-        };
-    });
-
-    const handleOutsideClick = (e) => {
-        if (newRef.current && !newRef.current.contains(e.target)) {
-            setCheck(false)
-        }
-    };
 
     return(
         <footer className="bg-neutral-800 text-white z-40 w-full pt-12 px-3 sm:px-8">
@@ -80,7 +61,7 @@ export default function Footer(){
             <div className="grid grid-cols-3 justify-between items-center py-8">
                 {/* Logo */}
                 <div className="">
-                    <img src={logo} className="h-16"/>
+                    <img src={logo} alt="logo" className="h-16"/>
                 </div>
 
                 {/* Copyright */}

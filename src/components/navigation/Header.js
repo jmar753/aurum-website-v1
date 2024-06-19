@@ -7,7 +7,7 @@ import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 export default function Header(){
     const [check, setCheck] = useState(false)
     const newRef = useRef(null)
-    const navArray = [{name:"About", nav:"/"}, {name:"Products"},{name:"Resources"},{name:"Contact"}]
+    const navArray = [{name:"About", nav:"/aboutus"}, {name:"Products", nav:"/products"},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
 
     useEffect(() => {
         document.addEventListener("mousedown", handleOutsideClick)
@@ -29,7 +29,7 @@ export default function Header(){
                     <div className="bg-neutral-950 w-screen h-screen absolute left-0 top-0 opacity-40 sm:hidden"></div>
                     <div className="text-base text-white text-left absolute left-0 top-0 z-40 w-3/4 p-6 h-screen bg-neutral-900 opacity-100 :hidden" ref={newRef}>
                         <div className="">
-                            <img src={logo} className="h-16"/>
+                            <img src={logo} alt="logo" className="h-16"/>
                         </div>
                         <button 
                             className="text-left  w-full py-3 pr-3  text-2xl my-1">
@@ -48,7 +48,7 @@ export default function Header(){
             }
             <div className="col-span-3">
                 <NavLink to="/">
-                    <img src={logo} className="h-16"/>
+                    <img src={logo} alt="logo" className="h-16"/>
                 </NavLink>
             </div>
             <div className="sm:flex hidden justify-between col-span-2">
@@ -57,7 +57,7 @@ export default function Header(){
                 <p><NavLink to="/">Guides</NavLink></p>
                 <p><NavLink to="/">Contact</NavLink></p> */}
                 {navArray.map((item, index) => (
-                    <NavLink>
+                    <NavLink to={item.nav}>
                         <button className="text-left  w-full py-3 pr-3 my-1" key={index}>
                             {item.name}
                         </button>

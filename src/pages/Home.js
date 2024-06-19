@@ -49,7 +49,7 @@ export default function Home(){
             <div className="flex flex-col py-48 items-center justify-center px-3">
                 <Reveal>
                     <div className="">
-                        <img src={TreePhoto} className="h-32"/>
+                        <img src={TreePhoto} alt="logo" className="h-32"/>
                     </div>
                 </Reveal>
 
