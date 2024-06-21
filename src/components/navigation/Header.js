@@ -180,17 +180,10 @@ export default function Header(){
             {/* Mobile Pop up */}
             <MobilePopup/>
 
-                {/* Random item */}
-                <p className="text-right sm:block hidden">
-                    EN
-                </p>
-            </nav>
-            {/* Mobile Pop up */}
-            {check ? 
-                <MobilePopup/>
-                :
-                null
-            }
+            {/* Random item */}
+            <p className="text-right sm:block hidden">
+                EN
+            </p>
         </header>
     )
 }
