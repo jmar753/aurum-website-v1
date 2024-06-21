@@ -8,6 +8,7 @@ import { SiAircanada } from "react-icons/si";
 import { FaRegHandshake, FaTree, FaRegThumbsUp, FaArrowRight } from "react-icons/fa";
 import { GiAchievement } from "react-icons/gi";
 import { IconContext } from "react-icons";
+import SideReveal from "../animations/SideReveal";
 
 export default function Home(){
 
@@ -27,7 +28,7 @@ export default function Home(){
             <div className="min-h-screen">
                     {/* Words*/}
                     <div className="absolute text-white flex flex-col gap-8 items-center justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
-                        <LoadReveal propDelay={8.0} className="">
+                        <SideReveal propDelay={7.9} className="">
                             <div className="space-y-12">
                                 <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-aurumgold">Values</span> With A New School <span className="text-logogreen">Touch</span></p>
                                 <div className="flex items-center space-x-3">
@@ -35,7 +36,7 @@ export default function Home(){
                                     <FaArrowRight/>
                                 </div>
                             </div>
-                        </LoadReveal>
+                        </SideReveal>
                     </div>
 
                 {/* Video */}

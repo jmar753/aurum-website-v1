@@ -23,6 +23,8 @@ export default function Header(){
         }
     };
 
+
+    {/* Dropdown Meny */}
     const FlyoutLink = ({ children, to, FlyoutContent}) => {
         const [open, setOpen] = useState(false)
         const showFlyout = open && FlyoutContent;
@@ -33,6 +35,7 @@ export default function Header(){
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
             >
+                {/* Header */}
                 <NavLink to={to} className="relative text-white">
                     {children}
                     <span
@@ -62,6 +65,7 @@ export default function Header(){
         )
     }
 
+    {/* Dropdown Menu Components */}
     const AboutSection = () => {
         return(
             <div className="w-64 bg-white p-6 shadow-xl">
@@ -117,7 +121,6 @@ export default function Header(){
             </div>
         )
     }
-
     const ProductsSection = () => {
         return(
             <div className="w-64 bg-white p-6 shadow-xl">
@@ -174,37 +177,38 @@ export default function Header(){
         )
     }
 
-    const NullSection = () => {
+    {/* Mobile Navigation */}
+    const MobilePopup = () => {
         return(
-            <></>
+            <>
+                <div className="bg-neutral-950 w-screen h-screen absolute left-0 top-0 opacity-40 sm:hidden"></div>
+                <div className="text-base text-white text-left absolute left-0 top-0 z-40 w-3/4 p-6 h-screen bg-neutral-900 opacity-100 :hidden" ref={newRef}>
+                    <div className="">
+                        <img src={logo} alt="logo" className="h-16"/>
+                    </div>
+                    <button 
+                        className="text-left  w-full py-3 pr-3  text-2xl my-1">
+                        Home
+                    </button>
+                    {navArray.map((item, index) => (
+                        <button 
+                            className="text-left  w-full py-3 pr-3  text-2xl my-1" key={index}>
+                                {item.name}
+                        </button>
+                    ))}
+                </div> 
+            </>
         )
     }
 
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductsSection},{name:"Resources", nav:"/resources", Flyout:NullSection},{name:"Contact", nav:"/contact", Flyout:NullSection}]
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductsSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
 
     return(
         <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-3 sm:px-8 flex sm:grid sm:grid-cols-8 justify-between items-center fixed top-0 z-40 w-full">
 
             {/* Mobile Pop up */}
             {check ? 
-                <>
-                    <div className="bg-neutral-950 w-screen h-screen absolute left-0 top-0 opacity-40 sm:hidden"></div>
-                    <div className="text-base text-white text-left absolute left-0 top-0 z-40 w-3/4 p-6 h-screen bg-neutral-900 opacity-100 :hidden" ref={newRef}>
-                        <div className="">
-                            <img src={logo} alt="logo" className="h-16"/>
-                        </div>
-                        <button 
-                            className="text-left  w-full py-3 pr-3  text-2xl my-1">
-                            Home
-                        </button>
-                        {navArray.map((item, index) => (
-                            <button 
-                                className="text-left  w-full py-3 pr-3  text-2xl my-1" key={index}>
-                                    {item.name}
-                            </button>
-                        ))}
-                    </div> 
-                </>
+                <MobilePopup/>
                 :
                 null
             }
@@ -223,25 +227,16 @@ export default function Header(){
                         {item.name}
                     </FlyoutLink>
                 ))}
-
-                {/* Old Navigation Reference */}                
-                {/* 
-                {navArray.map((item, index) => (
-                    <NavLink to={item.nav}>
-                        <button className="text-left  w-full py-3 pr-3 my-1" key={index}>
-                            {item.name}
-                        </button>
-                    </NavLink>
-                ))} 
-                 */}
-
-
             </div>
+
+            {/* Pop Up Actuator */}
             <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100' }}>
                 <div className="sm:hidden flex" onClick={() => {setCheck(true)}}>
                     <HiMenu/>
                 </div>
             </IconContext.Provider>
+
+            {/* Random item */}
             <p className="text-right sm:block hidden col-span-3">
                 EN
             </p>
