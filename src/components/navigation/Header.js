@@ -128,7 +128,7 @@ export default function Header(){
                 <AnimatePresence>
                 { check && (
                     <motion.div 
-                        className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 overflow-hidden overscroll-none"
+                        className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100"
                         initial={{ opacity: 0,}}
                         animate={{ opacity: 1,}}
                         exit={{ opacity: 0,}}
@@ -136,7 +136,7 @@ export default function Header(){
                     >   
 
                         {/* Navigation Header */}
-                        <div className="flex items-center justify-between px-6 overscroll-none">
+                        <div className="flex items-center justify-between px-6">
                             <div className="flex items-center h-[5rem]">
                                 <img src={logoblack} alt="logo" className="h-16"/>
                             </div>
@@ -193,7 +193,7 @@ export default function Header(){
                         </div>
 
                         {/* Navigation Footer */}
-                        <footer className="z-50 bg-gray-300 p-[5rem] overscroll-none">
+                        <footer className="z-50 bg-gray-300 p-[5rem]">
 
                         </footer>
                     </motion.div> 
