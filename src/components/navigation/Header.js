@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
+import logoblack from "../../RoughAssets/LogoNoTree.svg"
 
 export default function Header(){
 
@@ -115,7 +116,7 @@ export default function Header(){
     const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductsSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
 
     const MobilePopup = () => {
-        const [check, setCheck] = useState(false)
+        const [check, setCheck] = useState(true)
         return(
             <>
                 {/* Pop Up Actuator */}
@@ -127,30 +128,74 @@ export default function Header(){
                 <AnimatePresence>
                 { check && (
                     <motion.div 
-                        className="text-base text-white text-left absolute left-0 top-0 z-40 w-screen p-6 h-screen bg-neutral-900 opacity-100 :hidden"
+                        className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 overflow-hidden overscroll-none"
                         initial={{ opacity: 0,}}
                         animate={{ opacity: 1,}}
                         exit={{ opacity: 0,}}
                         transition={{duration: 0.3, ease: 'easeOut'}}
-                    >
-                        <div>
-                            <div className="flex items-center">
-                                <img src={logo} alt="logo" className="h-16"/>
+                    >   
+
+                        {/* Navigation Header */}
+                        <div className="flex items-center justify-between px-6 overscroll-none">
+                            <div className="flex items-center h-[5rem]">
+                                <img src={logoblack} alt="logo" className="h-16"/>
                             </div>
                             <button onClick={() => {setCheck(false)}}>
                                 close
                             </button>
                         </div>
-                        <button 
-                            className="text-left  w-full py-3 pr-3  text-2xl my-1">
-                            Home
-                        </button>
-                        {navArray.map((item, index) => (
-                            <button 
-                                className="text-left  w-full py-3 pr-3  text-2xl my-1" key={index}>
-                                    {item.name}
-                            </button>
-                        ))}
+
+                        {/* Navigation Body */}
+                        <div className="bg-neutral-100 px-6 overflow-y-scroll h-[calc(100vh-10rem)] w-full">
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                            text<br/>
+                        </div>
+
+                        {/* Navigation Footer */}
+                        <footer className="z-50 bg-gray-300 p-[5rem] overscroll-none">
+
+                        </footer>
                     </motion.div> 
                 )}
             </AnimatePresence>
@@ -159,7 +204,7 @@ export default function Header(){
     }
 
     return(
-        <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-3 sm:px-8 flex sm:grid sm:grid-cols-8 justify-between items-center fixed top-0 z-40 w-full">
+        <header className="bg-aurumblack text-white h-[5rem] shrink-0 px-6 sm:px-8 flex sm:grid sm:grid-cols-8 justify-between items-center fixed top-0 z-40 w-full">
 
             {/* Logo */}
             <div className="col-span-3">
