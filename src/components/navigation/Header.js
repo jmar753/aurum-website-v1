@@ -3,11 +3,41 @@ import { IconContext } from "react-icons";
 import { HiMenu } from "react-icons/hi";
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { FaPlusCircle, FaMinusCircle, FaMinus } from "react-icons/fa";
 
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 import logoblack from "../../RoughAssets/LogoNoTree.svg"
 
 export default function Header(){
+    {/* Accordion Test */}
+    const [activeQuestion, setActiveQuestion] = useState(null)
+    const accordionTest = [
+        {
+            id: 1,
+            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        },
+        {
+            id: 2,
+            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        },
+        {
+            id: 3,
+            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        },
+        {
+            id: 4,
+            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        },
+        {
+            id: 5,
+            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        },
+    ]
 
     {/* Dropdown Menu */}
     const FlyoutLink = ({ children, to, FlyoutContent}) => {
@@ -116,7 +146,7 @@ export default function Header(){
     const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductsSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
 
     const MobilePopup = () => {
-        const [check, setCheck] = useState(true)
+        const [check, setCheck] = useState(false)
         check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
 
         return(
@@ -148,50 +178,22 @@ export default function Header(){
                         </div>
 
                         {/* Navigation Body */}
-                        <div className="bg-neutral-100 px-6 overflow-y-scroll h-[calc(100vh-10rem)] w-full">
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
-                            text<br/>
+                        <div className="px-6 overflow-y-scroll h-[calc(100vh-10rem)] w-full">
+                            <div className="w-full m-auto bg-neutral-100 p-8">
+                                <h1 className="text-2xl mb-6 font-semibold text-black"> Frequently Asked Questions</h1>
+                                {accordionTest.map((q,index) => (
+                                    <div className="mb-4 last:mb-0" key={q.id}>
+                                        <button
+                                            className="w-full text-left text-xl focus:outline-none p-4 bg-red-100 rounded-lg shadow-md flex justify-between items-center"
+                                            onClick={() => setActiveQuestion(activeQuestion === q.id ? null : q.id)}
+                                        >
+                                            {q.question}
+                                            {activeQuestion === q.id ? <FaMinusCircle/> : <FaPlusCircle/>}
+                                        </button>
+                                    </div>
+                                ))}
+
+                            </div>
                         </div>
 
                         {/* Navigation Footer */}
@@ -218,7 +220,7 @@ export default function Header(){
                 {/* Middle Navigation */}
                 <div className="sm:flex hidden justify-between">
                     {navArray.map((item, index) => (
-                        <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout}>
+                        <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
                             {item.name}
                         </FlyoutLink>
                     ))}
