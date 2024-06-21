@@ -145,6 +145,46 @@ export default function Header(){
     {/* Mobile Navigation */}
     const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductsSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
 
+    {/* Mobile Assets */}
+
+    const Accordion = ({ question, answer }) => {
+
+        const [isOpen, setIsOpen] = useState(false);
+      
+        return (
+          <motion.div>
+            <AnimatePresence>
+              <motion.div
+                key="question"
+                className="rounded-tr-md relative z-20  rounded-br-md shadow-sm px-1 py-2 bg-blue-200 cursor-pointer font-open border-l-2 border-yellow-500"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <motion.div className="text-gray-800 font-bold ml-1">
+                  Do you like animations?
+                </motion.div>
+              </motion.div>
+      
+              {isOpen && (
+                <motion.div
+                  key="answer"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: {
+                      duration: 0.5,
+                    },
+                  }}
+                  exit={{ opacity: 0 }}
+                  className="p-2 text-lg text-gray-700 border-l border-b border-gray-300"
+                >
+                  Yes, I love them!
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        );
+      };
+
     const MobilePopup = () => {
         const [check, setCheck] = useState(false)
         check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
@@ -181,16 +221,8 @@ export default function Header(){
                         <div className="px-6 overflow-y-scroll h-[calc(100vh-10rem)] w-full">
                             <div className="w-full m-auto bg-neutral-100 p-8">
                                 <h1 className="text-2xl mb-6 font-semibold text-black"> Frequently Asked Questions</h1>
-                                {accordionTest.map((q,index) => (
-                                    <div className="mb-4 last:mb-0" key={q.id}>
-                                        <button
-                                            className="w-full text-left text-xl focus:outline-none p-4 bg-red-100 rounded-lg shadow-md flex justify-between items-center"
-                                            onClick={() => setActiveQuestion(activeQuestion === q.id ? null : q.id)}
-                                        >
-                                            {q.question}
-                                            {activeQuestion === q.id ? <FaMinusCircle/> : <FaPlusCircle/>}
-                                        </button>
-                                    </div>
+                                {accordionTest.map((item,index) => (
+                                    <Accordion id={item.id} answer={item.answer} question={item.question}/>
                                 ))}
 
                             </div>
