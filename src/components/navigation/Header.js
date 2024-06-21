@@ -8,36 +8,9 @@ import { FaPlusCircle, FaMinusCircle, FaMinus } from "react-icons/fa";
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 import logoblack from "../../RoughAssets/LogoNoTree.svg"
 
+import VerticalAccordion from "../containers/VerticalAccordion";
+
 export default function Header(){
-    {/* Accordion Test */}
-    const [activeQuestion, setActiveQuestion] = useState(null)
-    const accordionTest = [
-        {
-            id: 1,
-            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-        },
-        {
-            id: 2,
-            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-        },
-        {
-            id: 3,
-            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-        },
-        {
-            id: 4,
-            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-        },
-        {
-            id: 5,
-            question: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-        },
-    ]
 
     {/* Dropdown Menu */}
     const FlyoutLink = ({ children, to, FlyoutContent}) => {
@@ -111,39 +84,9 @@ export default function Header(){
             </div>
         )
     }
-    const ProductsSection = () => {
-        return(
-            <div className="w-64 bg-white p-6 shadow-xl">
-                <div className="mb-3 space-y-3">
-                <h3 className="font-semibold">For Individuals</h3>
-                <a to="#" className="block text-sm hover:underline">
-                    Introduction
-                </a>
-                <a to="#" className="block text-sm hover:underline">
-                    Pay as you go
-                </a>
-                </div>
-                <div className="mb-6 space-y-3">
-                <h3 className="font-semibold">For Companies</h3>
-                <a to="#" className="block text-sm hover:underline">
-                    Startups
-                </a>
-                <a to="#" className="block text-sm hover:underline">
-                    SMBs
-                </a>
-                <a to="#" className="block text-sm hover:underline">
-                    Enterprise
-                </a>
-                </div>
-                <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
-                Contact sales
-                </button>
-            </div>
-        )
-    }
 
     {/* Mobile Navigation */}
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductsSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:AboutSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
 
     {/* Mobile Assets */}
 
@@ -220,10 +163,8 @@ export default function Header(){
                         {/* Navigation Body */}
                         <div className="px-6 overflow-y-scroll h-[calc(100vh-10rem)] w-full">
                             <div className="w-full m-auto bg-neutral-100 p-8">
-                                <h1 className="text-2xl mb-6 font-semibold text-black"> Frequently Asked Questions</h1>
-                                {accordionTest.map((item,index) => (
-                                    <Accordion id={item.id} answer={item.answer} question={item.question}/>
-                                ))}
+                                {/* Content Here */}
+                                <VerticalAccordion/>
 
                             </div>
                         </div>

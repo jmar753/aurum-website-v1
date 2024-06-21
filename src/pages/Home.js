@@ -1,6 +1,5 @@
 import ShortVideo from "../RoughAssets/RoughMain.mp4"
 import TreePhoto from "../RoughAssets/TreeGold.svg"
-import LoadReveal from "../animations/LoadReveal"
 import Reveal from "../animations/Reveal"
 
 //react-icons library: https://react-icons.github.io/react-icons/
