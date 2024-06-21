@@ -7,24 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
 export default function Header(){
-    const [check, setCheck] = useState(false)
-    const newRef = useRef(null)
 
-    useEffect(() => {
-        document.addEventListener("mousedown", handleOutsideClick)
-        return () => {
-          document.removeEventListener("mousedown", handleOutsideClick)
-        };
-    });
-
-    const handleOutsideClick = (e) => {
-        if (newRef.current && !newRef.current.contains(e.target)) {
-            setCheck(false)
-        }
-    };
-
-
-    {/* Dropdown Meny */}
+    {/* Dropdown Menu */}
     const FlyoutLink = ({ children, to, FlyoutContent}) => {
         const [open, setOpen] = useState(false)
         const showFlyout = open && FlyoutContent;
@@ -69,149 +53,113 @@ export default function Header(){
     const AboutSection = () => {
         return(
             <div className="w-64 bg-white p-6 shadow-xl">
-
                 <div className="mb-3 space-y-3">
-
                 <h3 className="font-semibold">For Individuals</h3>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     Introduction
-
                 </a>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     Pay as you go
-
                 </a>
-
                 </div>
-
                 <div className="mb-6 space-y-3">
-
                 <h3 className="font-semibold">For Companies</h3>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     Startups
-
                 </a>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     SMBs
-
                 </a>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     Enterprise
-
                 </a>
-
                 </div>
-
                 <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
-
                 Contact sales
-
                 </button>
-
             </div>
         )
     }
     const ProductsSection = () => {
         return(
             <div className="w-64 bg-white p-6 shadow-xl">
-
                 <div className="mb-3 space-y-3">
-
                 <h3 className="font-semibold">For Individuals</h3>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     Introduction
-
                 </a>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     Pay as you go
-
                 </a>
-
                 </div>
-
                 <div className="mb-6 space-y-3">
-
                 <h3 className="font-semibold">For Companies</h3>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     Startups
-
                 </a>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     SMBs
-
                 </a>
-
                 <a to="#" className="block text-sm hover:underline">
-
                     Enterprise
-
                 </a>
-
                 </div>
-
                 <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
-
                 Contact sales
-
                 </button>
-
             </div>
         )
     }
 
     {/* Mobile Navigation */}
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductsSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
+
     const MobilePopup = () => {
+        const [check, setCheck] = useState(false)
         return(
             <>
-                <div className="bg-neutral-950 w-screen h-screen absolute left-0 top-0 opacity-40 sm:hidden"></div>
-                <div className="text-base text-white text-left absolute left-0 top-0 z-40 w-3/4 p-6 h-screen bg-neutral-900 opacity-100 :hidden" ref={newRef}>
-                    <div className="">
-                        <img src={logo} alt="logo" className="h-16"/>
+                {/* Pop Up Actuator */}
+                <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100' }}>
+                    <div className="sm:hidden flex" onClick={() => {setCheck(true)}}>
+                        <HiMenu/>
                     </div>
-                    <button 
-                        className="text-left  w-full py-3 pr-3  text-2xl my-1">
-                        Home
-                    </button>
-                    {navArray.map((item, index) => (
+                </IconContext.Provider>
+                <AnimatePresence>
+                { check && (
+                    <motion.div 
+                        className="text-base text-white text-left absolute left-0 top-0 z-40 w-screen p-6 h-screen bg-neutral-900 opacity-100 :hidden"
+                        initial={{ opacity: 0,}}
+                        animate={{ opacity: 1,}}
+                        exit={{ opacity: 0,}}
+                        transition={{duration: 0.3, ease: 'easeOut'}}
+                    >
+                        <div>
+                            <div className="flex items-center">
+                                <img src={logo} alt="logo" className="h-16"/>
+                            </div>
+                            <button onClick={() => {setCheck(false)}}>
+                                close
+                            </button>
+                        </div>
                         <button 
-                            className="text-left  w-full py-3 pr-3  text-2xl my-1" key={index}>
-                                {item.name}
+                            className="text-left  w-full py-3 pr-3  text-2xl my-1">
+                            Home
                         </button>
-                    ))}
-                </div> 
+                        {navArray.map((item, index) => (
+                            <button 
+                                className="text-left  w-full py-3 pr-3  text-2xl my-1" key={index}>
+                                    {item.name}
+                            </button>
+                        ))}
+                    </motion.div> 
+                )}
+            </AnimatePresence>
             </>
         )
     }
 
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductsSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
-
     return(
         <header className="bg-aurumblack text-white h-[4rem] shrink-0 px-3 sm:px-8 flex sm:grid sm:grid-cols-8 justify-between items-center fixed top-0 z-40 w-full">
-
-            {/* Mobile Pop up */}
-            {check ? 
-                <MobilePopup/>
-                :
-                null
-            }
 
             {/* Logo */}
             <div className="col-span-3">
@@ -229,12 +177,8 @@ export default function Header(){
                 ))}
             </div>
 
-            {/* Pop Up Actuator */}
-            <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100' }}>
-                <div className="sm:hidden flex" onClick={() => {setCheck(true)}}>
-                    <HiMenu/>
-                </div>
-            </IconContext.Provider>
+            {/* Mobile Pop up */}
+            <MobilePopup/>
 
             {/* Random item */}
             <p className="text-right sm:block hidden col-span-3">
