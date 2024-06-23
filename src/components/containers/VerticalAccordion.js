@@ -8,7 +8,7 @@ const VerticalAccordion = () => {
 
   return (
     <section className="p-4 bg-indigo-600">
-      <div className="flex flex-col lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto shadow overflow-hidden">
+      <div className="flex flex-col lg:flex-row h-fit w-full max-w-6xl mx-auto shadow overflow-hidden">
         {items.map((item) => {
           return (
             <Panel
@@ -50,7 +50,6 @@ const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) => {
         <div className="w-6 lg:w-full aspect-square bg-indigo-600 text-white grid place-items-center">
           <Icon />
         </div>
-        <span className="w-4 h-4 bg-white group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] lg:border-b-0 lg:border-t-[1px] border-slate-200 rotate-45 absolute bottom-0 lg:bottom-[50%] right-[50%] lg:right-0 translate-y-[50%] translate-x-[50%] z-20" />
       </button>
 
       <AnimatePresence>
