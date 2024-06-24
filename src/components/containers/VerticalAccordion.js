@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { IoGitMerge } from "react-icons/io5";
 
 const VerticalAccordion = () => {
   const [open, setOpen] = useState(items[0].id);
@@ -19,7 +20,17 @@ const VerticalAccordion = () => {
               setOpen={setOpen}
               id={item.id}
               title={item.title}
+              links={item.links}
               description={item.description}
+            />
+          );
+        })}
+        {items2.map((item) => {
+          return (
+            <Panel2
+              key={item.id}
+              id={item.id}
+              title={item.title}
             />
           );
         })}
@@ -28,13 +39,13 @@ const VerticalAccordion = () => {
   );
 };
 
-const Panel = ({ open, setOpen, id, title, description }) => {
+const Panel = ({ open, setOpen, id, title, description, links }) => {
   const isOpen = open === id;
 
   return (
     <div className="px-6">
       <button
-        className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
+        className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600"
         onClick={() => setOpen(id)}
       >
         <span className="block lg:hidden text-2xl font-semibold">{title}</span>
@@ -48,16 +59,31 @@ const Panel = ({ open, setOpen, id, title, description }) => {
             initial="closed"
             animate="open"
             exit="closed"
-            className="w-full h-full overflow-hidden relative bg-black flex items-end"
+            className="w-full h-full overflow-hidden relative flex items-end origin-top"
           >
             <motion.div
-              className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white"
+              className="px-4 py-2 gap-y-2 text-lg w-full font-semibold backdrop-blur-sm text-neutral-800 origin-top"
             >
-              <p>{description}</p>
+              {links.map((item, index) => (
+                <div className="hover:cursor-pointer hover:text-aurumgreen-600">
+                  {item.title}
+                </div>
+              ))}
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+    </div>
+  );
+};
+
+const Panel2 = ({id, title }) => {
+
+  return (
+    <div className="px-6">
+      <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600">
+        <span className="block lg:hidden text-2xl font-semibold">{title}</span>
+      </button>
     </div>
   );
 };
@@ -79,25 +105,24 @@ const items = [
   {
     id: 1,
     title: "About",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+    links: [{title:"About Us", link:"aboutus"}, {title:"Our Solutions", link:"aboutus"}, {title:"Our History", link:"aboutus"},],
   },
   {
     id: 2,
     title: "Products",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
-  },
-  {
-    id: 3,
-    title: "Resources",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
-  },
-  {
-    id: 4,
-    title: "Contact",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+      links: [{title:"Our Products", link:"aboutus"}, {title:"CFC Series", link:"aboutus"}, {title:"DTR Series", link:"aboutus"}, {title:"BTR Series", link:"aboutus"}, {title:"CFC Series", link:"aboutus"}, {title:"CFC Series", link:"aboutus"},],
   },
 ];
+
+const items2 = [
+  {
+    id: 1,
+    title: "Resources",
+    links: [],
+  },
+  {
+    id: 2,
+    title: "Contact",
+    links: [],
+  },
+]

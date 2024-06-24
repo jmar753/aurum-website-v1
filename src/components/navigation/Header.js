@@ -92,7 +92,7 @@ export default function Header(){
 
     const MobilePopup = () => {
         const [check, setCheck] = useState(false)
-        check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
+        // check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
 
         return(
             <>
@@ -105,7 +105,7 @@ export default function Header(){
                 <AnimatePresence>
                     { check && (
                         <motion.div 
-                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 overscroll-y-contain"
+                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100"
                             initial={{ opacity: 0,}}
                             animate={{ opacity: 1,}}
                             exit={{ opacity: 0,}}
