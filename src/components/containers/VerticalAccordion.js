@@ -4,10 +4,6 @@ import { IoGitMerge } from "react-icons/io5";
 
 const VerticalAccordion = () => {
   const [open, setOpen] = useState(items[0].id);
-  const [drop1, setDrop1] = useState(false);
-  const [drop2, setDrop2] = useState(false);
-  const [drop3, setDrop3] = useState(false);
-  const [drop4, setDrop4] = useState(false);
 
   return (
     <section className="">

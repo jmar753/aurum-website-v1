@@ -58,25 +58,70 @@ export default function Header(){
         return(
             <div className="w-64 bg-white p-6 shadow-xl">
                 <div className="mb-3 space-y-3">
-                <h3 className="font-semibold">For Individuals</h3>
-                <a to="#" className="block text-sm hover:underline">
-                    Introduction
-                </a>
-                <a to="#" className="block text-sm hover:underline">
-                    Pay as you go
-                </a>
+                    <h3 className="font-semibold">About Aurum</h3>
+                    <a to="#" className="block text-sm hover:underline pl-4">
+                        About us
+                    </a>
+                    <a to="#" className="block text-sm hover:underline pl-4">
+                        Our History
+                    </a>
                 </div>
                 <div className="mb-6 space-y-3">
-                <h3 className="font-semibold">For Companies</h3>
-                <a to="#" className="block text-sm hover:underline">
-                    Startups
-                </a>
-                <a to="#" className="block text-sm hover:underline">
-                    SMBs
-                </a>
-                <a to="#" className="block text-sm hover:underline">
-                    Enterprise
-                </a>
+                    <h3 className="font-semibold">About Design</h3>
+                    <div className="pl-4">
+                        <a to="#" className="block text-sm hover:underline">
+                            Enterprise
+                        </a>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    const ProductSection = () => {
+        return(
+            <div className="w-64 bg-white p-6 shadow-xl">
+                <div className="mb-3 space-y-3">
+                    <h3 className="font-semibold">Older Series</h3>
+                    <a to="#" className="block text-sm hover:underline pl-4">
+                        CFC Series
+                    </a>
+                    <a to="#" className="block text-sm hover:underline pl-4">
+                        DTR Series
+                    </a>
+                    <a to="#" className="block text-sm hover:underline pl-4">
+                        BTR Series
+                    </a>
+                </div>
+                <div className="mb-6 space-y-3">
+                    <h3 className="font-semibold">Newer Series</h3>
+                    <a to="#" className="block text-sm hover:underline pl-4">
+                        MHR Series
+                    </a>
+                    <a to="#" className="block text-sm hover:underline pl-4">
+                        DDR Series
+                    </a>
+                </div>
+            </div>
+        )
+    }
+
+    const ContactSection = () => {
+        return(
+            <div className="w-64 bg-white p-6 shadow-xl">
+                <div className="mb-3 space-y-3">
+                    <p to="#" className="block text-sm hover:underline">
+                        <span className="font-semibold">Phone:</span>
+                        111-111-1111
+                    </p>
+                    <p to="#" className="block text-sm hover:underline">
+                        <span className="font-semibold">Email:</span>
+                        111-111-1111
+                    </p>
+                    <p to="#" className="block text-sm hover:underline">
+                        <span className="font-semibold">Address:</span>
+                        111-111-1111
+                    </p>
                 </div>
                 <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
                 Contact sales
@@ -86,7 +131,7 @@ export default function Header(){
     }
 
     {/* Mobile Navigation */}
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:AboutSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact"}]
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact", Flyout:ContactSection}]
 
     {/* Mobile Assets */}
 
@@ -140,10 +185,10 @@ export default function Header(){
     }
 
     return(
-        <header className="bg-aurumblack text-white h-[5rem] shrink-0 px-6 sm:px-8 flex sm:grid sm:grid-cols-8 justify-between items-center fixed top-0 z-40 w-full">
+        <header className="bg-aurumblack text-white h-[5rem] shrink-0 px-6 sm:px-8 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full">
 
             {/* Logo */}
-            <div className="col-span-3">
+            <div className="">
                 <NavLink to="/">
                     <img src={logo} alt="logo" className="h-16"/>
                 </NavLink>
@@ -163,7 +208,7 @@ export default function Header(){
 
             {/* Random item */}
             <p className="text-right sm:block hidden">
-                EN
+                Phone
             </p>
         </header>
     )
