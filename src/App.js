@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/About/AboutUs';
 import OurHistory from './pages/About/OurHistory';
 import OurSolution from './pages/About/OurSolution';
+import Contact from './pages/Contact';
 
 function App() {
 
@@ -24,6 +25,10 @@ function App() {
           <Route exact path="/ourhistory" element={<OurHistory/>}/>
           <Route exact path="/oursolution" element={<OurSolution/>}/>
           <Route exact path="*" element={<NoPage/>}/>
+
+          {/* Contact */}
+          <Route exact path="/contactus" element={<Contact/>}/>
+
         </Routes>
       </Layout>
     </Router>

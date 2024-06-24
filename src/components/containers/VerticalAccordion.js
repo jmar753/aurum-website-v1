@@ -77,13 +77,15 @@ const Panel = ({ open, setOpen, id, title, description, links, check, setCheck }
   );
 };
 
-const Panel2 = ({id, title }) => {
+const Panel2 = ({id, title, links }) => {
 
   return (
     <div className="px-6">
-      <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600">
-        <span className="block lg:hidden text-2xl font-semibold">{title}</span>
-      </button>
+      <NavLink to={links}>
+        <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600">
+          <span className="block lg:hidden text-2xl font-semibold">{title}</span>
+        </button>
+      </NavLink>
     </div>
   );
 };
@@ -118,11 +120,11 @@ const items2 = [
   {
     id: 1,
     title: "Resources",
-    links: [],
+    links: "/resources",
   },
   {
     id: 2,
     title: "Contact",
-    links: [],
+    links: "/contactus",
   },
 ]

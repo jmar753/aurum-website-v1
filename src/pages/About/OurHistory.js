@@ -4,7 +4,7 @@ export default function OurHistory(){
         <div className="text-white">
             {/* About Banner */}
             <div className="bg-gradient-to-b h-56 pt-20 text-6xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
-                <h1 className="text-white">About <span className="text-logogreen">Us</span></h1>
+                <h1 className="text-white">Our <span className="text-logogreen">History</span></h1>
             </div>
 
             {/* Written */}

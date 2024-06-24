@@ -131,7 +131,7 @@ export default function Header(){
     }
 
     //Mobile Navigation
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact", Flyout:ContactSection}]
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
 
     //Mobile Assets
     const MobilePopup = () => {
@@ -209,7 +209,7 @@ export default function Header(){
 
             {/* Random item */}
             <p className="text-right sm:block hidden">
-                Phone
+                .
             </p>
         </header>
     )
