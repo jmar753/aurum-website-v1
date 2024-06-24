@@ -59,19 +59,19 @@ export default function Header(){
             <div className="w-64 bg-white p-6 shadow-xl">
                 <div className="mb-3 space-y-3">
                     <h3 className="font-semibold">About Aurum</h3>
-                    <a to="#" className="block text-sm hover:underline pl-4">
+                    <NavLink to="/aboutus" className="block text-sm hover:underline pl-4">
                         About us
-                    </a>
-                    <a to="#" className="block text-sm hover:underline pl-4">
+                    </NavLink>
+                    <NavLink  to="/ourhistory" className="block text-sm hover:underline pl-4">
                         Our History
-                    </a>
+                    </NavLink>
                 </div>
                 <div className="mb-6 space-y-3">
                     <h3 className="font-semibold">About Design</h3>
                     <div className="pl-4">
-                        <a to="#" className="block text-sm hover:underline">
+                        <NavLink  to="#" className="block text-sm hover:underline">
                             Enterprise
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
             </div>
@@ -83,24 +83,24 @@ export default function Header(){
             <div className="w-64 bg-white p-6 shadow-xl">
                 <div className="mb-3 space-y-3">
                     <h3 className="font-semibold">Older Series</h3>
-                    <a to="#" className="block text-sm hover:underline pl-4">
+                    <NavLink  to="#" className="block text-sm hover:underline pl-4">
                         CFC Series
-                    </a>
-                    <a to="#" className="block text-sm hover:underline pl-4">
+                    </NavLink>
+                    <NavLink  to="#" className="block text-sm hover:underline pl-4">
                         DTR Series
-                    </a>
-                    <a to="#" className="block text-sm hover:underline pl-4">
+                    </NavLink>
+                    <NavLink  to="#" className="block text-sm hover:underline pl-4">
                         BTR Series
-                    </a>
+                    </NavLink>
                 </div>
                 <div className="mb-6 space-y-3">
                     <h3 className="font-semibold">Newer Series</h3>
-                    <a to="#" className="block text-sm hover:underline pl-4">
+                    <NavLink  to="#" className="block text-sm hover:underline pl-4">
                         MHR Series
-                    </a>
-                    <a to="#" className="block text-sm hover:underline pl-4">
+                    </NavLink>
+                    <NavLink  to="#" className="block text-sm hover:underline pl-4">
                         DDR Series
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         )
@@ -159,9 +159,11 @@ export default function Header(){
 
                             {/* Navigation Header */}
                             <div className="flex items-center justify-between px-6">
-                                <div className="flex items-center h-[5rem]">
-                                    <img src={logoblack} alt="logo" className="h-16"/>
-                                </div>
+                                <NavLink to="/">
+                                    <div className="flex items-center h-[5rem]">
+                                        <img src={logoblack} alt="logo" className="h-16"/>
+                                    </div>
+                                </NavLink>
                                 <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100'}}>
                                     <div className="sm:hidden flex" onClick={() => {setCheck(false)}}>
                                         <IoClose/>
@@ -173,7 +175,7 @@ export default function Header(){
                             <div className="bg-neutral-100 overflow-y-scroll h-[calc(100vh-5rem)] w-full">
                                 <div className="w-full m-auto bg-neutral-100">
                                     {/* Content Here */}
-                                    <VerticalAccordion/>
+                                    <VerticalAccordion check={check} setCheck={setCheck}/>
 
                                 </div>
                             </div>

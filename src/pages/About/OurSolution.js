@@ -1,4 +1,4 @@
-export default function AboutUs(){
+export default function OurSolution(){
 
     return(
         <div className="text-white">

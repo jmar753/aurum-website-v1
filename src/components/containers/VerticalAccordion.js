@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { IoGitMerge } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
-const VerticalAccordion = () => {
+const VerticalAccordion = ({check, setCheck}) => {
   const [open, setOpen] = useState(items[0].id);
 
   return (
@@ -35,7 +36,7 @@ const VerticalAccordion = () => {
   );
 };
 
-const Panel = ({ open, setOpen, id, title, description, links }) => {
+const Panel = ({ open, setOpen, id, title, description, links, setCheck }) => {
   const isOpen = open === id;
 
   return (
@@ -61,9 +62,11 @@ const Panel = ({ open, setOpen, id, title, description, links }) => {
               className="px-4 py-2 gap-y-2 text-lg w-full font-semibold backdrop-blur-sm text-neutral-800 origin-top"
             >
               {links.map((item, index) => (
-                <div className="hover:cursor-pointer hover:text-aurumgreen-600">
-                  {item.title}
-                </div>
+                <NavLink to={item.link} onClick={() => setCheck(false)}>
+                  <div className="hover:cursor-pointer hover:text-aurumgreen-600">
+                    {item.title}
+                  </div>
+                </NavLink>
               ))}
             </motion.div>
           </motion.div>
@@ -101,7 +104,7 @@ const items = [
   {
     id: 1,
     title: "About",
-    links: [{title:"About Us", link:"aboutus"}, {title:"Our Solutions", link:"aboutus"}, {title:"Our History", link:"aboutus"},],
+    links: [{title:"About Us", link:"/aboutus"}, {title:"Our Solutions", link:"/oursolution"}, {title:"Our History", link:"/ourhistory"},],
   },
   {
     id: 2,

@@ -1,4 +1,4 @@
-export default function AboutUs(){
+export default function OurHistory(){
 
     return(
         <div className="text-white">
