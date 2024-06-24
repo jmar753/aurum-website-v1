@@ -105,7 +105,7 @@ export default function Header(){
                 <AnimatePresence>
                     { check && (
                         <motion.div 
-                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100"
+                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 sm:hidden"
                             initial={{ opacity: 0,}}
                             animate={{ opacity: 1,}}
                             exit={{ opacity: 0,}}
