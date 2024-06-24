@@ -1,4 +1,5 @@
-import { FaFacebook, FaLinkedin, FaPhone, FaMailBulk, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaPhone, FaMailBulk, FaInstagram, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function Contact(){
     return(
@@ -62,15 +63,20 @@ export default function Contact(){
                         </div>
 
                         <div className="space-y-1">
-                            <h1 className="text-xl font-semibold">Call us</h1>
-                            <p className="text-neutral-300">Call our team Mon-Fri from 8am to 4pm</p>
-                            <p>number here</p>
+                            <h1 className="text-xl font-semibold">Contact us</h1>
+                            <div  className="flex items-center gap-x-2 font-semibold underline">
+                                <FaPhoneAlt/>
+                                <p>905-597-4799 | info@aurum-m.com</p>
+                            </div>
                         </div>
 
                         <div className="space-y-1">
                             <h1 className="text-xl font-semibold">Visit us</h1>
                             <p className="text-neutral-300">Talk to us in person at our Vaughan HQ</p>
-                            <p>location here</p>
+                            <div  className="flex items-center gap-x-2 font-semibold underline">
+                                <FaLocationDot/>
+                                <p>200 Tesma Way #7, Vaughan, ON L4K 0J9</p>
+                            </div>
                         </div>
                     </div>
 
