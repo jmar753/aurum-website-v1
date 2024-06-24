@@ -4,17 +4,22 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Layout from "./components/containers/Layout";
 import NoPage from './pages/NoPage';
 import Home from './pages/Home';
+import ScrollToTop from './components/navigation/ScrolToTop';
 
 //About Pages
 import AboutUs from './pages/About/AboutUs';
 import OurHistory from './pages/About/OurHistory';
 import OurSolution from './pages/About/OurSolution';
+
+//Single Pages
 import Contact from './pages/Contact';
+import Resources from './pages/Resources';
 
 function App() {
 
   return (
-    <Router>
+    <>
+      <ScrollToTop />
       <Layout>
         <Routes>
           {/* Home */}
@@ -29,9 +34,12 @@ function App() {
           {/* Contact */}
           <Route exact path="/contactus" element={<Contact/>}/>
 
+          {/* Resources */}
+          <Route exact path="/resources" element={<Resources/>}/>
+
         </Routes>
       </Layout>
-    </Router>
+    </>
   );
 }
 
