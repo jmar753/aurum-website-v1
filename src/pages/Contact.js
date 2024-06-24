@@ -1,17 +1,21 @@
+import { FaFacebook, FaLinkedin, FaPhone, FaMailBulk, FaInstagram } from "react-icons/fa";
+
 export default function Contact(){
     return(
         <div className="bg-aurumgrey h-screen w-full flex items-center justify-center text-white">
-            <div className="w-[2000px]">
+            <div className="w-screen">
 
                 {/* Opener */}
-                <h1>Contact our team</h1>
-                <p>Got any questions? We're here to help. Shoot an email to our team and we will be sure to reach back.</p>
+                <div className="text-center space-y-5 py-10">
+                    <h1 className="text-5xl font-semibold">Contact our team</h1>
+                    <p className="">Got any questions? We're here to help. Shoot an email to our team and we will be sure to reach back.</p>
+                </div>
 
                 {/* Form */}
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-3 divide-x-2 divide-gray-100">
                     {/* Email side */}
-                    <div className="bg-red-900">
-                        <form className="max-w-md mx-auto">
+                    <div className="p-6 col-span-2">
+                        <form className="max-w-3xl mx-auto">
                             <div className="grid md:grid-cols-2 md:gap-6">
                                 <div className="relative z-0 w-full mb-5 group">
                                     <label for="small-input" className="block mb-2 font-semibold text-white">Small input</label>
@@ -39,22 +43,35 @@ export default function Contact(){
                     </div>
 
                     {/* Contact List */}
-                    <div className="bg-green-900">
-                        <h1>Chat with us</h1>
-                        <p>Speak to our friendly team VIA phone or email</p>
+                    <div className="px-12 py-6 space-y-8">
+                        <div className="space-y-1">
+                            <h1 className="text-xl font-semibold">Chat with us</h1>
+                            <p className="text-neutral-300">Speak to our friendly team VIA phone or email</p>
+                            <div className="flex items-center gap-x-2 font-semibold underline">
+                                <FaLinkedin/>
+                                <p>Message us on LinkedIn</p>
+                            </div>
+                            <div className="flex items-center gap-x-2 font-semibold underline">
+                                <FaFacebook/>
+                                <p>Visit our Facebook</p>
+                            </div>
+                            <div  className="flex items-center gap-x-2 font-semibold underline">
+                                <FaInstagram/>
+                                <p>Follow our Instagram</p>
+                            </div>
+                        </div>
 
-                        <p>Send an email</p>
-                        <p>Message us on LinkedIn</p>
-                        <p>Visit our Facebook</p>
-                        <p>Follow our Instagram</p>
+                        <div className="space-y-1">
+                            <h1 className="text-xl font-semibold">Call us</h1>
+                            <p className="text-neutral-300">Call our team Mon-Fri from 8am to 4pm</p>
+                            <p>number here</p>
+                        </div>
 
-                        <h1>Call us</h1>
-                        <p>Call our team Mon-Fri from 8am to 4pm</p>
-                        <p>number here</p>
-
-                        <h1>Visit us</h1>
-                        <p>Talk to us in person at our Vaughan HQ</p>
-                        <p>location here</p>
+                        <div className="space-y-1">
+                            <h1 className="text-xl font-semibold">Visit us</h1>
+                            <p className="text-neutral-300">Talk to us in person at our Vaughan HQ</p>
+                            <p>location here</p>
+                        </div>
                     </div>
 
                 </div>
