@@ -141,41 +141,36 @@ export default function Header(){
                     </div>
                 </IconContext.Provider>
                 <AnimatePresence>
-                { check && (
-                    <motion.div 
-                        className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 overscroll-y-contain"
-                        initial={{ opacity: 0,}}
-                        animate={{ opacity: 1,}}
-                        exit={{ opacity: 0,}}
-                        transition={{duration: 0.3, ease: 'easeOut'}}
-                    >   
+                    { check && (
+                        <motion.div 
+                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 overscroll-y-contain"
+                            initial={{ opacity: 0,}}
+                            animate={{ opacity: 1,}}
+                            exit={{ opacity: 0,}}
+                            transition={{duration: 0.3, ease: 'easeOut'}}
+                        >   
 
-                        {/* Navigation Header */}
-                        <div className="flex items-center justify-between px-6">
-                            <div className="flex items-center h-[5rem]">
-                                <img src={logoblack} alt="logo" className="h-16"/>
+                            {/* Navigation Header */}
+                            <div className="flex items-center justify-between px-6">
+                                <div className="flex items-center h-[5rem]">
+                                    <img src={logoblack} alt="logo" className="h-16"/>
+                                </div>
+                                <button onClick={() => {setCheck(false)}}>
+                                    close
+                                </button>
                             </div>
-                            <button onClick={() => {setCheck(false)}}>
-                                close
-                            </button>
-                        </div>
 
-                        {/* Navigation Body */}
-                        <div className="px-6 overflow-y-scroll h-[calc(100vh-10rem)] w-full">
-                            <div className="w-full m-auto bg-neutral-100 p-8">
-                                {/* Content Here */}
-                                <VerticalAccordion/>
+                            {/* Navigation Body */}
+                            <div className="bg-neutral-100 overflow-y-scroll h-[calc(100vh-5rem)] w-full">
+                                <div className="w-full m-auto bg-neutral-100">
+                                    {/* Content Here */}
+                                    <VerticalAccordion/>
 
+                                </div>
                             </div>
-                        </div>
-
-                        {/* Navigation Footer */}
-                        <footer className="z-50 bg-gray-300 p-[5rem]">
-
-                        </footer>
-                    </motion.div> 
-                )}
-            </AnimatePresence>
+                        </motion.div> 
+                    )}
+                </AnimatePresence>
             </>
         )
     }

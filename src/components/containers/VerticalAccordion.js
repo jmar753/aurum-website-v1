@@ -1,14 +1,16 @@
-import { FiBarChart, FiBell, FiDollarSign, FiPlay } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
-import { useWindowSize } from "./useWindowSize";
 import { useState } from "react";
 
 const VerticalAccordion = () => {
   const [open, setOpen] = useState(items[0].id);
+  const [drop1, setDrop1] = useState(false);
+  const [drop2, setDrop2] = useState(false);
+  const [drop3, setDrop3] = useState(false);
+  const [drop4, setDrop4] = useState(false);
 
   return (
-    <section className="p-4 bg-indigo-600">
-      <div className="flex flex-col lg:flex-row h-fit w-full max-w-6xl mx-auto shadow overflow-hidden">
+    <section className="">
+      <div className="flex flex-col lg:flex-row h-fit w-full max-w-6xl mx-auto overflow-hidden">
         {items.map((item) => {
           return (
             <Panel
@@ -16,9 +18,7 @@ const VerticalAccordion = () => {
               open={open}
               setOpen={setOpen}
               id={item.id}
-              Icon={item.Icon}
               title={item.title}
-              imgSrc={item.imgSrc}
               description={item.description}
             />
           );
@@ -28,50 +28,29 @@ const VerticalAccordion = () => {
   );
 };
 
-const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) => {
-  const { width } = useWindowSize();
+const Panel = ({ open, setOpen, id, title, description }) => {
   const isOpen = open === id;
 
   return (
-    <>
+    <div className="px-6">
       <button
-        className="bg-white hover:bg-slate-50 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
+        className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
         onClick={() => setOpen(id)}
       >
-        <span
-          style={{
-            writingMode: "vertical-lr",
-          }}
-          className="hidden lg:block text-xl font-light rotate-180"
-        >
-          {title}
-        </span>
-        <span className="block lg:hidden text-xl font-light">{title}</span>
-        <div className="w-6 lg:w-full aspect-square bg-indigo-600 text-white grid place-items-center">
-          <Icon />
-        </div>
+        <span className="block lg:hidden text-2xl font-semibold">{title}</span>
       </button>
 
       <AnimatePresence>
         {isOpen && (
           <motion.div
             key={`panel-${id}`}
-            variants={width && width > 1024 ? panelVariants : panelVariantsSm}
+            variants={panelVariants}
             initial="closed"
             animate="open"
             exit="closed"
-            style={{
-              backgroundImage: `url(${imgSrc})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
             className="w-full h-full overflow-hidden relative bg-black flex items-end"
           >
             <motion.div
-              variants={descriptionVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
               className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white"
             >
               <p>{description}</p>
@@ -79,7 +58,7 @@ const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 
@@ -88,18 +67,7 @@ export default VerticalAccordion;
 const panelVariants = {
   open: {
     width: "100%",
-    height: "100%",
-  },
-  closed: {
-    width: "0%",
-    height: "100%",
-  },
-};
-
-const panelVariantsSm = {
-  open: {
-    width: "100%",
-    height: "200px",
+    height: "auto",
   },
   closed: {
     width: "100%",
@@ -107,51 +75,28 @@ const panelVariantsSm = {
   },
 };
 
-const descriptionVariants = {
-  open: {
-    opacity: 1,
-    y: "0%",
-    transition: {
-      delay: 0.125,
-    },
-  },
-  closed: { opacity: 0, y: "100%" },
-};
-
 const items = [
   {
     id: 1,
-    title: "Earn more",
-    Icon: FiDollarSign,
-    imgSrc:
-      "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    title: "About",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
   },
   {
     id: 2,
-    title: "Play more",
-    Icon: FiPlay,
-    imgSrc:
-      "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+    title: "Products",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
   },
   {
     id: 3,
-    title: "Keep track",
-    Icon: FiBell,
-    imgSrc:
-      "https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    title: "Resources",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
   },
   {
     id: 4,
-    title: "Grow faster",
-    Icon: FiBarChart,
-    imgSrc:
-      "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    title: "Contact",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
   },
