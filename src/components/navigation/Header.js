@@ -3,7 +3,7 @@ import { IconContext } from "react-icons";
 import { HiMenu } from "react-icons/hi";
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaPlusCircle, FaMinusCircle, FaMinus } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 import logoblack from "../../RoughAssets/LogoNoTree.svg"
@@ -90,44 +90,6 @@ export default function Header(){
 
     {/* Mobile Assets */}
 
-    const Accordion = ({ question, answer }) => {
-
-        const [isOpen, setIsOpen] = useState(false);
-      
-        return (
-          <motion.div>
-            <AnimatePresence>
-              <motion.div
-                key="question"
-                className="rounded-tr-md relative z-20  rounded-br-md shadow-sm px-1 py-2 bg-blue-200 cursor-pointer font-open border-l-2 border-yellow-500"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <motion.div className="text-gray-800 font-bold ml-1">
-                  Do you like animations?
-                </motion.div>
-              </motion.div>
-      
-              {isOpen && (
-                <motion.div
-                  key="answer"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: 1,
-                    transition: {
-                      duration: 0.5,
-                    },
-                  }}
-                  exit={{ opacity: 0 }}
-                  className="p-2 text-lg text-gray-700 border-l border-b border-gray-300"
-                >
-                  Yes, I love them!
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        );
-      };
-
     const MobilePopup = () => {
         const [check, setCheck] = useState(false)
         check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
@@ -155,9 +117,11 @@ export default function Header(){
                                 <div className="flex items-center h-[5rem]">
                                     <img src={logoblack} alt="logo" className="h-16"/>
                                 </div>
-                                <button onClick={() => {setCheck(false)}}>
-                                    close
-                                </button>
+                                <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100'}}>
+                                    <div className="sm:hidden flex" onClick={() => {setCheck(false)}}>
+                                        <IoClose/>
+                                    </div>
+                                </IconContext.Provider>
                             </div>
 
                             {/* Navigation Body */}
