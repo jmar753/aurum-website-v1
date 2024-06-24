@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { IoGitMerge } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
 const VerticalAccordion = ({check, setCheck}) => {
@@ -19,6 +18,7 @@ const VerticalAccordion = ({check, setCheck}) => {
               title={item.title}
               links={item.links}
               description={item.description}
+              setCheck={setCheck}
             />
           );
         })}
@@ -28,6 +28,7 @@ const VerticalAccordion = ({check, setCheck}) => {
               key={item.id}
               id={item.id}
               title={item.title}
+              setCheck={setCheck}
             />
           );
         })}
@@ -36,7 +37,7 @@ const VerticalAccordion = ({check, setCheck}) => {
   );
 };
 
-const Panel = ({ open, setOpen, id, title, description, links, setCheck }) => {
+const Panel = ({ open, setOpen, id, title, description, links, check, setCheck }) => {
   const isOpen = open === id;
 
   return (

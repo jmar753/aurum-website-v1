@@ -1,15 +1,15 @@
 export default function AboutUs(){
 
     return(
-        <div className="text-white">
+        <div className="text-white px-6">
             {/* About Banner */}
-            <div className="bg-gradient-to-b h-56 pt-20 text-6xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
+            <div className="bg-gradient-to-b h-56 pt-20 text-5xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
                 <h1 className="text-white">About <span className="text-logogreen">Us</span></h1>
             </div>
 
             {/* Written */}
             <div className="text-center space-y-8 pb-20">
-                <p className="text-3xl font-semibold text-aurumgold">"Our mission at Aurum Manufacturing is to be an innovative leader in air flow technology by providing intellectual solutions to the ultimate challenge of comfort."</p>
+                <p className="text-2xl font-semibold text-aurumgold">"Our mission at Aurum Manufacturing is to be an innovative leader in air flow technology by providing intellectual solutions to the ultimate challenge of comfort."</p>
 
                 <h1 className="text-3xl font-semibold ">Who <span className="text-logogreen">We Are</span></h1>
 

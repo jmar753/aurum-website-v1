@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { IconContext } from "react-icons";
 import { HiMenu } from "react-icons/hi";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 
@@ -12,7 +12,7 @@ import VerticalAccordion from "../containers/VerticalAccordion";
 
 export default function Header(){
 
-    {/* Dropdown Menu */}
+    //Dropdown Menu
     const FlyoutLink = ({ children, to, FlyoutContent}) => {
         const [open, setOpen] = useState(false)
         const showFlyout = open && FlyoutContent;
@@ -53,7 +53,7 @@ export default function Header(){
         )
     }
 
-    {/* Dropdown Menu Components */}
+    //Dropdown Menu Components
     const AboutSection = () => {
         return(
             <div className="w-64 bg-white p-6 shadow-xl">
@@ -130,11 +130,10 @@ export default function Header(){
         )
     }
 
-    {/* Mobile Navigation */}
+    //Mobile Navigation
     const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contact", Flyout:ContactSection}]
 
-    {/* Mobile Assets */}
-
+    //Mobile Assets
     const MobilePopup = () => {
         const [check, setCheck] = useState(false)
         // check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
@@ -159,7 +158,7 @@ export default function Header(){
 
                             {/* Navigation Header */}
                             <div className="flex items-center justify-between px-6">
-                                <NavLink to="/">
+                                <NavLink to="/"  onClick={() => setCheck(false)}>
                                     <div className="flex items-center h-[5rem]">
                                         <img src={logoblack} alt="logo" className="h-16"/>
                                     </div>
