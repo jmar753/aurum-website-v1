@@ -1,23 +1,174 @@
 export default function OurSolution(){
 
+    const threats = [
+        {
+            id: 1,
+            title:"Threat 1 Rust",
+            span1:"Risk of Flooding",
+            text1: "Rust chips can clog drain pans and condensate hoses causing backup and overflow. This may result in water damage.",
+            span2: "Health Hazard",
+            text2: "Rust can become airborne. These airborne particles can lead to prolonged coughing and lung irritation.",
+        },
+        {
+            id: 2,
+            title:"Threat 2 Mold",
+            span1:"Health Hazard",
+            text1: "Airborne mold particles can cause major allergen irritations and in severe cases can lead to respiratory problems.",
+            span2: "",
+            text2: "",
+        },
+        {
+            id: 3,
+            title:"Threat 3 Low Electrical Efficiency",
+            span1:"Old Technology",
+            text1: "Inefficient and outdated components cause unnecessary power consumption",
+            span2: "Coil Clogging",
+            text2: "Lack of maintenance and/or improper operation can result in dirt and debris clogging your coil. This clogged coil reduces airflow efficiency.",
+        },
+    ]
+
+    const gridinfo = [
+        {
+            id: 1,
+            title: "ECM Technology",
+            note1: "- 80% electrically efficient (30-40% increase)",
+            note2: "- 90,000+ hours operating life span",
+            note3: "",
+        },
+        {
+            id: 2,
+            title: "20 Gauge Stainless Steel Construction",
+            note1: "- Virtually eliminates the possibility of rust occurrence",
+            note2: "",
+            note3: "",
+        },
+        {
+            id: 3,
+            title: "Control Valve and Actuato",
+            note1: "- Zero Leakage ",
+            note2: "- Self-cleaning technology to be clog resistance",
+            note3: "- Consumes 95% less power than conventional actuator ",
+        },
+        {
+            id: 4,
+            title: "24V Control Centre",
+            note1: "- Easy plug and play compatible with most smart thermostats on the market",
+            note2: "",
+            note3: "",
+        },
+        {
+            id: 5,
+            title: "Safety Features",
+            note1: "- Float Sensor to detect drain pan water backup",
+            note2: "",
+            note3: "",
+        },
+        {
+            id: 6,
+            title: "Easy Future Serviceability",
+            note1: "- Union connections from valve bodies",
+            note2: "- Braided stainless steel hoses are equipped with union connections for easy connect/disconnect from building supply and return. ",
+            note3: "",
+        },
+    ]
+
     return(
-        <div className="text-white">
+        <div className="text-white px-6 leading-loose">
             {/* About Banner */}
-            <div className="bg-gradient-to-b h-56 pt-20 text-4xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
-                <h1 className="text-white">Our <span className="text-logogreen">Solution</span></h1>
+            <div className="bg-gradient-to-b h-56 pt-20 text-5xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
+                <h1 className="text-white">Our <span className="text-logogreen">Solutions</span></h1>
             </div>
 
             {/* Written */}
             <div className="text-center space-y-8 pb-20">
+                <p className="text-2xl font-semibold text-aurumgold">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
+                <p>This is the common misconception made by many homeowners regarding their outdated fan coil units. Your HVAC system is crucial in your everyday living and should be held at such standards. Retrofitting your fan coil unit drastically improves this essential system.</p>
+            </div>
 
-                <p>Aurum Manufacturing is a Canadian based manufacturer specializing in the replacement solutions for outdated fan coil systems. We are dedicated to working closely with suppliers, vendors and contractors to deliver superior products for the end user. All Aurum model fan coil units are made with the highest degree of quality and craftsmanship. Aurum has focused their goal on creating solutions for energy efficiency and effective air control and movement.  Over the years, we have manufactured equipment for thousands of projects and applications including residential and commercial multi-story buildings. We stand by our designs and being a leader in the HVAC industry, we pride ourselves in being able to customize our models to meet and exceed our customer’s needs. Our various fan coil unit sizes have been manufactured to fit the dimensions of almost all buildings that have been built within the past 50+ years. Aurum’s flexibility and expertise allows us to provide designs that fit the building, rather than forcing the building to fit the equipment.</p>
+            {/* Retrofit Section */}
+            <div className="text-center space-y-8 pb-20">
+                <h1>Understanding Why to Retrofi</h1>
+                <p>Aside from your fan coil system not look appealing there are also some threatening qualities that pictures
+                cannot capture.</p>
+                <p>Three of the biggest threats of aging fan coils are:</p>
+                <ul>
+                    <li>Rust</li>
+                    <li>Mold Growth</li>
+                    <li> Low Electrical Efficiency</li>
+                </ul>
+            </div>
 
-                <h1 className="text-3xl font-semibold ">What <span className="text-logogreen">We Do</span></h1>
+            {/* Threat Section */}
+            <div className="text-center space-y-8 pb-20">
+                {threats.map((items, index) => (
+                    <div>
+                        <h1>{items.title}</h1>
+                        <p>{items.span1}</p>
+                        <p>{items.text1}</p>
+                        <p>{items.span2}</p>
+                        <p>{items.text2}</p>
+                    </div>
+                ))}
+            </div>
 
-                <p>At Aurum, our core values define who we are and the decisions we make. We design with old school values, while adding a new school touch. We are dedicated to building products with the same type of precision, detail, craftsmanship and reliability as they were built years ago. Our expertise allows us to build our products using the same reliable ideas that have supported us through decades but by revolutionizing these concepts using modern day technologies and superior efficiencies. Here at Aurum, our priority is to provide you with quality, reliability, comfort and care. We value integrity because without it, our success is meaningless. Aurum promises to work tirelessly to meet and exceed the expectations of our customers with everything we do.</p>
+            {/*The Aurum Solution*/}
+            <div className="text-center space-y-8 pb-20">
+                <h1>THE AURUM SOLUTION</h1>
+                <p>Aurum Manufacturing is proud to be one of the pioneers in retrofit development. This solution completely transforms your fan coil unit into an up-to-date modern and efficient system</p>
+                <div className="grid grid-cols-2 space-x-8">
+                    <div className="bg-aurumgreen-600 w-full h-[400px]"></div>
+                    <div className="bg-aurumgreen-600 w-full h-[400px]"></div>
+                </div>
+            </div>
 
-                <h1 className="text-3xl font-semibold text-aurumgold">“Old School Values with a New School Touch”</h1>
+            {/*Homeowner Benefits*/}
+            <div className="text-center space-y-8 pb-20">
+                <h1>HOMEOWNER BENEFITS</h1>
+                <p>Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
+                <ul>
+                    <li>Increases air circulation in your home</li>
+                    <li>Increases efficiency in fan coil operations</li>
+                    <li>Includes safety features for flood prevention</li>
+                    <li>Creates and enhances optimal comfort in your home</li>
+                    <li>Reduces operational noise</li>
+                    <li>Lowers fan coil energy consumption</li>
+                </ul>
+            </div>
 
+            {/* Essential Components */}
+            <div className="text-center space-y-8 pb-20">
+                <div className="grid grid-cols-2 gap-5">
+                    <h1>ECM MOTOR</h1>
+                    <h1>FLOAT SENSOR</h1>
+                    <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
+                    <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
+                    <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
+                    <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
+                </div>
+            </div>
+
+            {/* 6 grid */}
+            <div className="text-center space-y-8 pb-20">
+                <div className="grid grid-cols-2">
+                    {gridinfo.map((item, index) => (
+                        <div className="border-aurumgreen-1">
+                            <h1>{item.title}</h1>
+                            <p>{item.note1}</p>
+                            <p>{item.note2}</p>
+                            <p>{item.note3}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/*Optional Features */}
+            <div className="text-center space-y-8 pb-20">
+                <ul>
+                    <li>Audible Water Sensor</li>
+                    <li>Cabinet Floor Moisture Sensor</li>
+                    <li>Secondary Room Temperature Sensors</li>
+                    <li>Smart Thermostats</li>
+                </ul>
             </div>
         </div>
     )

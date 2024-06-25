@@ -69,8 +69,8 @@ export default function Header(){
                 <div className="mb-6 space-y-3">
                     <h3 className="font-semibold">About Design</h3>
                     <div className="pl-4">
-                        <NavLink  to="#" className="block text-sm hover:underline">
-                            Enterprise
+                        <NavLink  to="/oursolution" className="block text-sm hover:underline">
+                            Our Solution
                         </NavLink>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ export default function Header(){
                     </p>
                 </div>
                 <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
-                Contact sales
+                    Contact Zorzit
                 </button>
             </div>
         )
@@ -186,7 +186,7 @@ export default function Header(){
     }
 
     return(
-        <header className="bg-aurumblack text-white h-[5rem] shrink-0 px-6 sm:px-8 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full">
+        <header className="bg-aurumblack/50 text-white h-[5rem] shrink-0 px-6 sm:px-8 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full">
 
             {/* Logo */}
             <div className="">
@@ -208,8 +208,8 @@ export default function Header(){
             <MobilePopup/>
 
             {/* Random item */}
-            <p className="text-right sm:block hidden">
-                .
+            <p className="text-right sm:block hidden underline">
+                905-597-4799 | info@aurum-m.com
             </p>
         </header>
     )

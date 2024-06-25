@@ -46,7 +46,7 @@ export default function Home(){
 
 
             {/* Who Are We? */}
-            <div className="flex flex-col py-48 items-center justify-center px-3">
+            <div className="flex flex-col py-28 items-center justify-center px-3 mx-auto max-w-6xl">
                 <Reveal>
                     <div className="">
                         <img src={TreePhoto} alt="logo" className="h-32"/>
@@ -54,18 +54,18 @@ export default function Home(){
                 </Reveal>
 
                 <Reveal>           
-                    <h1 className="font-bold text-4xl">Why <span className="text-logogreen">Aurum</span>?</h1>
+                    <h1 className="font-bold text-4xl md:text-5xl">Why <span className="text-logogreen">Aurum</span>?</h1>
                 </Reveal>
                 
                 <Reveal>
-                    <p className="pt-3 text-center">Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity. </p>
+                    <p className="pt-3 text-center md:text-2xl md:leading-loose">Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity. </p>
                 </Reveal>
             </div>
 
 
             {/* Banner */}
             <div className="py-10">
-                <div className="m-6 p-6 bg-neutral-800 rounded-xl grid grid-cols-3 gap-4">
+                <div className="my-6 p-6 bg-neutral-800 grid grid-cols-5 gap-4">
                     {BannerArray.map((item, index) => (
                         <IconContext.Provider value={{ className: `text-xl text-aurumgold ${item.size}` }} key={item.description}>
                             <div className="flex justify-center items-center gap-x-2 p-2">
