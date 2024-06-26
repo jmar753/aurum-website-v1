@@ -1,13 +1,15 @@
 import ShortVideo from "../RoughAssets/RoughMain.mp4"
 import TreePhoto from "../RoughAssets/TreeGold.svg"
+
+//animations
 import Reveal from "../animations/Reveal"
+import SideReveal from "../animations/SideReveal";
 
 //react-icons library: https://react-icons.github.io/react-icons/
 import { SiAircanada } from "react-icons/si";
-import { FaRegHandshake, FaTree, FaRegThumbsUp, FaArrowRight } from "react-icons/fa";
+import { FaRegHandshake, FaTree, FaRegThumbsUp, FaArrowRight, FaCanadianMapleLeaf } from "react-icons/fa";
 import { GiAchievement } from "react-icons/gi";
 import { IconContext } from "react-icons";
-import SideReveal from "../animations/SideReveal";
 
 export default function Home(){
 
@@ -20,13 +22,13 @@ export default function Home(){
     ]
 
     return(
-        <div className="text-white relative">
-
+        <div className="text-white">
 
             {/* Animated Intro */}
-            <div className="min-h-screen">
-                    {/* Words*/}
-                    <div className="absolute text-white flex flex-col gap-8 items-center justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
+            <div className="min-h-screen relative">
+
+                    {/* Written Section*/}
+                    <div className="absolute text-white flex flex-col gap-8 justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
                         <SideReveal propDelay={7.9} className="">
                             <div className="space-y-12">
                                 <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-galliano-300">Values</span> With A New School <span className="text-logogreen">Touch</span></p>
@@ -36,9 +38,20 @@ export default function Home(){
                                 </div>
                             </div>
                         </SideReveal>
+                        
+                        {/* Canada Logo*/}
+                        <div className="z-40 flex items-center gap-x-2">
+                            <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
+                                <FaCanadianMapleLeaf className="text-red-600 h-6 w-6"/>
+                            </div>
+                            <div className="text-sm font-thin tracking-tight text-neutral-200">
+                                <p>ONTARIO MANUFACTURED</p>
+                                <p>PROUDLY CANADIAN</p>
+                            </div>
+                        </div>
                     </div>
 
-                {/* Video */}
+                {/* Video BG */}
                 <video className='absolute h-screen w-screen object-cover z-10' autoPlay muted>
                     <source src={ShortVideo} type='video/mp4'/>
                 </video>
