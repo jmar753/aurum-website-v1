@@ -9,7 +9,7 @@ export default function AboutUs(){
 
             {/* Written */}
             <div className="text-center space-y-8 pb-20">
-                <p className="text-2xl font-semibold text-aurumgold">"Our mission at Aurum Manufacturing is to be an innovative leader in air flow technology by providing intellectual solutions to the ultimate challenge of comfort."</p>
+                <p className="text-2xl font-semibold text-galliano-300">"Our mission at Aurum Manufacturing is to be an innovative leader in air flow technology by providing intellectual solutions to the ultimate challenge of comfort."</p>
 
                 <h1 className="text-3xl font-semibold ">Who <span className="text-logogreen">We Are</span></h1>
 
@@ -19,7 +19,7 @@ export default function AboutUs(){
 
                 <p>At Aurum, our core values define who we are and the decisions we make. We design with old school values, while adding a new school touch. We are dedicated to building products with the same type of precision, detail, craftsmanship and reliability as they were built years ago. Our expertise allows us to build our products using the same reliable ideas that have supported us through decades but by revolutionizing these concepts using modern day technologies and superior efficiencies. Here at Aurum, our priority is to provide you with quality, reliability, comfort and care. We value integrity because without it, our success is meaningless. Aurum promises to work tirelessly to meet and exceed the expectations of our customers with everything we do.</p>
 
-                <h1 className="text-3xl font-semibold text-aurumgold">“Old School Values with a New School Touch”</h1>
+                <h1 className="text-3xl font-semibold text-galliano-300">“Old School Values with a New School Touch”</h1>
 
             </div>
         </div>

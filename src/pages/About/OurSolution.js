@@ -81,7 +81,7 @@ export default function OurSolution(){
 
             {/* Written */}
             <div className="text-center space-y-8 pb-20">
-                <p className="text-2xl font-semibold text-aurumgold">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
+                <p className="text-2xl font-semibold text-galliano-300">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
                 <p>This is the common misconception made by many homeowners regarding their outdated fan coil units. Your HVAC system is crucial in your everyday living and should be held at such standards. Retrofitting your fan coil unit drastically improves this essential system.</p>
             </div>
 

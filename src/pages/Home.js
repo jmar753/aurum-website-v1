@@ -29,7 +29,7 @@ export default function Home(){
                     <div className="absolute text-white flex flex-col gap-8 items-center justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
                         <SideReveal propDelay={7.9} className="">
                             <div className="space-y-12">
-                                <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-aurumgold">Values</span> With A New School <span className="text-logogreen">Touch</span></p>
+                                <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-galliano-300">Values</span> With A New School <span className="text-logogreen">Touch</span></p>
                                 <div className="flex items-center space-x-3">
                                     <p className="font-semibold">View Fan Coil Line</p>
                                     <FaArrowRight/>
@@ -67,7 +67,7 @@ export default function Home(){
             <div className="py-10">
                 <div className="my-6 p-6 bg-neutral-800 grid grid-cols-5 gap-4">
                     {BannerArray.map((item, index) => (
-                        <IconContext.Provider value={{ className: `text-xl text-aurumgold ${item.size}` }} key={item.description}>
+                        <IconContext.Provider value={{ className: `text-xl text-galliano-300 ${item.size}` }} key={item.description}>
                             <div className="flex justify-center items-center gap-x-2 p-2">
                                 <item.icon/>
                                 <p className="">{item.description}</p>
