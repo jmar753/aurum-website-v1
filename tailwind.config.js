@@ -7,9 +7,8 @@ module.exports = {
     extend: {    
       colors: {
       'aurumblack': '#050505',
-      'aurumgrey' : '#0e0e0e',
+      'aurumgrey' : '#0f0f0f',
       'galliano-300' : '#9c8c64',
-      'logogreen' : '#059c5c',
       'aurumgreen': {
         '50': '#ecfdf3',
         '100': '#d1fae0',
@@ -23,6 +22,20 @@ module.exports = {
         '900': '#064e33',
         '950': '#022c1d',
       },
+      'codgray': {
+        '50': '#f6f6f6',
+        '100': '#e7e7e7',
+        '200': '#d1d1d1',
+        '300': '#b0b0b0',
+        '400': '#888888',
+        '500': '#6d6d6d',
+        '600': '#5d5d5d',
+        '700': '#4f4f4f',
+        '800': '#454545',
+        '900': '#3d3d3d',
+        '950': '#0f0f0f',
+    },
+    
       'mantis': {
         '50': '#f2f9ec',
         '100': '#e1f2d5',
