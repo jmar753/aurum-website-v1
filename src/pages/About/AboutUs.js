@@ -1,10 +1,10 @@
 export default function AboutUs(){
 
     return(
-        <div className="text-white px-6 leading-loose">
+        <div className="text-neutral-100 px-6 leading-loose">
             {/* About Banner */}
             <div className="bg-gradient-to-b h-56 pt-20 text-5xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
-                <h1 className="text-white">About <span className="text-logogreen">Us</span></h1>
+                <h1 className="text-neutral-100">About <span className="text-logogreen">Us</span></h1>
             </div>
 
             {/* Written */}

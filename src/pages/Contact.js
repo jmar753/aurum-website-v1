@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function Contact(){
     return(
-        <div className="bg-aurumgrey h-screen w-full flex items-center justify-center text-white">
+        <div className="bg-aurumgrey h-screen w-full flex items-center justify-center text-neutral-100">
             <div className="w-screen">
 
                 {/* Opener */}
@@ -19,27 +19,27 @@ export default function Contact(){
                         <form className="max-w-3xl mx-auto">
                             <div className="grid md:grid-cols-2 md:gap-6">
                                 <div className="relative z-0 w-full mb-5 group">
-                                    <label for="small-input" className="block mb-2 font-semibold text-white">First Name</label>
+                                    <label for="small-input" className="block mb-2 font-semibold text-neutral-100">First Name</label>
                                     <input type="text" id="small-input" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-aurumgreen-500 focus:border-aurumgreen-500"/>
                                 </div>
                                 <div className="relative z-0 w-full mb-5 group">
-                                    <label for="small-input" className="block mb-2 font-semibold text-white">Last Name</label>
+                                    <label for="small-input" className="block mb-2 font-semibold text-neutral-100">Last Name</label>
                                     <input type="text" id="small-input" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-aurumgreen-500 focus:border-aurumgreen-500"/>
                                 </div>
                             </div>
                             <div className="relative z-0 w-full mb-5 group">
-                                <label for="small-input" className="block mb-2 font-semibold text-white">Email</label>
+                                <label for="small-input" className="block mb-2 font-semibold text-neutral-100">Email</label>
                                 <input type="text" id="small-input" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-aurumgreen-500 focus:border-aurumgreen-500"/>
                             </div>
                             <div className="relative z-0 w-full mb-5 group">
-                                <label for="small-input" className="block mb-2 font-semibold text-white">Phone</label>
+                                <label for="small-input" className="block mb-2 font-semibold text-neutral-100">Phone</label>
                                 <input type="text" id="small-input" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-aurumgreen-500 focus:border-aurumgreen-500"/>
                             </div>
                             <div className="relative z-0 w-full mb-5 group">
-                                <label for="small-input" className="block mb-2 font-semibold text-white">Message</label>
+                                <label for="small-input" className="block mb-2 font-semibold text-neutral-100">Message</label>
                                 <textarea  type="text" id="small-input" rows="5" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-aurumgreen-500 focus:border-aurumgreen-500"/>
                             </div>
-                            <button type="submit" className="text-white bg-aurumgreen-700 hover:bg-aurumgreen-800 focus:ring-4 focus:outline-none focus:ring-aurumgreen-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-aurumgreen-600 dark:hover:bg-aurumgreen-700 dark:focus:ring-aurumgreen-800">Submit</button>
+                            <button type="submit" className="text-neutral-100 bg-aurumgreen-700 hover:bg-aurumgreen-800 focus:ring-4 focus:outline-none focus:ring-aurumgreen-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-aurumgreen-600 dark:hover:bg-aurumgreen-700 dark:focus:ring-aurumgreen-800">Submit</button>
                         </form>
                     </div>
 

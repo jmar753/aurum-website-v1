@@ -22,20 +22,23 @@ export default function Home(){
     ]
 
     return(
-        <div className="text-white">
+        <div className="text-neutral-100">
 
             {/* Animated Intro */}
             <div className="min-h-screen relative">
 
                     {/* Written Section*/}
-                    <div className="absolute text-white flex flex-col gap-8 justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
+                    <div className="absolute text-neutral-100 flex flex-col gap-8 justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
                         <SideReveal propDelay={7.9} className="">
                             <div className="space-y-12">
+                                {/* Bannre */}
                                 <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-galliano-300">Values</span> With A New School <span className="text-logogreen">Touch</span></p>
-                                <div className="flex items-center space-x-3">
-                                    <p className="font-semibold">View Fan Coil Line</p>
+
+                                {/* Product redirect */}
+                                <button className="p-4 bg-black flex items-center gap-x-2 rounded-lg hover:bg-neutral-600">
+                                    View Retrofits
                                     <FaArrowRight/>
-                                </div>
+                                </button>
                             </div>
                         </SideReveal>
                         
@@ -44,7 +47,7 @@ export default function Home(){
                             <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
                                 <FaCanadianMapleLeaf className="text-red-600 h-6 w-6"/>
                             </div>
-                            <div className="text-sm font-thin tracking-tight text-neutral-200">
+                            <div className="text-sm font-thin tracking-tight text-neutral-100">
                                 <p>ONTARIO MANUFACTURED</p>
                                 <p>PROUDLY CANADIAN</p>
                             </div>
@@ -58,7 +61,7 @@ export default function Home(){
             </div>
 
 
-            {/* Who Are We? */}
+            {/* Why Aurum? */}
             <div className="flex flex-col py-28 items-center justify-center px-3 mx-auto max-w-6xl">
                 <Reveal>
                     <div className="">

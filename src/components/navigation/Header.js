@@ -24,7 +24,7 @@ export default function Header(){
                 onMouseLeave={() => setOpen(false)}
             >
                 {/* Header */}
-                <NavLink to={to} className="relative text-white">
+                <NavLink to={to} className="relative text-neutral-100">
                     {children}
                     <span
                         style={{ 
@@ -123,7 +123,7 @@ export default function Header(){
                         111-111-1111
                     </p>
                 </div>
-                <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
+                <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-neutral-100">
                     Contact Zorzit
                 </button>
             </div>
@@ -186,7 +186,7 @@ export default function Header(){
     }
 
     return(
-        <header className="bg-aurumblack/50 text-white h-[5rem] shrink-0 px-6 sm:px-8 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full">
+        <header className="bg-aurumblack/50 text-neutral-100 h-[5rem] shrink-0 px-6 sm:px-8 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full">
 
             {/* Logo */}
             <div className="">
