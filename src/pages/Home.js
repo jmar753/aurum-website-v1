@@ -75,7 +75,10 @@ export default function Home(){
 
                 {/* Intro */}
                 <div className="grid grid-cols-3 gap-12">
-                    <div className="col-span-2 text-5xl font-semibold">We are leading and educating a new era for air conditioning, heating, cooling, fan coils and retrofits</div>
+                    <div className="col-span-2 text-5xl font-semibold">
+                        <h1>We are leading and educating a new era for air conditioning, heating, cooling, fan coils and retrofits</h1>
+                    </div>
+
                     <div className="grid gap-y-4 pb-16">
                         <p>Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity</p>
                         <p className="underline font-semibold">Read More</p>
@@ -85,10 +88,10 @@ export default function Home(){
                 </div>
 
                 <div className="grid grid-cols-4 gap-8 w-full">
-                    <div className="h-48 bg-aurumgreen-600">filler</div>
-                    <div className="h-48 bg-aurumgreen-600">filler</div>
-                    <div className="h-48 bg-aurumgreen-600">filler</div>
-                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                    <div className="h-48 bg-blue-600">filler</div>
+                    <div className="h-48 bg-blue-600">filler</div>
+                    <div className="h-48 bg-blue-600">filler</div>
+                    <div className="h-48 bg-blue-600">filler</div>
                 </div>
             </div>
             {/* <div className="flex flex-col py-28 items-center justify-center px-3 mx-auto max-w-6xl">
@@ -115,25 +118,27 @@ export default function Home(){
                 </div>
                 <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
 
-                {/* Intro */}
                 <div className="grid grid-cols-3 gap-12">
-                    <div className="col-span-2 text-5xl font-semibold">We are leading and educating a new era for air conditioning, heating, cooling, fan coils and retrofits</div>
-                    <div className="grid gap-y-4 pb-16">
-                        <p>Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity</p>
-                        <p className="underline font-semibold">Read More</p>
+                    <div className="col-span-2">
+                        <div>
+                            <h1 className="text-3xl">Homeowner Benefits</h1>
+                            <p>Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
+                        </div>
+                        <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
+                        <div>
+                            <h1>Homeowner Benefits</h1>
+                            <p>Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
+                        </div>
+                    </div>
 
+                    {/* Filler Photo */}
+                    <div className="grid gap-y-4 pb-16">
+                        <div className="p-6 h-[500px] rounded-2xl bg-blue-500"></div>
                     </div>
 
                 </div>
-
-                <div className="grid grid-cols-4 gap-8 w-full">
-                    <div className="h-48 bg-aurumgreen-600">filler</div>
-                    <div className="h-48 bg-aurumgreen-600">filler</div>
-                    <div className="h-48 bg-aurumgreen-600">filler</div>
-                    <div className="h-48 bg-aurumgreen-600">filler</div>
-                </div>
-                <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
             </div>
+
             {/* Banner */}
             <div className="py-10">
                 <div className="my-6 p-6 bg-neutral-800 grid grid-cols-5 gap-4">
@@ -144,7 +149,7 @@ export default function Home(){
                                 <p className="">{item.description}</p>
                             </div>
                         </IconContext.Provider>
-                        ))}
+                    ))}
                 </div> 
             </div>
         </div>
