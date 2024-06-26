@@ -30,7 +30,7 @@ export default function Home(){
             <div className="min-h-screen relative">
 
                     {/* Written Section*/}
-                    <div className="absolute text-neutral-100 flex flex-col gap-8 justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
+                    <div className="absolute text-neutral-100 flex flex-col gap-8 justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 md:pl-24 text-xl font-bold">
                         <SideReveal propDelay={7.9} className="">
                             <div className="space-y-5">
                                 <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-galliano-300">Values</span> With A New School <span className="text-aurumgreen-600">Touch</span></p>
@@ -43,7 +43,7 @@ export default function Home(){
                         
                         {/* Canada Logo*/}
                         <motion.div 
-                            className="absolute z-40 flex justify-center items-center pl-3 sm:left-16 bottom-10 gap-x-2"
+                            className="absolute z-40 flex justify-center items-center pl-3 sm:left-16 md:left-24 bottom-10 gap-x-2"
                             initial={{ opacity: 0}}
                             animate={{ opacity: 1}}
                             transition={{ duration: 0.3, ease: 'easeOut', delay: 10 }}
@@ -66,7 +66,7 @@ export default function Home(){
 
 
             {/* Who Are We? */}
-            <div className="h-screen bg-codgray-200 p-3 sm:p-16 text-aurumgrey">
+            <div className="h-screen bg-codgray-200 p-3 sm:p-16 md:p-24 text-aurumgrey">
                 {/* Header */}
                 <div className="bg-aurumgrey text-white rounded-3xl p-2 w-28 flex justify-center items-center">
                     <p>01 - About</p>
@@ -111,7 +111,7 @@ export default function Home(){
             </div> */}
 
            {/* Product List */}
-           <div className="h-screen bg-codgray-200 p-3 sm:p-16 text-aurumgrey">
+           <div className="h-screen bg-codgray-200 p-3 sm:p-16 md:p-24 text-aurumgrey">
                 {/* Header */}
                 <div className="bg-aurumgrey text-white rounded-3xl p-2 w-28 flex justify-center items-center">
                     <p>02 - Products</p>
@@ -119,14 +119,29 @@ export default function Home(){
                 <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
 
                 <div className="grid grid-cols-3 gap-12">
-                    <div className="col-span-2">
+                    <div className="col-span-2 grid grid-cols-2 gap-8">
                         <div>
+                            <div>1</div>
+                            <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
                             <h1 className="text-3xl">Homeowner Benefits</h1>
                             <p>Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
                         </div>
-                        <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
                         <div>
-                            <h1>Homeowner Benefits</h1>
+                            <div>1</div>
+                            <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
+                            <h1 className="text-3xl">Homeowner Benefits</h1>
+                            <p>Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
+                        </div>
+                        <div>
+                            <div>1</div>
+                            <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
+                            <h1 className="text-3xl">Homeowner Benefits</h1>
+                            <p>Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
+                        </div>
+                        <div>
+                            <div>1</div>
+                            <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
+                            <h1 className="text-3xl">Homeowner Benefits</h1>
                             <p>Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
                         </div>
                     </div>
