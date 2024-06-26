@@ -43,7 +43,7 @@ export default function Home(){
                         
                         {/* Canada Logo*/}
                         <motion.div 
-                            className="absolute z-40 flex justify-center items-center left-16 bottom-10 gap-x-2"
+                            className="absolute z-40 flex justify-center items-center pl-3 sm:left-16 bottom-10 gap-x-2"
                             initial={{ opacity: 0}}
                             animate={{ opacity: 1}}
                             transition={{ duration: 0.3, ease: 'easeOut', delay: 10 }}
@@ -73,10 +73,10 @@ export default function Home(){
                 </div>
                 <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
 
-                {/* Text */}
+                {/* Intro */}
                 <div className="grid grid-cols-3 gap-12">
                     <div className="col-span-2 text-5xl font-semibold">We are leading and educating a new era for air conditioning, heating, cooling, fan coils and retrofits</div>
-                    <div className="grid gap-y-4">
+                    <div className="grid gap-y-4 pb-16">
                         <p>Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity</p>
                         <p className="underline font-semibold">Read More</p>
 
@@ -84,7 +84,12 @@ export default function Home(){
 
                 </div>
 
-                <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
+                <div className="grid grid-cols-4 gap-8 w-full">
+                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                </div>
             </div>
             {/* <div className="flex flex-col py-28 items-center justify-center px-3 mx-auto max-w-6xl">
                 <Reveal>
@@ -102,7 +107,33 @@ export default function Home(){
                 </Reveal>
             </div> */}
 
+           {/* Product List */}
+           <div className="h-screen bg-codgray-200 p-3 sm:p-16 text-aurumgrey">
+                {/* Header */}
+                <div className="bg-aurumgrey text-white rounded-3xl p-2 w-28 flex justify-center items-center">
+                    <p>02 - Products</p>
+                </div>
+                <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
 
+                {/* Intro */}
+                <div className="grid grid-cols-3 gap-12">
+                    <div className="col-span-2 text-5xl font-semibold">We are leading and educating a new era for air conditioning, heating, cooling, fan coils and retrofits</div>
+                    <div className="grid gap-y-4 pb-16">
+                        <p>Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity</p>
+                        <p className="underline font-semibold">Read More</p>
+
+                    </div>
+
+                </div>
+
+                <div className="grid grid-cols-4 gap-8 w-full">
+                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                    <div className="h-48 bg-aurumgreen-600">filler</div>
+                </div>
+                <hr class="h-px my-8 border-0 bg-aurumgrey"></hr>
+            </div>
             {/* Banner */}
             <div className="py-10">
                 <div className="my-6 p-6 bg-neutral-800 grid grid-cols-5 gap-4">
