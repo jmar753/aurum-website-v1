@@ -76,7 +76,7 @@ export default function OurSolution(){
         <div className="text-neutral-100 px-6 leading-loose">
             {/* About Banner */}
             <div className="bg-gradient-to-b h-56 pt-20 text-5xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
-                <h1 className="text-neutral-100">Our <span className="text-aurumgreen-600">Solutions</span></h1>
+                <h1 className="text-neutral-100">Our <span className="text-apple-600">Solutions</span></h1>
             </div>
 
             {/* Written */}
@@ -116,8 +116,8 @@ export default function OurSolution(){
                 <h1>THE AURUM SOLUTION</h1>
                 <p>Aurum Manufacturing is proud to be one of the pioneers in retrofit development. This solution completely transforms your fan coil unit into an up-to-date modern and efficient system</p>
                 <div className="grid grid-cols-2 space-x-8">
-                    <div className="bg-aurumgreen-600 w-full h-[400px]"></div>
-                    <div className="bg-aurumgreen-600 w-full h-[400px]"></div>
+                    <div className="bg-apple-600 w-full h-[400px]"></div>
+                    <div className="bg-apple-600 w-full h-[400px]"></div>
                 </div>
             </div>
 
@@ -140,10 +140,10 @@ export default function OurSolution(){
                 <div className="grid grid-cols-2 gap-5">
                     <h1>ECM MOTOR</h1>
                     <h1>FLOAT SENSOR</h1>
-                    <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
-                    <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
-                    <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
-                    <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
+                    <div className="bg-apple-600 h-[300px] w-full"></div>
+                    <div className="bg-apple-600 h-[300px] w-full"></div>
+                    <div className="bg-apple-600 h-[300px] w-full"></div>
+                    <div className="bg-apple-600 h-[300px] w-full"></div>
                 </div>
             </div>
 
@@ -151,7 +151,7 @@ export default function OurSolution(){
             <div className="text-center space-y-8 pb-20">
                 <div className="grid grid-cols-2">
                     {gridinfo.map((item, index) => (
-                        <div className="border-aurumgreen-1">
+                        <div className="border-apple-1">
                             <h1>{item.title}</h1>
                             <p>{item.note1}</p>
                             <p>{item.note2}</p>

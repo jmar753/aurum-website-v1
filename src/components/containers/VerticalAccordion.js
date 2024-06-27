@@ -43,7 +43,7 @@ const Panel = ({ open, setOpen, id, title, description, links, check, setCheck }
   return (
     <div className="px-6">
       <button
-        className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600"
+        className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-apple-600"
         onClick={() => setOpen(id)}
       >
         <span className="block lg:hidden text-2xl font-semibold">{title}</span>
@@ -64,7 +64,7 @@ const Panel = ({ open, setOpen, id, title, description, links, check, setCheck }
             >
               {links.map((item, index) => (
                 <NavLink to={item.link} onClick={() => setCheck(false)}>
-                  <div className="hover:cursor-pointer hover:text-aurumgreen-600">
+                  <div className="hover:cursor-pointer hover:text-apple-600">
                     {item.title}
                   </div>
                 </NavLink>
@@ -82,7 +82,7 @@ const Panel2 = ({id, title, links }) => {
   return (
     <div className="px-6">
       <NavLink to={links}>
-        <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600">
+        <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-apple-600">
           <span className="block lg:hidden text-2xl font-semibold">{title}</span>
         </button>
       </NavLink>

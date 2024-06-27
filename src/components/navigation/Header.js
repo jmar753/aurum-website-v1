@@ -30,7 +30,7 @@ export default function Header(){
                         style={{ 
                             transform: open ? "scaleX(1)" : "scaleX(0)",
                         }}
-                        className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-aurumgreen-600 transition-transform duration-300 ease-out"
+                        className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-apple-600 transition-transform duration-300 ease-out"
                     />
                 </NavLink>
                 <AnimatePresence>
@@ -131,7 +131,7 @@ export default function Header(){
     }
 
     //Mobile Navigation
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Blog", nav:"/blog"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
 
     //Mobile Assets
     const MobilePopup = () => {
@@ -186,7 +186,7 @@ export default function Header(){
     }
 
     return(
-        <header className="bg-aurumblack/50 text-neutral-100 h-[5rem] shrink-0 px-6 sm:px-8 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full">
+        <header className="bg-aurumblack/50 text-neutral-100 h-[5rem] shrink-0 px-6 sm:px-8 md:px-16 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full">
 
             {/* Logo */}
             <div className="">
@@ -209,7 +209,7 @@ export default function Header(){
 
             {/* Random item */}
             <p className="text-right sm:block hidden underline">
-                905-597-4799 | info@aurum-m.com
+                .
             </p>
         </header>
     )
