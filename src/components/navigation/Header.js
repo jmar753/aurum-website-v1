@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom"
 import { IconContext } from "react-icons";
 import { HiMenu } from "react-icons/hi";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
@@ -11,6 +11,20 @@ import logoblack from "../../RoughAssets/LogoNoTree.svg"
 import VerticalAccordion from "../containers/VerticalAccordion";
 
 export default function Header(){
+    const [hidden, setHidden] = useState(false);
+    const {scrollY} = useScroll();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const previous = scrollY.getPrevious()
+
+        if (latest > previous && latest > 150) {
+            setHidden(true)
+        }
+
+        else {
+            setHidden(false)
+        }
+    })
 
     //Dropdown Menu
     const FlyoutLink = ({ children, to, FlyoutContent}) => {
@@ -186,7 +200,15 @@ export default function Header(){
     }
 
     return(
-        <header className="bg-aurumblack/50 text-neutral-100 h-[5rem] shrink-0 px-6 sm:px-8 md:px-16 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full">
+        <motion.nav 
+            className="bg-aurumblack/50 text-neutral-100 h-[5rem] shrink-0 px-6 sm:px-8 md:px-16 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full"
+            variants={{
+                visible: {y: 0},
+                hidden: {y: "-100%"},
+            }}
+            animate={hidden ? "hidden" : "visible"}
+            transition={{ duration: 0.2, ease:"easeInOut"}}
+        >
 
             {/* Logo */}
             <div className="">
@@ -211,6 +233,6 @@ export default function Header(){
             <p className="text-right sm:block hidden underline">
                 .
             </p>
-        </header>
+        </motion.nav>
     )
 }

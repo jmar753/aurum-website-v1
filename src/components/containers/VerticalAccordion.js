@@ -26,7 +26,7 @@ const VerticalAccordion = ({check, setCheck}) => {
           return (
             <Panel2
               key={item.id}
-              id={item.id}
+              links={item.links}
               title={item.title}
               setCheck={setCheck}
             />
@@ -77,11 +77,11 @@ const Panel = ({ open, setOpen, id, title, description, links, check, setCheck }
   );
 };
 
-const Panel2 = ({id, title, links }) => {
+const Panel2 = ({id, title, links, setCheck }) => {
 
   return (
-    <div className="px-6">
-      <NavLink to={links}>
+    <div className="px-6" key={id}>
+      <NavLink to={links} onClick={() => setCheck(false)}>
         <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-apple-600">
           <span className="block lg:hidden text-2xl font-semibold">{title}</span>
         </button>
@@ -119,11 +119,16 @@ const items = [
 const items2 = [
   {
     id: 1,
+    title: "Blog",
+    links: "/blog",
+  },
+  {
+    id: 2,
     title: "Resources",
     links: "/resources",
   },
   {
-    id: 2,
+    id: 3,
     title: "Contact",
     links: "/contactus",
   },

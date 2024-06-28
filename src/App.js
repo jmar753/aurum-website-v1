@@ -22,6 +22,7 @@ import MHR from './pages/Products/MHR';
 //Single Pages
 import Contact from './pages/Contact';
 import Resources from './pages/Resources';
+import Blog from './pages/Blog';
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
           <Route exact path="/aboutus" element={<AboutUs/>}/>
           <Route exact path="/ourhistory" element={<OurHistory/>}/>
           <Route exact path="/oursolution" element={<OurSolution/>}/>
+
+          {/* Blog */}
+          <Route exact path="/blog" element={<Blog/>}/>
 
           {/* Contact */}
           <Route exact path="/contactus" element={<Contact/>}/>
