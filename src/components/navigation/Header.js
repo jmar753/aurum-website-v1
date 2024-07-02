@@ -44,7 +44,7 @@ export default function Header(){
                         style={{ 
                             transform: open ? "scaleX(1)" : "scaleX(0)",
                         }}
-                        className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-apple-600 transition-transform duration-300 ease-out"
+                        className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-aurumgreen-600 transition-transform duration-300 ease-out"
                     />
                 </NavLink>
                 <AnimatePresence>
@@ -230,7 +230,7 @@ export default function Header(){
                 <MobilePopup/>
 
                 {/* Random item */}
-                <button className="text-right lg:block hidden underline">
+                <button className="text-right lg:flex hidden h-10 w-44 font-semibold rounded-3xl border-2 border-aurumgreen-600 text-aurumgreen-600 justify-center items-center">
                     Get Estimate
                 </button>
             </div>

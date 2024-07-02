@@ -48,10 +48,10 @@ export default function Footer(){
 
                     <p>Subscribe to our newsletter to keep up to date with all things Aurum!</p>
 
-                    <div className="mt-4 mb-3 xl:pl-3 inline-block md:max-w-xl w-full overflow-hidden border bg-apple-200 border-gray-200 rounded-sm focus-within:ring focus-within:ring-apple-300">
+                    <div className="mt-4 mb-3 xl:pl-3 inline-block md:max-w-xl w-full overflow-hidden border bg-aurumgreen-200 border-gray-200 rounded-sm focus-within:ring focus-within:ring-aurumgreen-300">
                         <div className="flex flex-wrap items-center">
                             <div className="w-full xl:flex-1">
-                                <input className="p-3 xl:p-0 xl:pr-6 w-full text-sm font-roboto-regular bg-apple-200 text-gray-500 placeholder-gray-500 outline-none" id="footerInput1-1" type="text" placeholder="Enter your e-mail address"/></div><div className="w-full xl:w-auto"><div className="block"><button className="py-2 px-8 w-full text-neutral-100 font-productsans-medium border border-apple-700 focus:ring focus:ring-apple-300 bg-apple-600 hover:bg-apple-700 transition ease-in-out duration-200" type="button">Subscribe</button></div></div></div></div>
+                                <input className="p-3 xl:p-0 xl:pr-6 w-full text-sm font-roboto-regular bg-aurumgreen-200 text-gray-500 placeholder-gray-500 outline-none" id="footerInput1-1" type="text" placeholder="Enter your e-mail address"/></div><div className="w-full xl:w-auto"><div className="block"><button className="py-2 px-8 w-full text-neutral-100 font-productsans-medium border border-aurumgreen-700 focus:ring focus:ring-aurumgreen-300 bg-aurumgreen-600 hover:bg-aurumgreen-700 transition ease-in-out duration-200" type="button">Subscribe</button></div></div></div></div>
 
                 </div>
 

@@ -52,7 +52,7 @@ export default function Home(){
                                     animate={{ opacity: 1}}
                                     transition={{ duration: 0.3, ease: 'easeOut', delay: 9.6 }}
                                 >
-                                    <button className="p-4 h-14 bg-aurumgreen-600 hover:bg-aurumgreen-700 flex justify-center items-center gap-x-4 transition duration-200 w-48 sm:w-auto">
+                                    <button className="p-4 h-12 bg-aurumgreen-600 hover:bg-aurumgreen-700 flex justify-center items-center gap-x-4 transition duration-200 w-48 sm:w-auto rounded-3xl">
                                         <p>View Retrofits</p>
                                         <FaArrowRight className="hidden sm:block"/>
                                     </button>
@@ -63,7 +63,7 @@ export default function Home(){
                                     animate={{ opacity: 1}}
                                     transition={{ duration: 0.3, ease: 'easeOut', delay: 9.8 }}
                                 >
-                                    <button className="p-4 h-14 hover:border-aurumgreen-600 hover:text-aurumgreen-600 border-2 flex justify-center items-center gap-x-4 transition duration-200 w-48 sm:w-auto">
+                                    <button className="p-4 h-12 hover:border-aurumgreen-600 hover:text-aurumgreen-600 border-2 flex justify-center items-center gap-x-4 transition duration-200 w-48 sm:w-auto rounded-3xl">
                                         <p>Installation Services</p>
                                         <FaArrowRight className="hidden sm:block"/>
                                     </button>
@@ -126,7 +126,7 @@ export default function Home(){
                 <div className="grid md:grid-cols-5">
                     <div className="md:col-span-2 relative hidden md:block">
                         <div className="bg-aurumgrey relative">
-                            <img src="https://images.unsplash.com/photo-1667264921635-0fdd6bab6174?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhlYXRpbmclMjBzeXN0ZW18ZW58MHx8MHx8fDA%3D" className="opacity-40 h-full w-full"/>
+                            <img src="https://images.unsplash.com/photo-1667264921635-0fdd6bab6174?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhlYXRpbmclMjBzeXN0ZW18ZW58MHx8MHx8fDA%3D" className="opacity-40 h-full w-full" />
                             <div className="absolute bottom-0 right-0 w-2/5 h-2/5 bg-aurumgreen-600 z-20 flex flex-col justify-center items-center px-10 space-y-2">
                                 <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
                                     <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" className="h-8"></img>
@@ -160,10 +160,10 @@ export default function Home(){
             <div className="h-screen w-full flex justify-center items-center bg-aurumblack">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
-                    <h1 className="text-5xl font-bold">Why choose Aurum for your home?</h1>
+                    <h1 className="text-5xl font-bold py-4">Why choose Aurum for your home?</h1>
 
                     {/* Banner */}
-                    <div className="py-10">
+                    <div className="py-4">
                         <div className="my-6 p-6 grid grid-cols-4 gap-12">
                             {BannerArray.map((item, index) => (
                                 <div key={item.description} className="text-left space-y-6">

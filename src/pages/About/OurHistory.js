@@ -34,7 +34,7 @@ export default function OurHistory(){
         <div className="text-neutral-100 px-6 leading-loose">
             {/* About Banner */}
             <div className="bg-gradient-to-b h-56 pt-20 text-5xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
-                <h1 className="text-neutral-100">Our <span className="text-apple-600">History</span></h1>
+                <h1 className="text-neutral-100">Our <span className="text-aurumgreen-600">History</span></h1>
             </div>
 
             {/* Written */}
