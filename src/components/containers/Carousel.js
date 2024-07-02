@@ -1,27 +1,94 @@
-export default function Carousel() {
-    return(
-        <div class="relative mt-32">
-            <h1 class="text-5xl font-extrabold tracking-tight text-center underline capitalize decoration-emerald-400">Get away this winter</h1>
-            <ul class="mt-10 pb-8 px-[50vw] w-full flex gap-8 snap-x overflow-x-auto self-center">
+import { motion, useTransform, useScroll } from "framer-motion";
+import { useRef } from "react";
 
-                <li class="snap-center">
-                    <div class="relative flex-shrink-0 max-w-[95vw] overflow-hidden rounded-3xl">
-                        <img src="https://images.unsplash.com/photo-1542144612-1b3641ec3459?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="" class="absolute inset-0 object-cover object-bottom w-full h-full " />
-                        <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-black/75"></div>
+const Carousel = () => {
+  return (
+    <div className="bg-neutral-800">
+      <HorizontalScrollCarousel />
+    </div>
+  );
+};
 
-                        <div class=" relative h-96 w-[768px] p-12 flex flex-col justify-between items-start">
-                            <div>
-                                <p class="font-medium text-stone-50">Destination</p>
-                                <h2 class="w-2/3 mt-3 text-3xl font-semibold tracking-tight text-white">amit deka</h2>
-                            </div>
+const HorizontalScrollCarousel = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
 
-                            <a href="#" class="px-4 py-3 text-sm font-medium bg-white rounded-lg text-slate-900"> browse</a>
-                        </div>
-                    </div>
-                </li>
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
-                <li></li>*4 times
-            </ul>
-        </div>
-    )
-}
+  return (
+    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex gap-4">
+          {cards.map((card) => {
+            return <Card card={card} key={card.id} />;
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+const Card = ({ card }) => {
+  return (
+    <div
+      key={card.id}
+      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+    >
+      <div
+        style={{
+          backgroundImage: `url(${card.url})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+      ></div>
+      <div className="absolute inset-0 z-10 grid place-content-center">
+        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+          {card.title}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Carousel;
+
+const cards = [
+  {
+    url: "/imgs/abstract/1.jpg",
+    title: "Title 1",
+    id: 1,
+  },
+  {
+    url: "/imgs/abstract/2.jpg",
+    title: "Title 2",
+    id: 2,
+  },
+  {
+    url: "/imgs/abstract/3.jpg",
+    title: "Title 3",
+    id: 3,
+  },
+  {
+    url: "/imgs/abstract/4.jpg",
+    title: "Title 4",
+    id: 4,
+  },
+  {
+    url: "/imgs/abstract/5.jpg",
+    title: "Title 5",
+    id: 5,
+  },
+  {
+    url: "/imgs/abstract/6.jpg",
+    title: "Title 6",
+    id: 6,
+  },
+  {
+    url: "/imgs/abstract/7.jpg",
+    title: "Title 7",
+    id: 7,
+  },
+];

@@ -1,3 +1,5 @@
+import Carousel from "../components/containers/Carousel"
+
 export default function Blog(){
     return(
         <div className="bg-aurumgrey h-screen w-full text-neutral-100 px-6 space-y-4">
@@ -39,7 +41,8 @@ export default function Blog(){
                 </div>
 
                 {/* Carousel */}
-                <div class="relative mt-32">
+                <Carousel/>
+                {/* <div class="relative mt-32">
                     <ul class="mt-10 pb-8 px-[50vw] w-full flex gap-8 snap-x overflow-x-auto self-center">
                         <li class="snap-center">
                             <div class="relative flex-shrink-0 max-w-[95vw] overflow-hidden rounded-3xl">
@@ -59,7 +62,7 @@ export default function Blog(){
 
                         <li></li>*4 times
                     </ul>
-                </div>
+                </div> */}
             </div>
         </div>
     )
