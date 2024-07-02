@@ -33,7 +33,7 @@ export default function Header(){
 
         return (
             <div 
-                className="group relative h-fit w-fit"
+                className="group relative h-[4rem] w-24 flex items-center justify-center"
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
             >
@@ -55,7 +55,7 @@ export default function Header(){
                             exit={{ opacity: 0, y:15 }}
                             style={{ x:"-50%" }}
                             transition={{duration: 0.3, ease: 'easeOut'}}
-                            className="absolute left-1/2 top-12  bg-white text-black"
+                            className="absolute left-1/2 top-20  bg-white text-black"
                         >
                             <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent"/>
                             <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white"/>
@@ -156,14 +156,14 @@ export default function Header(){
             <>
                 {/* Pop Up Actuator */}
                 <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100'}}>
-                    <div className="sm:hidden flex" onClick={() => {setCheck(true)}}>
+                    <div className="lg:hidden flex" onClick={() => {setCheck(true)}}>
                         <HiMenu/>
                     </div>
                 </IconContext.Provider>
                 <AnimatePresence>
                     { check && (
                         <motion.div 
-                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 sm:hidden"
+                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 lg:hidden"
                             initial={{ opacity: 0,}}
                             animate={{ opacity: 1,}}
                             exit={{ opacity: 0,}}
@@ -178,7 +178,7 @@ export default function Header(){
                                     </div>
                                 </NavLink>
                                 <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100'}}>
-                                    <div className="sm:hidden flex" onClick={() => {setCheck(false)}}>
+                                    <div className="lg:hidden flex" onClick={() => {setCheck(false)}}>
                                         <IoClose/>
                                     </div>
                                 </IconContext.Provider>
@@ -201,7 +201,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-aurumblack/50 text-neutral-100 h-[5rem] shrink-0 px-6 sm:px-8 md:px-16 flex sm:grid sm:grid-cols-3 justify-between items-center fixed top-0 z-40 w-full"
+            className="bg-aurumblack/50 text-neutral-100 h-[5rem] px-6 fixed top-0 z-40 w-full flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
@@ -209,16 +209,16 @@ export default function Header(){
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.2, ease:"easeInOut"}}
         >
-
-            {/* Logo */}
-            <div className="">
-                <NavLink to="/">
-                    <img src={logo} alt="logo" className="h-16"/>
-                </NavLink>
-            </div>
+            <div className="w-full h-full max-w-7xl flex justify-between items-center">
+                {/* Logo */}
+                <div className="">
+                    <NavLink to="/">
+                        <img src={logo} alt="logo" className="h-16"/>
+                    </NavLink>
+                </div>
 
                 {/* Middle Navigation */}
-                <div className="sm:flex hidden justify-between">
+                <div className="lg:flex hidden justify-between">
                     {navArray.map((item, index) => (
                         <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
                             {item.name}
@@ -226,13 +226,14 @@ export default function Header(){
                     ))}
                 </div>
 
-            {/* Mobile Pop up */}
-            <MobilePopup/>
+                {/* Mobile Pop up */}
+                <MobilePopup/>
 
-            {/* Random item */}
-            <p className="text-right sm:block hidden underline">
-                .
-            </p>
+                {/* Random item */}
+                <button className="text-right lg:block hidden underline">
+                    Get Estimate
+                </button>
+            </div>
         </motion.nav>
     )
 }

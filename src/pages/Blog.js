@@ -41,7 +41,7 @@ export default function Blog(){
                 </div>
 
                 {/* Carousel */}
-                <Carousel/>
+                {/* <Carousel/> */}
                 {/* <div class="relative mt-32">
                     <ul class="mt-10 pb-8 px-[50vw] w-full flex gap-8 snap-x overflow-x-auto self-center">
                         <li class="snap-center">
