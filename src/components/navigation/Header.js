@@ -224,7 +224,7 @@ export default function Header(){
                         <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
                             <div className="flex justify-center items-center space-x-2 group">
                                 <p className="font-medium text-lg">{item.name}</p>
-                                {item.name === "About" || item.name === "Contact" || item.name === "Blog" ? <IoIosArrowDown className="group-hover:text-aurumgreen-600"/> : null}
+                                {item.name === "About" || item.name === "Contact" || item.name === "Products" ? <IoIosArrowDown className="group-hover:text-aurumgreen-600 duration-200"/> : null}
                             </div>
                         </FlyoutLink>
                     ))}

@@ -68,7 +68,9 @@ export default function Home(){
 
 
             {/* Who Are We? */}
-            <div className="h-screen border-t-gray-700 text-white flex items-center justify-center">
+            <div className="h-screen bg-zinc-50 grid grid-cols-2 text-gray-800">
+                <div className="flex justify-center items-center">1</div>
+                <div className="flex justify-center items-center">2</div>
 
             </div>
 
