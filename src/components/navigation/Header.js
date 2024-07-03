@@ -4,6 +4,7 @@ import { HiMenu } from "react-icons/hi";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { IoClose } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
 
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 import logoblack from "../../RoughAssets/LogoNoTree.svg"
@@ -125,16 +126,16 @@ export default function Header(){
             <div className="w-64 bg-white p-6 shadow-xl">
                 <div className="mb-3 space-y-3">
                     <p to="#" className="block text-sm hover:underline">
-                        <span className="font-semibold">Phone:</span>
-                        111-111-1111
+                        <span className="font-semibold">Phone: </span>
+                        905-597-4799
                     </p>
                     <p to="#" className="block text-sm hover:underline">
-                        <span className="font-semibold">Email:</span>
-                        111-111-1111
+                        <span className="font-semibold">Email: </span>
+                        info@aurum-m.com
                     </p>
                     <p to="#" className="block text-sm hover:underline">
-                        <span className="font-semibold">Address:</span>
-                        111-111-1111
+                        <span className="font-semibold">Address: </span>
+                        200 Tesma Way #7, Vaughan, ON L4K 0J9
                     </p>
                 </div>
                 <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-gray-800">
@@ -221,7 +222,10 @@ export default function Header(){
                 <div className="lg:flex hidden justify-between">
                     {navArray.map((item, index) => (
                         <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
-                            <p className="font-medium text-lg">{item.name}</p>
+                            <div className="flex justify-center items-center space-x-2 group">
+                                <p className="font-medium text-lg">{item.name}</p>
+                                {item.name === "About" || item.name === "Contact" || item.name === "Blog" ? <IoIosArrowDown className="group-hover:text-aurumgreen-600"/> : null}
+                            </div>
                         </FlyoutLink>
                     ))}
                 </div>

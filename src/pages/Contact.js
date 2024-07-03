@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function Contact(){
     return(
-        <div className="bg-aurumgrey h-screen w-full flex items-center justify-center text-gray-800">
+        <div className="h-screen w-full flex items-center justify-center text-gray-800">
             <div className="w-screen">
 
                 {/* Opener */}
@@ -47,7 +47,7 @@ export default function Contact(){
                     <div className="px-12 py-6 space-y-8">
                         <div className="space-y-1">
                             <h1 className="text-xl font-semibold">Chat with us</h1>
-                            <p className="text-neutral-300">Speak to our friendly team VIA phone or email</p>
+                            <p className="text-gray-500">Speak to our friendly team VIA phone or email</p>
                             <div className="flex items-center gap-x-2 font-semibold underline">
                                 <FaLinkedin/>
                                 <p>Message us on LinkedIn</p>
@@ -72,7 +72,7 @@ export default function Contact(){
 
                         <div className="space-y-1">
                             <h1 className="text-xl font-semibold">Visit us</h1>
-                            <p className="text-neutral-300">Talk to us in person at our Vaughan HQ</p>
+                            <p className="text-gray-500">Talk to us in person at our Vaughan HQ</p>
                             <div  className="flex items-center gap-x-2 font-semibold underline">
                                 <FaLocationDot/>
                                 <p>200 Tesma Way #7, Vaughan, ON L4K 0J9</p>
