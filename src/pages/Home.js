@@ -24,24 +24,15 @@ export default function Home(){
     ]
 
     return(
-        <div className="text-neutral-100">
+        <div className="text-gray-800">
 
             {/* Animated Intro */}
             <div className="min-h-screen relative">
-                {/* <motion.div 
-                        initial={{ opacity: 1}}
-                        animate={{ opacity: 0}}
-                        transition={{ duration: 0.3, ease: 'easeOut', delay: 4 }}
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40"
-                >
-                    <img src={logo} alt="logo" className="h-36"/>
-                </motion.div> */}
-
                 {/* Written Section*/}
-                <div className="absolute flex flex-col md:justify-center items-center w-full gap-8 pt-[120px] md:pt-0 z-30 h-screen px-6 text-neutral-100 text-xl font-bold">
+                <div className="absolute flex flex-col md:justify-center items-center w-full gap-8 pt-[120px] md:pt-0 z-30 h-screen px-6 text-gray-800 text-xl font-bold">
                     <div className="max-w-7xl md:grid md:grid-cols-2">
                         <div>
-                            <SideReveal propDelay={7.9} className="">
+                            <SideReveal className="">
                                 <div className="space-y-5">
                                     <p className="text-4xl md:text-5xl lg:text-6xl">Old School <span className="text-galliano-300">Values</span> With A New School <span className="text-aurumgreen-600">Touch</span></p>
                                 </div>
@@ -50,7 +41,7 @@ export default function Home(){
                                 <motion.div 
                                     initial={{ opacity: 0}}
                                     animate={{ opacity: 1}}
-                                    transition={{ duration: 0.3, ease: 'easeOut', delay: 9.6 }}
+                                    transition={{ duration: 0.3, ease: 'easeOut', delay: 0.9 }}
                                 >
                                     <button className="p-4 h-12 bg-aurumgreen-600 hover:bg-aurumgreen-700 flex justify-center items-center gap-x-4 transition duration-200 w-48 sm:w-auto rounded-3xl">
                                         <p>View Retrofits</p>
@@ -61,7 +52,7 @@ export default function Home(){
                                 <motion.div 
                                     initial={{ opacity: 0}}
                                     animate={{ opacity: 1}}
-                                    transition={{ duration: 0.3, ease: 'easeOut', delay: 9.8 }}
+                                    transition={{ duration: 0.3, ease: 'easeOut', delay: 1.1 }}
                                 >
                                     <button className="p-4 h-12 hover:border-aurumgreen-600 hover:text-aurumgreen-600 border-2 flex justify-center items-center gap-x-4 transition duration-200 w-48 sm:w-auto rounded-3xl">
                                         <p>Installation Services</p>
@@ -81,12 +72,12 @@ export default function Home(){
                                 className="z-40 flex justify-center items-center gap-x-2"
                                 initial={{ opacity: 0}}
                                 animate={{ opacity: 1}}
-                                transition={{ duration: 0.3, ease: 'easeOut', delay: 10 }}
+                                transition={{ duration: 0.3, ease: 'easeOut', delay: 1.3 }}
                             >
                                 <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
                                     <FaCanadianMapleLeaf className="text-red-600 h-6 w-6"/>
                                 </div>
-                                <div className="text-sm font-thin text-neutral-100">
+                                <div className="text-sm font-thin text-gray-800">
                                     <p>ONTARIO MANUFACTURED</p>
                                     <p>PROUDLY CANADIAN</p>
                                 </div>
@@ -97,7 +88,7 @@ export default function Home(){
                                 className="z-40 flex justify-center items-center gap-x-2"
                                 initial={{ opacity: 0}}
                                 animate={{ opacity: 1}}
-                                transition={{ duration: 0.3, ease: 'easeOut', delay: 10 }}
+                                transition={{ duration: 0.3, ease: 'easeOut', delay: 1.3 }}
                             >
                                 <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
                                     <img 
@@ -105,7 +96,7 @@ export default function Home(){
                                         className=""
                                     />
                                 </div>
-                                <div className="text-sm font-thin text-neutral-100">
+                                <div className="text-sm font-thin text-gray-800">
                                     <p>ASSURED, TESTED, INSPECTED</p>
                                     <p>AND CERTIFIED BY INTERTEK</p>
                                 </div>
@@ -115,14 +106,14 @@ export default function Home(){
                 </div>
 
                 {/* Video BG */}
-                <video className='absolute h-screen w-screen object-cover z-10' autoPlay muted>
+                {/* <video className='absolute h-screen w-screen object-cover z-10' autoPlay muted>
                     <source src={ShortVideo} type='video/mp4'/>
-                </video>
+                </video> */}
             </div>
 
 
             {/* Who Are We? */}
-            <div className="h-screen  text-white flex items-center justify-center">
+            {/* <div className="h-screen  text-white flex items-center justify-center">
                 <div className="grid md:grid-cols-5">
                     <div className="md:col-span-2 relative hidden md:block">
                         <div className="bg-aurumgrey relative">
@@ -154,10 +145,10 @@ export default function Home(){
 
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Why Choose Aurum? */}
-            <div className="h-screen w-full flex justify-center items-center bg-aurumblack">
+            <div className="h-screen w-full flex justify-center items-center bg-zinc-50">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
                     <h1 className="text-5xl font-bold py-4">Why choose Aurum for your home?</h1>
@@ -180,7 +171,7 @@ export default function Home(){
             </div>
 
             {/* Final Banner */}
-            <div className="flex flex-col gap-6 justify-center items-center bg-gradient-to-r from-aurumgreen-600 to-galliano-600 py-32">
+            <div className="flex flex-col gap-6 justify-center items-center bg-gradient-to-r from-aurumgreen-600 to-sky-600 py-32">
                 <h1 className="text-4xl font-bold">Ready to put an end to your old HVAC system?</h1>
                 <button className="bg-aurumgrey w-60 rounded-3xl p-3">Contact Support</button>
             </div>

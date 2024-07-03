@@ -33,12 +33,12 @@ export default function Header(){
 
         return (
             <div 
-                className="group relative h-[4rem] w-24 flex items-center justify-center"
+                className="group relative h-[4rem] px-5 flex items-center justify-center"
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
             >
                 {/* Header */}
-                <NavLink to={to} className="relative text-neutral-100">
+                <NavLink to={to} className="relative text-gray-800">
                     {children}
                     <span
                         style={{ 
@@ -137,7 +137,7 @@ export default function Header(){
                         111-111-1111
                     </p>
                 </div>
-                <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-neutral-100">
+                <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-gray-800">
                     Contact Zorzit
                 </button>
             </div>
@@ -201,7 +201,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-aurumblack/50 text-neutral-100 h-[5rem] px-6 fixed top-0 z-40 w-full flex justify-center items-center"
+            className="bg-white shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-800 h-[5rem] px-6 fixed top-0 z-40 w-full flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
@@ -213,7 +213,7 @@ export default function Header(){
                 {/* Logo */}
                 <div className="">
                     <NavLink to="/">
-                        <img src={logo} alt="logo" className="h-16"/>
+                        <img src={logoblack} alt="logo" className="h-16"/>
                     </NavLink>
                 </div>
 
@@ -221,7 +221,7 @@ export default function Header(){
                 <div className="lg:flex hidden justify-between">
                     {navArray.map((item, index) => (
                         <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
-                            {item.name}
+                            <p className="font-medium text-lg">{item.name}</p>
                         </FlyoutLink>
                     ))}
                 </div>

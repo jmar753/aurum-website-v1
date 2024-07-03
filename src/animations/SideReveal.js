@@ -22,7 +22,7 @@ export default function SideReveal({children, propDelay=0.25}){
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.8, delay: propDelay}}
+                transition={{ duration: 0.4, delay: propDelay}}
             >
                 {children}
             </motion.div>

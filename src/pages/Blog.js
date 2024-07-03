@@ -2,7 +2,7 @@ import Carousel from "../components/containers/Carousel"
 
 export default function Blog(){
     return(
-        <div className="bg-aurumgrey h-screen w-full text-neutral-100 px-6 space-y-4">
+        <div className="bg-aurumgrey h-screen w-full text-gray-800 px-6 space-y-4">
             {/* Title */}
             <h1 className="pt-[6rem] text-3xl">Aurum <span className="text-aurumgreen-600">Blog</span></h1>
 

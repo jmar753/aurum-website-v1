@@ -7,7 +7,7 @@ const VerticalAccordion = ({check, setCheck}) => {
 
   return (
     <section className="">
-      <div className="flex flex-col lg:flex-row h-fit w-full max-w-6xl mx-auto overflow-hidden">
+      <div className="flex flex-col lg:flex-row h-fit w-fit max-w-6xl overflow-hidden">
         {items.map((item) => {
           return (
             <Panel
