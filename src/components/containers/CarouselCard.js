@@ -31,7 +31,7 @@ export default function CarouselCard({item, index}){
                 </motion.div>
             }
             </AnimatePresence>
-            <img src={item.photo} className="object-cover"/>
+            <img src={item.photo} className="object-contain h-[400px] "/>
         </motion.div>
     )
 }

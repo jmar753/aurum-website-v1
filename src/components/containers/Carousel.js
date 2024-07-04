@@ -45,27 +45,44 @@ export default function Carousel(){
 		
 		controls = animate(xTranslation, [0, finalPosition], {
 			ease:'linear',
-			duration: 20,
+			duration: 25,
 			repeat: Infinity,
 			repeatType: 'loop',
 			repeatDelay: 0
-		}, [xTranslation, width])
+		})
 
 		return controls.stop
-	})
+	}, [xTranslation, width])
 
 	return(
-		<div className="">
-			<motion.div 
-				className="absolute left-0 flex gap-4" 
-				ref={ref}
-				style={{ x: xTranslation}}
-				>
-				{/* Card Layout */}
-				{[...images, ...images].map((item, index) => (
-					<CarouselCard item={item} index={index} key={index}/>
+		// <div className="">
+		// 	<motion.div 
+		// 		className="absolute left-0 flex gap-4 max-w-max" 
+		// 		ref={ref}
+		// 		style={{ x: xTranslation}}
+		// 	>
+		// 		{/* Card Layout */}
+		// 		{[...images, ...images].map((item, index) => (
+		// 			<CarouselCard item={item} index={index} key={index}/>
+		// 		))}
+
+		// 	</motion.div>
+		// </div>
+		<div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+				{images.map((item, index) => (
+					<li>
+						<CarouselCard item={item} index={index} key={index}/>
+					</li>
 				))}
-			</motion.div>
+			</ul>
+			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+				{images.map((item, index) => (
+					<li>
+						<CarouselCard item={item} index={index} key={index}/>
+					</li>
+				))}
+			</ul>
 		</div>
 	)
 }

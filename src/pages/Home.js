@@ -27,8 +27,8 @@ export default function Home(){
             {/* Animated Intro */}
             <div className="min-h-screen relative">
                 {/* Written Section*/}
-                <div className="absolute flex flex-col md:justify-center items-center w-full gap-8 pt-[120px] md:pt-0 z-30 h-screen px-6 text-gray-800 text-xl font-bold">
-                    <div className="max-w-7xl md:grid md:grid-cols-2">
+                <div className="flex flex-col md:justify-center items-center w-full gap-8 pt-[120px] md:pt-0 z-30 h-screen px-6 text-gray-800 text-xl font-bold">
+                    <div className="max-w-7xl w-full md:grid md:grid-cols-2">
                         {/* Right */}
                         <div className="space-y-4">
                             <SideReveal>
