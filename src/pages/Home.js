@@ -10,6 +10,7 @@ import SideReveal from "../animations/SideReveal";
 //react-icons library: https://react-icons.github.io/react-icons/
 import { SiAircanada } from "react-icons/si";
 import { FaRegHandshake, FaTree, FaRegThumbsUp, FaArrowRight, FaCanadianMapleLeaf } from "react-icons/fa";
+import Carousel from "../components/containers/Carousel";
 
 export default function Home(){
 
@@ -28,6 +29,7 @@ export default function Home(){
                 {/* Written Section*/}
                 <div className="absolute flex flex-col md:justify-center items-center w-full gap-8 pt-[120px] md:pt-0 z-30 h-screen px-6 text-gray-800 text-xl font-bold">
                     <div className="max-w-7xl md:grid md:grid-cols-2">
+                        {/* Right */}
                         <div className="space-y-4">
                             <SideReveal>
                                 <div className="">
@@ -61,6 +63,9 @@ export default function Home(){
                                 </motion.div>
                             </div>
                         </div>
+
+                        {/* Left */}
+                        <Carousel/>
 
                     </div>
                 </div>
