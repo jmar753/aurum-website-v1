@@ -7,14 +7,10 @@ export default function Footer(){
         <footer className="bg-neutral-800 text-white z-40 w-full pt-12 px-3 sm:px-8">
 
             {/* Top */}
-            <div className="flex flex-col md:flex-row justify-between md:h-48 gap-y-4 md:gap-y-0">
-
-                <div className="block md:hidden">
-                    <img src={logo} alt="logo" className="h-16"/>
-                </div>
+            <div className="grid grid-cols-2 md:flex flex-col md:flex-row justify-between md:h-48 gap-y-4 md:gap-y-0">
 
                 {/* About */}
-                <div className="w-full gap-y-4 space-y-2 md:space-y-0">
+                <div className="w-full gap-y-4 space-y-2 md:space-y-0 md:text-base text-sm">
                     <h1 className="font-bold text-lg">About</h1>
                     
                     <p>About Us</p>
@@ -24,7 +20,7 @@ export default function Footer(){
                 </div>
 
                 {/* Products */}
-                <div className="w-full space-y-2 md:space-y-0">
+                <div className="w-full space-y-2 md:space-y-0 md:text-base text-sm">
                     <h1 className="font-bold text-lg">Products</h1>
 
                     <p>BTR Series</p>
@@ -36,7 +32,7 @@ export default function Footer(){
                 </div>
 
                 {/* Resources */}
-                <div className="w-full space-y-2 md:space-y-0">
+                <div className="w-full space-y-2 md:space-y-0 md:text-base text-sm">
                     <h1 className="font-bold text-lg">Resources</h1>
 
                     <p>Owner's Guide</p>
@@ -47,8 +43,9 @@ export default function Footer(){
                 </div>
 
                 {/* Contact */}
-                <div className="w-full space-y-2 md:space-y-0">
-                    <h1 className="font-bold text-lg">Contact</h1>
+                <div className="col-span-2 md:col-span-1 w-full space-y-2 md:space-y-0 md:text-base text-sm">
+                    <h1 className="font-bold text-lg hidden md:block">Contact</h1>
+                    <h1 className="font-bold text-lg md:hidden block">Subscribe to our newsletter</h1>
 
                     <p>Subscribe to our newsletter to keep up to date with all things Aurum!</p>
 
