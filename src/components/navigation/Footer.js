@@ -4,7 +4,7 @@ import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 export default function Footer(){
 
     return(
-        <footer className="bg-neutral-800 text-gray-800 z-40 w-full pt-12 px-3 sm:px-8">
+        <footer className="bg-neutral-800 text-white z-40 w-full pt-12 px-3 sm:px-8">
 
             {/* Top */}
             <div className="flex justify-between h-48">
