@@ -82,14 +82,14 @@ export default function Home(){
 
 
             {/* What is Aurum? */}
-            <div className="py-32 flex justify-center items-center bg-zinc-50 text-gray-800">
-                <div className="max-w-7xl grid grid-cols-5 gap-14">
-                    <div className="flex justify-center items-center col-span-3">
+            <div className="px-4 py-20 md:py-32 flex justify-center items-center bg-zinc-50 text-gray-800 text-center md:text-left">
+                <div className="max-w-7xl grid md:grid-cols-5 gap-14">
+                    <div className="flex justify-center items-center md:col-span-3">
                         <video className='object-cover z-10 rounded-3xl' autoPlay muted>
                             <source src={ShortVideo} type='video/mp4'/>
                         </video>
                     </div>
-                    <div className="flex flex-col justify-center  space-y-4 col-span-2">
+                    <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:col-span-2">
                         <h1 className="font-semibold text-4xl">What is <span className="text-aurumgreen-600">Aurum</span>?</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
@@ -103,9 +103,9 @@ export default function Home(){
             </div>
 
             {/* Explore Our Products */}
-            <div className="py-32 flex justify-center items-center bg-white text-gray-800">
-                <div className="max-w-7xl grid grid-cols-5 gap-14">
-                    <div className="flex flex-col justify-center  space-y-4 col-span-2">
+            <div className="py-20 md:py-32 px-4 flex justify-center items-center bg-aurumwhite text-gray-800 text-center md:text-left">
+                <div className="max-w-7xl grid md:grid-cols-5 gap-14">
+                    <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:col-span-2">
                         <h1 className="font-semibold text-4xl">Explore Our Products</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
@@ -114,7 +114,7 @@ export default function Home(){
                             <FaArrowRight className="hidden sm:block"/>
                         </button>
                     </div>
-                    <div className="flex justify-center items-center col-span-3 w-full">
+                    <div className="flex justify-center items-center md:col-span-3 w-full">
                         {/* <img src={TempPhoto} className="w-full rounded-3xl shadow-2xl"/> */}
                         <FloatingImage/>
                     </div>
@@ -123,14 +123,14 @@ export default function Home(){
             </div>
 
             {/* Why Choose Aurum? */}
-            <div className="py-32 w-full flex justify-center items-center bg-aurumwhite">
+            <div className="py-20 md:py-32 px-4 flex justify-center items-center bg-white text-center md:text-left">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
                     <h1 className="text-5xl font-bold py-4">Why choose Aurum for your home?</h1>
 
                     {/* Banner */}
                     <div className="py-4">
-                        <div className="my-6 p-6 grid grid-cols-4 gap-12">
+                        <div className="my-6 p-6 grid md:grid-cols-4 gap-12">
                             {BannerArray.map((item, index) => (
                                 <div key={item.description} className="text-left space-y-6">
                                     <div className="h-16 w-16 flex justify-center items-center rounded-full bg-aurumgreen-600">
@@ -146,7 +146,7 @@ export default function Home(){
             </div>
 
             {/* Final Banner */}
-            <div className="flex flex-col gap-6 justify-center items-center bg-gradient-to-r from-aurumgreen-600 to-sky-600 py-32 text-white">
+            <div className="flex flex-col gap-6 justify-center items-center bg-gradient-to-r from-aurumgreen-600 to-sky-600 py-32 text-white px-4 text-center md:text-left">
                 <h1 className="text-4xl font-bold">Ready to put an end to your old HVAC system?</h1>
                 <button className="bg-aurumgrey w-60 rounded-3xl p-3">Contact Support</button>
             </div>
