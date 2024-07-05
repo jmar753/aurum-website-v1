@@ -1,7 +1,7 @@
 import {useEffect, useRef} from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-export default function SideReveal({children, propDelay=0.25}){
+export default function RightReveal({children, propDelay=0.25}){
     const ref = useRef(null);
     const isInView = useInView(ref)
 
@@ -17,7 +17,7 @@ export default function SideReveal({children, propDelay=0.25}){
         <div ref={ref}>
             <motion.div
                 variants={{
-                    hidden: {opacity: 0, x:-75},
+                    hidden: {opacity: 0, x:75},
                     visible: {opacity: 1, x:0},
                 }}
                 initial="hidden"

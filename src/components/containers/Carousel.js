@@ -68,7 +68,7 @@ export default function Carousel(){
 
 		// 	</motion.div>
 		// </div>
-		<div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+		<div class="w-1/4 h-[200px] sm:h-auto inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
 			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
 				{images.map((item, index) => (
 					<li>

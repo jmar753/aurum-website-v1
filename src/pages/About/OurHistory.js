@@ -31,7 +31,7 @@ export default function OurHistory(){
 
     return(
 
-        <div className="text-gray-800 px-6 leading-loose">
+        <div className="text-gray-800 px-4 leading-loose">
             {/* About Banner */}
             <div className="bg-gradient-to-b h-56 pt-20 text-5xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
                 <h1 className="text-gray-800">Our <span className="text-aurumgreen-600">History</span></h1>

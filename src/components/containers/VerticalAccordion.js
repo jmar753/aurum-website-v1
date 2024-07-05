@@ -41,7 +41,7 @@ const Panel = ({ open, setOpen, id, title, description, links, check, setCheck }
   const isOpen = open === id;
 
   return (
-    <div className="px-6">
+    <div className="px-4">
       <button
         className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600"
         onClick={() => setOpen(id)}
@@ -80,7 +80,7 @@ const Panel = ({ open, setOpen, id, title, description, links, check, setCheck }
 const Panel2 = ({id, title, links, setCheck }) => {
 
   return (
-    <div className="px-6" key={id}>
+    <div className="px-4" key={id}>
       <NavLink to={links} onClick={() => setCheck(false)}>
         <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600">
           <span className="block lg:hidden text-2xl font-semibold">{title}</span>

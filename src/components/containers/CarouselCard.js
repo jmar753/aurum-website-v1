@@ -7,7 +7,7 @@ export default function CarouselCard({item, index}){
     return (
         <motion.div 
             key={index} 
-            className="relative overflow-hidden h-[400px] min-w-[200px] bg-slate-400 rounded-xl flex justify-center items-center"
+            className="relative overflow-hidden h-[400px] min-w-[200px] bg-zinc-100 rounded-xl flex justify-center items-center"
             onHoverStart={() => setShowOverlay(true)}
             onHoverEnd={() => setShowOverlay(false)}
         >    

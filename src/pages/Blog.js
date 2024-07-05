@@ -3,7 +3,7 @@ import Carousel from "../components/containers/Carousel"
 export default function Blog(){
     return(
         <div className="flex justify-center items-center">
-            <div className="pb-20 w-full max-w-7xl text-gray-800 px-6 space-y-4">
+            <div className="pb-20 w-full max-w-7xl text-gray-800 px-4 space-y-4">
                 {/* Title */}
                 <h1 className="pt-[6rem] text-3xl font-semibold">Aurum <span className="text-aurumgreen-600">Blog</span></h1>
 

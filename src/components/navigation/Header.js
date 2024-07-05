@@ -95,7 +95,7 @@ export default function Header(){
 
     const ProductSection = () => {
         return(
-            <div className="w-64 bg-white p-6 shadow-xl">
+            <div className="w-64 bg-white p-6 shadow-xl z-40">
                 <div className="mb-3 space-y-3">
                     <h3 className="font-semibold">Older Series</h3>
                     <NavLink  to="#" className="block text-sm hover:underline pl-4">
@@ -172,7 +172,7 @@ export default function Header(){
                         >   
 
                             {/* Navigation Header */}
-                            <div className="flex items-center justify-between px-6">
+                            <div className="flex items-center justify-between px-4">
                                 <NavLink to="/"  onClick={() => setCheck(false)}>
                                     <div className="flex items-center h-[5rem]">
                                         <img src={logoblack} alt="logo" className="h-16"/>
@@ -202,7 +202,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-white shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-800 h-[5rem] px-6 fixed top-0 z-40 w-full flex justify-center items-center"
+            className="bg-white shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-800 h-[5rem] px-4 fixed top-0 z-40 w-full flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
