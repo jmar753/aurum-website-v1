@@ -234,7 +234,7 @@ export default function Header(){
 
                 {/* Random item */}
                 <button className="text-right lg:flex hidden h-10 w-44 font-semibold rounded-3xl border-2 border-aurumgreen-600 text-aurumgreen-600 justify-center items-center">
-                    Get Estimate
+                    Join Us
                 </button>
             </div>
         </motion.nav>
