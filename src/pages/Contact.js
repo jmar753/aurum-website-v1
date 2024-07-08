@@ -4,7 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 export default function Contact(){
     return(
         <div className="h-screen w-full flex items-center justify-center text-gray-800">
-            <div className="w-screen">
+            <div className="w-screen pt-16">
 
                 {/* Opener */}
                 <div className="text-center space-y-5 py-10">

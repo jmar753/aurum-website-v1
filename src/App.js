@@ -23,6 +23,7 @@ import MHR from './pages/Catalogue/MHR';
 import Contact from './pages/Contact';
 import Resources from './pages/Resources';
 import Blog from './pages/Blog';
+import { RetrofitDetails } from './components/RetrofitDetails';
 
 function App() {
 
@@ -50,11 +51,7 @@ function App() {
 
           {/*Products)*/}
           <Route exact path="/catalogue" element={<Catalogue/>}/>
-          <Route exact path="/btr-series" element={<BTR/>}/>
-          <Route exact path="/cfc-series" element={<CFC/>}/>
-          <Route exact path="/ddr-series" element={<DDR/>}/>
-          <Route exact path="/mhr-series" element={<MHR/>}/>
-          <Route exact path="/dtr-series" element={<DTR/>}/>
+          <Route exact path="/catalogue/:retrofitId" element={<RetrofitDetails/>}/>
 
           {/* No Page */}
           <Route exact path="*" element={<NoPage/>}/>
