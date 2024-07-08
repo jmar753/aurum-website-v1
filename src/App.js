@@ -24,6 +24,7 @@ import Contact from './pages/Contact';
 import Resources from './pages/Resources';
 import Blog from './pages/Blog';
 import { RetrofitDetails } from './components/RetrofitDetails';
+import Test from './pages/Test';
 
 function App() {
 
@@ -52,6 +53,9 @@ function App() {
           {/*Products)*/}
           <Route exact path="/catalogue" element={<Catalogue/>}/>
           <Route exact path="/catalogue/:retrofitId" element={<RetrofitDetails/>}/>
+
+          {/* Test */}
+          <Route exact path="/test" element={<Test/>}/>
 
           {/* No Page */}
           <Route exact path="*" element={<NoPage/>}/>

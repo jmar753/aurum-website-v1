@@ -145,7 +145,7 @@ export default function Header(){
     }
 
     //Mobile Navigation
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Catalogue", nav:"/catalogue", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Blog", nav:"/blog"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Catalogue", nav:"/catalogue", Flyout:ProductSection},{name:"Blog", nav:"/blog"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
 
     //Mobile Assets
     const MobilePopup = () => {
@@ -201,7 +201,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-white shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-800 h-[5rem] px-4 fixed top-0 z-40 w-full flex justify-center items-center"
+            className="bg-white shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-800 h-[5rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
@@ -209,13 +209,7 @@ export default function Header(){
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.2, ease:"easeInOut"}}
         >
-            <div className="w-full h-full max-w-7xl flex justify-between items-center">
-                {/* Logo */}
-                <div className="">
-                    <a href="/">
-                        <img src={logoblack} alt="logo" className="h-16"/>
-                    </a>
-                </div>
+            <div className="w-full h-full max-w-7xl justify-between items-center grid grid-cols-3">
 
                 {/* Middle Navigation */}
                 <div className="lg:flex hidden justify-between">
@@ -229,13 +223,22 @@ export default function Header(){
                     ))}
                 </div>
 
+                {/* Logo */}
+                <div className="flex justify-center items-center">
+                    <a href="/">
+                        <img src={logoblack} alt="logo" className="h-16"/>
+                    </a>
+                </div>
+
                 {/* Mobile Pop up */}
                 <MobilePopup/>
 
                 {/* Random item */}
-                <button className="text-right lg:flex hidden h-10 w-44 font-semibold rounded-3xl border-2 border-aurumgreen-600 text-aurumgreen-600 justify-center items-center">
-                    Join Us
-                </button>
+                <div className="flex items-end justify-end">
+                    <button className="text-right lg:flex hidden h-10 w-44 font-semibold rounded-3xl border-2 border-aurumgreen-600 text-aurumgreen-600 justify-center items-center">
+                        Join Us
+                    </button>
+                </div>
             </div>
         </motion.nav>
     )

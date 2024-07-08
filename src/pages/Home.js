@@ -27,55 +27,18 @@ export default function Home(){
         <div className="text-gray-800">
 
             {/* Introduction */}
-            <div className="min-h-screen ">
-                {/* Written Section*/}
-                <div className="flex flex-col md:justify-center items-center w-full gap-8 pt-[120px] md:pt-0 z-30 h-screen px-4 text-gray-800 text-xl font-bold ">
-                    <div className="max-w-7xl w-full space-y-4 flex flex-col sm:space-y-0 md:grid md:grid-cols-2 md:gap-6 min-h-screen ">
-                        {/* Right */}
-                        <div className="space-y-4 flex flex-col justify-center text-center sm:text-left">
-                            <LeftReveal>
-                                <div className="">
-                                    <p className="text-4xl md:text-5xl lg:text-6xl">Old School <span className="text-galliano-300">Values</span> With A New School <span className="text-aurumgreen-600">Touch</span></p>
-                                </div>
-                            </LeftReveal>
-                            <LeftReveal>
-                                <p className="text-gray-600 text-lg sm:text-xl font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
-                            </LeftReveal>
-                            <div className="grid grid-cols-2 md:flex md:items-center gap-2 sm:gap-4 font-semibold text-base sm:space-y-6 md:space-y-0 sm:pt-2">
-                                <motion.div 
-                                    initial={{ opacity: 0}}
-                                    animate={{ opacity: 1}}
-                                    transition={{ duration: 0.3, ease: 'easeOut', delay: 0.9 }}
-                                >
-                                    <button className="p-4 h-12 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 w-full sm:w-48 rounded-3xl">
-                                        <p>View Retrofits</p>
-                                        <FaArrowRight className="hidden sm:block"/>
-                                    </button>
-                                </motion.div>
+            <div className="h-screen relative bg-aurumwhite">
+                {/* Accent Divs */}
+                <div className="absolute m-auto bottom-0 left-0 right-0 bg-naturegreen h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
 
-                                <motion.div 
-                                    initial={{ opacity: 0}}
-                                    animate={{ opacity: 1}}
-                                    transition={{ duration: 0.3, ease: 'easeOut', delay: 1.1 }}
-                                >
-                                    <button className="p-4 h-12 group hover:border-aurumgreen-600 hover:text-aurumgreen-600 border-2 border-gray-800 flex justify-center items-center gap-x-2 transition duration-200 w-full sm:w-48 rounded-3xl">
-                                        <p>Installation <span className="hidden sm:block">Services</span></p>
-                                        <FaArrowRight className="hidden sm:block group-hover:translate-x-2 h-2"/>
-                                    </button>
-                                </motion.div>
-                            </div>
+                {/* Written */}
+                <div className="flex absolute justify-center h-full w-full z-20 py-32">
+                    <div className="w-full max-w-7xl grid grid-cols-2">
+                        <div className="pt-2">
+                            <p>Old School Values With A New School Touch</p>
+                            <h1 className="text-7xl text-naturegreen">Comfort, Quality</h1>
+                            <h1  className="text-8xl font-semibold text-[#d2ba1a] mix-blend-multiply">Expertise</h1>
                         </div>
-
-                        {/* Left */}
-                        <div className="flex items-center overflow-hidden px-4">
-                            <RightReveal propDelay={0.35}>
-                                <Carousel/>
-                            </RightReveal>
-                        </div>
-                        {/* <div className="flex justify-center items-center w-full">
-                            <ProductDisplay/>
-                        </div> */}
-
                     </div>
                 </div>
             </div>

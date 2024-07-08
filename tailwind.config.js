@@ -24,8 +24,9 @@ module.exports = {
       colors: {
       'aurumblack': '#050505',
       'aurumgrey' : '#0f0f0f',
-      'aurumgold' : '#9c8c64',
-      'aurumwhite' : '#f1fef3',
+      'aurumgold' : '#FFDF00',
+      'naturegreen' : '#004223',
+      'aurumwhite' : '#efeee5',
       'aurumgreen': {
         '50': '#effef1',
         '100': '#dafedf',
