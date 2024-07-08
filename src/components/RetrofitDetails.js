@@ -4,15 +4,16 @@ import { useEffect, useState } from "react";
 import NoPage from "../pages/NoPage";
 
 export const RetrofitDetails = () => {
-    const [retrofit, setRetrofit] = useState({})
-
+    const [retrofit, setRetrofit] = useState({id:'naw'})
     const { retrofitId } = useParams();
+
+    {/* Render Fit Data */}
     useEffect(() => {
-        let temp = {}
         setRetrofit(RetrofitData.find((item) => retrofitId === item.id))
     }, [retrofitId]);
 
-    if (typeof retrofitId.id !== undefined) {    
+    {/* Return Corresponding page */}
+    if (retrofit) {    
         return (
             <div className="h-screen flex flex-col justify-center items-center">
                 <p>RetrofitDetails: {retrofit.id}</p>
