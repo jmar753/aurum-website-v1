@@ -21,7 +21,7 @@ export default function Footer(){
 
                 {/* Products */}
                 <div className="w-full space-y-2 md:space-y-0 md:text-base text-sm">
-                    <h1 className="font-bold text-lg">Products</h1>
+                    <h1 className="font-bold text-lg">Catalogue</h1>
 
                     <p>BTR Series</p>
                     <p>DTR Series</p>

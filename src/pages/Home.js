@@ -47,7 +47,7 @@ export default function Home(){
                                     animate={{ opacity: 1}}
                                     transition={{ duration: 0.3, ease: 'easeOut', delay: 0.9 }}
                                 >
-                                    <button className="p-4 h-12 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 w-full sm:w-auto rounded-3xl">
+                                    <button className="p-4 h-12 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 w-full sm:w-48 rounded-3xl">
                                         <p>View Retrofits</p>
                                         <FaArrowRight className="hidden sm:block"/>
                                     </button>
@@ -58,7 +58,7 @@ export default function Home(){
                                     animate={{ opacity: 1}}
                                     transition={{ duration: 0.3, ease: 'easeOut', delay: 1.1 }}
                                 >
-                                    <button className="p-4 h-12 group hover:border-aurumgreen-600 hover:text-aurumgreen-600 border-2 border-gray-800 flex justify-center items-center gap-x-2 transition duration-200 w-full sm:w-auto rounded-3xl">
+                                    <button className="p-4 h-12 group hover:border-aurumgreen-600 hover:text-aurumgreen-600 border-2 border-gray-800 flex justify-center items-center gap-x-2 transition duration-200 w-full sm:w-48 rounded-3xl">
                                         <p>Installation <span className="hidden sm:block">Services</span></p>
                                         <FaArrowRight className="hidden sm:block group-hover:translate-x-2 h-2"/>
                                     </button>

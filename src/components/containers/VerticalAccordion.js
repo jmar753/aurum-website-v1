@@ -111,7 +111,7 @@ const items = [
   },
   {
     id: 2,
-    title: "Products",
+    title: "Catalogue",
       links: [{title:"Our Products", link:"aboutus"}, {title:"CFC Series", link:"aboutus"}, {title:"DTR Series", link:"aboutus"}, {title:"BTR Series", link:"aboutus"}, {title:"CFC Series", link:"aboutus"}, {title:"CFC Series", link:"aboutus"},],
   },
 ];

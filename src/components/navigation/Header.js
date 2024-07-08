@@ -146,7 +146,7 @@ export default function Header(){
     }
 
     //Mobile Navigation
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Blog", nav:"/blog"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Catalogue", nav:"/catalogue", Flyout:ProductSection},{name:"Resources", nav:"/resources"},{name:"Blog", nav:"/blog"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
 
     //Mobile Assets
     const MobilePopup = () => {
@@ -224,7 +224,7 @@ export default function Header(){
                         <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
                             <div className="flex justify-center items-center space-x-2 group">
                                 <p className="font-medium text-lg">{item.name}</p>
-                                {item.name === "About" || item.name === "Contact" || item.name === "Products" ? <IoIosArrowDown className="group-hover:text-aurumgreen-600 duration-200"/> : null}
+                                {item.name === "About" || item.name === "Contact" || item.name === "Catalogue" ? <IoIosArrowDown className="group-hover:text-aurumgreen-600 duration-200"/> : null}
                             </div>
                         </FlyoutLink>
                     ))}

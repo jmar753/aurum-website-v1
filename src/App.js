@@ -11,13 +11,13 @@ import AboutUs from './pages/About/AboutUs';
 import OurHistory from './pages/About/OurHistory';
 import OurSolution from './pages/About/OurSolution';
 
-//Products Pages
-import Products from './pages/Products/Products';
-import BTR from './pages/Products/BTR';
-import CFC from './pages/Products/CFC';
-import DDR from './pages/Products/DDR';
-import DTR from './pages/Products/DTR';
-import MHR from './pages/Products/MHR';
+//Catalogue Pages
+import Catalogue from './pages/Catalogue/Catalogue';
+import BTR from './pages/Catalogue/BTR';
+import CFC from './pages/Catalogue/CFC';
+import DDR from './pages/Catalogue/DDR';
+import DTR from './pages/Catalogue/DTR';
+import MHR from './pages/Catalogue/MHR';
 
 //Single Pages
 import Contact from './pages/Contact';
@@ -49,7 +49,7 @@ function App() {
           <Route exact path="/resources" element={<Resources/>}/>
 
           {/*Products)*/}
-          <Route exact path="/products" element={<Products/>}/>
+          <Route exact path="/catalogue" element={<Catalogue/>}/>
           <Route exact path="/btr-series" element={<BTR/>}/>
           <Route exact path="/cfc-series" element={<CFC/>}/>
           <Route exact path="/ddr-series" element={<DDR/>}/>
