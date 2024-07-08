@@ -39,8 +39,7 @@ export const RetrofitDetails = () => {
                 <h3 class="text-lg font-semibold text-gray-800">Specifications</h3>
                 <ul class="mt-2 text-gray-600">
                   <li>Size: Medium</li>
-                  <li>Color: Blue</li>
-                  <li>Material: Cotton</li>
+                  <li>Something: Something</li>
                 </ul>
               </div>
             </div>
