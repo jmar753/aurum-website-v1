@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom"
 import { IconContext } from "react-icons";
 import { HiMenu } from "react-icons/hi";
 import { useEffect, useState } from "react";
@@ -39,7 +38,7 @@ export default function Header(){
                 onMouseLeave={() => setOpen(false)}
             >
                 {/* Header */}
-                <NavLink to={to} className="relative text-gray-800">
+                <a href={to} className="relative text-gray-800">
                     {children}
                     <span
                         style={{ 
@@ -47,7 +46,7 @@ export default function Header(){
                         }}
                         className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-aurumgreen-600 transition-transform duration-300 ease-out"
                     />
-                </NavLink>
+                </a>
                 <AnimatePresence>
                     {showFlyout && (
                         <motion.div 
@@ -74,19 +73,19 @@ export default function Header(){
             <div className="w-64 bg-white p-6 shadow-xl">
                 <div className="mb-3 space-y-3">
                     <h3 className="font-semibold">About Aurum</h3>
-                    <NavLink to="/aboutus" className="block text-sm hover:underline pl-4">
+                    <a href="/aboutus" className="block text-sm hover:underline pl-4">
                         About us
-                    </NavLink>
-                    <NavLink  to="/ourhistory" className="block text-sm hover:underline pl-4">
+                    </a>
+                    <a href="/ourhistory" className="block text-sm hover:underline pl-4">
                         Our History
-                    </NavLink>
+                    </a>
                 </div>
                 <div className="mb-6 space-y-3">
                     <h3 className="font-semibold">About Design</h3>
                     <div className="pl-4">
-                        <NavLink  to="/oursolution" className="block text-sm hover:underline">
+                        <a href="/oursolution" className="block text-sm hover:underline">
                             Our Solution
-                        </NavLink>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -98,24 +97,24 @@ export default function Header(){
             <div className="w-64 bg-white p-6 shadow-xl z-40">
                 <div className="mb-3 space-y-3">
                     <h3 className="font-semibold">Older Series</h3>
-                    <NavLink  to="/catalogue/cfc" className="block text-sm hover:underline pl-4">
+                    <a href="/catalogue/cfc" className="block text-sm hover:underline pl-4">
                         CFC Series
-                    </NavLink>
-                    <NavLink  to="/catalogue/dtr" className="block text-sm hover:underline pl-4">
+                    </a>
+                    <a href="/catalogue/dtr" className="block text-sm hover:underline pl-4">
                         DTR Series
-                    </NavLink>
-                    <NavLink  to="/catalogue/btr" className="block text-sm hover:underline pl-4">
+                    </a>
+                    <a href="/catalogue/btr" className="block text-sm hover:underline pl-4">
                         BTR Series
-                    </NavLink>
+                    </a>
                 </div>
                 <div className="mb-6 space-y-3">
                     <h3 className="font-semibold">Newer Series</h3>
-                    <NavLink  to="/catalogue/mhr" className="block text-sm hover:underline pl-4">
+                    <a href="/catalogue/mhr" className="block text-sm hover:underline pl-4">
                         MHR Series
-                    </NavLink>
-                    <NavLink  to="/catalogue/ddr" className="block text-sm hover:underline pl-4">
+                    </a>
+                    <a href="/catalogue/ddr" className="block text-sm hover:underline pl-4">
                         DDR Series
-                    </NavLink>
+                    </a>
                 </div>
             </div>
         )
@@ -173,11 +172,11 @@ export default function Header(){
 
                             {/* Navigation Header */}
                             <div className="flex items-center justify-between px-4">
-                                <NavLink to="/"  onClick={() => setCheck(false)}>
+                                <a href="/"  onClick={() => setCheck(false)}>
                                     <div className="flex items-center h-[5rem]">
                                         <img src={logoblack} alt="logo" className="h-16"/>
                                     </div>
-                                </NavLink>
+                                </a>
                                 <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100'}}>
                                     <div className="lg:hidden flex" onClick={() => {setCheck(false)}}>
                                         <IoClose/>
@@ -213,9 +212,9 @@ export default function Header(){
             <div className="w-full h-full max-w-7xl flex justify-between items-center">
                 {/* Logo */}
                 <div className="">
-                    <NavLink to="/">
+                    <a href="/">
                         <img src={logoblack} alt="logo" className="h-16"/>
-                    </NavLink>
+                    </a>
                 </div>
 
                 {/* Middle Navigation */}

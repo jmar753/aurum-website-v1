@@ -13,15 +13,15 @@ export const RetrofitDetails = () => {
     }, [retrofitId]);
 
     if (typeof retrofitId.id !== undefined) {    
-        return <NoPage/> 
-    } 
-    else{
-        return(
+        return (
             <div className="h-screen flex flex-col justify-center items-center">
                 <p>RetrofitDetails: {retrofit.id}</p>
                 <p>RetrofitDescription: {retrofit.description}</p>
             </div>
         )
+    } 
+    else{
+        return <NoPage/>
     } 
       
 }
