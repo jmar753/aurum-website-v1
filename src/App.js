@@ -25,6 +25,7 @@ import Resources from './pages/Resources';
 import Blog from './pages/Blog';
 import { RetrofitDetails } from './components/RetrofitDetails';
 import Test from './pages/Test';
+import TextOverlapColorChange from './pages/Test';
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
           <Route exact path="/catalogue/:retrofitId" element={<RetrofitDetails/>}/>
 
           {/* Test */}
-          <Route exact path="/test" element={<Test/>}/>
+          <Route exact path="/test" element={<TextOverlapColorChange/>}/>
 
           {/* No Page */}
           <Route exact path="*" element={<NoPage/>}/>
