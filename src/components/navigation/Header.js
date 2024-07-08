@@ -98,22 +98,22 @@ export default function Header(){
             <div className="w-64 bg-white p-6 shadow-xl z-40">
                 <div className="mb-3 space-y-3">
                     <h3 className="font-semibold">Older Series</h3>
-                    <NavLink  to="/cfc" className="block text-sm hover:underline pl-4">
+                    <NavLink  to="/catalogue/cfc" className="block text-sm hover:underline pl-4">
                         CFC Series
                     </NavLink>
-                    <NavLink  to="/dtr" className="block text-sm hover:underline pl-4">
+                    <NavLink  to="/catalogue/dtr" className="block text-sm hover:underline pl-4">
                         DTR Series
                     </NavLink>
-                    <NavLink  to="/btr" className="block text-sm hover:underline pl-4">
+                    <NavLink  to="/catalogue/btr" className="block text-sm hover:underline pl-4">
                         BTR Series
                     </NavLink>
                 </div>
                 <div className="mb-6 space-y-3">
                     <h3 className="font-semibold">Newer Series</h3>
-                    <NavLink  to="/mhr" className="block text-sm hover:underline pl-4">
+                    <NavLink  to="/catalogue/mhr" className="block text-sm hover:underline pl-4">
                         MHR Series
                     </NavLink>
-                    <NavLink  to="/ddr" className="block text-sm hover:underline pl-4">
+                    <NavLink  to="/catalogue/ddr" className="block text-sm hover:underline pl-4">
                         DDR Series
                     </NavLink>
                 </div>

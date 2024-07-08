@@ -20,4 +20,18 @@ export const RetrofitData = [
         description: "This is a placeholder. Write a description for the product Lorem",
         images:["1",]
     },
+    {
+        id: "mhr",
+        name: "MHR",
+        price: 999.99,
+        description: "This is a placeholder. Write a description for the product Lorem",
+        images:["1",]
+    },
+    {
+        id: "ddr",
+        name: "DDR",
+        price: 999.99,
+        description: "This is a placeholder. Write a description for the product Lorem",
+        images:["1",]
+    },
   ];

@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 
 const VerticalAccordion = ({check, setCheck}) => {
   const [open, setOpen] = useState(items[0].id);
@@ -63,11 +62,11 @@ const Panel = ({ open, setOpen, id, title, description, links, check, setCheck }
               className="px-4 py-2 gap-y-2 text-lg w-full font-semibold backdrop-blur-sm text-neutral-800 origin-top"
             >
               {links.map((item, index) => (
-                <NavLink to={item.link} onClick={() => setCheck(false)}>
+                <a href={item.link} onClick={() => setCheck(false)}>
                   <div className="hover:cursor-pointer hover:text-aurumgreen-600">
                     {item.title}
                   </div>
-                </NavLink>
+                </a>
               ))}
             </motion.div>
           </motion.div>
@@ -81,11 +80,11 @@ const Panel2 = ({id, title, links, setCheck }) => {
 
   return (
     <div className="px-4" key={id}>
-      <NavLink to={links} onClick={() => setCheck(false)}>
+      <a href={links} onClick={() => setCheck(false)}>
         <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600">
           <span className="block lg:hidden text-2xl font-semibold">{title}</span>
         </button>
-      </NavLink>
+      </a>
     </div>
   );
 };
