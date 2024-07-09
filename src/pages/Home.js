@@ -6,14 +6,11 @@ import LeftReveal from "../animations/LeftReveal";
 //react-icons library: https://react-icons.github.io/react-icons/
 import { SiAircanada } from "react-icons/si";
 import { FaRegHandshake, FaTree, FaRegThumbsUp, FaArrowRight, FaCanadianMapleLeaf } from "react-icons/fa";
-import Carousel from "../components/containers/Carousel";
-import RightReveal from "../animations/RightReveal";
 import FloatingImage from "../components/styles/FloatingImage";
 
 import ShortVideo from "../RoughAssets/DTRMOV.mp4"
-import TempPhoto from "../RoughAssets/TempDisplay.png"
-import ProductDisplay from "../components/containers/ProductDisplay";
 import BTR from "../ProductPhotos/CFC.png"
+import GoldTree from "../RoughAssets/TreeGold.svg"
 
 export default function Home(){
 
@@ -31,8 +28,8 @@ export default function Home(){
             <div className="h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
                 {/* Accent Divs */}
                 <div className="absolute hidden lg:block m-auto bottom-0 left-0 right-0 bg-naturegreen-800 h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
-                <div className="absolute -bottom-14 -right-8 z-20">
-                    <img src={BTR} className="h-[600px] brightness-75"/>
+                <div className="absolute -bottom-14 -right-16 z-20">
+                    <img src={BTR} className="h-[580px] brightness-75"/>
                 </div>
                 <div className="absolute bg-aurumwhite h-[800px] w-[500px] -rotate-45 -bottom-80 -left-72 shadow-2xl"></div>
                 <div className="absolute bottom-10 left-4 z-10">
@@ -51,13 +48,14 @@ export default function Home(){
                 {/* Written */}
                 <div className="flex absolute justify-center h-full w-[calc(100%-32px)] z-20 py-0 lg:py-32">
                     <div className="w-full max-w-7xl lg:grid lg:grid-cols-2">
-                        <div className="pt-32 lg:pt-2 h-1/3">
+                        <div className="pt-24 lg:pt-2 h-1/3">
                             <p className="text-aurumaqua-background hidden lg:block">Old School Values With A New School Touch</p>
-                            <h1 className="text-5xl lg:text-7xl text-aurumwhite">Comfort, Quality</h1>
-                            <h1  className="text-6xl lg:text-8xl font-semibold text-aurumaqua-primary">Expertise</h1>
-                            <div className="grid grid-cols-2 gap-4 pt-10">
+                            <h1 className="text-4xl lg:text-7xl text-aurumwhite">Comfort, Quality</h1>
+                            <h1  className="text-4xl lg:text-8xl font-semibold text-aurumaqua-primary">Expertise</h1>
+                            <h1  className="py-2 text-naturegreen-300">Cooling homes with 40+ years of experience</h1>
+                            <div className="grid grid-cols-2 gap-4 pt-4">
                                 <button className="w-full h-12 rounded-3xl bg-neutral-800 text-white">Our Products</button>
-                                <button className="w-full h-12 rounded-3xl bg-aurumwhite">Our Products</button>
+                                <button className="w-full h-12 rounded-3xl bg-aurumwhite">Contact Us</button>
                             </div>
                         </div>
                     </div>
@@ -66,37 +64,38 @@ export default function Home(){
 
 
             {/* What is Aurum? */}
-            <div className="px-4 py-20 lg:py-32 flex justify-center items-center bg-zinc-50 text-gray-800 text-center lg:text-left">
-                <div className="max-w-7xl grid lg:grid-cols-5 gap-14">
+            <div className="relative px-4 py-20 lg:py-32 flex justify-center items-center bg-naturegreen-800 text-aurumwhite lg:text-left">
+                {/* Style */}
+                <div className="absolute m-auto left-0 -right-96 opacity-40">
+                    <img src={GoldTree} className="h-[1000px]"/>
+                </div>
+
+                {/* Written */}
+                <div className="max-w-7xl grid lg:grid-cols-5 gap-14 z-10">
+                    <div className="lg:items-start space-y-4 lg:col-span-2">
+                        <div>
+                            <h1 className="font-semibold text-3xl lg:text-4xl underline decoration-aurumgold-500 decoration-4">What is <span className="text-aurumaqua-primary">Aurum</span>?
+                            </h1>
+                            {/* <svg height="20" width="200" viewBox="50 50 1 10" className="fill-aurumgold-600">
+                                <path d="M 0 60 Q 50 40 100 60 Q 50 45 0 60 Z" />
+                            </svg> */}
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
+                    </div>
                     <div className="flex justify-center items-center lg:col-span-3">
                         <video className='object-cover z-10 rounded-3xl' autoPlay muted>
                             <source src={ShortVideo} type='video/mp4'/>
                         </video>
-                    </div>
-                    <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
-                        <h1 className="font-semibold text-3xl lg:text-4xl">What is <span className="text-aurumgreen-600">Aurum</span>?</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
-                        <button className="p-4 h-12 max-w-fit px-8 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 lg:w-auto rounded-3xl">
-                            <p>Learn More</p>
-                            <FaArrowRight className="hidden lg:block"/>
-                        </button>
                     </div>
                 </div>
 
             </div>
 
             {/* Explore Our Products */}
-            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-aurumwhite text-gray-800 text-center lg:text-left">
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-aurumwhite text-naturegreen-800 text-center lg:text-left">
                 <div className="max-w-7xl grid lg:grid-cols-5 gap-14">
                     <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
-                        <h1 className="font-semibold text-3xl lg:text-4xl">Explore Our Products</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
-                        <button className="p-4 h-12 max-w-fit px-8 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 lg:w-auto rounded-3xl">
-                            <p>View Products</p>
-                            <FaArrowRight className="hidden lg:block"/>
-                        </button>
+                        <h1 className="font-semibold text-3xl lg:text-4xl">Old School <span className="text-aurumgold-700">Values</span> With A <span className="text-aurumgold-700">New School Touch</span></h1>
                     </div>
                     <div className="flex justify-center items-center lg:col-span-3 w-full">
                         {/* <img src={TempPhoto} className="w-full rounded-3xl shadow-2xl"/> */}

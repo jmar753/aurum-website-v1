@@ -28,7 +28,8 @@ module.exports = {
       'aurumgold' : {
         '500': '#FFD700',
         '600': '#FFC300',
-        '800': '#DAA520',
+        '700': '#DAA520',
+        '800': '#B8860B',
       },
       aurumaqua: {
         background: '#004223', // Deep Green
