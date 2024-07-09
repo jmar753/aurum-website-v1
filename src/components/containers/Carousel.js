@@ -68,15 +68,15 @@ export default function Carousel(){
 
 		// 	</motion.div>
 		// </div>
-		<div class="w-1/4 h-[200px] sm:h-auto inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+		<div class="w-1/4 h-[200px] lg:h-auto inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+			<ul class="flex items-center justify-center lg:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
 				{images.map((item, index) => (
 					<li>
 						<CarouselCard item={item} index={index} key={index}/>
 					</li>
 				))}
 			</ul>
-			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+			<ul class="flex items-center justify-center lg:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
 				{images.map((item, index) => (
 					<li>
 						<CarouselCard item={item} index={index} key={index}/>

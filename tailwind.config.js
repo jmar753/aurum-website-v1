@@ -25,7 +25,29 @@ module.exports = {
       'aurumblack': '#050505',
       'aurumgrey' : '#0f0f0f',
       'aurumgold' : '#FFDF00',
-      'naturegreen' : '#004223',
+      'aurumgold' : {
+        '500': '#FFD700',
+        '600': '#FFC300',
+        '800': '#DAA520',
+      },
+      aurumaqua: {
+        background: '#004223', // Deep Green
+        primary: '#8FBC8F', // Dark Sea Green for main text
+        secondary: '#2E8B57', // Sea Green
+        header: '#006400', // Dark Green
+        accent1: '#66CDAA', // Medium Aquamarine
+        accent2: '#20B2AA', // Light Sea Green
+      },
+      'naturegreen': {
+        '200': '#66CDAA',
+        '300': '#2E8B57',
+        '400': '#008080',
+        '500': '#044b2a',
+        '600': '#004223',
+        '800': '#004223',
+        '900': '#002b13',
+        '950': '##010b09',
+      },
       'aurumwhite' : '#efeee5',
       'aurumgreen': {
         '50': '#effef1',

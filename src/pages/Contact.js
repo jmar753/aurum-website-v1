@@ -17,7 +17,7 @@ export default function Contact(){
                     {/* Email side */}
                     <div className="p-6 col-span-2">
                         <form className="max-w-3xl mx-auto">
-                            <div className="grid md:grid-cols-2 md:gap-6">
+                            <div className="grid lg:grid-cols-2 lg:gap-6">
                                 <div className="relative z-0 w-full mb-5 group">
                                     <label for="small-input" className="block mb-2 font-semibold text-gray-800">First Name</label>
                                     <input type="text" id="small-input" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-aurumgreen-500 focus:border-aurumgreen-500"/>
@@ -39,7 +39,7 @@ export default function Contact(){
                                 <label for="small-input" className="block mb-2 font-semibold text-gray-800">Message</label>
                                 <textarea  type="text" id="small-input" rows="5" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-aurumgreen-500 focus:border-aurumgreen-500"/>
                             </div>
-                            <button type="submit" className="text-gray-800 bg-aurumgreen-700 hover:bg-aurumgreen-800 focus:ring-4 focus:outline-none focus:ring-aurumgreen-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-aurumgreen-600 dark:hover:bg-aurumgreen-700 dark:focus:ring-aurumgreen-800">Submit</button>
+                            <button type="submit" className="text-gray-800 bg-aurumgreen-700 hover:bg-aurumgreen-800 focus:ring-4 focus:outline-none focus:ring-aurumgreen-300 font-medium rounded-lg text-sm w-full lg:w-auto px-5 py-2.5 text-center dark:bg-aurumgreen-600 dark:hover:bg-aurumgreen-700 dark:focus:ring-aurumgreen-800">Submit</button>
                         </form>
                     </div>
 

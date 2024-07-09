@@ -173,8 +173,8 @@ export default function Header(){
                             {/* Navigation Header */}
                             <div className="flex items-center justify-between px-4">
                                 <a href="/"  onClick={() => setCheck(false)}>
-                                    <div className="flex items-center h-[5rem]">
-                                        <img src={logoblack} alt="logo" className="h-16"/>
+                                    <div className="flex items-center h-[4rem]">
+                                        <img src={logoblack} alt="logo" className="h-12"/>
                                     </div>
                                 </a>
                                 <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100'}}>
@@ -185,7 +185,7 @@ export default function Header(){
                             </div>
 
                             {/* Navigation Body */}
-                            <div className="bg-neutral-100 overflow-y-scroll h-[calc(100vh-5rem)] w-full">
+                            <div className="bg-neutral-100 overflow-y-scroll h-[calc(100vh-4rem)] w-full">
                                 <div className="w-full m-auto bg-neutral-100">
                                     {/* Content Here */}
                                     <VerticalAccordion check={check} setCheck={setCheck}/>
@@ -201,7 +201,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-white shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-800 h-[5rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
+            className="bg-white shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-800 h-[4rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
@@ -209,14 +209,14 @@ export default function Header(){
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.2, ease:"easeInOut"}}
         >
-            <div className="w-full h-full max-w-7xl justify-between items-center grid grid-cols-3">
+            <div className="w-full h-full max-w-7xl justify-between items-center flex lg:grid lg:grid-cols-3">
 
                 {/* Middle Navigation */}
                 <div className="lg:flex hidden justify-between">
                     {navArray.map((item, index) => (
                         <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
                             <div className="flex justify-center items-center space-x-2 group">
-                                <p className="font-medium text-lg">{item.name}</p>
+                                <p className="font-medium text-base">{item.name}</p>
                                 {item.name === "About" || item.name === "Contact" || item.name === "Catalogue" ? <IoIosArrowDown className="group-hover:text-aurumgreen-600 duration-200"/> : null}
                             </div>
                         </FlyoutLink>
@@ -226,7 +226,7 @@ export default function Header(){
                 {/* Logo */}
                 <div className="flex justify-center items-center">
                     <a href="/">
-                        <img src={logoblack} alt="logo" className="h-16"/>
+                        <img src={logoblack} alt="logo" className="h-12"/>
                     </a>
                 </div>
 
@@ -234,8 +234,8 @@ export default function Header(){
                 <MobilePopup/>
 
                 {/* Random item */}
-                <div className="flex items-end justify-end">
-                    <button className="text-right lg:flex hidden h-10 w-44 font-semibold rounded-3xl border-2 border-aurumgreen-600 text-aurumgreen-600 justify-center items-center">
+                <div className="lg:flex hidden items-end justify-end">
+                    <button className="text-right flex h-10 w-44 font-semibold rounded-3xl border-2 border-aurumgreen-600 text-aurumgreen-600 justify-center items-center">
                         Join Us
                     </button>
                 </div>

@@ -13,6 +13,7 @@ import FloatingImage from "../components/styles/FloatingImage";
 import ShortVideo from "../RoughAssets/DTRMOV.mp4"
 import TempPhoto from "../RoughAssets/TempDisplay.png"
 import ProductDisplay from "../components/containers/ProductDisplay";
+import BTR from "../ProductPhotos/CFC.png"
 
 export default function Home(){
 
@@ -27,17 +28,37 @@ export default function Home(){
         <div className="text-gray-800">
 
             {/* Introduction */}
-            <div className="h-screen relative bg-aurumwhite">
+            <div className="h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
                 {/* Accent Divs */}
-                <div className="absolute m-auto bottom-0 left-0 right-0 bg-naturegreen h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
+                <div className="absolute hidden lg:block m-auto bottom-0 left-0 right-0 bg-naturegreen-800 h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
+                <div className="absolute -bottom-14 -right-8 z-20">
+                    <img src={BTR} className="h-[600px] brightness-75"/>
+                </div>
+                <div className="absolute bg-aurumwhite h-[800px] w-[500px] -rotate-45 -bottom-80 -left-72 shadow-2xl"></div>
+                <div className="absolute bottom-10 left-4 z-10">
+                    <div className="grid grid-cols-2 gap-4">
+                        <p className="font-semibold text-naturegreen-800 text-4xl">11.12</p>
+                        <p className="w-1/2 text-sm">Nov 2024</p>
+
+                    </div>
+                    <h1 className="text-xl text-naturegreen-300">Tradeshow</h1>
+                    <h1 className="text-xl text-naturegreen-300">Showcasing</h1>
+                    <h1 className="text-xl text-naturegreen-300 ">New Products</h1>
+                    <h1 className="text-xl pt-4 text-naturegreen-500 underline font-semibold">Explore</h1>
+                </div>
+
 
                 {/* Written */}
-                <div className="flex absolute justify-center h-full w-full z-20 py-32">
-                    <div className="w-full max-w-7xl grid grid-cols-2">
-                        <div className="pt-2">
-                            <p>Old School Values With A New School Touch</p>
-                            <h1 className="text-7xl text-naturegreen">Comfort, Quality</h1>
-                            <h1  className="text-8xl font-semibold text-[#d2ba1a] mix-blend-multiply">Expertise</h1>
+                <div className="flex absolute justify-center h-full w-[calc(100%-32px)] z-20 py-0 lg:py-32">
+                    <div className="w-full max-w-7xl lg:grid lg:grid-cols-2">
+                        <div className="pt-32 lg:pt-2 h-1/3">
+                            <p className="text-aurumaqua-background hidden lg:block">Old School Values With A New School Touch</p>
+                            <h1 className="text-5xl lg:text-7xl text-aurumwhite">Comfort, Quality</h1>
+                            <h1  className="text-6xl lg:text-8xl font-semibold text-aurumaqua-primary">Expertise</h1>
+                            <div className="grid grid-cols-2 gap-4 pt-10">
+                                <button className="w-full h-12 rounded-3xl bg-neutral-800 text-white">Our Products</button>
+                                <button className="w-full h-12 rounded-3xl bg-aurumwhite">Our Products</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -45,20 +66,20 @@ export default function Home(){
 
 
             {/* What is Aurum? */}
-            <div className="px-4 py-20 md:py-32 flex justify-center items-center bg-zinc-50 text-gray-800 text-center md:text-left">
-                <div className="max-w-7xl grid md:grid-cols-5 gap-14">
-                    <div className="flex justify-center items-center md:col-span-3">
+            <div className="px-4 py-20 lg:py-32 flex justify-center items-center bg-zinc-50 text-gray-800 text-center lg:text-left">
+                <div className="max-w-7xl grid lg:grid-cols-5 gap-14">
+                    <div className="flex justify-center items-center lg:col-span-3">
                         <video className='object-cover z-10 rounded-3xl' autoPlay muted>
                             <source src={ShortVideo} type='video/mp4'/>
                         </video>
                     </div>
-                    <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:col-span-2">
-                        <h1 className="font-semibold text-3xl md:text-4xl">What is <span className="text-aurumgreen-600">Aurum</span>?</h1>
+                    <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
+                        <h1 className="font-semibold text-3xl lg:text-4xl">What is <span className="text-aurumgreen-600">Aurum</span>?</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
-                        <button className="p-4 h-12 max-w-fit px-8 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 sm:w-auto rounded-3xl">
+                        <button className="p-4 h-12 max-w-fit px-8 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 lg:w-auto rounded-3xl">
                             <p>Learn More</p>
-                            <FaArrowRight className="hidden sm:block"/>
+                            <FaArrowRight className="hidden lg:block"/>
                         </button>
                     </div>
                 </div>
@@ -66,18 +87,18 @@ export default function Home(){
             </div>
 
             {/* Explore Our Products */}
-            <div className="py-20 md:py-32 px-4 flex justify-center items-center bg-aurumwhite text-gray-800 text-center md:text-left">
-                <div className="max-w-7xl grid md:grid-cols-5 gap-14">
-                    <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:col-span-2">
-                        <h1 className="font-semibold text-3xl md:text-4xl">Explore Our Products</h1>
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-aurumwhite text-gray-800 text-center lg:text-left">
+                <div className="max-w-7xl grid lg:grid-cols-5 gap-14">
+                    <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
+                        <h1 className="font-semibold text-3xl lg:text-4xl">Explore Our Products</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
-                        <button className="p-4 h-12 max-w-fit px-8 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 sm:w-auto rounded-3xl">
+                        <button className="p-4 h-12 max-w-fit px-8 group bg-aurumgreen-600 hover:bg-aurumgreen-700 text-white flex justify-center items-center gap-x-4 transition duration-200 lg:w-auto rounded-3xl">
                             <p>View Products</p>
-                            <FaArrowRight className="hidden sm:block"/>
+                            <FaArrowRight className="hidden lg:block"/>
                         </button>
                     </div>
-                    <div className="flex justify-center items-center md:col-span-3 w-full">
+                    <div className="flex justify-center items-center lg:col-span-3 w-full">
                         {/* <img src={TempPhoto} className="w-full rounded-3xl shadow-2xl"/> */}
                         <FloatingImage/>
                     </div>
@@ -86,14 +107,14 @@ export default function Home(){
             </div>
 
             {/* Why Choose Aurum? */}
-            <div className="py-20 md:py-32 px-4 flex justify-center items-center bg-white text-center md:text-left">
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-white text-center lg:text-left">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
-                    <h1 className="text-3xl md:text-5xl font-bold py-4">Why choose Aurum for your home?</h1>
+                    <h1 className="text-3xl lg:text-5xl font-bold py-4">Why choose Aurum for your home?</h1>
 
                     {/* Banner */}
                     <div className="py-4">
-                        <div className="my-6 p-6 grid md:grid-cols-4 gap-12">
+                        <div className="my-6 p-6 grid lg:grid-cols-4 gap-12">
                             {BannerArray.map((item, index) => (
                                 <div key={item.description} className="text-left space-y-6">
                                     <div className="h-16 w-16 flex justify-center items-center rounded-full bg-aurumgreen-600">
@@ -109,8 +130,8 @@ export default function Home(){
             </div>
 
             {/* Final Banner */}
-            <div className="flex flex-col gap-6 justify-center items-center bg-gradient-to-r from-aurumgreen-600 to-sky-600 py-32 text-white px-4 text-center md:text-left">
-                <h1 className="text-2xl md:text-4xl font-bold">Ready to put an end to your old HVAC system?</h1>
+            <div className="flex flex-col gap-6 justify-center items-center bg-gradient-to-r from-aurumgreen-600 to-sky-600 py-32 text-white px-4 text-center lg:text-left">
+                <h1 className="text-2xl lg:text-4xl font-bold">Ready to put an end to your old HVAC system?</h1>
                 <button className="bg-aurumgrey w-60 rounded-3xl p-3">Contact Support</button>
             </div>
         </div>

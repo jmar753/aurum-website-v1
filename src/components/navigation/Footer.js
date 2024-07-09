@@ -4,13 +4,13 @@ import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 export default function Footer(){
 
     return(
-        <footer className="bg-neutral-800 text-white z-40 w-full pt-12 px-3 sm:px-8">
+        <footer className="bg-neutral-800 text-white z-40 w-full pt-12 px-3 lg:px-8">
 
             {/* Top */}
-            <div className="grid grid-cols-2 md:flex flex-col md:flex-row justify-between md:h-48 gap-y-4 md:gap-y-0">
+            <div className="grid grid-cols-2 lg:flex flex-col lg:flex-row justify-between lg:h-48 gap-y-4 lg:gap-y-0">
 
                 {/* About */}
-                <div className="w-full gap-y-4 space-y-2 md:space-y-0 md:text-base text-sm">
+                <div className="w-full gap-y-4 space-y-2 lg:space-y-0 lg:text-base text-sm">
                     <h1 className="font-bold text-lg">About</h1>
                     
                     <p>About Us</p>
@@ -20,7 +20,7 @@ export default function Footer(){
                 </div>
 
                 {/* Products */}
-                <div className="w-full space-y-2 md:space-y-0 md:text-base text-sm">
+                <div className="w-full space-y-2 lg:space-y-0 lg:text-base text-sm">
                     <h1 className="font-bold text-lg">Catalogue</h1>
 
                     <p>BTR Series</p>
@@ -32,7 +32,7 @@ export default function Footer(){
                 </div>
 
                 {/* Resources */}
-                <div className="w-full space-y-2 md:space-y-0 md:text-base text-sm">
+                <div className="w-full space-y-2 lg:space-y-0 lg:text-base text-sm">
                     <h1 className="font-bold text-lg">Resources</h1>
 
                     <p>Owner's Guide</p>
@@ -43,13 +43,13 @@ export default function Footer(){
                 </div>
 
                 {/* Contact */}
-                <div className="col-span-2 md:col-span-1 w-full space-y-2 md:space-y-0 md:text-base text-sm">
-                    <h1 className="font-bold text-lg hidden md:block">Contact</h1>
-                    <h1 className="font-bold text-lg md:hidden block">Subscribe to our newsletter</h1>
+                <div className="col-span-2 lg:col-span-1 w-full space-y-2 lg:space-y-0 lg:text-base text-sm">
+                    <h1 className="font-bold text-lg hidden lg:block">Contact</h1>
+                    <h1 className="font-bold text-lg lg:hidden block">Subscribe to our newsletter</h1>
 
                     <p>Subscribe to our newsletter to keep up to date with all things Aurum!</p>
 
-                    <div className="mt-4 mb-3 xl:pl-3 inline-block md:max-w-xl w-full overflow-hidden border bg-aurumgreen-200 border-gray-200 rounded-sm focus-within:ring focus-within:ring-aurumgreen-300">
+                    <div className="mt-4 mb-3 xl:pl-3 inline-block lg:max-w-xl w-full overflow-hidden border bg-aurumgreen-200 border-gray-200 rounded-sm focus-within:ring focus-within:ring-aurumgreen-300">
                         <div className="flex flex-wrap items-center">
                             <div className="w-full xl:flex-1">
                             <input className="p-3 xl:p-0 xl:pr-6 w-full text-sm font-roboto-regular bg-aurumgreen-200 text-gray-500 placeholder-gray-500 outline-none" id="footerInput1-1" type="text" placeholder="Enter your e-mail address"/></div>
@@ -75,7 +75,7 @@ export default function Footer(){
                 </div>
 
                 {/* Copyright */}
-                <p className="hidden md:block">Copyright © 2024 Aurum Manufacturing Inc. All Rights Reserved</p>
+                <p className="hidden lg:block">Copyright © 2024 Aurum Manufacturing Inc. All Rights Reserved</p>
 
                 {/* Socials */}
                 <div className="flex flex-row-reverse gap-4 text-right">
@@ -84,7 +84,7 @@ export default function Footer(){
                     <FaLinkedin/>
                 </div>
 
-                <div className="col-span-2 block md:hidden">
+                <div className="col-span-2 block lg:hidden">
                     <p className="text-xs font-neutral-300 py-4">Copyright © 2024 Aurum Manufacturing Inc. All Rights Reserved</p>
                 </div>
             </div>
