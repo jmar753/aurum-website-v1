@@ -29,7 +29,7 @@ export default function Home(){
                 {/* Accent Divs */}
                 <div className="absolute hidden lg:block m-auto bottom-0 left-0 right-0 bg-naturegreen-800 h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
                 <div className="absolute -bottom-14 -right-16 z-20">
-                    <img src={BTR} className="h-[580px] brightness-75"/>
+                    <img src={BTR} className="h-[500px] brightness-75"/>
                 </div>
                 <div className="absolute bg-aurumwhite h-[800px] w-[500px] -rotate-45 -bottom-80 -left-72 shadow-2xl"></div>
                 <div className="absolute bottom-10 left-4 z-10">
