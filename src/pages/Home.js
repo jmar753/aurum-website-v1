@@ -30,7 +30,7 @@ export default function Home(){
         <div className="text-gray-800">
 
             {/* Introduction */}
-            <div className="h-[calc(90vh)] sm:h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
+            <div className="h-[calc(95vh)] sm:h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
                 {/* Accent Divs */}
                 <div className="absolute hidden lg:block m-auto bottom-0 left-0 right-0 bg-naturegreen-800 h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
                 <div className="absolute -bottom-14 -right-16 z-20">
