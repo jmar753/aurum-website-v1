@@ -145,8 +145,8 @@ export default function Home(){
                     {/* Products */}
                     <div className="h-auto text-aurumwhite text-left divide-y divide-dashed divide-aurumwhite">
                         {retrofits.map((item, index) => (
-                            <div key={index} className="py-4">
-                                <h1>{item.name}</h1>
+                            <div key={index} className="py-4 space-y-4">
+                                <h1 className="text-2xl font-medium">{item.name}</h1>
                                 <p>{item.description}</p>
                             </div>
                         ))}
@@ -177,12 +177,6 @@ export default function Home(){
                         </div> 
                     </div>
                 </div>
-            </div>
-
-            {/* Final Banner */}
-            <div className="flex flex-col gap-6 justify-center items-center bg-gradient-to-r from-aurumgreen-600 to-sky-600 py-32 text-white px-4 text-center lg:text-left">
-                <h1 className="text-2xl lg:text-4xl font-bold">Ready to put an end to your old HVAC system?</h1>
-                <button className="bg-aurumgrey w-60 rounded-3xl p-3">Contact Support</button>
             </div>
         </div>
     )
