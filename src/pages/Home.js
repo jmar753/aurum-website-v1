@@ -22,12 +22,20 @@ export default function Home(){
         {icon: FaRegThumbsUp, title: "Plan With Confidence", description:"Whether it's for the next 6 months or next 5 years, use our built-in integrations, reports and auto-generated forecasts to develop plans you can rely on.", size: "size-[4rem]"},
     ]
 
-    // const retrofits = [
-    //     {
-    //         name: "CFC Series",
-    //         description: "Aurum’s CFC Series is our replacement solution for outdated closet fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement.",
-    //     }
-    // ]
+    const retrofits = [
+        {
+            name: "CFC Series",
+            description: "Aurum’s CFC Series is our replacement solution for outdated closet fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement.",
+        },
+        {
+            name: "DTR Series",
+            description: "Aurum’s DTR Series is our replacement solution for outdated blow through fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement. ",
+        },
+        {
+            name: "BTR Series",
+            description: "Aurum’s BTR Series is our replacement solution for outdated blow through fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement. ",
+        },
+    ]
 
     return(
         <div className="text-gray-800">
@@ -132,21 +140,16 @@ export default function Home(){
             {/* What are we offering? */}
             <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-naturegreen-800 text-aurumwhite text-center lg:text-left">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
-                    <h1 className="text-3xl lg:text-5xl font-bold py-4">Explore our <span>wide variety of retrofits</span> </h1>
-
-                    {/* Banner */}
-                    <div className="py-4">
-                        <div className="my-6 p-6 grid lg:grid-cols-4 gap-12">
-                            {BannerArray.map((item, index) => (
-                                <div key={index} className="text-left space-y-6">
-                                    <div className="h-16 w-16 flex justify-center items-center rounded-full bg-aurumgreen-600">
-                                        <item.icon className="text-white h-10 w-10"/>
-                                    </div>
-                                    <p className="text-2xl font-semibold">{item.title}</p>
-                                    <p className="text-lg text-neutral-400">{item.description}</p>
-                                </div>
-                            ))}
-                        </div> 
+                    <h1 className="text-3xl lg:text-5xl font-medium py-4">Explore our <span>wide variety of retrofits</span> </h1>
+                    
+                    {/* Products */}
+                    <div className="h-auto text-aurumwhite text-left divide-y divide-dashed divide-aurumwhite">
+                        {retrofits.map((item, index) => (
+                            <div key={index} className="py-4">
+                                <h1>{item.name}</h1>
+                                <p>{item.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -159,13 +162,15 @@ export default function Home(){
 
                     {/* Banner */}
                     <div className="py-4">
-                        <div className="my-6 p-6 grid lg:grid-cols-4 gap-12">
+                        <div className="grid lg:grid-cols-4 gap-12">
                             {BannerArray.map((item, index) => (
-                                <div key={index} className="text-left space-y-6">
-                                    <div className="h-16 w-16 flex justify-center items-center rounded-full bg-aurumgreen-600">
-                                        <item.icon className="text-white h-10 w-10"/>
+                                <div key={index} className="text-left space-y-6 rou">
+                                    <div className="flex items-center justify-center gap-2">
+                                        <div className="h-8 w-8 lg:h-16 lg:w-16 flex justify-center items-center rounded-full bg-naturegreen-300">
+                                            <item.icon className="text-white h-6 w-6 lg:h-10 lg:w-10"/>
+                                        </div>
+                                        <p className="text-2xl font-semibold">{item.title}</p>
                                     </div>
-                                    <p className="text-2xl font-semibold">{item.title}</p>
                                     <p className="text-lg text-neutral-400">{item.description}</p>
                                 </div>
                             ))}
