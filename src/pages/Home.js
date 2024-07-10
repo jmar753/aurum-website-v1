@@ -8,9 +8,14 @@ import { SiAircanada } from "react-icons/si";
 import { FaRegHandshake, FaTree, FaRegThumbsUp, FaArrowRight, FaCanadianMapleLeaf } from "react-icons/fa";
 import FloatingImage from "../components/styles/FloatingImage";
 
+//Rough Assets
 import ShortVideo from "../RoughAssets/DTRMOV.mp4"
 import BTR from "../ProductPhotos/CFC.png"
 import GoldTree from "../RoughAssets/TreeGold.svg"
+
+//AssetPhotos
+import AdamChillin from "../AssetPhotos/AdamChillin.png"
+import OfficeBuilding from "../AssetPhotos/AurumFront.png"
 
 export default function Home(){
 
@@ -25,7 +30,7 @@ export default function Home(){
         <div className="text-gray-800">
 
             {/* Introduction */}
-            <div className="h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
+            <div className="h-[calc(90vh)] sm:h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
                 {/* Accent Divs */}
                 <div className="absolute hidden lg:block m-auto bottom-0 left-0 right-0 bg-naturegreen-800 h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
                 <div className="absolute -bottom-14 -right-16 z-20">
@@ -64,7 +69,7 @@ export default function Home(){
 
 
             {/* What is Aurum? */}
-            <div className="relative px-4 py-20 lg:py-32 flex justify-center items-center bg-naturegreen-800 text-aurumwhite lg:text-left">
+            <div className="relative h-auto px-4 py-20 lg:py-32 flex justify-center items-center bg-naturegreen-800 text-aurumwhite overflow-hidden lg:text-left">
                 {/* Style */}
                 <div className="absolute m-auto left-0 -right-96 opacity-40">
                     <img src={GoldTree} className="h-[1000px]"/>
@@ -91,22 +96,38 @@ export default function Home(){
 
             </div>
 
-            {/* Explore Our Products */}
-            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-aurumwhite text-naturegreen-800 text-center lg:text-left">
-                <div className="max-w-7xl grid lg:grid-cols-5 gap-14">
+            {/* About Us */}
+            <div className="py-20 lg:py-32 px-4 h-auto flex justify-center items-center bg-aurumwhite text-naturegreen-800 text-center lg:text-left">
+                <div className="max-w-7xl">
                     <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
-                        <h1 className="font-semibold text-3xl lg:text-4xl">Old School <span className="text-aurumgold-700">Values</span> With A <span className="text-aurumgold-700">New School Touch</span></h1>
+                        <h1 className="font-semibold text-3xl lg:text-4xl">Old School <span className="text-naturegreen-800 font-bold">Values</span> With A <span className="text-naturegreen-800 font-bold">New School Touch</span></h1>
                     </div>
-                    <div className="flex justify-center items-center lg:col-span-3 w-full">
-                        {/* <img src={TempPhoto} className="w-full rounded-3xl shadow-2xl"/> */}
-                        <FloatingImage/>
+                    <div className="flex flex-col md:flex-row pt-16 gap-4 relative">
+                        <div className="relative h-80 w-full md:w-1/2 rounded-xl">
+                            <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
+                            <img src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover"/>
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-aurumwhite z-20">
+                                <p className="font-semibold text-2xl">About Us</p>
+                                <p className="underline">Read our Journey</p>
+                            </div>
+                        </div>
+
+                        <div className="relative h-80 w-full md:w-1/2 rounded-xl">
+                            <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
+                            <img src={AdamChillin} className="absolute h-full w-full rounded-xl object-cover z-10"/>
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-aurumwhite z-30">
+                                <p className="font-semibold text-2xl">Our Story</p>
+                                <p className="underline">Read our Journey</p>
+                            </div>
+                        </div>
+                        <div className="absolute block bg-naturegreen-800 w-screen h-[300px] -bottom-32 -left-4 z-0"></div>
                     </div>
                 </div>
 
             </div>
 
             {/* Why Choose Aurum? */}
-            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-white text-center lg:text-left">
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-naturegreen-800 text-center lg:text-left">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
                     <h1 className="text-3xl lg:text-5xl font-bold py-4">Why choose Aurum for your home?</h1>

@@ -201,7 +201,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-white shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-800 h-[4rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
+            className="bg-aurumwhite shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[4rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
