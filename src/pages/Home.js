@@ -64,14 +64,14 @@ export default function Home(){
                 {/* Written */}
                 <div className="flex absolute justify-center h-full w-[calc(100%-32px)] z-20 py-0 lg:py-32">
                     <div className="w-full max-w-7xl lg:grid lg:grid-cols-2">
-                        <div className="pt-24 lg:pt-2 h-1/3">
+                        <div className="pt-24 lg:pt-2 h-1/3 text-center">
                             <p className="text-aurumaqua-background hidden lg:block">Old School Values With A New School Touch</p>
                             <h1 className="text-4xl lg:text-7xl text-aurumwhite">Comfort, Quality</h1>
-                            <h1  className="text-4xl lg:text-8xl font-semibold text-aurumaqua-primary">Expertise</h1>
+                            <h1  className="text-5xl lg:text-8xl font-semibold text-aurumaqua-primary">Expertise</h1>
                             <h1  className="py-2 text-naturegreen-300">Cooling homes with 40+ years of experience</h1>
                             <div className="grid grid-cols-2 gap-4 pt-4">
-                                <button className="w-full h-12 rounded-3xl bg-neutral-800 text-white">Our Products</button>
-                                <button className="w-full h-12 rounded-3xl bg-aurumwhite">Contact Us</button>
+                                <button className="w-full h-12 rounded-lg bg-[#6AB04C] text-white">Our Products</button>
+                                <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ export default function Home(){
 
 
             {/* What is Aurum? */}
-            <div className="relative h-auto px-4 py-20 lg:py-32 flex justify-center items-center bg-naturegreen-800 text-aurumwhite overflow-hidden lg:text-left">
+            <div className="relative h-auto px-4 py-20 lg:py-32 flex justify-center items-center bg-gradient-to-l from-naturegreen-500 to-naturegreen-900 text-aurumwhite overflow-hidden lg:text-left">
                 {/* Style */}
                 <div className="absolute m-auto left-0 -right-96 opacity-40">
                     <img alt="aurumTree" src={GoldTree} className="h-[1000px]"/>
@@ -90,7 +90,7 @@ export default function Home(){
                 <div className="max-w-7xl grid lg:grid-cols-5 gap-14 z-10">
                     <div className="lg:items-start space-y-4 lg:col-span-2">
                         <div>
-                            <h1 className="font-semibold text-3xl lg:text-4xl underline decoration-aurumgold-500 decoration-4">What is <span className="text-aurumaqua-primary">Aurum</span>?
+                            <h1 className="font-semibold text-3xl lg:text-4xl">What is Aurum?
                             </h1>
                             {/* <svg height="20" width="200" viewBox="50 50 1 10" className="fill-aurumgold-600">
                                 <path d="M 0 60 Q 50 40 100 60 Q 50 45 0 60 Z" />

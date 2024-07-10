@@ -25,6 +25,7 @@ module.exports = {
       'aurumblack': '#050505',
       'aurumgrey' : '#0f0f0f',
       'aurumgold' : '#FFDF00',
+      'leafgreen' : '#6AB04C',
       'aurumgold' : {
         '500': '#FFD700',
         '600': '#FFC300',
