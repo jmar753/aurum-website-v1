@@ -13,18 +13,12 @@ import OurSolution from './pages/About/OurSolution';
 
 //Catalogue Pages
 import Catalogue from './pages/Catalogue/Catalogue';
-import BTR from './pages/Catalogue/BTR';
-import CFC from './pages/Catalogue/CFC';
-import DDR from './pages/Catalogue/DDR';
-import DTR from './pages/Catalogue/DTR';
-import MHR from './pages/Catalogue/MHR';
 
 //Single Pages
 import Contact from './pages/Contact';
 import Resources from './pages/Resources';
 import Blog from './pages/Blog';
 import { RetrofitDetails } from './components/RetrofitDetails';
-import Test from './pages/Test';
 import TextOverlapColorChange from './pages/Test';
 
 function App() {

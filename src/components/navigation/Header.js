@@ -1,13 +1,16 @@
+//Libraries
+
 import { IconContext } from "react-icons";
 import { HiMenu } from "react-icons/hi";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 
-import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
+//svgs
 import logoblack from "../../RoughAssets/LogoNoTree.svg"
 
+//components
 import VerticalAccordion from "../containers/VerticalAccordion";
 
 export default function Header(){

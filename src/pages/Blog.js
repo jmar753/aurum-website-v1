@@ -1,5 +1,3 @@
-import Carousel from "../components/containers/Carousel"
-
 export default function Blog(){
     return(
         <div className="flex justify-center items-center">

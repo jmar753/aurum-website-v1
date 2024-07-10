@@ -1,12 +1,8 @@
-import {motion } from "framer-motion";
-
-//animations
-import LeftReveal from "../animations/LeftReveal";
+// import {motion } from "framer-motion";
 
 //react-icons library: https://react-icons.github.io/react-icons/
 import { SiAircanada } from "react-icons/si";
-import { FaRegHandshake, FaTree, FaRegThumbsUp, FaArrowRight, FaCanadianMapleLeaf } from "react-icons/fa";
-import FloatingImage from "../components/styles/FloatingImage";
+import { FaRegHandshake, FaTree, FaRegThumbsUp } from "react-icons/fa";
 
 //Rough Assets
 import ShortVideo from "../RoughAssets/DTRMOV.mp4"
@@ -26,6 +22,13 @@ export default function Home(){
         {icon: FaRegThumbsUp, title: "Plan With Confidence", description:"Whether it's for the next 6 months or next 5 years, use our built-in integrations, reports and auto-generated forecasts to develop plans you can rely on.", size: "size-[4rem]"},
     ]
 
+    // const retrofits = [
+    //     {
+    //         name: "CFC Series",
+    //         description: "Aurum’s CFC Series is our replacement solution for outdated closet fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement.",
+    //     }
+    // ]
+
     return(
         <div className="text-gray-800">
 
@@ -34,7 +37,7 @@ export default function Home(){
                 {/* Accent Divs */}
                 <div className="absolute hidden lg:block m-auto bottom-0 left-0 right-0 bg-naturegreen-800 h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
                 <div className="absolute -bottom-14 -right-16 z-20">
-                    <img src={BTR} className="h-[500px] brightness-75"/>
+                    <img src={BTR} alt="retrofit" className="h-[500px] brightness-75"/>
                 </div>
                 <div className="absolute bg-aurumwhite h-[800px] w-[500px] -rotate-45 -bottom-80 -left-72 shadow-2xl"></div>
                 <div className="absolute bottom-10 left-4 z-10">
@@ -72,7 +75,7 @@ export default function Home(){
             <div className="relative h-auto px-4 py-20 lg:py-32 flex justify-center items-center bg-naturegreen-800 text-aurumwhite overflow-hidden lg:text-left">
                 {/* Style */}
                 <div className="absolute m-auto left-0 -right-96 opacity-40">
-                    <img src={GoldTree} className="h-[1000px]"/>
+                    <img alt="aurumTree" src={GoldTree} className="h-[1000px]"/>
                 </div>
 
                 {/* Written */}
@@ -105,7 +108,7 @@ export default function Home(){
                     <div className="flex flex-col md:flex-row pt-16 gap-4 relative">
                         <div className="relative h-80 w-full md:w-1/2 rounded-xl">
                             <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
-                            <img src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover"/>
+                            <img alt="Aurum Office" src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover"/>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-aurumwhite z-20">
                                 <p className="font-semibold text-2xl">About Us</p>
                                 <p className="underline">Read our Journey</p>
@@ -114,20 +117,42 @@ export default function Home(){
 
                         <div className="relative h-80 w-full md:w-1/2 rounded-xl">
                             <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
-                            <img src={AdamChillin} className="absolute h-full w-full rounded-xl object-cover z-10"/>
+                            <img src={AdamChillin} alt="Aurum Office" className="absolute h-full w-full rounded-xl object-cover z-10"/>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-aurumwhite z-30">
                                 <p className="font-semibold text-2xl">Our Story</p>
                                 <p className="underline">Read our Journey</p>
                             </div>
                         </div>
-                        <div className="absolute block bg-naturegreen-800 w-screen h-[300px] -bottom-32 -left-4 z-0"></div>
+                        <div className="absolute hidden bg-naturegreen-800 w-screen h-[300px] -bottom-32 -left-4 z-0"></div>
                     </div>
                 </div>
 
             </div>
 
+            {/* What are we offering? */}
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-naturegreen-800 text-aurumwhite text-center lg:text-left">
+                <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
+                    <h1 className="text-3xl lg:text-5xl font-bold py-4">Explore our <span>wide variety of retrofits</span> </h1>
+
+                    {/* Banner */}
+                    <div className="py-4">
+                        <div className="my-6 p-6 grid lg:grid-cols-4 gap-12">
+                            {BannerArray.map((item, index) => (
+                                <div key={index} className="text-left space-y-6">
+                                    <div className="h-16 w-16 flex justify-center items-center rounded-full bg-aurumgreen-600">
+                                        <item.icon className="text-white h-10 w-10"/>
+                                    </div>
+                                    <p className="text-2xl font-semibold">{item.title}</p>
+                                    <p className="text-lg text-neutral-400">{item.description}</p>
+                                </div>
+                            ))}
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
             {/* Why Choose Aurum? */}
-            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-naturegreen-800 text-center lg:text-left">
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-aurumwhite text-center lg:text-left">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
                     <h1 className="text-3xl lg:text-5xl font-bold py-4">Why choose Aurum for your home?</h1>
@@ -136,7 +161,7 @@ export default function Home(){
                     <div className="py-4">
                         <div className="my-6 p-6 grid lg:grid-cols-4 gap-12">
                             {BannerArray.map((item, index) => (
-                                <div key={item.description} className="text-left space-y-6">
+                                <div key={index} className="text-left space-y-6">
                                     <div className="h-16 w-16 flex justify-center items-center rounded-full bg-aurumgreen-600">
                                         <item.icon className="text-white h-10 w-10"/>
                                     </div>

@@ -1,4 +1,4 @@
-import { FaFacebook, FaLinkedin, FaPhone, FaMailBulk, FaInstagram, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
 export default function Contact(){
