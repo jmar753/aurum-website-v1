@@ -73,15 +73,15 @@ export default function OurSolution(){
     ]
 
     return(
-        <div className="text-gray-800 px-4 leading-loose">
+        <div className="text-aurumgreen-800 bg-aurumwhite leading-loose flex flex-col justify-center items-center px-6">
             {/* About Banner */}
-            <div className="bg-gradient-to-b h-56 pt-20 text-5xl font-bold from-aurumblack to-aurumgrey flex items-center justify-center">
-                <h1 className="text-gray-800">Our <span className="text-aurumgreen-600">Solutions</span></h1>
+            <div className="pb-20 pt-36 space-y-8 w-full">
+                <h1 className="font-bold text-3xl">Our Solution</h1>
             </div>
 
             {/* Written */}
             <div className="text-center space-y-8 pb-20">
-                <p className="text-2xl font-semibold text-galliano-300">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
+                <p className="text-2xl font-semibold text-aurumgold-700">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
                 <p>This is the common misconception made by many homeowners regarding their outdated fan coil units. Your HVAC system is crucial in your everyday living and should be held at such standards. Retrofitting your fan coil unit drastically improves this essential system.</p>
             </div>
 
@@ -116,8 +116,8 @@ export default function OurSolution(){
                 <h1>THE AURUM SOLUTION</h1>
                 <p>Aurum Manufacturing is proud to be one of the pioneers in retrofit development. This solution completely transforms your fan coil unit into an up-to-date modern and efficient system</p>
                 <div className="grid grid-cols-2 space-x-8">
-                    <div className="bg-aurumgreen-600 w-full h-[400px]"></div>
-                    <div className="bg-aurumgreen-600 w-full h-[400px]"></div>
+                    <div className="bg-aurumgreen-600 w-auto h-[400px]"></div>
+                    <div className="bg-aurumgreen-600 w-auto h-[400px]"></div>
                 </div>
             </div>
 
