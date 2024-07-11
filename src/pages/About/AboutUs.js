@@ -1,26 +1,61 @@
 export default function AboutUs(){
 
+    const ceoCard = [
+        {
+            name: "Vittorio Zorzit",
+            pos: "Co-Founder / CEO"
+        },
+        {
+            name: "Adam Zorzit",
+            pos: "Co-Founder / CEO"
+        },
+        {
+            name: "Stacy Zorzit",
+            pos: "Co-Founder / CEO"
+        },
+    ]
+
+    const blurbData = [
+        {
+            header:'50+',
+            text:'Years of experience'
+        },
+        {
+            header:'20+',
+            text:'Dedicated Partners'
+        },
+        {
+            header:'20+',
+            text:'Full-time professional employees'
+        },
+        {
+            header:'5+',
+            text:'Innovative Patents'
+        },
+        
+    ]
+
     return(
-        <div className="text-gray-800 leading-loose flex flex-col justify-center items-center">
-            {/* About Banner */}
-            <div className="bg-gradient-to-b h-56 pt-20 text-5xl font-bold from-aurumblack to-aurumgrey flex flex-col text-center space-y-8 items-center justify-center">
-                <h1 className="text-gray-800">About <span className="text-aurumgreen-600">Us</span></h1>
-                <p className="text-2xl font-semibold text-galliano-300">"Our mission at Aurum Manufacturing is to be an innovative leader in air flow technology by providing intellectual solutions to the ultimate challenge of comfort."</p>
+        <div className="text-aurumgreen-800 bg-aurumwhite leading-loose flex flex-col justify-center items-center px-6">
+
+            {/* Meet the Team */}
+            <div className="pb-20 pt-36 space-y-8">
+                <h1 className="font-bold text-3xl">Meet the Team</h1>
+                <p className="text-neutral-500">Aurum Manufacturing stems from a family with over 50 years of mechanical experience. The Zorzit last name has been through many areas of the mechanical industry beginning with our father, Vittorio Zorzit.</p>
+                {ceoCard.map((item, index) =>(
+                    <div className="flex items-center gap-4">
+                        <img src="https://static.vecteezy.com/system/resources/previews/001/840/618/original/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" className="h-12 w-12 rounded-full object-fill"/>
+                        <div>
+                            <h1>{item.name}</h1>
+                            <h1>{item.pos}</h1>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="w-full max-w-7xl">
-                {/* Written */}
-                <div className="text-center space-y-8 pb-20">
-                    <h1 className="text-3xl font-semibold ">Who <span className="text-aurumgreen-600">We Are</span></h1>
 
-                    <p>Aurum Manufacturing is a Canadian based manufacturer specializing in the replacement solutions for outdated fan coil systems. We are dedicated to working closely with suppliers, vendors and contractors to deliver superior products for the end user. All Aurum model fan coil units are made with the highest degree of quality and craftsmanship. Aurum has focused their goal on creating solutions for energy efficiency and effective air control and movement.  Over the years, we have manufactured equipment for thousands of projects and applications including residential and commercial multi-story buildings. We stand by our designs and being a leader in the HVAC industry, we pride ourselves in being able to customize our models to meet and exceed our customer’s needs. Our various fan coil unit sizes have been manufactured to fit the dimensions of almost all buildings that have been built within the past 50+ years. Aurum’s flexibility and expertise allows us to provide designs that fit the building, rather than forcing the building to fit the equipment.</p>
-
-                    <h1 className="text-3xl font-semibold ">What <span className="text-aurumgreen-600">We Do</span></h1>
-
-                    <p>At Aurum, our core values define who we are and the decisions we make. We design with old school values, while adding a new school touch. We are dedicated to building products with the same type of precision, detail, craftsmanship and reliability as they were built years ago. Our expertise allows us to build our products using the same reliable ideas that have supported us through decades but by revolutionizing these concepts using modern day technologies and superior efficiencies. Here at Aurum, our priority is to provide you with quality, reliability, comfort and care. We value integrity because without it, our success is meaningless. Aurum promises to work tirelessly to meet and exceed the expectations of our customers with everything we do.</p>
-
-                    <h1 className="text-3xl font-semibold text-galliano-300">“Old School Values with a New School Touch”</h1>
-
-                </div>
+            {/* I wanna play yugioh so bad */}
+            <div className="bg-naturegreen-800 text-white p-2 -m-2 rounded-3xl w-full">
+                <h1>Our Acheivements</h1>
             </div>
         </div>
     )

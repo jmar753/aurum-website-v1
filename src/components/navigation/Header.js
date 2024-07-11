@@ -212,7 +212,14 @@ export default function Header(){
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.2, ease:"easeInOut"}}
         >
-            <div className="w-full h-full max-w-7xl justify-between items-center flex lg:grid lg:grid-cols-3">
+            <div className="w-full h-full max-w-7xl justify-between items-center flex">
+
+                {/* Logo */}
+                <div className="flex justify-center items-center">
+                    <a href="/">
+                        <img src={logoblack} alt="logo" className="h-12"/>
+                    </a>
+                </div>
 
                 {/* Middle Navigation */}
                 <div className="lg:flex hidden justify-between">
@@ -224,13 +231,6 @@ export default function Header(){
                             </div>
                         </FlyoutLink>
                     ))}
-                </div>
-
-                {/* Logo */}
-                <div className="flex justify-center items-center">
-                    <a href="/">
-                        <img src={logoblack} alt="logo" className="h-12"/>
-                    </a>
                 </div>
 
                 {/* Mobile Pop up */}
