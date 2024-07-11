@@ -1,13 +1,8 @@
-import { useEffect, useState } from "react"
-import { animate, motion, useMotionValue } from "framer-motion"
-
 import BTR from "../../ProductPhotos/BTR.png"
 import CFC from "../../ProductPhotos/CFC.png"
 import DDR from "../../ProductPhotos/DDR.png"
 import DTR from "../../ProductPhotos/DTR.png"
 import MHR from "../../ProductPhotos/MHR.png"
-import CarouselCard from "./CarouselCard"
-import useMeasure from "react-use-measure"
 
 export default function ProductDisplay(){
     const photos = [BTR, CFC, DDR, DTR, MHR]

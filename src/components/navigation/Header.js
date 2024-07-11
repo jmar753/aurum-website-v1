@@ -3,7 +3,7 @@
 import { IconContext } from "react-icons";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -17,18 +17,6 @@ import VerticalAccordion from "../containers/VerticalAccordion";
 export default function Header(){
     const [hidden, setHidden] = useState(false);
     const {scrollY} = useScroll();
-
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        const previous = scrollY.getPrevious()
-
-        if (latest > previous && latest > 150) {
-            setHidden(true)
-        }
-
-        else {
-            setHidden(false)
-        }
-    })
 
     //Dropdown Menu
     const FlyoutLink = ({ children, to, FlyoutContent}) => {
@@ -203,7 +191,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-leafgreen shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[4rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
+            className="bg-naturegreen-800/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[4rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
