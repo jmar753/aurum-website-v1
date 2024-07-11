@@ -9,6 +9,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 //svgs
 import logoblack from "../../RoughAssets/LogoNoTree.svg"
+import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
 //components
 import VerticalAccordion from "../containers/VerticalAccordion";
@@ -158,11 +159,9 @@ export default function Header(){
         return(
             <>
                 {/* Pop Up Actuator */}
-                <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100'}}>
-                    <div className="lg:hidden flex" onClick={() => {setCheck(true)}}>
-                        <HiMenu/>
-                    </div>
-                </IconContext.Provider>
+                <div className="lg:hidden flex" onClick={() => {setCheck(true)}}>
+                    <HiMenu className="fill-aurumwhite size-10 hover:cursor-pointer"/>
+                </div>
                 <AnimatePresence>
                     { check && (
                         <motion.div 
@@ -204,7 +203,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-aurumwhite shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[4rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
+            className="bg-leafgreen shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[4rem] px-4 fixed top-0 z-40 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
@@ -217,7 +216,7 @@ export default function Header(){
                 {/* Logo */}
                 <div className="flex justify-center items-center">
                     <a href="/">
-                        <img src={logoblack} alt="logo" className="h-12"/>
+                        <img src={logo} alt="logo" className="h-12"/>
                     </a>
                 </div>
 
