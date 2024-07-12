@@ -12,7 +12,7 @@ import logoblack from "../../RoughAssets/LogoNoTree.svg"
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
 //components
-import VerticalAccordion from "../containers/VerticalAccordion";
+import NavMenu from "./NavMenu";
 
 export default function Header(){
     const [hidden, setHidden] = useState(false);
@@ -178,7 +178,7 @@ export default function Header(){
                             <div className="bg-neutral-100 overflow-y-scroll h-[calc(100vh-4rem)] w-full">
                                 <div className="w-full m-auto bg-neutral-100">
                                     {/* Content Here */}
-                                    <VerticalAccordion check={check} setCheck={setCheck}/>
+                                    <NavMenu/>
 
                                 </div>
                             </div>
@@ -191,7 +191,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-naturegreen-800/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[4rem] px-4 fixed -top-1 z-40 w-screen flex justify-center items-center"
+            className="bg-naturegreen-800/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[5rem] px-4 fixed -top-1 z-40 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
@@ -204,7 +204,7 @@ export default function Header(){
                 {/* Logo */}
                 <div className="flex justify-center items-center">
                     <a href="/">
-                        <img src={logo} alt="logo" className="h-12"/>
+                        <img src={logo} alt="logo" className="h-16"/>
                     </a>
                 </div>
 
