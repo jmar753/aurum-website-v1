@@ -100,8 +100,9 @@ export default function Home(){
                     </div>
                 </div>
                 
+                {/* Accent Divs */}
                 <div className="relative h-[500px] w-full">
-                    <div className="absolute m-auto -bottom-20 -right-20 h-40 w-[calc(200vw)] bg-aurumwhite -rotate-[10deg] z-10"></div>
+                    <div className="absolute m-auto -bottom-[350px] -right-20 h-[400px] w-[calc(200vw)] bg-aurumwhite -rotate-[10deg] z-10"></div>
                     <div className="absolute -bottom-16 -right-16 z-20">
                         <img src={BTR} alt="retrofit" className="h-[500px] brightness-75"/>
                     </div>
@@ -122,24 +123,26 @@ export default function Home(){
 
 
             {/* What is Aurum? */}
-            <div className="relative h-auto px-4 py-20 lg:py-32 flex justify-center items-center bg-aurumwhite text-naturegreen-800 overflow-hidden lg:text-left">
+            <div className="px-4 border-x-2">
+                <div className="relative h-auto py-20 lg:py-32 flex justify-center items-center bg-aurumwhite text-naturegreen-800 overflow-hidden lg:text-left">
 
-                <div className="absolute m-auto left-0 -right-96 opacity-40">
-                    <img alt="aurumTree" src={GoldTree} className="h-[1000px]"/>
-                </div>
-
-                <div className="max-w-7xl grid lg:grid-cols-5 gap-14 z-10 px-4">
-                    <div className="lg:items-start space-y-4 lg:col-span-2">
-                        <div>
-                            <h1 className="font-semibold text-3xl lg:text-4xl">What is Aurum?
-                            </h1>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
+                    <div className="absolute m-auto left-0 -right-96 opacity-40">
+                        <img alt="aurumTree" src={GoldTree} className="h-[1000px]"/>
                     </div>
-                    <div className="flex justify-center items-center lg:col-span-3">
-                        <video className='object-cover z-10 rounded-3xl' autoPlay muted>
-                            <source src={ShortVideo} type='video/mp4'/>
-                        </video>
+
+                    <div className="max-w-7xl grid lg:grid-cols-5 gap-14 z-10 px-4">
+                        <div className="lg:items-start space-y-4 lg:col-span-2">
+                            <div>
+                                <h1 className="font-semibold text-3xl lg:text-4xl">What is Aurum?
+                                </h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
+                        </div>
+                        <div className="flex justify-center items-center lg:col-span-3">
+                            <video className='object-cover z-10 rounded-3xl' autoPlay muted>
+                                <source src={ShortVideo} type='video/mp4'/>
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
