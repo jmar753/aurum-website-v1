@@ -41,8 +41,9 @@ export default function Home(){
         <div className="text-gray-800">
 
             {/* Introduction */}
-            <div className="h-[calc(95vh)] sm:h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
-                {/* Accent Divs */}
+            {/* <div className="h-[calc(95vh)] sm:h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
+
+
                 <div className="absolute hidden lg:block m-auto bottom-0 left-0 right-0 bg-naturegreen-800 h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
                 <div className="absolute -bottom-14 -right-16 z-20">
                     <img src={BTR} alt="retrofit" className="h-[500px] brightness-75"/>
@@ -61,7 +62,6 @@ export default function Home(){
                 </div>
 
 
-                {/* Written */}
                 <div className="flex absolute justify-center h-full w-[calc(100%-32px)] z-20 py-0 lg:py-32">
                     <div className="w-full max-w-7xl lg:grid lg:grid-cols-2">
                         <div className="pt-24 lg:pt-2 h-1/3 text-center">
@@ -76,25 +76,42 @@ export default function Home(){
                         </div>
                     </div>
                 </div>
+            </div> */}
+
+            <div className="flex flex-col justify-center items-center h-auto sm:h-screen bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
+
+                <div className="flex justify-center h-full w-[calc(100%-32px)] z-20 py-0 lg:py-32">
+                    <div className="w-full max-w-7xl lg:grid lg:grid-cols-2 py-36">
+                        <div className="pt-10 lg:pt-2 h-1/3 text-left space-y-2">
+                            <h1 className="text-4xl lg:text-7xl text-aurumwhite font-semibold">Old School Values With A New School Touch</h1>
+                            <h1  className="py-2 text-aurumaqua-primary">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
+                            <div className="grid grid-cols-2 gap-4 pt-4">
+                                <button className="w-full h-12 rounded-lg bg-[#6AB04C] text-white">Our Products</button>
+                                <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
+                            </div>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="h-10">
+                    <div className="h-20 w-[1000px] bg-aurumwhite -rotate-12"></div>
+                </div>
             </div>
 
 
             {/* What is Aurum? */}
-            <div className="relative h-auto px-4 py-20 lg:py-32 flex justify-center items-center bg-gradient-to-l from-naturegreen-500 to-naturegreen-900 text-aurumwhite overflow-hidden lg:text-left">
-                {/* Style */}
+            <div className="relative h-auto px-4 py-20 lg:py-32 flex justify-center items-center bg-aurumwhite text-naturegreen-800 overflow-hidden lg:text-left">
+
                 <div className="absolute m-auto left-0 -right-96 opacity-40">
                     <img alt="aurumTree" src={GoldTree} className="h-[1000px]"/>
                 </div>
 
-                {/* Written */}
-                <div className="max-w-7xl grid lg:grid-cols-5 gap-14 z-10">
+                <div className="max-w-7xl grid lg:grid-cols-5 gap-14 z-10 px-4">
                     <div className="lg:items-start space-y-4 lg:col-span-2">
                         <div>
                             <h1 className="font-semibold text-3xl lg:text-4xl">What is Aurum?
                             </h1>
-                            {/* <svg height="20" width="200" viewBox="50 50 1 10" className="fill-aurumgold-600">
-                                <path d="M 0 60 Q 50 40 100 60 Q 50 45 0 60 Z" />
-                            </svg> */}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
                     </div>
@@ -104,7 +121,6 @@ export default function Home(){
                         </video>
                     </div>
                 </div>
-
             </div>
 
             {/* About Us */}

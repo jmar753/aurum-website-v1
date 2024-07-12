@@ -12,6 +12,7 @@ import logoblack from "../../RoughAssets/LogoNoTree.svg"
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
 //components
+import VerticalAccordion from "../containers/VerticalAccordion";
 import NavMenu from "./NavMenu";
 
 export default function Header(){
@@ -148,7 +149,7 @@ export default function Header(){
             <>
                 {/* Pop Up Actuator */}
                 <div className="lg:hidden flex" onClick={() => {setCheck(true)}}>
-                    <HiMenu className="fill-aurumwhite size-10 hover:cursor-pointer"/>
+                    <HiMenu className="fill-aurumwhite size-8 hover:cursor-pointer"/>
                 </div>
                 <AnimatePresence>
                     { check && (
@@ -178,7 +179,7 @@ export default function Header(){
                             <div className="bg-neutral-100 overflow-y-scroll h-[calc(100vh-4rem)] w-full">
                                 <div className="w-full m-auto bg-neutral-100">
                                     {/* Content Here */}
-                                    <NavMenu/>
+                                    <VerticalAccordion check={check} setCheck={setCheck}/>
 
                                 </div>
                             </div>
@@ -191,7 +192,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-naturegreen-800/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[5rem] px-4 fixed -top-1 z-40 w-screen flex justify-center items-center"
+            className="bg-naturegreen-800/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[4rem] px-4 fixed -top-1 z-40 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
@@ -199,12 +200,12 @@ export default function Header(){
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.2, ease:"easeInOut"}}
         >
-            <div className="w-full h-full max-w-7xl justify-between items-center flex">
+            <div className="w-full h-full max-w-7xl justify-between items-center flex px-4">
 
                 {/* Logo */}
                 <div className="flex justify-center items-center">
                     <a href="/">
-                        <img src={logo} alt="logo" className="h-16"/>
+                        <img src={logo} alt="logo" className="h-10"/>
                     </a>
                 </div>
 
