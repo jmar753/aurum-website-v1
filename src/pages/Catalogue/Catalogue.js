@@ -1,28 +1,6 @@
 import { RetrofitData } from "../../data/RetrofitData"
 
 export default function Catalogue(){
-    const productsList = [
-        {
-            image: 1,
-            name: "BTR"
-        },
-        {
-            image: 1,
-            name: "BTR"
-        },
-        {
-            image: 1,
-            name: "BTR"
-        },
-        {
-            image: 1,
-            name: "BTR"
-        },
-        {
-            image: 1,
-            name: "BTR"
-        },
-    ]
 
     return(
         <div className="flex flex-col justify-center items-center text-aurumwhite bg-gradient-to-bl from-naturegreen-400 to-naturegreen-900 ">
@@ -31,14 +9,14 @@ export default function Catalogue(){
                     <h1 className="text-4xl lg:text-7xl text-aurumwhite font-semibold">ALL PRODUCTS</h1>
                 </div>
                 <div className="grid grid-cols-2 gap-4 py-20">
-                    {productsList.map((item, index) => (
+                    {RetrofitData.map((item, index) => (
                         ((index + 1) % 3 ?
-                        <div className="bg-red-500 w-full h-20">
-
+                        <div className="w-full h-full">
+                            <img src={item.images[0]}/>
                         </div>
                         :
-                        <div className="col-span-2 bg-green-500 w-full h-20">
-
+                        <div className="col-span-2 w-full h-full">
+                            <img src={item.images[0]}/>
                         </div>
                         )
                     ))}

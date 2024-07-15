@@ -1,37 +1,38 @@
+import CFC from "../ProductPhotos/CFC.png"
+import BTR from "../ProductPhotos/BTR-ISO.png"
+import DDR from "../ProductPhotos/DDR-ISO.png"
+import DTR from "../ProductPhotos/DTR-ISO.png"
+import MHR from "../ProductPhotos/MHR-ISO.png"
+
 export const RetrofitData = [
     {
         id: "cfc",
         name: "CFC",
-        price: 999.99,
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:["1",]
+        images:[CFC]
     },
     {
         id: "dtr",
         name: "DTR",
-        price: 999.99,
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:["1",]
+        images:[DTR]
     },
     {
         id: "btr",
         name: "BTR",
-        price: 999.99,
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:["1",]
+        images:[BTR]
     },
     {
         id: "mhr",
         name: "MHR",
-        price: 999.99,
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:["1",]
+        images:[MHR]
     },
     {
         id: "ddr",
         name: "DDR",
-        price: 999.99,
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:["1",]
+        images:[DDR]
     },
   ];
