@@ -41,42 +41,6 @@ export default function Home(){
         <div className="text-gray-800">
 
             {/* Introduction */}
-            {/* <div className="h-[calc(95vh)] sm:h-screen relative bg-gradient-to-bl from-naturegreen-500 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
-
-
-                <div className="absolute hidden lg:block m-auto bottom-0 left-0 right-0 bg-naturegreen-800 h-2/3 w-full max-w-3xl z-10 mix-blend-multiply"></div>
-                <div className="absolute -bottom-14 -right-16 z-20">
-                    <img src={BTR} alt="retrofit" className="h-[500px] brightness-75"/>
-                </div>
-                <div className="absolute bg-aurumwhite h-[800px] w-[500px] -rotate-45 -bottom-80 -left-72 shadow-2xl"></div>
-                <div className="absolute bottom-10 left-4 z-10">
-                    <div className="grid grid-cols-2 gap-4">
-                        <p className="font-semibold text-naturegreen-800 text-4xl">11.12</p>
-                        <p className="w-1/2 text-sm">Nov 2024</p>
-
-                    </div>
-                    <h1 className="text-xl text-naturegreen-300">Tradeshow</h1>
-                    <h1 className="text-xl text-naturegreen-300">Showcasing</h1>
-                    <h1 className="text-xl text-naturegreen-300 ">New Products</h1>
-                    <h1 className="text-xl pt-4 text-naturegreen-500 underline font-semibold">Explore</h1>
-                </div>
-
-
-                <div className="flex absolute justify-center h-full w-[calc(100%-32px)] z-20 py-0 lg:py-32">
-                    <div className="w-full max-w-7xl lg:grid lg:grid-cols-2">
-                        <div className="pt-24 lg:pt-2 h-1/3 text-center">
-                            <p className="text-aurumaqua-background hidden lg:block">Old School Values With A New School Touch</p>
-                            <h1 className="text-4xl lg:text-7xl text-aurumwhite">Comfort, Quality</h1>
-                            <h1  className="text-5xl lg:text-8xl font-semibold text-aurumaqua-primary">Expertise</h1>
-                            <h1  className="py-2 text-naturegreen-300">Cooling homes with 40+ years of experience</h1>
-                            <div className="grid grid-cols-2 gap-4 pt-4">
-                                <button className="w-full h-12 rounded-lg bg-[#6AB04C] text-white">Our Products</button>
-                                <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
 
             <div className="flex flex-col justify-center items-center h-auto sm:h-screen bg-gradient-to-bl from-naturegreen-400 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
 
@@ -91,9 +55,9 @@ export default function Home(){
                                 <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
                             </div>
 
-                            <div class="flex items-center pt-4">
-                                <input type="email" id="input-9" class="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-aurumwhite" placeholder="user@mail.com"/>
-                                <button class="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-lg shadow-sm text-aurumwhite hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
+                            <div className="flex items-center pt-4">
+                                <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-aurumwhite" placeholder="user@mail.com"/>
+                                <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-lg shadow-sm text-aurumwhite hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
                             </div>
                             <br/>
                         </div>
@@ -106,25 +70,13 @@ export default function Home(){
                     <div className="absolute -bottom-16 -right-16 z-20">
                         <img src={BTR} alt="retrofit" className="h-[500px] brightness-75"/>
                     </div>
-
-                    {/* <div className="absolute top-20 z-10 bg-leafgreen p-4 rounded-lg">
-                        <div className="grid grid-cols-2 gap-4">
-                            <p className="font-semibold text-aurumwhite text-4xl">11.12</p>
-                            <p className="w-1/2 text-sm text-aurumwhite">Nov 2024</p>
-
-                        </div>
-                        <h1 className="text-naturegreen-300">Tradeshow</h1>
-                        <h1 className="text-naturegreen-300">Showcasing</h1>
-                        <h1 className="text-naturegreen-300 ">New Products</h1>
-                        <h1 className="pt-4 text-naturegreen-500 underline font-semibold">Explore</h1>
-                    </div> */}
                 </div>
             </div>
 
 
             {/* What is Aurum? */}
-            <div className="px-4 border-x-2">
-                <div className="relative h-auto py-20 lg:py-32 flex justify-center items-center bg-aurumwhite text-naturegreen-800 overflow-hidden lg:text-left">
+            <div className="px-4 border-x-2 overflow-hidden">
+                <div className="relative h-auto py-20 lg:py-32 flex justify-center items-center bg-aurumwhite text-naturegreen-800 lg:text-left">
 
                     <div className="absolute m-auto left-0 -right-96 opacity-40">
                         <img alt="aurumTree" src={GoldTree} className="h-[1000px]"/>

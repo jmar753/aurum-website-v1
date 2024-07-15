@@ -6,16 +6,16 @@ export default function Blog(){
                 <h1 className="pt-[6rem] text-3xl font-semibold">Aurum <span className="text-aurumgreen-600">Blog</span></h1>
 
                 {/* Search Bar */}
-                <div class="relative flex">
+                <div className="relative flex">
                     <input
                         type="search"
-                        class="relative m-0 block flex-auto rounded border border-solid border-gray-800 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none"
+                        className="relative m-0 block flex-auto rounded border border-solid border-gray-800 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none"
                         placeholder="Search"
                         aria-label="Search"
                         id="exampleFormControlInput2"
                         aria-describedby="button-addon2" />
                     <span
-                        class="flex items-center whitespace-nowrap px-3 py-[0.25rem] text-surface [&>svg]:h-5 [&>svg]:w-5"
+                        className="flex items-center whitespace-nowrap px-3 py-[0.25rem] text-surface [&>svg]:h-5 [&>svg]:w-5"
                         id="button-addon2">
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
