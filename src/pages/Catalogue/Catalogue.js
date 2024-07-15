@@ -22,10 +22,6 @@ export default function Catalogue(){
             image: 1,
             name: "BTR"
         },
-        {
-            image: 1,
-            name: "BTR"
-        },
     ]
 
     return(
