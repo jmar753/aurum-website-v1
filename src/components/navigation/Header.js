@@ -31,7 +31,7 @@ export default function Header(){
                 onMouseLeave={() => setOpen(false)}
             >
                 {/* Header */}
-                <a href={to} className="relative text-gray-800">
+                <a href={to} className="relative">
                     {children}
                     <span
                         style={{ 
@@ -192,7 +192,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-naturegreen-800/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-naturegreen-800 h-[4rem] px-4 fixed -top-1 z-40 w-screen flex justify-center items-center"
+            className="bg-galliano/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-aurumwhite h-[4rem] px-4 fixed -top-1 z-40 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
