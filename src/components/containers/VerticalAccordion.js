@@ -120,6 +120,11 @@ const items2 = [
     links: "/blog",
   },
   {
+    id: 1,
+    title: "Resources",
+    links: "/resources",
+  },
+  {
     id: 3,
     title: "Contact",
     links: "/contactus",
