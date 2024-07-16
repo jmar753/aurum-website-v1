@@ -109,7 +109,7 @@ const NavMenu = () => {
               </nav>
 
               {/* Footer */}
-              <div className="absolute bottom-24 w-full p-8 bg-aurumwhite">
+              <div className="absolute bottom-16 w-full p-8">
                 <div className="mb-6">
                   <h1 className="font-semibold text-lg text-neutral-900">Contact Us</h1>
                   <p className="text-neutral-600">Phone: (123) 456-7890</p>
