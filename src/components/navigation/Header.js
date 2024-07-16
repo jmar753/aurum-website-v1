@@ -180,7 +180,7 @@ export default function Header(){
                             </div>
 
                             {/* Navigation Footer */}
-                            <div className="absolute bottom-0 w-full bg-naturegreen-800 overflow-y-scroll h-[30vh]">
+                            <div className="absolute bottom-0 w-full bg-galliano overflow-y-scroll h-[30vh]">
                                 
                             </div>
                         </motion.div> 
@@ -222,8 +222,8 @@ export default function Header(){
                 </div>
 
                 {/* Mobile Pop up */}
-                <MobilePopup/>
-                {/* <NavMenu/> */}
+                {/* <MobilePopup/> */}
+                <NavMenu/>
 
                 {/* Random item */}
                 <div className="lg:flex hidden items-end justify-end">

@@ -2,10 +2,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const VerticalAccordion = () => {
-  const [open, setOpen] = useState(null);
+  const [openPanelId, setOpenPanelId] = useState(null);
 
   const handlePanelClick = (id) => {
-    setOpen(open === id ? null : id);
+    setOpenPanelId((prevId) => (prevId === id ? null : id));
   };
 
   return (
@@ -14,18 +14,15 @@ const VerticalAccordion = () => {
         {items.map((item) => (
           <Panel
             key={item.id}
-            open={open}
-            setOpen={handlePanelClick}
-            id={item.id}
+            isOpen={openPanelId === item.id}
+            onClick={() => handlePanelClick(item.id)}
             title={item.title}
             links={item.links}
-            description={item.description}
           />
         ))}
         {items2.map((item) => (
           <Panel2
             key={item.id}
-            id={item.id}
             links={item.links}
             title={item.title}
           />
@@ -35,14 +32,12 @@ const VerticalAccordion = () => {
   );
 };
 
-const Panel = ({ open, setOpen, id, title, description, links }) => {
-  const isOpen = open === id;
-
+const Panel = ({ isOpen, onClick, title, links }) => {
   return (
     <div className="px-4">
       <button
         className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600"
-        onClick={() => setOpen(id)}
+        onClick={onClick}
       >
         <span className="block lg:hidden text-2xl font-semibold">{title}</span>
       </button>
@@ -50,7 +45,7 @@ const Panel = ({ open, setOpen, id, title, description, links }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            key={`panel-${id}`}
+            key={`panel-${title}`}
             variants={panelVariants}
             initial="closed"
             animate="open"
@@ -73,9 +68,9 @@ const Panel = ({ open, setOpen, id, title, description, links }) => {
   );
 };
 
-const Panel2 = ({ id, title, links }) => {
+const Panel2 = ({ title, links }) => {
   return (
-    <div className="px-4" key={id}>
+    <div className="px-4">
       <a href={links}>
         <button className="transition-colors py-3 w-full border-b-[1px] flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group hover:text-aurumgreen-600">
           <span className="block lg:hidden text-2xl font-semibold">{title}</span>

@@ -9,7 +9,7 @@ const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState('');
 
-  isOpen?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
+  isOpen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -44,16 +44,46 @@ const NavMenu = () => {
 
               {/* Navigation Section */}
               <nav className="p-8">
-                <ul>
+                <div>
                   {/* About */}
-                  <li
-                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 mb-6'
+                  <button
+                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
                     onClick={() => toggleSubMenu('About')}
                   >
-                    <h1 className='font-semibold text-lg text-neutral-900'>About</h1>
-                    <IoIosArrowForward />
-                  </li>
-                </ul>
+                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>About</h1>
+                    <IoIosArrowForward className=' group-hover:cursor-pointer'/>
+                  </button>
+
+                  {/* Catalogue */}
+                  <button
+                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
+                    onClick={() => toggleSubMenu('Catalogue')}
+                  >
+                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Catalogue</h1>
+                    <IoIosArrowForward className=' group-hover:cursor-pointer'/>
+                  </button>
+
+                  {/* Blog */}
+                  <button
+                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
+                  >
+                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Blog</h1>
+                  </button>
+
+                  {/* Resources */}
+                  <button
+                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
+                  >
+                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Resources</h1>
+                  </button>
+
+                  {/* Contact */}
+                  <button
+                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
+                  >
+                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Contact</h1>
+                  </button>
+                </div>
               </nav>
             </div>
 
@@ -76,7 +106,7 @@ const NavMenu = () => {
                   initial={{ x: '100%' }}
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                   className="fixed top-0 right-0 w-full h-screen bg-aurumwhite z-50"
                 >
                   <div className='flex justify-between p-4 border-b border-neutral-300 h-[4.25rem]'>
@@ -90,6 +120,36 @@ const NavMenu = () => {
                       <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>About Us</li>
                       <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>Our History</li>
                       <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>Our Solution</li>
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Catalogue Sub Menu */}
+            <AnimatePresence>
+              {activeMenu === 'Catalogue' && (
+                <motion.div
+                  initial={{ x: '100%' }}
+                  animate={{ x: 0 }}
+                  exit={{ x: '100%' }}
+                  transition={{ duration: 0.2 }}
+                  className="fixed top-0 right-0 w-full h-screen bg-aurumwhite z-50"
+                >
+                  <div className='flex justify-between p-4 border-b border-neutral-300 h-[4.25rem]'>
+                    <button onClick={closeSubMenu} className="flex items-center justify-between">
+                      <IoIosArrowBack className="mr-2" />
+                      <p className='pb-0.5'>Back</p>
+                    </button>
+                  </div>
+                  <div className="p-8 bg-aurumwhite">
+                    <ul>
+                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>Our Products</li>
+                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>CFC Series</li>
+                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>DTR Series</li>
+                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>BTR Series</li>
+                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>MHR Series</li>
+                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>DDR Series</li>
                     </ul>
                   </div>
                 </motion.div>
