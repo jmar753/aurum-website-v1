@@ -71,7 +71,7 @@ const NavMenu = () => {
               </div>
 
               {/* Navigation Section */}
-              <nav className="p-8">
+              <nav className="px-8 py-4">
                 <div>
                   {/* About */}
                   <button
