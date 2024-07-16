@@ -4,6 +4,7 @@ import { FiChevronDown } from 'react-icons/fi';
 import { HiMenu } from "react-icons/hi";
 import Logo from "../../RoughAssets/LogoNoTree.svg";
 import { IoIosArrowForward, IoIosClose, IoIosArrowBack } from 'react-icons/io';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -106,6 +107,30 @@ const NavMenu = () => {
                   </a>
                 </div>
               </nav>
+
+              {/* Footer */}
+              <div className="absolute bottom-36 w-full p-8 bg-aurumwhite">
+                <div className="mb-6">
+                  <h1 className="font-semibold text-lg text-neutral-900">Contact Us</h1>
+                  <p className="text-neutral-600">Phone: (123) 456-7890</p>
+                  <p className="text-neutral-600">Address: 123 HVAC Street, City, Country</p>
+                  <p className="text-neutral-600">Email: info@hvaccompany.com</p>
+                </div>
+                <div className="flex space-x-4">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <FaFacebookF className="text-neutral-900 size-6 hover:text-blue-600" />
+                  </a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <FaTwitter className="text-neutral-900 size-6 hover:text-blue-400" />
+                  </a>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="text-neutral-900 size-6 hover:text-pink-500" />
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedinIn className="text-neutral-900 size-6 hover:text-blue-700" />
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Overlay */}
@@ -139,7 +164,7 @@ const NavMenu = () => {
                   <div className="p-8 bg-aurumwhite">
                     <ul>
                       {aboutlinks.map((item, index) => (
-                        <a href={item.link}>
+                        <a href={item.link} key={index}>
                           <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>{item.title}</li>
                         </a>
                       ))}
@@ -168,7 +193,7 @@ const NavMenu = () => {
                   <div className="p-8 bg-aurumwhite">
                     <ul>
                       {cataloguelinks.map((item, index) => (
-                        <a href={item.link}>
+                        <a href={item.link} key={index}>
                           <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>{item.title}</li>
                         </a>
                       ))}
