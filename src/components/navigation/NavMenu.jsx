@@ -25,7 +25,7 @@ const NavMenu = () => {
     { title: "Our History", link: "/ourhistory" }
   ]
 
-  isOpen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto";
+  isOpen?document.body.style.overflow ="hidden":document.body.style.overflow="auto";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
