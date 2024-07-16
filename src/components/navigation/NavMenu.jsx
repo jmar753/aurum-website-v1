@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiChevronDown } from 'react-icons/fi';
 import { HiMenu } from "react-icons/hi";
 import Logo from "../../RoughAssets/LogoNoTree.svg";
 import { IoIosArrowForward, IoIosClose, IoIosArrowBack } from 'react-icons/io';
@@ -9,6 +8,21 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState('');
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.overflow = 'auto';
+      document.body.style.position = 'static';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.body.style.position = 'static';
+    };
+  }, [isOpen]);
 
   const cataloguelinks = [
     { title: "Our Products", link: "/catalogue" },
@@ -24,8 +38,6 @@ const NavMenu = () => {
     { title: "Our Solutions", link: "/oursolution" },
     { title: "Our History", link: "/ourhistory" }
   ]
-
-  isOpen?document.body.style.overflow ="hidden":document.body.style.overflow="auto";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
