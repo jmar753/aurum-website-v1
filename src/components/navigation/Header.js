@@ -1,11 +1,8 @@
 //Libraries
-
-import { IconContext } from "react-icons";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
-import { IoClose } from "react-icons/io5";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosClose } from "react-icons/io";
 
 //svgs
 import logoblack from "../../RoughAssets/LogoNoTree.svg"
@@ -143,7 +140,7 @@ export default function Header(){
     //Mobile Assets
     const MobilePopup = () => {
         const [check, setCheck] = useState(false)
-        // check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
+        check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
 
         return(
             <>
@@ -154,7 +151,7 @@ export default function Header(){
                 <AnimatePresence>
                     { check && (
                         <motion.div 
-                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-screen bg-white opacity-100 lg:hidden"
+                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-[110vh] bg-white opacity-100 lg:hidden"
                             initial={{ opacity: 0,}}
                             animate={{ opacity: 1,}}
                             exit={{ opacity: 0,}}
@@ -162,17 +159,15 @@ export default function Header(){
                         >   
 
                             {/* Navigation Header */}
-                            <div className="flex items-center justify-between px-4">
+                            <div className="flex items-center justify-between px-8">
                                 <a href="/"  onClick={() => setCheck(false)}>
                                     <div className="flex items-center h-[4rem]">
-                                        <img src={logoblack} alt="logo" className="h-12"/>
+                                        <img src={logoblack} alt="logo" className="h-10"/>
                                     </div>
                                 </a>
-                                <IconContext.Provider value={{ className: 'text-zinc-500 text-xl size-10 opacity-100  hover:text-slate-200 hover:cursor-pointer transition duration-100'}}>
-                                    <div className="lg:hidden flex" onClick={() => {setCheck(false)}}>
-                                        <IoClose/>
-                                    </div>
-                                </IconContext.Provider>
+                                <button onClick={() => {setCheck(false)}} className="">
+                                    <IoIosClose className="fill-neutral-900 size-11 -mx-1.5 hover:cursor-pointer" />
+                                </button>
                             </div>
 
                             {/* Navigation Body */}
@@ -182,6 +177,11 @@ export default function Header(){
                                     <VerticalAccordion check={check} setCheck={setCheck}/>
 
                                 </div>
+                            </div>
+
+                            {/* Navigation Footer */}
+                            <div className="absolute bottom-0 w-full bg-naturegreen-800 overflow-y-scroll h-[30vh]">
+                                
                             </div>
                         </motion.div> 
                     )}
@@ -222,8 +222,8 @@ export default function Header(){
                 </div>
 
                 {/* Mobile Pop up */}
-                {/* <MobilePopup/> */}
-                <NavMenu/>
+                <MobilePopup/>
+                {/* <NavMenu/> */}
 
                 {/* Random item */}
                 <div className="lg:flex hidden items-end justify-end">

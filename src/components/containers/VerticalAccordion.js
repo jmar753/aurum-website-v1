@@ -2,33 +2,34 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const VerticalAccordion = () => {
-  const [open, setOpen] = useState(items[0].id);
+  const [open, setOpen] = useState(null);
+
+  const handlePanelClick = (id) => {
+    setOpen(open === id ? null : id);
+  };
 
   return (
-    <section className="">
-      <div className="flex flex-col lg:flex-row h-fit w-fit max-w-6xl overflow-hidden">
-        {items.map((item) => {
-          return (
-            <Panel
-              key={item.id}
-              open={open}
-              setOpen={setOpen}
-              id={item.id}
-              title={item.title}
-              links={item.links}
-              description={item.description}
-            />
-          );
-        })}
-        {items2.map((item) => {
-          return (
-            <Panel2
-              key={item.id}
-              links={item.links}
-              title={item.title}
-            />
-          );
-        })}
+    <section>
+      <div className="flex flex-col lg:flex-row h-fit max-w-6xl overflow-hidden">
+        {items.map((item) => (
+          <Panel
+            key={item.id}
+            open={open}
+            setOpen={handlePanelClick}
+            id={item.id}
+            title={item.title}
+            links={item.links}
+            description={item.description}
+          />
+        ))}
+        {items2.map((item) => (
+          <Panel2
+            key={item.id}
+            id={item.id}
+            links={item.links}
+            title={item.title}
+          />
+        ))}
       </div>
     </section>
   );
@@ -56,11 +57,9 @@ const Panel = ({ open, setOpen, id, title, description, links }) => {
             exit="closed"
             className="w-full h-full overflow-hidden relative flex items-end origin-top"
           >
-            <motion.div
-              className="px-4 py-2 gap-y-2 text-lg w-full font-semibold backdrop-blur-sm text-neutral-800 origin-top"
-            >
+            <motion.div className="px-4 py-2 gap-y-2 text-lg w-full font-semibold backdrop-blur-sm text-neutral-800 origin-top">
               {links.map((item, index) => (
-                <a href={item.link}>
+                <a href={item.link} key={index}>
                   <div className="hover:cursor-pointer hover:text-aurumgreen-600">
                     {item.title}
                   </div>
@@ -74,8 +73,7 @@ const Panel = ({ open, setOpen, id, title, description, links }) => {
   );
 };
 
-const Panel2 = ({id, title, links }) => {
-
+const Panel2 = ({ id, title, links }) => {
   return (
     <div className="px-4" key={id}>
       <a href={links}>
@@ -91,12 +89,14 @@ export default VerticalAccordion;
 
 const panelVariants = {
   open: {
-    width: "100%",
     height: "auto",
+    opacity: 1,
+    transition: { duration: 0.3 }
   },
   closed: {
-    width: "100%",
-    height: "0px",
+    height: 0,
+    opacity: 0,
+    transition: { duration: 0.3 }
   },
 };
 
@@ -104,29 +104,40 @@ const items = [
   {
     id: 1,
     title: "About",
-    links: [{title:"About Us", link:"/aboutus"}, {title:"Our Solutions", link:"/oursolution"}, {title:"Our History", link:"/ourhistory"},],
+    links: [
+      { title: "About Us", link: "/aboutus" },
+      { title: "Our Solutions", link: "/oursolution" },
+      { title: "Our History", link: "/ourhistory" }
+    ],
   },
   {
     id: 2,
     title: "Catalogue",
-      links: [{title:"Our Products", link:"/catalogue"}, {title:"CFC Series", link:"/catalogue/cfc"}, {title:"DTR Series", link:"/catalogue/dtr"}, {title:"BTR Series", link:"/catalogue/btr"}, {title:"MHR Series", link:"/catalogue/mhr"}, {title:"DDR Series", link:"/catalogue/ddr"},],
+    links: [
+      { title: "Our Products", link: "/catalogue" },
+      { title: "CFC Series", link: "/catalogue/cfc" },
+      { title: "DTR Series", link: "/catalogue/dtr" },
+      { title: "BTR Series", link: "/catalogue/btr" },
+      { title: "MHR Series", link: "/catalogue/mhr" },
+      { title: "DDR Series", link: "/catalogue/ddr" }
+    ],
   },
 ];
 
 const items2 = [
   {
-    id: 1,
+    id: 3,
     title: "Blog",
     links: "/blog",
   },
   {
-    id: 1,
+    id: 4,
     title: "Resources",
     links: "/resources",
   },
   {
-    id: 3,
+    id: 5,
     title: "Contact",
     links: "/contactus",
   },
-]
+];
