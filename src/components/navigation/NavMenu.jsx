@@ -48,7 +48,7 @@ const NavMenu = () => {
 
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed top-0 left-0 w-screen h-[110vh] bg-aurumwhite z-30 text-neutral-900 block lg:hidden">
+          <div className="fixed top-0 left-0 w-screen h-screen bg-aurumwhite z-30 text-neutral-900 block lg:hidden">
             <div className='w-full h-full'>
               {/* Banner */}
               <div className='flex justify-between px-8 py-3'>
