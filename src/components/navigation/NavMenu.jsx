@@ -64,7 +64,9 @@ const NavMenu = () => {
             <div className='w-full h-full'>
               {/* Banner */}
               <div className='flex justify-between px-8 py-3'>
-                <img src={Logo} className='h-10' />
+                <a href='/'>
+                  <img src={Logo} className='h-10' />
+                </a>
                 <button onClick={toggleMenu} className="">
                   <IoIosClose className="fill-neutral-900 size-11 -mx-4 hover:cursor-pointer" />
                 </button>
