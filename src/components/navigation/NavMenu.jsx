@@ -9,6 +9,21 @@ const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState('');
 
+  const cataloguelinks = [
+    { title: "Our Products", link: "/catalogue" },
+    { title: "CFC Series", link: "/catalogue/cfc" },
+    { title: "DTR Series", link: "/catalogue/dtr" },
+    { title: "BTR Series", link: "/catalogue/btr" },
+    { title: "MHR Series", link: "/catalogue/mhr" },
+    { title: "DDR Series", link: "/catalogue/ddr" }
+  ]
+
+  const aboutlinks = [
+    { title: "About Us", link: "/aboutus" },
+    { title: "Our Solutions", link: "/oursolution" },
+    { title: "Our History", link: "/ourhistory" }
+  ]
+
   isOpen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto";
 
   const toggleMenu = () => {
@@ -64,25 +79,31 @@ const NavMenu = () => {
                   </button>
 
                   {/* Blog */}
-                  <button
-                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
-                  >
-                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Blog</h1>
-                  </button>
+                  <a href="/blog">
+                    <button
+                      className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
+                    >
+                      <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Blog</h1>
+                    </button>
+                  </a>
 
                   {/* Resources */}
-                  <button
-                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
-                  >
-                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Resources</h1>
-                  </button>
+                  <a href="/resources">
+                    <button
+                      className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
+                    >
+                      <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Resources</h1>
+                    </button>
+                  </a>
 
                   {/* Contact */}
-                  <button
-                    className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
-                  >
-                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Contact</h1>
-                  </button>
+                  <a href="/contactus">
+                    <button
+                      className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
+                    >
+                      <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Contact</h1>
+                    </button>
+                  </a>
                 </div>
               </nav>
             </div>
@@ -117,9 +138,11 @@ const NavMenu = () => {
                   </div>
                   <div className="p-8 bg-aurumwhite">
                     <ul>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>About Us</li>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>Our History</li>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>Our Solution</li>
+                      {aboutlinks.map((item, index) => (
+                        <a href={item.link}>
+                          <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>{item.title}</li>
+                        </a>
+                      ))}
                     </ul>
                   </div>
                 </motion.div>
@@ -144,12 +167,11 @@ const NavMenu = () => {
                   </div>
                   <div className="p-8 bg-aurumwhite">
                     <ul>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>Our Products</li>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>CFC Series</li>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>DTR Series</li>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>BTR Series</li>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>MHR Series</li>
-                      <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>DDR Series</li>
+                      {cataloguelinks.map((item, index) => (
+                        <a href={item.link}>
+                          <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>{item.title}</li>
+                        </a>
+                      ))}
                     </ul>
                   </div>
                 </motion.div>
