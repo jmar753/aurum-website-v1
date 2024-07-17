@@ -1,20 +1,16 @@
 //Libraries
-import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
-import { IoIosArrowDown, IoIosClose } from "react-icons/io";
+import { AnimatePresence, motion } from "framer-motion";
+import { IoIosArrowDown } from "react-icons/io";
 
 //svgs
-import logoblack from "../../RoughAssets/LogoNoTree.svg"
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
 //components
-import VerticalAccordion from "../containers/VerticalAccordion";
 import NavMenu from "./NavMenu";
 
 export default function Header(){
     const [hidden, setHidden] = useState(false);
-    const {scrollY} = useScroll();
 
     //Dropdown Menu
     const FlyoutLink = ({ children, to, FlyoutContent}) => {
@@ -137,59 +133,6 @@ export default function Header(){
     //Mobile Navigation
     const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Catalogue", nav:"/catalogue", Flyout:ProductSection},{name:"Blog", nav:"/blog"},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
 
-    //Mobile Assets
-    const MobilePopup = () => {
-        const [check, setCheck] = useState(false)
-        check?document.body.style.overflow ="hidden":document.body.style.overflow="auto"
-
-        return(
-            <>
-                {/* Pop Up Actuator */}
-                <div className="lg:hidden flex" onClick={() => {setCheck(true)}}>
-                    <HiMenu className="fill-aurumwhite size-8 hover:cursor-pointer"/>
-                </div>
-                <AnimatePresence>
-                    { check && (
-                        <motion.div 
-                            className="text-base text-black text-left absolute left-0 top-0 z-40 w-screen h-[110vh] bg-white opacity-100 lg:hidden"
-                            initial={{ opacity: 0,}}
-                            animate={{ opacity: 1,}}
-                            exit={{ opacity: 0,}}
-                            transition={{duration: 0.3, ease: 'easeOut'}}
-                        >   
-
-                            {/* Navigation Header */}
-                            <div className="flex items-center justify-between px-8">
-                                <a href="/"  onClick={() => setCheck(false)}>
-                                    <div className="flex items-center h-[4rem]">
-                                        <img src={logoblack} alt="logo" className="h-10"/>
-                                    </div>
-                                </a>
-                                <button onClick={() => {setCheck(false)}} className="">
-                                    <IoIosClose className="fill-neutral-900 size-11 -mx-1.5 hover:cursor-pointer" />
-                                </button>
-                            </div>
-
-                            {/* Navigation Body */}
-                            <div className="bg-neutral-100 overflow-y-scroll h-[calc(100vh-4rem)] w-full">
-                                <div className="w-full m-auto bg-neutral-100">
-                                    {/* Content Here */}
-                                    <VerticalAccordion check={check} setCheck={setCheck}/>
-
-                                </div>
-                            </div>
-
-                            {/* Navigation Footer */}
-                            <div className="absolute bottom-0 w-full bg-galliano overflow-y-scroll h-[30vh]">
-                                
-                            </div>
-                        </motion.div> 
-                    )}
-                </AnimatePresence>
-            </>
-        )
-    }
-
     return(
         <motion.nav 
             className="bg-galliano/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-aurumwhite h-[4rem] px-4 fixed -top-1 z-40 w-screen flex justify-center items-center"
@@ -222,7 +165,6 @@ export default function Header(){
                 </div>
 
                 {/* Mobile Pop up */}
-                {/* <MobilePopup/> */}
                 <NavMenu/>
 
                 {/* Random item */}
