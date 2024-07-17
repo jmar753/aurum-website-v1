@@ -76,7 +76,7 @@ export default function OurSolution(){
         <div className="text-aurumgreen-800 bg-gray-100 leading-loose flex flex-col justify-center items-center px-6">
             {/* About Banner */}
             <div className="pb-20 pt-36 space-y-8 w-full">
-                <h1 className="font-bold text-3xl">Our Solution</h1>
+                <h1 className="font-semibold text-3xl">Our Solution</h1>
             </div>
 
             {/* Written */}

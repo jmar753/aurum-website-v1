@@ -40,7 +40,7 @@ export default function AboutUs(){
 
             {/* Meet the Team */}
             <div className="pb-20 pt-36 space-y-8">
-                <h1 className="font-bold text-3xl">Meet the Team</h1>
+                <h1 className="font-semibold text-3xl">Meet the Team</h1>
                 <p className="text-neutral-500">Aurum Manufacturing stems from a family with over 50 years of mechanical experience. The Zorzit last name has been through many areas of the mechanical industry beginning with our father, Vittorio Zorzit.</p>
                 {ceoCard.map((item, index) =>(
                     <div className="flex items-center gap-4" key={index}>

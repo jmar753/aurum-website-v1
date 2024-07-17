@@ -103,7 +103,7 @@ export default function Home(){
             <div className="py-20 lg:py-32 px-4 h-auto flex justify-center items-center bg-gray-100 text-naturegreen-800 text-center lg:text-left">
                 <div className="max-w-7xl">
                     <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
-                        <h1 className="font-semibold text-3xl lg:text-4xl">Old School <span className="text-naturegreen-800 font-bold">Values</span> With A <span className="text-naturegreen-800 font-bold">New School Touch</span></h1>
+                        <h1 className="font-semibold text-3xl lg:text-4xl">Old School <span className="text-naturegreen-800 font-semibold">Values</span> With A <span className="text-naturegreen-800 font-semibold">New School Touch</span></h1>
                     </div>
                     <div className="flex flex-col md:flex-row pt-16 gap-4 relative">
                         <div className="relative h-80 w-full md:w-1/2 rounded-xl">
@@ -150,7 +150,7 @@ export default function Home(){
             <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-gray-100 text-center lg:text-left">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
-                    <h1 className="text-3xl lg:text-5xl font-bold py-4">Why choose Aurum for your home?</h1>
+                    <h1 className="text-3xl lg:text-5xl font-semibold py-4">Why choose Aurum for your home?</h1>
 
                     {/* Banner */}
                     <div className="py-4">

@@ -35,7 +35,7 @@ export default function OurHistory(){
 
             {/* Meet the Team */}
             <div className="pb-20 pt-36 space-y-8">
-                <h1 className="font-bold text-3xl">Our History</h1>
+                <h1 className="font-semibold text-3xl">Our History</h1>
                 <p className="text-neutral-500">We are proud and honoured to share our family history and the origin of Aurum Manufacturing. Aurum Manufacturing stems from a family with over 50 years of mechanical experience. The Zorzit last name has been through many areas of the mechanical industry beginning with our father, Vittorio Zorzit.</p>
             </div>
         </div>
