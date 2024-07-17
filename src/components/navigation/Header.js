@@ -83,22 +83,22 @@ export default function Header(){
             <div className="w-64 bg-white p-6 shadow-xl z-40">
                 <div className="mb-3 space-y-3">
                     <h3 className="font-semibold">Older Series</h3>
-                    <a href="/catalogue/cfc" className="block text-sm hover:underline pl-4">
+                    <a href="/products/cfc" className="block text-sm hover:underline pl-4">
                         CFC Series
                     </a>
-                    <a href="/catalogue/dtr" className="block text-sm hover:underline pl-4">
+                    <a href="/products/dtr" className="block text-sm hover:underline pl-4">
                         DTR Series
                     </a>
-                    <a href="/catalogue/btr" className="block text-sm hover:underline pl-4">
+                    <a href="/products/btr" className="block text-sm hover:underline pl-4">
                         BTR Series
                     </a>
                 </div>
                 <div className="mb-6 space-y-3">
                     <h3 className="font-semibold">Newer Series</h3>
-                    <a href="/catalogue/mhr" className="block text-sm hover:underline pl-4">
+                    <a href="/products/mhr" className="block text-sm hover:underline pl-4">
                         MHR Series
                     </a>
-                    <a href="/catalogue/ddr" className="block text-sm hover:underline pl-4">
+                    <a href="/products/ddr" className="block text-sm hover:underline pl-4">
                         DDR Series
                     </a>
                 </div>
@@ -131,7 +131,7 @@ export default function Header(){
     }
 
     //Mobile Navigation
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Catalogue", nav:"/catalogue", Flyout:ProductSection},{name:"Blog", nav:"/blog"},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
+    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Blog", nav:"/blog"},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
 
     return(
         <motion.nav 
@@ -158,7 +158,7 @@ export default function Header(){
                         <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
                             <div className="flex justify-center items-center space-x-2 group">
                                 <p className="font-medium text-base">{item.name}</p>
-                                {item.name === "About" || item.name === "Contact" || item.name === "Catalogue" ? <IoIosArrowDown className="group-hover:text-aurumgreen-600 duration-200"/> : null}
+                                {item.name === "About" || item.name === "Contact" || item.name === "Products" ? <IoIosArrowDown className="group-hover:text-aurumgreen-600 duration-200"/> : null}
                             </div>
                         </FlyoutLink>
                     ))}

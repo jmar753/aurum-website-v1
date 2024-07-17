@@ -25,12 +25,12 @@ const NavMenu = () => {
   }, [isOpen]);
 
   const cataloguelinks = [
-    { title: "Our Products", link: "/catalogue" },
-    { title: "CFC Series", link: "/catalogue/cfc" },
-    { title: "DTR Series", link: "/catalogue/dtr" },
-    { title: "BTR Series", link: "/catalogue/btr" },
-    { title: "MHR Series", link: "/catalogue/mhr" },
-    { title: "DDR Series", link: "/catalogue/ddr" }
+    { title: "Our Products", link: "/products" },
+    { title: "CFC Series", link: "/products/cfc" },
+    { title: "DTR Series", link: "/products/dtr" },
+    { title: "BTR Series", link: "/products/btr" },
+    { title: "MHR Series", link: "/products/mhr" },
+    { title: "DDR Series", link: "/products/ddr" }
   ]
 
   const aboutlinks = [
@@ -84,12 +84,12 @@ const NavMenu = () => {
                     <IoIosArrowForward className=' group-hover:cursor-pointer'/>
                   </button>
 
-                  {/* Catalogue */}
+                  {/* Products */}
                   <button
                     className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
-                    onClick={() => toggleSubMenu('Catalogue')}
+                    onClick={() => toggleSubMenu('Products')}
                   >
-                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Catalogue</h1>
+                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Products</h1>
                     <IoIosArrowForward className=' group-hover:cursor-pointer'/>
                   </button>
 
@@ -188,9 +188,9 @@ const NavMenu = () => {
               )}
             </AnimatePresence>
 
-            {/* Catalogue Sub Menu */}
+            {/* Products Sub Menu */}
             <AnimatePresence>
-              {activeMenu === 'Catalogue' && (
+              {activeMenu === 'Products' && (
                 <motion.div
                   initial={{ x: '100%' }}
                   animate={{ x: 0 }}

@@ -11,8 +11,8 @@ import AboutUs from './pages/About/AboutUs';
 import OurHistory from './pages/About/OurHistory';
 import OurSolution from './pages/About/OurSolution';
 
-//Catalogue Pages
-import Catalogue from './pages/Catalogue/Catalogue';
+//Products Pages
+import Products from './pages/Products/Products';
 
 //Single Pages
 import Contact from './pages/Contact';
@@ -46,8 +46,8 @@ function App() {
           <Route exact path="/resources" element={<Resources/>}/>
 
           {/*Products)*/}
-          <Route exact path="/catalogue" element={<Catalogue/>}/>
-          <Route exact path="/catalogue/:retrofitId" element={<RetrofitDetails/>}/>
+          <Route exact path="/products" element={<Products/>}/>
+          <Route exact path="/products/:retrofitId" element={<RetrofitDetails/>}/>
 
           {/* Test */}
           <Route exact path="/test" element={<TextOverlapColorChange/>}/>
