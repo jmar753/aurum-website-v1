@@ -5,7 +5,7 @@ import { GiAchievement } from "react-icons/gi";
 import { IconContext } from "react-icons";
 
 //Rough Assets
-import ShortVideo from "../RoughAssets/DTRMOV.mp4"
+import ShortVideo from "../RoughAssets/RoughMain.mp4"
 
 //AssetPhotos
 import AdamChillin from "../AssetPhotos/AdamChillin.png"
@@ -53,12 +53,19 @@ export default function Home(){
                     {/* Written Section*/}
                     <div className="absolute text-white flex flex-col gap-8 justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
                         <SideReveal propDelay={7.9} className="">
-                            <div className="space-y-12">
-                                <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-galliano-300">Values</span> With A New School <span className="text-logogreen">Touch</span></p>
-                                <div className="flex items-center space-x-3">
-                                    <p className="font-semibold">View Fan Coil Line</p>
-                                    <FaArrowRight/>
+                            <div className="pt-10 lg:pt-2 text-left space-y-2">
+                                <h1 className="text-4xl lg:text-7xl text-gray-100 font-semibold">Old School Values With A New School Touch</h1>
+                                <h1  className="py-2 text-aurumaqua-primary">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
+                                <div className="grid grid-cols-2 gap-4 pt-4">
+                                    <button className="w-full h-12 rounded-lg bg-[#6AB04C] text-white">Our Products</button>
+                                    <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
                                 </div>
+
+                                <div className="flex items-center pt-4">
+                                    <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-gray-100" placeholder="user@mail.com"/>
+                                    <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-lg shadow-sm text-gray-100 hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
+                                </div>
+                                <br/>
                             </div>
                         </SideReveal>
                         
@@ -116,8 +123,37 @@ export default function Home(){
                 </div>
             </div>
 
+            {/* About Us */}
+            <div className="py-20 lg:py-32 px-4 h-auto flex justify-center items-center bg-neutral-900 text-white text-center lg:text-left">
+                <div className="max-w-7xl">
+                    <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
+                        <h1 className="font-semibold text-3xl lg:text-4xl">Old School <span className="text-naturegreen-800 font-semibold">Values</span> With A <span className="text-naturegreen-800 font-semibold">New School Touch</span></h1>
+                    </div>
+                    <div className="flex flex-col md:flex-row pt-16 gap-4 relative">
+                        <div className="relative h-80 w-full md:w-1/2 rounded-xl">
+                            <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
+                            <img alt="Aurum Office" src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover"/>
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-20">
+                                <p className="font-semibold text-2xl">About Us</p>
+                                <p className="underline">Read our Journey</p>
+                            </div>
+                        </div>
+
+                        <div className="relative h-80 w-full md:w-1/2 rounded-xl">
+                            <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
+                            <img src={AdamChillin} alt="Aurum Office" className="absolute h-full w-full rounded-xl object-cover z-10"/>
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-30">
+                                <p className="font-semibold text-2xl">Our Story</p>
+                                <p className="underline">Read our Journey</p>
+                            </div>
+                        </div>
+                        <div className="absolute hidden bg-naturegreen-800 w-screen h-[300px] -bottom-32 -left-4 z-0"></div>
+                    </div>
+                </div>
+            </div>
+
             {/* Why Choose Aurum? */}
-            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-gray-100 text-center lg:text-left">
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center text-center lg:text-left bg-neutral-900">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
                     <h1 className="text-3xl lg:text-5xl font-semibold py-4">Why choose Aurum for your home?</h1>
