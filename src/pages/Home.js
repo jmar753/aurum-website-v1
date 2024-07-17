@@ -42,13 +42,13 @@ export default function Home(){
 
             {/* Introduction */}
 
-            <div className="flex flex-col justify-center items-center h-auto sm:h-screen bg-gradient-to-bl from-naturegreen-400 to-naturegreen-900 lg:bg-aurumwhite px-4 overflow-hidden">
+            <div className="flex flex-col justify-center items-center h-auto sm:h-screen bg-gradient-to-bl from-naturegreen-400 to-naturegreen-900 lg:bg-gray-100 px-4 overflow-hidden">
 
                 <div className="flex justify-center h-full w-[calc(100%-32px)] z-20">
                     <div className="w-full max-w-7xl lg:grid lg:grid-cols-2 pt-36">
                         <div className="pt-10 lg:pt-2 text-left space-y-2">
 
-                            <h1 className="text-4xl lg:text-7xl text-aurumwhite font-semibold">Old School Values With A New School Touch</h1>
+                            <h1 className="text-4xl lg:text-7xl text-gray-100 font-semibold">Old School Values With A New School Touch</h1>
                             <h1  className="py-2 text-aurumaqua-primary">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
                             <div className="grid grid-cols-2 gap-4 pt-4">
                                 <button className="w-full h-12 rounded-lg bg-[#6AB04C] text-white">Our Products</button>
@@ -56,8 +56,8 @@ export default function Home(){
                             </div>
 
                             <div className="flex items-center pt-4">
-                                <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-aurumwhite" placeholder="user@mail.com"/>
-                                <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-lg shadow-sm text-aurumwhite hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
+                                <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-gray-100" placeholder="user@mail.com"/>
+                                <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-lg shadow-sm text-gray-100 hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
                             </div>
                             <br/>
                         </div>
@@ -66,7 +66,7 @@ export default function Home(){
                 
                 {/* Accent Divs */}
                 <div className="relative h-[500px] w-full">
-                    <div className="absolute m-auto -bottom-[350px] -right-20 h-[400px] w-[calc(200vw)] bg-aurumwhite -rotate-[10deg] z-10"></div>
+                    <div className="absolute m-auto -bottom-[350px] -right-20 h-[400px] w-[calc(200vw)] bg-gray-100 -rotate-[10deg] z-10"></div>
                     <div className="absolute -bottom-16 -right-16 z-20">
                         <img src={BTR} alt="retrofit" className="h-[500px] brightness-75"/>
                     </div>
@@ -76,11 +76,11 @@ export default function Home(){
 
             {/* What is Aurum? */}
             <div className="px-4 border-x-2 overflow-hidden">
-                <div className="relative h-auto py-20 lg:py-32 flex justify-center items-center bg-aurumwhite text-naturegreen-800 lg:text-left">
+                <div className="relative h-auto py-20 lg:py-32 flex justify-center items-center bg-gray-100 text-naturegreen-800 lg:text-left">
 
-                    <div className="absolute m-auto left-0 -right-96 opacity-40">
+                    {/* <div className="absolute m-auto left-0 -right-96 opacity-40">
                         <img alt="aurumTree" src={GoldTree} className="h-[1000px]"/>
-                    </div>
+                    </div> */}
 
                     <div className="max-w-7xl grid lg:grid-cols-5 gap-14 z-10 px-4">
                         <div className="lg:items-start space-y-4 lg:col-span-2">
@@ -91,16 +91,16 @@ export default function Home(){
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
                         </div>
                         <div className="flex justify-center items-center lg:col-span-3">
-                            <video className='object-cover z-10 rounded-3xl' autoPlay muted>
+                            {/* <video className='object-cover z-10 rounded-3xl' autoPlay muted>
                                 <source src={ShortVideo} type='video/mp4'/>
-                            </video>
+                            </video> */}
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* About Us */}
-            <div className="py-20 lg:py-32 px-4 h-auto flex justify-center items-center bg-aurumwhite text-naturegreen-800 text-center lg:text-left">
+            <div className="py-20 lg:py-32 px-4 h-auto flex justify-center items-center bg-gray-100 text-naturegreen-800 text-center lg:text-left">
                 <div className="max-w-7xl">
                     <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
                         <h1 className="font-semibold text-3xl lg:text-4xl">Old School <span className="text-naturegreen-800 font-bold">Values</span> With A <span className="text-naturegreen-800 font-bold">New School Touch</span></h1>
@@ -109,7 +109,7 @@ export default function Home(){
                         <div className="relative h-80 w-full md:w-1/2 rounded-xl">
                             <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
                             <img alt="Aurum Office" src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover"/>
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-aurumwhite z-20">
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-20">
                                 <p className="font-semibold text-2xl">About Us</p>
                                 <p className="underline">Read our Journey</p>
                             </div>
@@ -118,7 +118,7 @@ export default function Home(){
                         <div className="relative h-80 w-full md:w-1/2 rounded-xl">
                             <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
                             <img src={AdamChillin} alt="Aurum Office" className="absolute h-full w-full rounded-xl object-cover z-10"/>
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-aurumwhite z-30">
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-30">
                                 <p className="font-semibold text-2xl">Our Story</p>
                                 <p className="underline">Read our Journey</p>
                             </div>
@@ -130,12 +130,12 @@ export default function Home(){
             </div>
 
             {/* What are we offering? */}
-            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-naturegreen-800 text-aurumwhite text-center lg:text-left">
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-naturegreen-800 text-gray-100 text-center lg:text-left">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <h1 className="text-3xl lg:text-5xl font-medium py-4">Explore our <span>wide variety of retrofits</span> </h1>
                     
                     {/* Products */}
-                    <div className="h-auto text-aurumwhite text-left divide-y divide-dashed divide-aurumwhite">
+                    <div className="h-auto text-gray-100 text-left divide-y divide-dashed divide-gray-100">
                         {retrofits.map((item, index) => (
                             <div key={index} className="py-4 space-y-4">
                                 <h1 className="text-2xl font-medium">{item.name}</h1>
@@ -147,7 +147,7 @@ export default function Home(){
             </div>
 
             {/* Why Choose Aurum? */}
-            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-aurumwhite text-center lg:text-left">
+            <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-gray-100 text-center lg:text-left">
                 <div className="w-full max-w-7xl flex flex-col justify-center items-center text-center">
                     <p className="text-aurumgreen-500">THE AURUM DIFFERENCE</p>
                     <h1 className="text-3xl lg:text-5xl font-bold py-4">Why choose Aurum for your home?</h1>

@@ -31,7 +31,7 @@ export default function OurHistory(){
 
     return(
 
-        <div className="text-aurumgreen-800 bg-aurumwhite leading-loose flex flex-col justify-center items-center px-6">
+        <div className="text-aurumgreen-800 bg-gray-100 leading-loose flex flex-col justify-center items-center px-6">
 
             {/* Meet the Team */}
             <div className="pb-20 pt-36 space-y-8">

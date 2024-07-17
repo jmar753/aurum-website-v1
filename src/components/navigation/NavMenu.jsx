@@ -55,12 +55,12 @@ const NavMenu = () => {
   return (
     <div>
       <button onClick={toggleMenu} className="lg:hidden flex">
-        <HiMenu className="fill-aurumwhite size-11 py-1 hover:cursor-pointer -mx-4" />
+        <HiMenu className="fill-gray-100 size-11 py-1 hover:cursor-pointer -mx-4" />
       </button>
 
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed top-0 left-0 w-screen h-screen bg-aurumwhite z-30 text-neutral-900 block lg:hidden">
+          <div className="fixed top-0 left-0 w-screen h-screen bg-gray-100 z-30 text-neutral-900 block lg:hidden">
             <div className='w-full h-full'>
               {/* Banner */}
               <div className='flex justify-between px-8 py-3'>
@@ -167,7 +167,7 @@ const NavMenu = () => {
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
                   transition={{ duration: 0.2 }}
-                  className="fixed top-0 right-0 w-full h-screen bg-aurumwhite z-50"
+                  className="fixed top-0 right-0 w-full h-screen bg-gray-100 z-50"
                 >
                   <div className='flex justify-between p-4 border-b border-neutral-300 h-[4.25rem]'>
                     <button onClick={closeSubMenu} className="flex items-center justify-between">
@@ -175,7 +175,7 @@ const NavMenu = () => {
                       <p className='pb-0.5'>Back</p>
                     </button>
                   </div>
-                  <div className="p-8 bg-aurumwhite">
+                  <div className="p-8 bg-gray-100">
                     <ul>
                       {aboutlinks.map((item, index) => (
                         <a href={item.link} key={index}>
@@ -196,7 +196,7 @@ const NavMenu = () => {
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
                   transition={{ duration: 0.2 }}
-                  className="fixed top-0 right-0 w-full h-screen bg-aurumwhite z-50"
+                  className="fixed top-0 right-0 w-full h-screen bg-gray-100 z-50"
                 >
                   <div className='flex justify-between p-4 border-b border-neutral-300 h-[4.25rem]'>
                     <button onClick={closeSubMenu} className="flex items-center justify-between">
@@ -204,7 +204,7 @@ const NavMenu = () => {
                       <p className='pb-0.5'>Back</p>
                     </button>
                   </div>
-                  <div className="p-8 bg-aurumwhite">
+                  <div className="p-8 bg-gray-100">
                     <ul>
                       {cataloguelinks.map((item, index) => (
                         <a href={item.link} key={index}>
