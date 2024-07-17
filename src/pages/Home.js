@@ -1,25 +1,32 @@
-// import {motion } from "framer-motion";
-
 //react-icons library: https://react-icons.github.io/react-icons/
 import { SiAircanada } from "react-icons/si";
-import { FaRegHandshake, FaTree, FaRegThumbsUp } from "react-icons/fa";
+import { FaRegHandshake, FaTree, FaRegThumbsUp, FaArrowRight, FaCanadianMapleLeaf } from "react-icons/fa";
+import { GiAchievement } from "react-icons/gi";
+import { IconContext } from "react-icons";
 
 //Rough Assets
 import ShortVideo from "../RoughAssets/DTRMOV.mp4"
-import BTR from "../ProductPhotos/CFC.png"
-import GoldTree from "../RoughAssets/TreeGold.svg"
 
 //AssetPhotos
 import AdamChillin from "../AssetPhotos/AdamChillin.png"
 import OfficeBuilding from "../AssetPhotos/AurumFront.png"
 
+
+import TreePhoto from "../RoughAssets/TreeGold.svg"
+
+//animations
+import Reveal from "../animations/Reveal"
+import SideReveal from "../animations/SideReveal";
+
+
 export default function Home(){
 
     const BannerArray = [
-        {icon: SiAircanada, title: "Plan With Confidence", description:"Whether it's for the next 6 months or next 5 years, use our built-in integrations, reports and auto-generated forecasts to develop plans you can rely on.", size: "size-[4rem]"},
-        {icon: FaRegHandshake, title: "Plan With Confidence", description:"Whether it's for the next 6 months or next 5 years, use our built-in integrations, reports and auto-generated forecasts to develop plans you can rely on.", size: "size-[7rem]"},
-        {icon: FaTree, title: "Plan With Confidence", description:"Whether it's for the next 6 months or next 5 years, use our built-in integrations, reports and auto-generated forecasts to develop plans you can rely on.", size: "size-[4rem]"},
-        {icon: FaRegThumbsUp, title: "Plan With Confidence", description:"Whether it's for the next 6 months or next 5 years, use our built-in integrations, reports and auto-generated forecasts to develop plans you can rely on.", size: "size-[4rem]"},
+        {icon: SiAircanada, description:"Canadian Based Manufacturer", size: "size-[4rem]"},
+        {icon: FaRegHandshake, description:"Trusted by Property Managers & Trade Technicians ", size: "size-[7rem]"},
+        {icon: FaTree, description:"A Family Business With Over 40 years Experience", size: "size-[4rem]"},
+        {icon: FaRegThumbsUp , description:"100% Satisfaction Guaranteed", size: "size-[4rem]"},
+        {icon: GiAchievement, description:"Made With The Highest Quality & Craftsmanship", size: "size-[7rem]"},
     ]
 
     const retrofits = [
@@ -38,96 +45,59 @@ export default function Home(){
     ]
 
     return(
-        <div className="text-gray-800">
+        <div className="text-white">
 
-            {/* Introduction */}
+            {/* Animated Intro */}
+            <div className="min-h-screen relative">
 
-            <div className="flex flex-col justify-center items-center h-auto sm:h-screen bg-gradient-to-bl from-naturegreen-400 to-naturegreen-900 lg:bg-gray-100 px-4 overflow-hidden">
-
-                <div className="flex justify-center h-full w-[calc(100%-32px)] z-20">
-                    <div className="w-full max-w-7xl lg:grid lg:grid-cols-2 pt-36">
-                        <div className="pt-10 lg:pt-2 text-left space-y-2">
-
-                            <h1 className="text-4xl lg:text-7xl text-gray-100 font-semibold">Old School Values With A New School Touch</h1>
-                            <h1  className="py-2 text-aurumaqua-primary">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
-                            <div className="grid grid-cols-2 gap-4 pt-4">
-                                <button className="w-full h-12 rounded-lg bg-[#6AB04C] text-white">Our Products</button>
-                                <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
+                    {/* Written Section*/}
+                    <div className="absolute text-white flex flex-col gap-8 justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
+                        <SideReveal propDelay={7.9} className="">
+                            <div className="space-y-12">
+                                <p className="text-2xl md:text-5xl lg:text-7xl">Old School <span className="text-galliano-300">Values</span> With A New School <span className="text-logogreen">Touch</span></p>
+                                <div className="flex items-center space-x-3">
+                                    <p className="font-semibold">View Fan Coil Line</p>
+                                    <FaArrowRight/>
+                                </div>
                             </div>
-
-                            <div className="flex items-center pt-4">
-                                <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-gray-100" placeholder="user@mail.com"/>
-                                <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-lg shadow-sm text-gray-100 hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
+                        </SideReveal>
+                        
+                        {/* Canada Logo*/}
+                        <div className="z-40 flex items-center gap-x-2">
+                            <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
+                                <FaCanadianMapleLeaf className="text-red-600 h-6 w-6"/>
                             </div>
-                            <br/>
+                            <div className="text-sm font-thin tracking-tight text-neutral-200">
+                                <p>ONTARIO MANUFACTURED</p>
+                                <p>PROUDLY CANADIAN</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                {/* Video BG */}
+                <video className='absolute h-screen w-screen object-cover z-10' autoPlay muted>
+                    <source src={ShortVideo} type='video/mp4'/>
+                </video>
+            </div>
+
+
+            {/* Who Are We? */}
+            <div className="flex flex-col py-28 items-center justify-center px-3 mx-auto max-w-6xl">
+                <Reveal>
+                    <div className="">
+                        <img src={TreePhoto} alt="logo" className="h-32"/>
+                    </div>
+                </Reveal>
+
+                <Reveal>           
+                    <h1 className="font-bold text-4xl md:text-5xl">Why <span className="text-logogreen">Aurum</span>?</h1>
+                </Reveal>
                 
-                {/* Accent Divs */}
-                <div className="relative h-[500px] w-full">
-                    <div className="absolute m-auto -bottom-[350px] -right-20 h-[400px] w-[calc(200vw)] bg-gray-100 -rotate-[10deg] z-10"></div>
-                    <div className="absolute -bottom-16 -right-16 z-20">
-                        <img src={BTR} alt="retrofit" className="h-[500px] brightness-75"/>
-                    </div>
-                </div>
+                <Reveal>
+                    <p className="pt-3 text-center md:text-2xl md:leading-loose">Aurum is a family owned and operated business that operates with more emphasis on customer relationships rather than sale making. Building a meaningful relationship with our customers, suppliers, vendors, and every individual in our process is our main focus as a company. Aurum prides ourselves in treating each customer like they’re our only customer, not just another number. We believe our success is meaningless without integrity. </p>
+                </Reveal>
             </div>
 
-
-            {/* What is Aurum? */}
-            <div className="px-4 border-x-2 overflow-hidden">
-                <div className="relative h-auto py-20 lg:py-32 flex justify-center items-center bg-gray-100 text-naturegreen-800 lg:text-left">
-
-                    {/* <div className="absolute m-auto left-0 -right-96 opacity-40">
-                        <img alt="aurumTree" src={GoldTree} className="h-[1000px]"/>
-                    </div> */}
-
-                    <div className="max-w-7xl grid lg:grid-cols-5 gap-14 z-10 px-4">
-                        <div className="lg:items-start space-y-4 lg:col-span-2">
-                            <div>
-                                <h1 className="font-semibold text-3xl lg:text-4xl">What is Aurum?
-                                </h1>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ornare leo, ut aliquam dolor. Proin quis tincidunt neque, vel aliquet nisl. Etiam id mattis nulla. Etiam vitae libero turpis.</p>
-                        </div>
-                        <div className="flex justify-center items-center lg:col-span-3">
-                            {/* <video className='object-cover z-10 rounded-3xl' autoPlay muted>
-                                <source src={ShortVideo} type='video/mp4'/>
-                            </video> */}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* About Us */}
-            <div className="py-20 lg:py-32 px-4 h-auto flex justify-center items-center bg-gray-100 text-naturegreen-800 text-center lg:text-left">
-                <div className="max-w-7xl">
-                    <div className="flex flex-col justify-center items-center lg:items-start space-y-4 lg:col-span-2">
-                        <h1 className="font-semibold text-3xl lg:text-4xl">Old School <span className="text-naturegreen-800 font-semibold">Values</span> With A <span className="text-naturegreen-800 font-semibold">New School Touch</span></h1>
-                    </div>
-                    <div className="flex flex-col md:flex-row pt-16 gap-4 relative">
-                        <div className="relative h-80 w-full md:w-1/2 rounded-xl">
-                            <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
-                            <img alt="Aurum Office" src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover"/>
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-20">
-                                <p className="font-semibold text-2xl">About Us</p>
-                                <p className="underline">Read our Journey</p>
-                            </div>
-                        </div>
-
-                        <div className="relative h-80 w-full md:w-1/2 rounded-xl">
-                            <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
-                            <img src={AdamChillin} alt="Aurum Office" className="absolute h-full w-full rounded-xl object-cover z-10"/>
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-30">
-                                <p className="font-semibold text-2xl">Our Story</p>
-                                <p className="underline">Read our Journey</p>
-                            </div>
-                        </div>
-                        <div className="absolute hidden bg-naturegreen-800 w-screen h-[300px] -bottom-32 -left-4 z-0"></div>
-                    </div>
-                </div>
-
-            </div>
 
             {/* What are we offering? */}
             <div className="py-20 lg:py-32 px-4 flex justify-center items-center bg-naturegreen-800 text-gray-100 text-center lg:text-left">
