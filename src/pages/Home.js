@@ -50,7 +50,7 @@ export default function Home(){
             {/* Introduction */}
             <div className="min-h-screen flex flex-col lg:flex-row lg:relative">
                 {/* Written Section */}
-                <div className="flex flex-col gap-8 justify-center z-30 h-auto w-full lg:h-screen lg:w-1/2 px-8 pl-0 lg:pl-16 text-xl font-bold">
+                <div className="flex flex-col gap-8 justify-center z-30 h-auto w-auto lg:w-full m-8 lg:m-0 lg:h-screen lg:w-1/2 pl-0 lg:pl-16 text-xl font-bold">
                     <SideReveal propDelay={7.9} className="">
                     <div className="pt-10 lg:pt-2 text-left space-y-2">
                         <h1 className="text-4xl lg:text-7xl text-gray-100 font-semibold">Old School Values With A New School Touch</h1>
@@ -69,7 +69,7 @@ export default function Home(){
                     </SideReveal>
 
                     {/* Canada Logo */}
-                    <div className="z-40 flex items-center gap-x-2">
+                    <div className="z-40 hidden lg:flex items-center gap-x-2">
                         <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
                             <FaCanadianMapleLeaf className="text-red-600 h-6 w-6" />
                         </div>
