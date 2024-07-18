@@ -60,16 +60,15 @@ export default function Home(){
                         <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
                         </div>
 
-                        <div className="flex items-center pt-4">
-                        <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-gray-100" placeholder="user@mail.com" />
-                        <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0 rounded-r-lg shadow-sm text-gray-100 hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
-                        </div>
-                        <br />
+                        {/* <div className="flex items-center pt-4">
+                            <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-gray-100" placeholder="user@mail.com" />
+                            <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0 rounded-r-lg shadow-sm text-gray-100 hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
+                        </div> */}
                     </div>
                     </SideReveal>
 
                     {/* Canada Logo */}
-                    <div className="z-40 hidden lg:flex items-center gap-x-2">
+                    {/* <div className="z-40 hidden lg:flex items-center gap-x-2">
                         <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
                             <FaCanadianMapleLeaf className="text-red-600 h-6 w-6" />
                         </div>
@@ -77,7 +76,7 @@ export default function Home(){
                             <p>ONTARIO MANUFACTURED</p>
                             <p>PROUDLY CANADIAN</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Video BG */}
