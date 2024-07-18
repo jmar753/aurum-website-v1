@@ -47,46 +47,46 @@ export default function Home(){
     return(
         <div className="text-white">
 
-            {/* Animated Intro */}
-            <div className="min-h-screen relative">
+            {/* Introduction */}
+            <div className="min-h-screen flex flex-col lg:flex-row lg:relative">
+                {/* Written Section */}
+                <div className="flex flex-col gap-8 justify-center z-30 h-auto w-full lg:h-screen lg:w-1/2 px-8 pl-0 lg:pl-16 text-xl font-bold">
+                    <SideReveal propDelay={7.9} className="">
+                    <div className="pt-10 lg:pt-2 text-left space-y-2">
+                        <h1 className="text-4xl lg:text-7xl text-gray-100 font-semibold">Old School Values With A New School Touch</h1>
+                        <h1 className="py-2 text-aurumaqua-primary">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
+                        <div className="grid grid-cols-2 gap-4 pt-4">
+                        <button className="w-full h-12 rounded-lg bg-[#6AB04C] text-white">Our Products</button>
+                        <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
+                        </div>
 
-                    {/* Written Section*/}
-                    <div className="absolute text-white flex flex-col gap-8 justify-center z-30 h-screen w-1/2 pl-3 sm:pl-16 text-xl font-bold">
-                        <SideReveal propDelay={7.9} className="">
-                            <div className="pt-10 lg:pt-2 text-left space-y-2">
-                                <h1 className="text-4xl lg:text-7xl text-gray-100 font-semibold">Old School Values With A New School Touch</h1>
-                                <h1  className="py-2 text-aurumaqua-primary">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
-                                <div className="grid grid-cols-2 gap-4 pt-4">
-                                    <button className="w-full h-12 rounded-lg bg-[#6AB04C] text-white">Our Products</button>
-                                    <button className="w-full h-12 rounded-lg text-white bg-aurumaqua-primary">Contact Us</button>
-                                </div>
+                        <div className="flex items-center pt-4">
+                        <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-gray-100" placeholder="user@mail.com" />
+                        <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0 rounded-r-lg shadow-sm text-gray-100 hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
+                        </div>
+                        <br />
+                    </div>
+                    </SideReveal>
 
-                                <div className="flex items-center pt-4">
-                                    <input type="email" id="input-9" className="w-full h-12 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-lg shadow-sm bg-gray-100" placeholder="user@mail.com"/>
-                                    <button className="h-12 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-lg shadow-sm text-gray-100 hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
-                                </div>
-                                <br/>
-                            </div>
-                        </SideReveal>
-                        
-                        {/* Canada Logo*/}
-                        <div className="z-40 flex items-center gap-x-2">
-                            <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
-                                <FaCanadianMapleLeaf className="text-red-600 h-6 w-6"/>
-                            </div>
-                            <div className="text-sm font-thin tracking-tight text-neutral-200">
-                                <p>ONTARIO MANUFACTURED</p>
-                                <p>PROUDLY CANADIAN</p>
-                            </div>
+                    {/* Canada Logo */}
+                    <div className="z-40 flex items-center gap-x-2">
+                        <div className="w-10 h-10 bg-neutral-200 rounded-full flex justify-center items-center">
+                            <FaCanadianMapleLeaf className="text-red-600 h-6 w-6" />
+                        </div>
+                        <div className="text-sm font-thin tracking-tight text-neutral-200">
+                            <p>ONTARIO MANUFACTURED</p>
+                            <p>PROUDLY CANADIAN</p>
                         </div>
                     </div>
+                </div>
 
                 {/* Video BG */}
-                <video className='absolute h-screen w-screen object-cover z-10' autoPlay muted>
-                    <source src={ShortVideo} type='video/mp4'/>
-                </video>
+                <div className="relative w-full lg:absolute lg:h-screen lg:w-screen">
+                    <video className='h-full w-full lg:object-cover z-10' autoPlay muted>
+                        <source src={ShortVideo} type='video/mp4' />
+                    </video>
+                </div>
             </div>
-
 
             {/* Who Are We? */}
             <div className="flex flex-col py-28 items-center justify-center px-3 mx-auto max-w-6xl">
