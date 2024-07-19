@@ -1,8 +1,11 @@
+//Show Images
 import CFC from "../ProductPhotos/CFC/CFC.png"
 import BTR from "../ProductPhotos/BTR/BTR-ISO.png"
 import DDR from "../ProductPhotos/DDR/DDR-ISO.png"
 import DTR from "../ProductPhotos/DTR/DTR-ISO.png"
 import MHR from "../ProductPhotos/MHR/MHR-ISO.png"
+
+//Size Diagrams
 
 export const RetrofitData = [
     {
