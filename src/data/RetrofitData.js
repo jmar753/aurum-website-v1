@@ -33,6 +33,8 @@ export const RetrofitData = [
                 title:"CFC1200Z",
                 measurements:["4 X 2", "0.20", "16.0", "6", "39500", "16.0", "6", "90500", "6.9", "8.6", "15"],
             },
+        ],
+        coolingHeating:[
             {
                 title:"COOLING",
                 measurements:["45/55", "78", "67"],
@@ -82,6 +84,8 @@ export const RetrofitData = [
                 title:"DTR1000Z",
                 measurements:["4 X 2", "0.20", "11.7", "5", "34400", "11.7", "5", "77500", "6.9", "8.6", "15"],
             },
+        ],
+        coolingHeating:[
             {
                 title:"COOLING",
                 measurements:["45/55", "78", "67"],
@@ -139,6 +143,8 @@ export const RetrofitData = [
                 title:"BTR1000Z",
                 measurements:["4 X 2", "0.20", "11.7", "5", "34400", "11.7", "5", "77500", "6.9", "8.6", "15"],
             },
+        ],
+        coolingHeating:[
             {
                 title:"COOLING",
                 measurements:["45/55", "78", "67"],
@@ -146,7 +152,7 @@ export const RetrofitData = [
             {
                 title:"HEATING",
                 measurements:["160/130", "70", ""],
-            }
+            }          
         ],
         measurementChart:[
             {
@@ -192,6 +198,8 @@ export const RetrofitData = [
                 title:"MHR600Z",
                 measurements:["4 X 2", "0.20", "MAX 10", "2.5", "18700", "MAX 10", "2.5", "40600", "4.9", "6.1", "15"],
             },
+        ],
+        coolingHeating:[
             {
                 title:"COOLING",
                 measurements:["45/55", "78", "67"],
@@ -199,7 +207,7 @@ export const RetrofitData = [
             {
                 title:"HEATING",
                 measurements:["160/130", "70", ""],
-            }
+            }      
         ],
         measurementChart:[
             {
@@ -225,6 +233,8 @@ export const RetrofitData = [
                 title:"CFC1200Z",
                 measurements:["4 X 4", "0.20", "16", "6", "39500", "16.0", "6", "90500", "6.9", "8.6", "15"],
             },
+        ],
+        coolingHeating:[
             {
                 title:"COOLING",
                 measurements:["45/55", "78", "67"],
@@ -232,7 +242,7 @@ export const RetrofitData = [
             {
                 title:"HEATING",
                 measurements:["160/130", "70", ""],
-            }
+            }      
         ],
         measurementChart:[
             {

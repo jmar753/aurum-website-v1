@@ -50,11 +50,69 @@ export const RetrofitDetails = () => {
           <p>{retrofit.description}</p>
         </div>
 
-      </div>
+        {/* Data Table */}
+        <div className="grid grid-cols-12">
+          {/* Table Header */}
+          <div className="row-span-3 col-start-1 row-start-2 border border-white text-center">Model</div>
+          <div className="col-span-12 col-start-1 row-start-1 border border-white text-center">{retrofit.name} Series Replacement Capacity</div>
+          <div className="row-span-3 row-start-2 border border-white text-center"># of Rows X Circuits</div>
+          <div className="row-span-2 row-start-2 border border-white text-center">E.S.P</div>
+          <div className="col-start-3 row-start-4 border border-white text-center">(IN WC)</div>
+          <div className="col-span-3 col-start-4 row-start-2 border border-white text-center">COOLING</div>
+          <div className="col-span-3 col-start-7 row-start-2 border border-white text-center">HEATING</div>
+          <div className="col-start-4 row-start-3 border border-white text-center">Pressure Drop</div>
+          <div className="col-start-5 row-start-3 border border-white text-center">Water Flow</div>
+          <div className="col-start-6 row-start-3 border border-white text-center">Total Cooling Capacity</div>
+          <div className="col-start-4 row-start-4 border border-white text-center">(Ft)</div>
+          <div className="col-start-5 row-start-4 border border-white text-center">(GPM)</div>
+          <div className="col-start-6 row-start-4 border border-white text-center">(BTUH)</div>
+          <div className="col-span-3 col-start-10 row-start-2 border border-white text-center">ELECTRICAL</div>
+          <div className="col-start-7 row-start-3 border border-white text-center">Pressure Drop</div>
+          <div className="col-start-7 row-start-4 border border-white text-center">(Ft)</div>
+          <div className="col-start-8 row-start-4 border border-white text-center">(GPM)</div>
+          <div className="col-start-8 row-start-3 border border-white text-center">Water Flow</div>
+          <div className="col-start-9 row-start-3 border border-white text-center">Total Heating Capacity</div>
+          <div className="col-start-9 row-start-4 border border-white text-center">(BTUH)</div>
+          <div className="col-start-10 row-start-3 border border-white text-center">UNIT FLA</div>
+          <div className="col-start-10 row-start-4 border border-white text-center">(A)</div>
+          <div className="col-start-11 row-start-3 border border-white text-center">UNIT MCA</div>
+          <div className="col-start-11 row-start-4 border border-white text-center">(A)</div>
+          <div className="col-start-12 row-start-3 border border-white text-center">UNIT MOP</div>
+          <div className="col-start-12 row-start-4 border border-white text-center">(A)</div>
 
-      {/* Desktop View */}
-      <div className="max-h-screen h-screen hidden lg:flex flex-col items-center justify-center bg-gradient-to-b from-neutral-700 via-neutral-400 to-neutral-900">
-        {/* Add desktop-specific content here */}
+          {/* Measurments */}
+          {retrofit.capacityChart.map((item, index) => (
+            <div className="col-span-12 grid grid-cols-12 text-center">
+              <div className="col-span-1 border border-white">{item.title}</div>
+              {item.measurements.map((item, index) => (
+                <div className="col-span-1 border border-white">{item}</div>
+              ))}
+            </div>
+          ))}
+
+          {/* Heating / Cooling */}
+          <div className="col-span-12 grid grid-cols-12 border border-white text-center">
+            <div className="col-span-3 row-span-2 border border-white">MODE</div>
+            <div className="col-span-3 col-start-4 border border-white">EWT/LWT</div>
+            <div className="col-span-3 col-start-7 border border-white">EAT (DB)</div>
+            <div className="col-span-3 col-start-10 border border-white">EAT (WB)</div>
+            <div className="col-span-3 col-start-4 row-start-2 border border-white">DEGREE (°F)</div>
+            <div className="col-span-3 col-start-7 row-start-2 border border-white">DEGREE (°F)</div>
+            <div className="col-span-3 col-start-10 row-start-2 border border-white">DEGREE (°F)</div>
+          </div>
+    
+          {/* Measurement */}
+          {retrofit.coolingHeating.map((item, index) => (
+            <div className="col-span-12 grid grid-cols-12 text-center">
+              <div className="col-span-3 border border-white">{item.title}</div>
+              {item.measurements.map((item, index) => (
+                <div className="col-span-3 border border-white">{item}</div>
+              ))}
+            </div>
+          ))}
+          
+
+        </div>
       </div>
     </>
   );
