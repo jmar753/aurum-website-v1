@@ -92,7 +92,7 @@ export const RetrofitDetails = () => {
 
           {/* Heating / Cooling */}
           <div className="col-span-12 grid grid-cols-12 border border-white text-center">
-            <div className="col-span-3 row-span-2 border border-white">MODE</div>
+            <div className="col-span-3 row-span-2 border border-white flex justify-center items-center">MODE</div>
             <div className="col-span-3 col-start-4 border border-white">EWT/LWT</div>
             <div className="col-span-3 col-start-7 border border-white">EAT (DB)</div>
             <div className="col-span-3 col-start-10 border border-white">EAT (WB)</div>
@@ -110,9 +110,56 @@ export const RetrofitDetails = () => {
               ))}
             </div>
           ))}
-          
-
         </div>
+
+        {/* Size Table */}
+        {retrofit.tabletype === 1 ?
+          <div className="grid grid-cols-11 border text-center">
+            <div className="border border-white">Logo</div>
+            <div className="border border-white">A</div>
+            <div className="border border-white">B</div>
+            <div className="border border-white">C</div>
+            <div className="border border-white">AA</div>
+            <div className="border border-white">AB</div>
+            <div className="border border-white">AC</div>
+            <div className="border border-white">AD</div>
+            <div className="border border-white">AE</div>
+            <div className="border border-white">AF</div>
+            <div className="border border-white">AG</div>
+            {retrofit.measurementChart.map((item, index) => (
+              <div className="grid grid-cols-11 col-span-11">
+                <div className="border border-white">{item.title}</div>
+                {item.measurements.map((item, index) => (
+                  <div className="border border-white">{item}</div>
+                ))}
+              </div>
+            ))}
+          </div>
+          :
+          <div className="grid grid-cols-13 text-center">
+            <div className="border border-white">Logo</div>
+            <div className="border border-white">A</div>
+            <div className="border border-white">B</div>
+            <div className="border border-white">C</div>
+            <div className="border border-white">D</div>
+            <div className="border border-white">E</div>
+            <div className="border border-white">AA</div>
+            <div className="border border-white">AB</div>
+            <div className="border border-white">AC</div>
+            <div className="border border-white">AD</div>
+            <div className="border border-white">AE</div>
+            <div className="border border-white">AF</div>
+            <div className="border border-white">AG</div>
+            {retrofit.measurementChart.map((item, index) => (
+              <div className="grid grid-cols-13 col-span-13">
+                <div className="border border-white">{item.title}</div>
+                {item.measurements.map((item, index) => (
+                  <div className="border border-white">{item}</div>
+                ))}
+              </div>
+            ))}
+          </div>
+        }
       </div>
     </>
   );
