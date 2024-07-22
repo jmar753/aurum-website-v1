@@ -18,7 +18,7 @@ import Products from './pages/Products/Products';
 import Contact from './pages/Contact';
 import Resources from './pages/Resources';
 import Blog from './pages/Blog';
-import { RetrofitDetails } from './components/RetrofitDetails';
+import { RetrofitDetails } from './pages/Products/RetrofitDetails';
 import TextOverlapColorChange from './pages/Test';
 
 function App() {

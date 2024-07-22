@@ -80,7 +80,7 @@ export default function Home(){
                 </div>
 
                 {/* Video BG */}
-                <div className="relative w-full lg:absolute lg:h-screen lg:w-screen">
+                <div className="relative w-full lg:absolute lg:h-screen">
                     <video className='h-full w-full lg:object-cover z-10' autoPlay muted>
                         <source src={ShortVideo} type='video/mp4' />
                     </video>

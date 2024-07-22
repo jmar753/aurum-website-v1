@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import { RetrofitData } from "../data/RetrofitData";
+import { RetrofitData } from "../../data/RetrofitData";
 import { useEffect, useState } from "react";
-import NoPage from "../pages/NoPage";
+import NoPage from "../NoPage";
 import { FaArrowRight } from "react-icons/fa6";
 
 export const RetrofitDetails = () => {
