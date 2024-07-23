@@ -165,7 +165,9 @@ export default function Header(){
                 </div>
 
                 {/* Mobile Pop up */}
-                <NavMenu/>
+                <div className="lg:hidden">
+                    <NavMenu/>
+                </div>
 
                 {/* Random item */}
                 <div className="lg:flex hidden items-end justify-end">
