@@ -1,9 +1,19 @@
 //Show Images
 import CFC from "../ProductPhotos/CFC/CFC.png"
+import frontCFC from "../ProductPhotos/CFC/Front_View_-_CFC.png"
+
 import BTR from "../ProductPhotos/BTR/BTR-ISO.png"
+import frontBTR from "../ProductPhotos/BTR/Front_View_-_BTR.png"
+
 import DDR from "../ProductPhotos/DDR/DDR-ISO.png"
+import frontDDR from "../ProductPhotos/DDR/Front_View_-_DDR.png"
+
 import DTR from "../ProductPhotos/DTR/DTR-ISO.png"
+import frontDTR from "../ProductPhotos/DTR/Front_View_-_DTR.png"
+
 import MHR from "../ProductPhotos/MHR/MHR-ISO.png"
+import frontMHR from "../ProductPhotos/MHR/Front_View_-_MHR.png"
+
 import useMeasure from "react-use-measure"
 
 //Size Diagrams
@@ -15,7 +25,7 @@ export const RetrofitData = [
         type: "Closet Fan",
         cabin: "Cabin",
         description: "Aurum’s CFC Series is our replacement solution for outdated closet fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement.",
-        images:[CFC],
+        images:[CFC, frontCFC],
         capacityChart:[
             {
                 title:"CFC600Z",
@@ -127,7 +137,7 @@ export const RetrofitData = [
         type: "Blow Through",
         cabin: "Cabin",
         description: "Aurum’s DTR Series is our replacement solution for outdated blow through fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement. ",
-        images:[DTR],
+        images:[DTR, frontDTR],
         capacityChart:[
             {
                 title:"DTR350Z",
@@ -265,7 +275,7 @@ export const RetrofitData = [
         type: "Blow Through",
         cabin: "No Cabin",
         description: "Aurum’s BTR Series is our replacement solution for outdated blow through fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement. ",
-        images:[BTR],
+        images:[BTR, frontBTR],
         capacityChart:[
             {
                 title:"BTR350Z",
@@ -413,7 +423,7 @@ export const RetrofitData = [
         type: "New Modal",
         cabin: "No Cabin",
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:[MHR],
+        images:[MHR, frontMHR],
         capacityChart:[
             {
                 title:"MHR400Z",
@@ -529,7 +539,7 @@ export const RetrofitData = [
         type: "New Modal",
         cabin: "No Cabin",
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:[DDR],
+        images:[DDR, frontDDR],
         capacityChart:[
             {
                 title:"CFC1200Z",

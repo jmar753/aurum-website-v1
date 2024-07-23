@@ -30,7 +30,7 @@ export default function Header(){
                         style={{ 
                             transform: open ? "scaleX(1)" : "scaleX(0)",
                         }}
-                        className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-leafgreen transition-transform duration-300 ease-out"
+                        className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-aurumgreen-800 transition-transform duration-300 ease-out"
                     />
                 </a>
                 <AnimatePresence>
@@ -80,7 +80,7 @@ export default function Header(){
 
     const ProductSection = () => {
         return(
-            <div className="w-64 bg-white p-6 shadow-xl z-40">
+            <div className="w-64 bg-white p-6 shadow-xl z-50">
                 <div className="mb-3 space-y-3">
                     <h3 className="font-semibold">Older Series</h3>
                     <a href="/products/cfc" className="block text-sm hover:underline pl-4">
@@ -135,7 +135,7 @@ export default function Header(){
 
     return(
         <motion.nav 
-            className="bg-aurumgrey/90 backdrop-blur-md shadow-lg shadow-slate-900/20 shadow-b-2 text-gray-100 h-[4rem] px-4 fixed -top-1 z-40 w-screen flex justify-center items-center"
+            className="bg-aurumblack text-gray-100 h-[4rem] px-4 fixed -top-1 z-50 w-screen flex justify-center items-center"
             variants={{
                 visible: {y: 0},
                 hidden: {y: "-100%"},
@@ -143,7 +143,7 @@ export default function Header(){
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.2, ease:"easeInOut"}}
         >
-            <div className="w-full h-full max-w-7xl justify-between items-center flex px-4">
+            <div className="w-full h-full justify-between items-center flex px-8">
 
                 {/* Logo */}
                 <div className="flex justify-center items-center">
@@ -158,7 +158,7 @@ export default function Header(){
                         <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
                             <div className="flex justify-center items-center space-x-2 group">
                                 <p className="font-medium text-base">{item.name}</p>
-                                {item.name === "About" || item.name === "Contact" || item.name === "Products" ? <IoIosArrowDown className="group-hover:text-leafgreen duration-200"/> : null}
+                                {item.name === "About" || item.name === "Contact" || item.name === "Products" ? <IoIosArrowDown className="group-hover:text-aurumgreen-800 duration-200"/> : null}
                             </div>
                         </FlyoutLink>
                     ))}
@@ -169,7 +169,7 @@ export default function Header(){
 
                 {/* Random item */}
                 <div className="lg:flex hidden items-end justify-end">
-                    <button className="text-right flex h-10 w-44 font-semibold rounded-3xl border-2 border-leafgreen text-leafgreen justify-center items-center">
+                    <button className="text-right flex h-10 w-44 font-semibold rounded-3xl border-2 border-white text-white justify-center items-center">
                         Join Us
                     </button>
                 </div>

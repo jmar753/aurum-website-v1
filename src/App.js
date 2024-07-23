@@ -21,6 +21,9 @@ import Blog from './pages/Blog';
 import TextOverlapColorChange from './pages/Test';
 import RetrofitDetails from './pages/Products/RetrofitDetails';
 
+//CSS 
+import './fonts.css'
+
 function App() {
 
   return (

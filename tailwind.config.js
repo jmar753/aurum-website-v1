@@ -177,7 +177,10 @@ module.exports = {
         '22': 'repeat(22, minmax(0, 1fr))',
         '23': 'repeat(23, minmax(0, 1fr))',
         '24': 'repeat(24, minmax(0, 1fr))',
-      }
+      },
+      fontFamily: {
+        lufga: ['Lufga', 'sans-serif'],
+      },
     },
   },
   plugins: [
