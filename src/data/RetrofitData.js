@@ -108,16 +108,16 @@ export const RetrofitData = [
         xaxis: {
             type: 'numeric',
             min: 0,
-            max: 1200,
+            max: 1400,
             title: {
-              text: 'X Axis (0 to 1400)'
+              text: 'CFM'
             }
         },
         yaxis: {
         min: 0,
-        max: 600,
+        max: 700,
         title: {
-            text: 'Y Axis (0 to 700)'
+            text: 'WATTAGE'
         }
         },
     },
@@ -248,14 +248,14 @@ export const RetrofitData = [
             min: 0,
             max: 1200,
             title: {
-              text: 'X Axis (0 to 1200)'
+              text: 'CFM'
             }
         },
         yaxis: {
         min: 0,
         max: 600,
         title: {
-            text: 'Y Axis (0 to 600)'
+            text: 'WATTAGE'
         }
         },
     },
@@ -396,14 +396,14 @@ export const RetrofitData = [
             min: 0,
             max: 1200,
             title: {
-              text: 'X Axis (0 to 1200)'
+              text: 'CFM'
             }
         },
         yaxis: {
         min: 0,
-        max: 600,
+        max: 700,
         title: {
-            text: 'Y Axis (0 to 700)'
+            text: 'WATTAGE'
         }
         },
     },
@@ -449,35 +449,77 @@ export const RetrofitData = [
         //Line Graph Details
         lines:[
             {
-                name: "0.2 in wc",
-                data:
+                name: "60% Speed",
+                data:[
+                    {"x": 1, "y": 330},
+                    {"x": 50, "y": 293},
+                    {"x": 92, "y": 283},
+                    {"x": 117, "y": 277},
+                    {"x": 215, "y": 263},
+                    {"x": 230, "y": 252},
+                    {"x": 239, "y": 226},
+                    {"x": 260, "y": 195},
+                    {"x": 290, "y": 136},
+                    {"x": 301, "y": 120},
+                    {"x": 311, "y": 100},
+                    {"x": 323, "y": 43},
+                    {"x": 358, "y": 2}
+                ]
+                  
             },
             {
-                name: "0.3 in wc",
-                data: 
+                name: "80% Speed",
+                data: [
+                    {"x": 2, "y": 440},
+                    {"x": 62, "y": 389},
+                    {"x": 148, "y": 374},
+                    {"x": 159, "y": 364},
+                    {"x": 319, "y": 342},
+                    {"x": 330, "y": 334},
+                    {"x": 339, "y": 307},
+                    {"x": 356, "y": 246},
+                    {"x": 363, "y": 228},
+                    {"x": 381, "y": 204},
+                    {"x": 389, "y": 179},
+                    {"x": 454, "y": 61},
+                    {"x": 466, "y": 33},
+                    {"x": 479, "y": 0}
+                ]
             },
             {
-                name: "0.5 in wc",
-                data: 
+                name: "100% Speed",
+                data: [
+                    {"x": 1, "y": 553},
+                    {"x": 49, "y": 498},
+                    {"x": 82, "y": 480},
+                    {"x": 106, "y": 474},
+                    {"x": 181, "y": 466},
+                    {"x": 199, "y": 460},
+                    {"x": 359, "y": 439},
+                    {"x": 380, "y": 429},
+                    {"x": 401, "y": 399},
+                    {"x": 452, "y": 301},
+                    {"x": 503, "y": 197},
+                    {"x": 531, "y": 134},
+                    {"x": 573, "y": 65},
+                    {"x": 597, "y": 2}
+                ]
+                  
             },
-            {
-                name: "0.7 in wc",
-                data: 
-            }
         ],
         xaxis: {
             type: 'numeric',
             min: 0,
-            max: 1200,
+            max: 700,
             title: {
-              text: 'X Axis (0 to 1400)'
+              text: 'CFM'
             }
         },
         yaxis: {
         min: 0,
         max: 600,
         title: {
-            text: 'Y Axis (0 to 700)'
+            text: 'STATIC PRESSURE [PA]'
         }
         },
     },
@@ -510,6 +552,58 @@ export const RetrofitData = [
                 measurements:['17.75"','37.1"', '9"', '30.975"', '27.875"', '13.3125"', '13.3125"', '4.75"', '4.5"', '10"', '4.56"', '5.69"'],
             },
         ],
-        tabletype:2
+        tabletype:2,
+
+        //Line Graph Details
+        lines:[
+            {
+                name: "0.2 in wc",
+                data: [
+                    {"x": 865, "y": 365},
+                    {"x": 1003, "y": 470},
+                    {"x": 1213, "y": 578}
+                  ]
+            },
+            {
+                name: "0.3 in wc",
+                data: [
+                    {"x": 857, "y": 379},
+                    {"x": 995, "y": 494},
+                    {"x": 1209, "y": 591}
+                ]  
+            },
+            {
+                name: "0.5 in wc",
+                data: [
+                    {"x": 867, "y": 398},
+                    {"x": 998, "y": 513},
+                    {"x": 1201, "y": 621}
+                ]
+                  
+            },
+            {
+                name: "0.7 in wc",
+                data: [
+                    {"x": 870, "y": 423},
+                    {"x": 999, "y": 555},
+                    {"x": 1205, "y": 657}
+                ]
+            }
+        ],
+        xaxis: {
+            type: 'numeric',
+            min: 600,
+            max: 1300,
+            title: {
+              text: 'WATTAGE'
+            }
+        },
+        yaxis: {
+        min: 300,
+        max: 700,
+        title: {
+            text: 'WATTAGE'
+        }
+        },
     },
   ];

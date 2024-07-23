@@ -23,24 +23,11 @@ export default function RetrofitDetails() {
       type: 'line',
       height: 400,
       zoom: {
-        enabled: true
+        enabled: false
       }
     },
-    xaxis: {
-      type: 'numeric',
-      min: 0,
-      max: 1200,
-      title: {
-        text: 'X Axis (0 to 1200)'
-      }
-    },
-    yaxis: {
-      min: 0,
-      max: 600,
-      title: {
-        text: 'Y Axis (0 to 600)'
-      }
-    },
+    xaxis: retrofit.xaxis,
+    yaxis: retrofit.yaxis,
     colors: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1'],
     markers: {
       size: 5
