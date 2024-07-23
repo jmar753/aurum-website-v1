@@ -88,7 +88,7 @@ export default function Home(){
             </div>
 
             {/* Who Are We? */}
-            <div className="flex flex-col py-28 items-center justify-center px-3 mx-auto max-w-6xl">
+            <div className="flex flex-col py-28 items-center justify-center px-3 mx-auto max-w-7xl">
                 <Reveal>
                     <div className="">
                         <img src={TreePhoto} alt="logo" className="h-32"/>
