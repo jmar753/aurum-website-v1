@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import { RetrofitData } from "../../data/RetrofitData";
 import { useEffect, useState } from "react";
 import NoPage from "../NoPage";
-import { FaArrowRight } from "react-icons/fa6";
+import ApexCharts from 'react-apexcharts';
 
-export const RetrofitDetails = () => {
+export default function RetrofitDetails() {
   const [retrofit, setRetrofit] = useState(null);
   const { retrofitId } = useParams();
 
@@ -14,6 +14,41 @@ export const RetrofitDetails = () => {
 
   if (!retrofit) {
     return <NoPage />;
+  }
+
+  const series = retrofit.lines
+
+  const options = {
+    chart: {
+      type: 'line',
+      height: 400,
+      zoom: {
+        enabled: true
+      }
+    },
+    xaxis: {
+      type: 'numeric',
+      min: 0,
+      max: 1200,
+      title: {
+        text: 'X Axis (0 to 1200)'
+      }
+    },
+    yaxis: {
+      min: 0,
+      max: 600,
+      title: {
+        text: 'Y Axis (0 to 600)'
+      }
+    },
+    colors: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1'],
+    markers: {
+      size: 5
+    },
+    legend: {
+      position: 'top',
+      horizontalAlign: 'center'
+    }
   }
 
   return (
@@ -46,12 +81,8 @@ export const RetrofitDetails = () => {
           <p>{retrofit.description}</p>
         </div>
 
-        <div className='relative w-full h-auto p-2 my-5 rounded-3xl bg-zinc-800 border-white flex justify-center items-center'>
-          <p>{retrofit.description}</p>
-        </div>
-
-        {/* Data Table */}
-        <div className="grid grid-cols-12">
+        {/* Temperature / Power Table */}
+        <div className="grid grid-cols-12 py-20">
           {/* Table Header */}
           <div className="row-span-3 col-start-1 row-start-2 border border-white text-center">Model</div>
           <div className="col-span-12 col-start-1 row-start-1 border border-white text-center">{retrofit.name} Series Replacement Capacity</div>
@@ -112,9 +143,9 @@ export const RetrofitDetails = () => {
           ))}
         </div>
 
-        {/* Size Table */}
+        {/* Measurment Tables */}
         {retrofit.tabletype === 1 ?
-          <div className="grid grid-cols-11 border text-center">
+          <div className="grid grid-cols-11 text-center py-20">
             <div className="border border-white">Logo</div>
             <div className="border border-white">A</div>
             <div className="border border-white">B</div>
@@ -136,7 +167,7 @@ export const RetrofitDetails = () => {
             ))}
           </div>
           :
-          <div className="grid grid-cols-13 text-center">
+          <div className="grid grid-cols-13 text-center py-20">
             <div className="border border-white">Logo</div>
             <div className="border border-white">A</div>
             <div className="border border-white">B</div>
@@ -160,6 +191,11 @@ export const RetrofitDetails = () => {
             ))}
           </div>
         }
+
+        {/* Line Graph */}
+        <div>
+          <ApexCharts options={options} series={series} type="line" height={400} />
+        </div>
       </div>
     </>
   );

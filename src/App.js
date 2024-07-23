@@ -18,8 +18,8 @@ import Products from './pages/Products/Products';
 import Contact from './pages/Contact';
 import Resources from './pages/Resources';
 import Blog from './pages/Blog';
-import { RetrofitDetails } from './pages/Products/RetrofitDetails';
 import TextOverlapColorChange from './pages/Test';
+import RetrofitDetails from './pages/Products/RetrofitDetails';
 
 function App() {
 
