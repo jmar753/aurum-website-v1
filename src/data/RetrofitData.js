@@ -1,20 +1,23 @@
 //Show Images
 import CFC from "../ProductPhotos/CFC/CFC.png"
 import frontCFC from "../ProductPhotos/CFC/Front_View_-_CFC.png"
+import ThirdCFC from "../ProductPhotos/CFC/ThirdCFC.png"
 
 import BTR from "../ProductPhotos/BTR/BTR-ISO.png"
 import frontBTR from "../ProductPhotos/BTR/Front_View_-_BTR.png"
+import ThirdBTR from "../ProductPhotos/BTR/ThirdBTR.png"
 
 import DDR from "../ProductPhotos/DDR/DDR-ISO.png"
 import frontDDR from "../ProductPhotos/DDR/Front_View_-_DDR.png"
+import ThirdDDR from "../ProductPhotos/DDR/ThirdDDR.png"
 
 import DTR from "../ProductPhotos/DTR/DTR-ISO.png"
 import frontDTR from "../ProductPhotos/DTR/Front_View_-_DTR.png"
+import ThirdDTR from "../ProductPhotos/DTR/ThirdDTR.png"
 
 import MHR from "../ProductPhotos/MHR/MHR-ISO.png"
 import frontMHR from "../ProductPhotos/MHR/Front_View_-_MHR.png"
-
-import useMeasure from "react-use-measure"
+import ThirdMHR from "../ProductPhotos/MHR/ThirdMHR.png"
 
 //Size Diagrams
 
@@ -25,7 +28,7 @@ export const RetrofitData = [
         type: "Closet Fan",
         cabin: "Cabin",
         description: "Aurum’s CFC Series is our replacement solution for outdated closet fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement.",
-        images:[CFC, frontCFC],
+        images:[CFC, frontCFC, ThirdCFC],
         capacityChart:[
             {
                 title:"CFC600Z",
@@ -137,7 +140,7 @@ export const RetrofitData = [
         type: "Blow Through",
         cabin: "Cabin",
         description: "Aurum’s DTR Series is our replacement solution for outdated blow through fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement. ",
-        images:[DTR, frontDTR],
+        images:[DTR, frontDTR, ThirdDTR],
         capacityChart:[
             {
                 title:"DTR350Z",
@@ -275,7 +278,7 @@ export const RetrofitData = [
         type: "Blow Through",
         cabin: "No Cabin",
         description: "Aurum’s BTR Series is our replacement solution for outdated blow through fan coil units. By keeping the basic operations on this system, Aurum has revolutionized our fan coil unit to provide better energy efficiency, airflow and overall comfort. The slide in chassis is designed for an efficient, non-invasive replacement. ",
-        images:[BTR, frontBTR],
+        images:[BTR, frontBTR, ThirdBTR],
         capacityChart:[
             {
                 title:"BTR350Z",
@@ -423,7 +426,7 @@ export const RetrofitData = [
         type: "New Modal",
         cabin: "No Cabin",
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:[MHR, frontMHR],
+        images:[MHR, frontMHR, ThirdMHR],
         capacityChart:[
             {
                 title:"MHR400Z",
@@ -539,7 +542,7 @@ export const RetrofitData = [
         type: "New Modal",
         cabin: "No Cabin",
         description: "This is a placeholder. Write a description for the product Lorem",
-        images:[DDR, frontDDR],
+        images:[DDR, frontDDR, ThirdDDR],
         capacityChart:[
             {
                 title:"CFC1200Z",

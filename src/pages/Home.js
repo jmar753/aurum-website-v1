@@ -3,6 +3,7 @@ import { RetrofitData } from "../data/RetrofitData"
 export default function Home() {
     return (
         <div className="px-8">
+            {/* Intro Block */}
             <div className="relative bg-aurumgreen-800 rounded-3xl overflow-hidden">
                 <div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
                     {/* Vibrant Gradient Background */}
@@ -42,9 +43,26 @@ export default function Home() {
 
                     {/* Introduction */}
                     <div className="relative z-40 px-10 flex flex-col items-center">
-                        <h1 className="text-7xl text-white py-20 font-lufga">Lufga CFC Series</h1>
-                        <img src={RetrofitData[0].images[1]}/>
+                        {/* Body text and image */}
+                        <h1 className="text-7xl text-white pt-24 pb-8 font-lufga">Lufga CFC Series</h1>
+                        <div className="overflow-hidden w-full" style={{ height: '33.33%' }}>
+                            <img src={RetrofitData[0].images[2]} className="w-full object-cover object-top" />
+                        </div>
                     </div>
+
+                    {/* Side Details Left */}
+                    <div className="absolute left-20 top-1/2 transform -translate-y-1/2 w-1/4 space-y-4 font-lufga">
+                        <h1>“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</h1>
+                        <p>This is the common misconception made by many homeowners regarding their outdated fan coil units. Your HVAC system is crucial in your everyday living and should be held at such standards. Retrofitting your fan coil unit drastically improves this essential system.</p>
+                    </div>
+
+                    {/* Side Details Right */}
+                    <div className="absolute right-20 top-1/2 transform -translate-y-1/2 w-1/4 space-y-4 font-lufga">
+                        {RetrofitData.map((item, index) => (
+                            <p>Placeholder</p>
+                        ))}
+                    </div>
+
                 </div>
             </div>
         </div>
