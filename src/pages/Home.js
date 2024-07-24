@@ -1,6 +1,23 @@
 import { RetrofitData } from "../data/RetrofitData"
 
+//libraries
+import { motion } from 'framer-motion';
+
+//react-icons library: https://react-icons.github.io/react-icons/
+import { SiAircanada } from "react-icons/si";
+import { FaRegHandshake, FaTree, FaRegThumbsUp } from "react-icons/fa";
+import { GiAchievement } from "react-icons/gi";
+
 export default function Home() {
+
+    const BannerArray = [
+        {icon: SiAircanada, description:"Canadian Based Manufacturer", size: "size-[4rem]"},
+        {icon: FaRegHandshake, description:"Trusted by Property Managers & Trade Technicians ", size: "size-[7rem]"},
+        {icon: FaTree, description:"A Family Business With Over 40 years Experience", size: "size-[4rem]"},
+        {icon: FaRegThumbsUp , description:"100% Satisfaction Guaranteed", size: "size-[4rem]"},
+        {icon: GiAchievement, description:"Made With The Highest Quality & Craftsmanship", size: "size-[7rem]"},
+    ]
+
     return (
         <div className="flex flex-col justify-center items-center px-8 font-lufga">
             <div className="flex justify-center py-16 w-full ">
@@ -59,12 +76,6 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Side Details Left */}
-                    <div className="absolute left-20 top-1/2 transform -translate-y-1/2 w-1/4 space-y-4 font-lufga">
-                        <h1>“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</h1>
-                        <p>fuck sum idk what to put here</p>
-                    </div>
-
                     {/* Side Details Right */}
                     <div className="absolute right-20 top-1/2 transform -translate-y-1/2 w-1/4 space-y-4 font-lufga">
                         {RetrofitData.map((item, index) => (
@@ -73,6 +84,33 @@ export default function Home() {
                     </div>
 
                 </div>
+            </div>
+
+            {/* Why Aurum */}
+            <div className="py-20 text-left max-w-7xl w-full space-y-16">
+                {/* Title */}
+                <div>
+                    <h1 className="text-4xl w-1/3">Why buy Retrofits from Aurum Manufacturing</h1>
+                </div>
+
+                {/* Card Sidescroll */}
+                <div className="flex overflow-x-auto py-8 space-x-4">
+                    {BannerArray.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            className="flex-shrink-0 max-w-md w-full bg-[#1a1a1a] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                            whileHover={{ scale: 1.02 }} // Optional: Add Framer Motion effect
+                        >
+                            <div className="p-6">
+                                <h2 className="text-2xl font-bold text-white mb-4">Card Title</h2>
+                                <p className="text-gray-300">
+                                    {item.description}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
             </div>
         </div>
     )
