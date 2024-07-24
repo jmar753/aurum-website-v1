@@ -6,6 +6,10 @@ import { motion } from 'framer-motion'; // Import Framer Motion if needed
 //react-icons library: https://react-icons.github.io/react-icons/
 import { FaCanadianMapleLeaf, FaUserTie, FaRibbon, FaHandshake, FaUserGroup} from "react-icons/fa6";
 
+//About Photos
+import AdamChillin from "../AssetPhotos/AdamChillin.png"
+import OfficeBuilding from "../AssetPhotos/AurumFront.png"
+
 export default function Home() {
 
     const BannerArray = [
@@ -91,6 +95,30 @@ export default function Home() {
                 {/* Title */}
                 <div className="flex justify-between items-end w-full">
                     <h1 className="text-4xl w-1/3">What is Aurum Manufacturing</h1>
+                </div>
+                <div>
+                    <p>Aurum Manufacturing, based in Canada, specializes in providing replacement solutions for outdated fan coil systems and retrofits in apartments, condos, businesses businesses. Join us on our journey to becoming a leading HVAC solutions company in Canada.
+                    </p>
+                    <div className="flex flex-col md:flex-row pt-16 gap-4 relative">
+                        <div className="relative h-80 w-full md:w-1/2 rounded-xl">
+                            <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
+                            <img alt="Aurum Office" src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover"/>
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-20">
+                                <p className="font-semibold text-2xl">About Us</p>
+                                <p className="underline">Read our Journey</p>
+                            </div>
+                        </div>
+
+                        <div className="relative h-80 w-full md:w-1/2 rounded-xl">
+                            <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
+                            <img src={AdamChillin} alt="Aurum Office" className="absolute h-full w-full rounded-xl object-cover z-10"/>
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-30">
+                                <p className="font-semibold text-2xl">Our Story</p>
+                                <p className="underline">Read our Journey</p>
+                            </div>
+                        </div>
+                        <div className="absolute hidden bg-naturegreen-800 w-screen h-[300px] -bottom-32 -left-4 z-0"></div>
+                    </div>
                 </div>
             </div>
 
