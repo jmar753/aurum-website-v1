@@ -1,25 +1,25 @@
 import { RetrofitData } from "../data/RetrofitData"
 
 //libraries
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // Import Framer Motion if needed
 
 //react-icons library: https://react-icons.github.io/react-icons/
-import { SiAircanada } from "react-icons/si";
-import { FaRegHandshake, FaTree, FaRegThumbsUp } from "react-icons/fa";
-import { GiAchievement } from "react-icons/gi";
+import { FaCanadianMapleLeaf, FaUserTie, FaRibbon, FaHandshake, FaUserGroup} from "react-icons/fa6";
 
 export default function Home() {
 
     const BannerArray = [
-        {icon: SiAircanada, description:"Canadian Based Manufacturer", size: "size-[4rem]"},
-        {icon: FaRegHandshake, description:"Trusted by Property Managers & Trade Technicians ", size: "size-[7rem]"},
-        {icon: FaTree, description:"A Family Business With Over 40 years Experience", size: "size-[4rem]"},
-        {icon: FaRegThumbsUp , description:"100% Satisfaction Guaranteed", size: "size-[4rem]"},
-        {icon: GiAchievement, description:"Made With The Highest Quality & Craftsmanship", size: "size-[7rem]"},
+        {icon: FaCanadianMapleLeaf, description:"Canadian Based Manufacturer", size: "size-[4rem]"},
+        {icon: FaUserTie , description:"Trusted by Property Managers & Trade Technicians ", size: "size-[7rem]"},
+        {icon: FaUserGroup, description:"A Family Business With Over 40 years Experience", size: "size-[4rem]"},
+        {icon: FaHandshake , description:"100% Satisfaction Guaranteed"},
+        {icon: FaRibbon, description:"Made With The Highest Quality & Craftsmanship"},
     ]
 
     return (
         <div className="flex flex-col justify-center items-center px-8 font-lufga">
+
+            {/* First Banner */}
             <div className="flex justify-center py-16 w-full ">
                 <div className="flex justify-between max-w-7xl w-full">
                     <h1 className="text-7xl">Retrofits</h1>
@@ -86,11 +86,20 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* What is Aurum */}
+            <div className="py-20 text-left max-w-7xl w-full space-y-16">
+                {/* Title */}
+                <div className="flex justify-between items-end w-full">
+                    <h1 className="text-4xl w-1/3">What is Aurum Manufacturing</h1>
+                </div>
+            </div>
+
             {/* Why Aurum */}
             <div className="py-20 text-left max-w-7xl w-full space-y-16">
                 {/* Title */}
-                <div>
+                <div className="flex justify-between items-end w-full">
                     <h1 className="text-4xl w-1/3">Why buy Retrofits from Aurum Manufacturing</h1>
+                    <p className="underline">Shop Retrofits &gt;</p>
                 </div>
 
                 {/* Card Sidescroll */}
@@ -101,8 +110,9 @@ export default function Home() {
                             className="flex-shrink-0 max-w-md w-full bg-[#1a1a1a] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
                             whileHover={{ scale: 1.02 }} // Optional: Add Framer Motion effect
                         >
-                            <div className="p-6">
-                                <h2 className="text-2xl font-bold text-white mb-4">Card Title</h2>
+                            <div className="p-8 space-y-4">
+                                <item.icon className="text-white h-6 w-6 lg:h-10 lg:w-10"/>
+                                <h2 className="text-2xl font-bold text-white">{item.description}</h2>
                                 <p className="text-gray-300">
                                     {item.description}
                                 </p>
@@ -110,7 +120,6 @@ export default function Home() {
                         </motion.div>
                     ))}
                 </div>
-
             </div>
         </div>
     )
