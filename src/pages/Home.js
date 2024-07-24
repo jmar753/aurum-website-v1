@@ -2,9 +2,18 @@ import { RetrofitData } from "../data/RetrofitData"
 
 export default function Home() {
     return (
-        <div className="px-8">
+        <div className="flex flex-col justify-center items-center px-8 font-lufga">
+            <div className="flex justify-center py-16 w-full ">
+                <div className="flex justify-between max-w-7xl w-full">
+                    <h1 className="text-7xl">Retrofits</h1>
+                    <div className="text-right">
+                        <p className="text-4xl">Invisible Comfort, Unmatched Feel.</p>
+                        <p className="text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
+                    </div>
+                </div>
+            </div>
             {/* Intro Block */}
-            <div className="relative bg-aurumgreen-800 rounded-3xl overflow-hidden">
+            <div className="relative max-h-[90vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
                 <div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
                     {/* Vibrant Gradient Background */}
                     <div className="absolute inset-0 overflow-hidden">
@@ -44,7 +53,7 @@ export default function Home() {
                     {/* Introduction */}
                     <div className="relative z-40 px-10 flex flex-col items-center">
                         {/* Body text and image */}
-                        <h1 className="text-7xl text-white pt-24 pb-8 font-lufga">Lufga CFC Series</h1>
+                        <h1 className="text-7xl text-white pt-24 pb-8 font-lufga">CFC Series</h1>
                         <div className="overflow-hidden w-full" style={{ height: '33.33%' }}>
                             <img src={RetrofitData[0].images[2]} className="w-full object-cover object-top" />
                         </div>
@@ -53,7 +62,7 @@ export default function Home() {
                     {/* Side Details Left */}
                     <div className="absolute left-20 top-1/2 transform -translate-y-1/2 w-1/4 space-y-4 font-lufga">
                         <h1>“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</h1>
-                        <p>This is the common misconception made by many homeowners regarding their outdated fan coil units. Your HVAC system is crucial in your everyday living and should be held at such standards. Retrofitting your fan coil unit drastically improves this essential system.</p>
+                        <p>fuck sum idk what to put here</p>
                     </div>
 
                     {/* Side Details Right */}
