@@ -23,18 +23,18 @@ export default function Home() {
     return (
         <div className="flex flex-col justify-center items-center px-8 font-lufga">
 
-            {/* First Banner */}
+            {/* Main1*/}
             <div className="flex justify-center py-16 w-full ">
-                <div className="flex justify-between max-w-7xl w-full">
-                    <h1 className="text-7xl">Retrofits</h1>
-                    <div className="text-right">
-                        <p className="text-4xl">Invisible Comfort, Unmatched Feel.</p>
-                        <p className="text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
+                <div className="flex flex-col lg:flex-row justify-between max-w-7xl w-full">
+                    <h1 className="text-6xl lg:text-7xl">Retrofits</h1>
+                    <div className="text-lg lg:text-right">
+                        <p className="lg:text-4xl">Invisible Comfort, Unmatched Feel.</p>
+                        <p className="lg:text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
                     </div>
                 </div>
             </div>
-            {/* Intro Block */}
-            <div className="relative max-h-[90vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
+            {/* Main2*/}
+            <div className="relative max-h-[60vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden mb-16">
                 <div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
                     {/* Vibrant Gradient Background */}
                     <div className="absolute inset-0 overflow-hidden">
@@ -90,11 +90,11 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* What is Aurum */}
-            <div className="py-20 text-left max-w-7xl w-full space-y-16">
+            {/* Main3 */}
+            <div className="py-36 text-left max-w-7xl w-full space-y-16">
                 {/* Title */}
                 <div className="flex justify-between items-end w-full">
-                    <h1 className="text-4xl w-1/3">What is Aurum Manufacturing</h1>
+                    <h1 className="text-4xl lg:w-1/3">What is Aurum Manufacturing</h1>
                 </div>
                 <div>
                     <p>Aurum Manufacturing, based in Canada, specializes in providing replacement solutions for outdated fan coil systems and retrofits in apartments, condos, businesses businesses. Join us on our journey to becoming a leading HVAC solutions company in Canada.
@@ -104,7 +104,7 @@ export default function Home() {
                             <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
                             <img alt="Aurum Office" src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover"/>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-20">
-                                <p className="font-semibold text-2xl">About Us</p>
+                                <p className=" text-2xl">About Us</p>
                                 <p className="underline">Read our Journey</p>
                             </div>
                         </div>
@@ -113,7 +113,7 @@ export default function Home() {
                             <div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
                             <img src={AdamChillin} alt="Aurum Office" className="absolute h-full w-full rounded-xl object-cover z-10"/>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-30">
-                                <p className="font-semibold text-2xl">Our Story</p>
+                                <p className=" text-2xl">Our Story</p>
                                 <p className="underline">Read our Journey</p>
                             </div>
                         </div>
@@ -122,12 +122,12 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Why Aurum */}
-            <div className="py-20 text-left max-w-7xl w-full space-y-16">
+            {/* Main4 */}
+            <div className="py-36 text-left max-w-7xl w-full space-y-16">
                 {/* Title */}
-                <div className="flex justify-between items-end w-full">
-                    <h1 className="text-4xl w-1/3">Why buy Retrofits from Aurum Manufacturing</h1>
-                    <p className="underline">Shop Retrofits &gt;</p>
+                <div className="flex flex-col lg:flex-row justify-between lg:items-end w-full">
+                    <h1 className="text-4xl lg:w-1/3">Why buy Retrofits from Aurum Manufacturing</h1>
+                    <p className="underline pt-8 lg:pt-0">Shop Retrofits &gt;</p>
                 </div>
 
                 {/* Card Sidescroll */}
@@ -140,7 +140,7 @@ export default function Home() {
                         >
                             <div className="p-8 space-y-4">
                                 <item.icon className="text-white h-6 w-6 lg:h-10 lg:w-10"/>
-                                <h2 className="text-2xl font-bold text-white">{item.description}</h2>
+                                <h2 className="text-2xl  text-white">{item.description}</h2>
                                 <p className="text-gray-300">
                                     {item.description}
                                 </p>

@@ -3,13 +3,13 @@ export default function Blog(){
         <div className="flex justify-center items-center">
             <div className="pb-20 w-full max-w-7xl text-gray-800 px-4 space-y-4">
                 {/* Title */}
-                <h1 className="pt-[6rem] text-3xl font-semibold">Aurum <span className="text-aurumgreen-600">Blog</span></h1>
+                <h1 className="pt-[6rem] text-3xl ">Aurum <span className="text-aurumgreen-600">Blog</span></h1>
 
                 {/* Search Bar */}
                 <div className="relative flex">
                     <input
                         type="search"
-                        className="relative m-0 block flex-auto rounded border border-solid border-gray-800 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none"
+                        className="relative m-0 block flex-auto rounded border border-solid border-gray-800 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base  leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none"
                         placeholder="Search"
                         aria-label="Search"
                         id="exampleFormControlInput2"
@@ -35,7 +35,7 @@ export default function Blog(){
                 <div>
                     {/* Header */}
                     <div className="flex justify-between items-center pb-10">
-                        <h1 className="text-xl font-semibold">Latest Posts</h1>
+                        <h1 className="text-xl ">Latest Posts</h1>
                         <h1>See More</h1>
                     </div>
 
@@ -48,7 +48,7 @@ export default function Blog(){
                                     className="h-[200px] w-full rounded-t-3xl object-cover"
                                 />
                                 <div className="p-6 space-y-6">
-                                    <h1 className="font-semibold text-2xl">{item.title}</h1>
+                                    <h1 className=" text-2xl">{item.title}</h1>
                                     <p className="line-clamp-5">{item.body}</p>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ export default function Blog(){
 
                     {/* Header */}
                     <div className="flex justify-between items-center py-10">
-                        <h1 className="text-xl font-semibold">Popular Posts</h1>
+                        <h1 className="text-xl ">Popular Posts</h1>
                         <h1>See More</h1>
                     </div>
 
@@ -66,7 +66,7 @@ export default function Blog(){
                         {cats.map((item, index) => 
                             <div className="flex gap-x-16 border-b-2 pt-2 pb-6" key={index}>
                                 <div className="pr-6 space-y-6 col-span-3">
-                                    <h1 className="font-semibold text-2xl">{item.title}</h1>
+                                    <h1 className=" text-2xl">{item.title}</h1>
                                     <p className="line-clamp-5">{item.body}</p>
                                     <div className="grid grid-cols-2">
                                         <p className="">By: {item.author}</p>

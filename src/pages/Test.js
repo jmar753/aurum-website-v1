@@ -47,7 +47,7 @@ const TextOverlapColorChange = () => {
 
       {/* Main Div */}
       <div ref={divRef} className="relative">
-        <div className={`text-4xl font-semibold mb-4 ${isOverlapping ? 'text-blue-500' : 'text-green-500'}`}>
+        <div className={`text-4xl  mb-4 ${isOverlapping ? 'text-blue-500' : 'text-green-500'}`}>
           Text Changes Color
         </div>
         <p className={`text-lg ${isOverlapping ? 'text-blue-700' : 'text-green-700'}`}>

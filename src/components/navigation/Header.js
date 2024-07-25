@@ -1,19 +1,19 @@
-//Libraries
+// Libraries
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
-//svgs
+// svgs
 import logo from "../../RoughAssets/WhiteLogoNoTree.svg"
 
-//components
+// components
 import NavMenu from "./NavMenu";
 
-export default function Header(){
+export default function Header() {
     const [hidden, setHidden] = useState(false);
 
-    //Dropdown Menu
-    const FlyoutLink = ({ children, to, FlyoutContent}) => {
+    // Dropdown Menu
+    const FlyoutLink = ({ children, to, FlyoutContent }) => {
         const [open, setOpen] = useState(false)
         const showFlyout = open && FlyoutContent;
 
@@ -36,16 +36,16 @@ export default function Header(){
                 <AnimatePresence>
                     {showFlyout && (
                         <motion.div 
-                            initial={{ opacity: 0, y:15 }}
-                            animate={{ opacity: 1, y:0 }}
-                            exit={{ opacity: 0, y:15 }}
-                            style={{ x:"-50%" }}
-                            transition={{duration: 0.3, ease: 'easeOut'}}
-                            className="absolute left-1/2 top-20  bg-white text-black"
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 15 }}
+                            style={{ x: "-50%" }}
+                            transition={{ duration: 0.3, ease: 'easeOut' }}
+                            className="absolute left-1/2 top-20 bg-white text-black"
                         >
-                            <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent"/>
-                            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white"/>
-                            <FlyoutContent/>
+                            <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
+                            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
+                            <FlyoutContent />
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -53,12 +53,12 @@ export default function Header(){
         )
     }
 
-    //Dropdown Menu Components
+    // Dropdown Menu Components
     const AboutSection = () => {
-        return(
+        return (
             <div className="w-64 bg-white p-6 shadow-xl">
                 <div className="mb-3 space-y-3">
-                    <h3 className="font-semibold">About Aurum</h3>
+                    <h3 className="">About Aurum</h3>
                     <a href="/aboutus" className="block text-sm hover:underline pl-4">
                         About us
                     </a>
@@ -67,7 +67,7 @@ export default function Header(){
                     </a>
                 </div>
                 <div className="mb-6 space-y-3">
-                    <h3 className="font-semibold">About Design</h3>
+                    <h3 className="">About Design</h3>
                     <div className="pl-4">
                         <a href="/oursolution" className="block text-sm hover:underline">
                             Our Solution
@@ -79,10 +79,10 @@ export default function Header(){
     }
 
     const ProductSection = () => {
-        return(
+        return (
             <div className="w-64 bg-white p-6 shadow-xl z-50">
                 <div className="mb-3 space-y-3">
-                    <h3 className="font-semibold">Older Series</h3>
+                    <h3 className="">Older Series</h3>
                     <a href="/products/cfc" className="block text-sm hover:underline pl-4">
                         CFC Series
                     </a>
@@ -94,7 +94,7 @@ export default function Header(){
                     </a>
                 </div>
                 <div className="mb-6 space-y-3">
-                    <h3 className="font-semibold">Newer Series</h3>
+                    <h3 className="">Newer Series</h3>
                     <a href="/products/mhr" className="block text-sm hover:underline pl-4">
                         MHR Series
                     </a>
@@ -107,58 +107,63 @@ export default function Header(){
     }
 
     const ContactSection = () => {
-        return(
+        return (
             <div className="w-64 bg-white p-6 shadow-xl">
                 <div className="mb-3 space-y-3">
                     <p to="#" className="block text-sm hover:underline">
-                        <span className="font-semibold">Phone: </span>
+                        <span className="">Phone: </span>
                         905-597-4799
                     </p>
                     <p to="#" className="block text-sm hover:underline">
-                        <span className="font-semibold">Email: </span>
+                        <span className="">Email: </span>
                         info@aurum-m.com
                     </p>
                     <p to="#" className="block text-sm hover:underline">
-                        <span className="font-semibold">Address: </span>
+                        <span className="">Address: </span>
                         200 Tesma Way #7, Vaughan, ON L4K 0J9
                     </p>
                 </div>
-                <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-gray-800">
+                <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2  transition-colors hover:bg-neutral-950 hover:text-gray-800">
                     Contact Zorzit
                 </button>
             </div>
         )
     }
 
-    //Mobile Navigation
-    const navArray = [{name:"About", nav:"/aboutus", Flyout:AboutSection}, {name:"Products", nav:"/products", Flyout:ProductSection},{name:"Blog", nav:"/blog"},{name:"Resources", nav:"/resources"},{name:"Contact", nav:"/contactus", Flyout:ContactSection}]
+    // Mobile Navigation
+    const navArray = [
+        { name: "About", nav: "/aboutus", Flyout: AboutSection }, 
+        { name: "Products", nav: "/products", Flyout: ProductSection },
+        { name: "Blog", nav: "/blog" },
+        { name: "Resources", nav: "/resources" },
+        { name: "Contact", nav: "/contactus", Flyout: ContactSection }
+    ]
 
-    return(
+    return (
         <motion.nav 
             className="bg-aurumblack text-gray-100 h-[4rem] px-4 fixed -top-1 z-50 w-screen flex justify-center items-center"
-            variants={{
-                visible: {y: 0},
-                hidden: {y: "-100%"},
-            }}
-            animate={hidden ? "hidden" : "visible"}
-            transition={{ duration: 0.2, ease:"easeInOut"}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
         >
             <div className="w-full h-full justify-between items-center flex px-8">
 
                 {/* Logo */}
                 <div className="flex justify-center items-center">
                     <a href="/">
-                        <img src={logo} alt="logo" className="h-10"/>
+                        <img src={logo} alt="logo" className="h-10" />
                     </a>
                 </div>
 
                 {/* Middle Navigation */}
                 <div className="lg:flex hidden justify-between">
                     {navArray.map((item, index) => (
-                        <FlyoutLink to={item.nav}  FlyoutContent={item.Flyout} key={item.name}>
+                        <FlyoutLink to={item.nav} FlyoutContent={item.Flyout} key={item.name}>
                             <div className="flex justify-center items-center space-x-2 group">
                                 <p className="font-medium text-base">{item.name}</p>
-                                {item.name === "About" || item.name === "Contact" || item.name === "Products" ? <IoIosArrowDown className="group-hover:text-aurumgreen-800 duration-200"/> : null}
+                                {item.name === "About" || item.name === "Contact" || item.name === "Products" ? (
+                                    <IoIosArrowDown className="group-hover:text-aurumgreen-800 duration-200" />
+                                ) : null}
                             </div>
                         </FlyoutLink>
                     ))}
@@ -166,12 +171,12 @@ export default function Header(){
 
                 {/* Mobile Pop up */}
                 <div className="lg:hidden">
-                    <NavMenu/>
+                    <NavMenu />
                 </div>
 
                 {/* Random item */}
                 <div className="lg:flex hidden items-end justify-end">
-                    <button className="text-right flex h-10 w-44 font-semibold rounded-3xl border-2 border-white text-white justify-center items-center">
+                    <button className="text-right flex h-10 w-44  rounded-3xl border-2 border-white text-white justify-center items-center">
                         Join Us
                     </button>
                 </div>

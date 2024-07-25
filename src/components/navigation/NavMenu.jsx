@@ -80,7 +80,7 @@ const NavMenu = () => {
                     className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
                     onClick={() => toggleSubMenu('About')}
                   >
-                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>About</h1>
+                    <h1 className=' text-lg text-neutral-900 group-hover:cursor-pointer'>About</h1>
                     <IoIosArrowForward className=' group-hover:cursor-pointer'/>
                   </button>
 
@@ -89,7 +89,7 @@ const NavMenu = () => {
                     className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
                     onClick={() => toggleSubMenu('Products')}
                   >
-                    <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Products</h1>
+                    <h1 className=' text-lg text-neutral-900 group-hover:cursor-pointer'>Products</h1>
                     <IoIosArrowForward className=' group-hover:cursor-pointer'/>
                   </button>
 
@@ -98,7 +98,7 @@ const NavMenu = () => {
                     <button
                       className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
                     >
-                      <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Blog</h1>
+                      <h1 className=' text-lg text-neutral-900 group-hover:cursor-pointer'>Blog</h1>
                     </button>
                   </a>
 
@@ -107,7 +107,7 @@ const NavMenu = () => {
                     <button
                       className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
                     >
-                      <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Resources</h1>
+                      <h1 className=' text-lg text-neutral-900 group-hover:cursor-pointer'>Resources</h1>
                     </button>
                   </a>
 
@@ -116,7 +116,7 @@ const NavMenu = () => {
                     <button
                       className='flex justify-between items-center border-b-2 border-dashed border-neutral-300 h-12 w-full mb-6 group'
                     >
-                      <h1 className='font-semibold text-lg text-neutral-900 group-hover:cursor-pointer'>Contact</h1>
+                      <h1 className=' text-lg text-neutral-900 group-hover:cursor-pointer'>Contact</h1>
                     </button>
                   </a>
                 </div>
@@ -125,7 +125,7 @@ const NavMenu = () => {
               {/* Footer */}
               <div className="absolute bottom-16 w-full p-8">
                 <div className="mb-6">
-                  <h1 className="font-semibold text-lg text-neutral-900">Contact Us</h1>
+                  <h1 className=" text-lg text-neutral-900">Contact Us</h1>
                   <p className="text-neutral-600">Phone: (123) 456-7890</p>
                   <p className="text-neutral-600">Address: 123 HVAC Street, City, Country</p>
                   <p className="text-neutral-600">Email: info@hvaccompany.com</p>
@@ -179,7 +179,7 @@ const NavMenu = () => {
                     <ul>
                       {aboutlinks.map((item, index) => (
                         <a href={item.link} key={index}>
-                          <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>{item.title}</li>
+                          <li className='flex justify-between items-center mb-6  text-lg text-neutral-900'>{item.title}</li>
                         </a>
                       ))}
                     </ul>
@@ -208,7 +208,7 @@ const NavMenu = () => {
                     <ul>
                       {cataloguelinks.map((item, index) => (
                         <a href={item.link} key={index}>
-                          <li className='flex justify-between items-center mb-6 font-semibold text-lg text-neutral-900'>{item.title}</li>
+                          <li className='flex justify-between items-center mb-6  text-lg text-neutral-900'>{item.title}</li>
                         </a>
                       ))}
                     </ul>

@@ -45,7 +45,7 @@ export default function RetrofitDetails() {
 
         <div>
           <h1 className="text-3xl -my-1">
-            {retrofit.name} <span className="text-3xl font-semibold">Series</span>
+            {retrofit.name} <span className="text-3xl ">Series</span>
           </h1>
         </div>
 

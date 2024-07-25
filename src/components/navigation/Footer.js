@@ -11,8 +11,8 @@ export default function Footer(){
 
                 {/* Contact */}
                 <div className="col-span-2 lg:col-span-1 w-full space-y-2 lg:space-y-0 lg:text-base text-sm">
-                    <h1 className="font-semibold text-lg hidden lg:block">Contact</h1>
-                    <h1 className="font-semibold text-lg lg:hidden block">Stay Up To Date</h1>
+                    <h1 className=" text-lg hidden lg:block">Contact</h1>
+                    <h1 className=" text-lg lg:hidden block">Stay Up To Date</h1>
 
                     <p>Subscribe to our newsletter to keep up to date with all things Aurum!</p>
                     <div className="flex items-center mt-1">
