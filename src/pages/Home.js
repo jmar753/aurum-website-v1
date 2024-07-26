@@ -5,7 +5,7 @@ import { RetrofitData } from "../data/RetrofitData";
 import { motion } from 'framer-motion'; // Import Framer Motion if needed
 
 // react-icons library: https://react-icons.github.io/react-icons/
-import { FaCanadianMapleLeaf, FaUserTie, FaRibbon, FaHandshake, FaUserGroup, FaLinkedin, FaFacebook, FaInstagram, FaLocationDot } from "react-icons/fa6";
+import { FaCanadianMapleLeaf, FaUserTie, FaRibbon, FaHandshake, FaUserGroup, FaLinkedin, FaFacebook, FaInstagram, FaLocationDot, FaClock, FaAddressCard } from "react-icons/fa6";
 
 // About Photos
 import AdamChillin from "../AssetPhotos/AdamChillin.png";
@@ -16,10 +16,11 @@ import ShortVideo from "../RoughAssets/RoughMain.mp4";
 
 // animations
 import SideReveal from "../animations/SideReveal";
+import Reveal from "../animations/Reveal";
 import { FaPhoneAlt } from 'react-icons/fa';
 
 export default function Home() {
-  const BannerArray = [
+  const AboutArray = [
     { icon: FaCanadianMapleLeaf, description: "Canadian Based Manufacturer", size: "size-[4rem]" },
     { icon: FaUserTie, description: "Trusted by Property Managers & Trade Technicians ", size: "size-[7rem]" },
     { icon: FaUserGroup, description: "A Family Business With Over 40 years Experience", size: "size-[4rem]" },
@@ -27,21 +28,28 @@ export default function Home() {
     { icon: FaRibbon, description: "Made With The Highest Quality & Craftsmanship" },
   ];
 
+ 	const BannerArray =[
+		{icon: FaClock, text1:"Open Weekdays", text2:"8:00 am to 4:00 pm"},
+		{icon: FaLocationDot, text1:"Vaughan, ON L4K 0J9", text2:"200 Tesma Way #7"},
+		{icon: FaAddressCard, text1:"About Us", text2:"Learn about our company!"},
+		{icon: FaClock, text1:"Contact Us", text2:"Set up your dream AC today!"},
+	]
+
   return (
 		<>
 			{/* Introduction */}
-			<div className="h-screen flex flex-col lg:flex-row lg:relative pt-10 ">
+			<div className="h-screen flex flex-col lg:flex-row lg:relative">
 				{/* Written Section */}
 				<div className="flex flex-col gap-8 justify-center z-30 h-auto w-auto m-8 lg:m-0 lg:h-screen lg:w-1/2 pl-0 lg:pl-16 text-xl">
 					<SideReveal propDelay={7.9} className="">
-						<div className="pt-10 lg:pt-2 text-center lg:text-left space-y-2">
-							<h1 className="text-4xl lg:text-7xl text-gray-100">Old School Values With A New School Touch</h1>
-							<h1 className="py-2 text-aurumgold-700">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
-							<div className="grid grid-cols-2 gap-4 pt-4">
-								<button className="w-full h-12 rounded-lg bg-leafgreen text-white">Our Products</button>
-								<button className="w-full h-12 rounded-lg text-white bg-naturegreen-300">Contact Us</button>
-							</div>
+					<div className="pt-10 lg:pt-2 text-center lg:text-left space-y-2">
+						<h1 className="text-4xl lg:text-7xl text-gray-100">Old School Values With A New School Touch</h1>
+						<h1 className="py-2 text-aurumgold-700">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
+						<div className="grid grid-cols-2 gap-4 pt-4">
+							<button className="w-full h-12 rounded-lg bg-leafgreen text-white">Our Products</button>
+							<button className="w-full h-12 rounded-lg text-white bg-naturegreen-300">Contact Us</button>
 						</div>
+					</div>
 					</SideReveal>
 				</div>
 
@@ -53,9 +61,62 @@ export default function Home() {
 				</div>
 			</div>
 
+			{/* Banner */}
+			<div className='relative h-[150px] w-screen bg-[#079030dc] grid grid-cols-4'>
+			{BannerArray.map((items, index) => (
+				<div className='flex justify-center items-center gap-4' key={index}>
+					<items.icon className='size-8'/>
+					<div className='justify-center items-center text-aurumwhite'>
+						<p className='text-2xl'>{items.text1}</p>
+						<p>{items.text2}</p>
+					</div>
+				</div>
+			))}
+			</div>
+
+
 			<div className="flex flex-col justify-center items-center px-8 font-lufga">
+				{/* Learn More */}
+				<Reveal className='pt-32'>
+					<div className="relative max-h-[60vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden mb-16">
+						<div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
+							{/* Vibrant Gradient Background */}
+							<div className="absolute inset-0 overflow-hidden">
+							{/* Main Gradient Background */}
+							<div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-80"></div>
+
+							{/* Lighter Green Accents */}
+							<div className="absolute inset-0 h-full w-full">
+								<div className="absolute top-10 left-10 h-[300px] w-[300px] bg-gradient-to-tl from-[#009933] to-[#b2e1b1] opacity-60 blur-2xl"></div>
+								<div className="absolute top-1/3 right-1/3 h-[250px] w-[250px] bg-gradient-to-tr from-[#004d00] to-[#80e0a1] opacity-50 blur-2xl"></div>
+								<div className="absolute bottom-10 left-1/4 h-[200px] w-[200px] bg-gradient-to-bl from-[#004d00] to-[#a8e6a2] opacity-40 blur-2xl"></div>
+								<div className="absolute bottom-20 right-20 h-[180px] w-[180px] bg-gradient-to-br from-[#009933] to-[#d0f0d0] opacity-50 blur-2xl"></div>
+							</div>
+
+							{/* Horizontal Lines */}
+							<div className="absolute inset-0 h-full w-full">
+								<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute top-8 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute bottom-8 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute bottom-16 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+							</div>
+							</div>
+
+							{/* Content */}
+							<div className="relative z-10 flex flex-col items-center justify-center h-full px-8 py-16 text-center lg:text-left">
+								<h2 className="text-4xl font-bold text-aurumwhite mb-4">Aurum Manufacturing Retrofit Solutions</h2>
+								<p className="text-lg lg:text-xl text-aurumwhite mb-8">Transform your old fan coil system into a modern, energy-efficient solution. Our retrofits are designed to provide unmatched comfort while saving you money on energy costs.</p>
+								<button className="bg-aurumwhite text-aurumgreen-800 py-2 px-6 rounded-lg text-xl">Learn More</button>
+							</div>
+						</div>
+					</div>
+				</Reveal>
+
+
 				{/* Main1 */}
-				<div className="flex justify-center py-16 w-full ">
+				<Reveal className="flex justify-center py-16 w-full ">
 					<div className="flex flex-col lg:flex-row justify-between max-w-7xl w-full">
 						<h1 className="text-6xl lg:text-7xl">Retrofits</h1>
 						<div className="text-lg lg:text-right">
@@ -63,10 +124,10 @@ export default function Home() {
 							<p className="lg:text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
 						</div>
 					</div>
-				</div>
+				</Reveal>
 				
 				{/* Main2 */}
-				<div className="relative max-h-[60vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden mb-16">
+				<Reveal className="relative max-h-[60vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden mb-16">
 					<div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
 						{/* Vibrant Gradient Background */}
 						<div className="absolute inset-0 overflow-hidden">
@@ -119,15 +180,15 @@ export default function Home() {
 							))}
 						</div>
 					</div>
-				</div>
+				</Reveal>
 
 				{/* Main3 */}
 				<div className="py-20 text-left max-w-7xl w-full space-y-16">
 					{/* Title */}
-					<div className="flex justify-between items-end w-full">
-						<h1 className="text-4xl lg:w-1/3">What is Aurum Manufacturing</h1>
-					</div>
-					<div>
+					<Reveal className="flex justify-between items-end w-full">
+						<h1 className="text-5xl">What is Aurum Manufacturing</h1>
+					</Reveal>
+					<Reveal>
 						<p>Aurum Manufacturing, based in Canada, specializes in providing replacement solutions for outdated fan coil systems and retrofits in apartments, condos, businesses businesses. Join us on our journey to becoming a leading HVAC solutions company in Canada.
 						</p>
 						<div className="flex flex-col md:flex-row pt-16 gap-4 relative">
@@ -150,20 +211,20 @@ export default function Home() {
 							</div>
 							<div className="absolute hidden bg-naturegreen-800 w-screen h-[300px] -bottom-32 -left-4 z-0"></div>
 						</div>
-					</div>
+					</Reveal>
 				</div>
 
 				{/* Main4 */}
 				<div className="py-20 text-left max-w-7xl w-full space-y-16">
 					{/* Title */}
-					<div className="flex flex-col lg:flex-row justify-between lg:items-end w-full">
-						<h1 className="text-4xl lg:w-1/3">Why buy Retrofits from Aurum Manufacturing</h1>
+					<Reveal className="flex flex-col lg:flex-row justify-between lg:items-end w-full">
+						<h1 className="text-5xl lg:w-3/4">Why buy Retrofits from Aurum Manufacturing</h1>
 						<p className="underline pt-8 lg:pt-0">Shop Retrofits &gt;</p>
-					</div>
+					</Reveal>
 
 					{/* Card Sidescroll */}
-					<div className="flex overflow-x-auto py-8 space-x-4">
-						{BannerArray.map((item, index) => (
+					<Reveal className="flex overflow-x-auto py-8 space-x-4">
+						{AboutArray.map((item, index) => (
 							<motion.div
 								key={index}
 								className="flex-shrink-0 max-w-md w-full bg-[#1a1a1a] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
@@ -178,19 +239,19 @@ export default function Home() {
 								</div>
 							</motion.div>
 						))}
-					</div>
+					</Reveal>
 				</div>
 
 				{/* Main5 */}
 				<div className="py-20 text-left max-w-7xl w-full space-y-16">
 					{/* Title */}
-					<div className="flex flex-col lg:flex-row justify-between lg:items-end w-full">
-						<h1 className="text-4xl lg:w-1/3">Contact our office</h1>
-					</div>
+					<Reveal className="flex flex-col lg:flex-row justify-between lg:items-end w-full">
+						<h1 className="text-5xl">Contact our office</h1>
+					</Reveal>
 
 					{/* Map */}
-					<div className="flex overflow-x-auto space-x-4 w-full h-auto">
-						<div className="grid lg:grid-cols-2 gap-4 w-full">
+					<Reveal className="flex overflow-x-auto w-full h-auto">
+						<div className="grid lg:grid-cols-3 gap-4 w-full">
 							<div className="w-full aspect-w-1 aspect-h-1">
 								<div className='p-12'>
 									<iframe
@@ -202,45 +263,28 @@ export default function Home() {
 									/>
 								</div>
 							</div>
-							<div className="flex flex-col justify-center items-start w-full">
-								<div className="lg:px-12 py-6 space-y-8">
-									<div className="space-y-1">
-											<h1 className="text-xl ">Chat with us</h1>
-											<p className="text-gray-500">Speak to our friendly team VIA phone or email</p>
-											<div className="flex items-center gap-x-2  underline">
-													<FaLinkedin/>
-													<p>Message us on LinkedIn</p>
-											</div>
-											<div className="flex items-center gap-x-2  underline">
-													<FaFacebook/>
-													<p>Visit our Facebook</p>
-											</div>
-											<div  className="flex items-center gap-x-2  underline">
-													<FaInstagram/>
-													<p>Follow our Instagram</p>
-											</div>
-									</div>
-
-									<div className="space-y-1">
+							<div className="flex flex-col  items-start w-full col-span-2">
+								<div className="lg:px-12 py-6 grid grid-cols-2 w-full gap-8">
+										<div className="space-y-1">
 											<h1 className="text-xl ">Contact us</h1>
 											<div  className="flex items-center gap-x-2  underline">
 													<FaPhoneAlt/>
 													<p>905-597-4799 | info@aurum-m.com</p>
 											</div>
-									</div>
+										</div>
 
-									<div className="space-y-1">
+										<div className="space-y-1">
 											<h1 className="text-xl ">Visit us</h1>
 											<p className="text-gray-500">Talk to us in person at our Vaughan HQ</p>
 											<div  className="flex items-center gap-x-2  underline">
 													<FaLocationDot/>
 													<p>200 Tesma Way #7, Vaughan, ON L4K 0J9</p>
 											</div>
-									</div>
+										</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</Reveal>
 				</div>
 			</div>
 		</>
