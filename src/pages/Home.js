@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RetrofitData } from "../data/RetrofitData";
 
 // libraries
@@ -20,6 +20,11 @@ import Reveal from "../animations/Reveal";
 import { FaPhoneAlt } from 'react-icons/fa';
 
 export default function Home() {
+    const [mainImage, setMainImage] = useState(RetrofitData[0].images[1]);
+  
+    const handleImageClick = (newImage) => {
+      setMainImage(newImage);
+    };
   const AboutArray = [
     { icon: FaCanadianMapleLeaf, description: "Canadian Based Manufacturer", size: "size-[4rem]" },
     { icon: FaUserTie, description: "Trusted by Property Managers & Trade Technicians ", size: "size-[7rem]" },
@@ -168,19 +173,39 @@ export default function Home() {
                         <div className="relative z-10 grid grid-cols-3 p-8">
                             {/* Body text and image */}
                             <div>
-                                <h1 className="text-4xl text-white font-lufga">CFC Series</h1>
-                                <img src={RetrofitData[0].images[1]} className="" alt="Retrofit" />
+                                <motion.img
+                                    key={mainImage}
+                                    src={mainImage}
+                                    className=""
+                                    alt="Retrofit"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.5 }}
+                                />
                             </div>
                             <div className="col-span-2">
-                                <div>2</div>
-                                <div>3</div>
+                                <h1 className="text-4xl text-white font-lufga">CFC Series</h1>
+                                <div>
+                                    <p>{RetrofitData[0].description}</p>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                    {RetrofitData.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="h-32 w-32 bg-leafgreen p-6 rounded-full cursor-pointer"
+                                        onClick={() => handleImageClick(item.images[1])}
+                                    >
+                                        <img src={item.images[1]} alt={`Thumbnail ${index}`} />
+                                    </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
 				</Reveal>
 
 				{/* Main3 */}
-				<div className="py-20 text-left max-w-7xl w-full space-y-16">
+				<div className="py-20 text-left max-w-7xl w-full space-y-16 bg-aurumgrey">
 					{/* Title */}
 					<Reveal className="flex justify-between items-end w-full">
 						<h1 className="text-5xl">What is Aurum Manufacturing</h1>
