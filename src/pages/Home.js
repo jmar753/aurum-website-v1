@@ -5,7 +5,7 @@ import { RetrofitData } from "../data/RetrofitData";
 import { motion } from 'framer-motion'; // Import Framer Motion if needed
 
 // react-icons library: https://react-icons.github.io/react-icons/
-import { FaCanadianMapleLeaf, FaUserTie, FaRibbon, FaHandshake, FaUserGroup, FaLinkedin, FaFacebook, FaInstagram, FaLocationDot, FaClock, FaAddressCard } from "react-icons/fa6";
+import { FaCanadianMapleLeaf, FaUserTie, FaRibbon, FaHandshake, FaUserGroup, FaLinkedin, FaFacebook, FaInstagram, FaLocationDot, FaClock, FaAddressCard, FaArrowRight, FaArrowLeft, FaFacebookF } from "react-icons/fa6";
 
 // About Photos
 import AdamChillin from "../AssetPhotos/AdamChillin.png";
@@ -20,11 +20,28 @@ import Reveal from "../animations/Reveal";
 import { FaPhoneAlt } from 'react-icons/fa';
 
 export default function Home() {
-    const [mainImage, setMainImage] = useState(RetrofitData[0].images[1]);
+    const [mainFit, setMainFit] = useState(0);
+
+	const itterateUp = () => {
+		var temp = mainFit + 1
+		if (temp > 4){
+			setMainFit(0);
+		}
+		else{
+			setMainFit(temp);
+		}
+	};
+
+	const itterateDown = () => {
+		var temp = mainFit - 1
+		if (temp < 0){
+			setMainFit(4);
+		}
+		else{
+			setMainFit(temp);
+		}
+	};
   
-    const handleImageClick = (newImage) => {
-      setMainImage(newImage);
-    };
   const AboutArray = [
     { icon: FaCanadianMapleLeaf, description: "Canadian Based Manufacturer", size: "size-[4rem]" },
     { icon: FaUserTie, description: "Trusted by Property Managers & Trade Technicians ", size: "size-[7rem]" },
@@ -80,132 +97,102 @@ export default function Home() {
 			</div>
 
 
-			<div className="flex flex-col justify-center items-center px-8 font-lufga">
+			<div className="flex flex-col justify-center items-center font-lufga">
 
 				{/* Main 1 */}
-				<Reveal className="flex justify-center pb-16 pt-28 w-full ">
-					<div className="flex flex-col lg:flex-row justify-between max-w-7xl w-full">
-						<h1 className="text-6xl lg:text-7xl">Retrofits</h1>
-						<div className="text-lg lg:text-right">
-							<p className="lg:text-4xl">Invisible Comfort, Unmatched Feel.</p>
-							<p className="lg:text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
-						</div>
-					</div>
-				</Reveal>
-				<div className='pb-28'>
-					<Reveal className="relative max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
-						<div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
-							{/* Vibrant Gradient Background */}
-							<div className="absolute inset-0 overflow-hidden">
-								{/* Main Gradient Background */}
-								<div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-80"></div>
-
-								{/* Lighter Green Accents */}
-								<div className="absolute inset-0 h-full w-full">
-								<div className="absolute top-10 left-10 h-[300px] w-[300px] bg-gradient-to-tl from-[#009933] to-[#b2e1b1] opacity-60 blur-2xl"></div>
-								<div className="absolute top-1/3 right-1/3 h-[250px] w-[250px] bg-gradient-to-tr from-[#004d00] to-[#80e0a1] opacity-50 blur-2xl"></div>
-								<div className="absolute bottom-10 left-1/4 h-[200px] w-[200px] bg-gradient-to-bl from-[#004d00] to-[#a8e6a2] opacity-40 blur-2xl"></div>
-								<div className="absolute bottom-20 right-20 h-[180px] w-[180px] bg-gradient-to-br from-[#009933] to-[#d0f0d0] opacity-50 blur-2xl"></div>
-								</div>
-
-								{/* Horizontal Lines */}
-								<div className="absolute inset-0 h-full w-full">
-								<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute top-8 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute top-24 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute top-32 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								</div>
-
-								{/* Additional Gradient Layer for Depth */}
-								<div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-40 blur-3xl"></div>
-
-								{/* Concentric Rings Accent */}
-								<div className="absolute top-1/2 left-[20%] transform -translate-y-1/2 flex flex-col justify-center items-center">
-								<div className="absolute rounded-full border-2 border-aurumwhite h-[100px] w-[100px] opacity-30"></div>
-								<div className="absolute rounded-full border-2 border-aurumwhite h-[200px] w-[200px] opacity-30"></div>
-								<div className="absolute rounded-full border-2 border-aurumwhite h-[300px] w-[300px] opacity-30"></div>
-								<div className="absolute rounded-full border-2 border-aurumwhite h-[400px] w-[400px] opacity-30"></div>
-								<div className="absolute rounded-full border-2 border-aurumwhite h-[500px] w-[500px] opacity-30"></div>
-								</div>
-							</div>
-
-							{/* Introduction */}
-							<div className="relative z-10 grid grid-cols-3 p-8">
-								{/* Body text and image */}
-								<div>
-									<motion.img
-										key={mainImage}
-										src={mainImage}
-										className=""
-										alt="Retrofit"
-										initial={{ opacity: 0 }}
-										animate={{ opacity: 1 }}
-										transition={{ duration: 0.5 }}
-									/>
-								</div>
-								<div className="col-span-2">
-									<h1 className="text-4xl text-white font-lufga">CFC Series</h1>
-									<div>
-										<p>{RetrofitData[0].description}</p>
-									</div>
-									<div className="flex justify-between items-center">
-										{RetrofitData.map((item, index) => (
-										<div
-											key={index}
-											className="h-32 w-32 bg-aurumaqua-accent1 p-2 rounded-3xl cursor-pointer"
-											onClick={() => handleImageClick(item.images[1])}
-										>
-											<img src={item.images[1]} alt={`Thumbnail ${index}`} />
-										</div>
-										))}
-									</div>
-								</div>
+				<>
+					<Reveal className="flex justify-center pb-16 pt-28 w-full px-8">
+						<div className="flex flex-col lg:flex-row justify-between max-w-7xl w-full">
+							<h1 className="text-6xl lg:text-7xl">Retrofits</h1>
+							<div className="text-lg lg:text-right">
+								<p className="lg:text-4xl">Invisible Comfort, Unmatched Feel.</p>
+								<p className="lg:text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
 							</div>
 						</div>
 					</Reveal>
-				</div>
+					<div className='pb-28 px-8'>
+						<Reveal className="relative max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
+							<div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
 
-				{/* Main2 */}
-				<Reveal className='py-28'>
-					<div className="relative max-h-[60vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
-						<div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
-							{/* Vibrant Gradient Background */}
-							<div className="absolute inset-0 overflow-hidden">
-							{/* Main Gradient Background */}
-							<div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-80"></div>
+								{/* Vibrant Gradient Background */}
+								<div className="absolute inset-0 overflow-hidden">
+									{/* Main Gradient Background */}
+									<div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-80"></div>
 
-							{/* Lighter Green Accents */}
-							<div className="absolute inset-0 h-full w-full">
-								<div className="absolute top-10 left-10 h-[300px] w-[300px] bg-gradient-to-tl from-[#009933] to-[#b2e1b1] opacity-60 blur-2xl"></div>
-								<div className="absolute top-1/3 right-1/3 h-[250px] w-[250px] bg-gradient-to-tr from-[#004d00] to-[#80e0a1] opacity-50 blur-2xl"></div>
-								<div className="absolute bottom-10 left-1/4 h-[200px] w-[200px] bg-gradient-to-bl from-[#004d00] to-[#a8e6a2] opacity-40 blur-2xl"></div>
-								<div className="absolute bottom-20 right-20 h-[180px] w-[180px] bg-gradient-to-br from-[#009933] to-[#d0f0d0] opacity-50 blur-2xl"></div>
-							</div>
+									{/* Lighter Green Accents */}
+									<div className="absolute inset-0 h-full w-full">
+									<div className="absolute top-10 left-10 h-[300px] w-[300px] bg-gradient-to-tl from-[#009933] to-[#b2e1b1] opacity-60 blur-2xl"></div>
+									<div className="absolute top-1/3 right-1/3 h-[250px] w-[250px] bg-gradient-to-tr from-[#004d00] to-[#80e0a1] opacity-50 blur-2xl"></div>
+									<div className="absolute bottom-10 left-1/4 h-[200px] w-[200px] bg-gradient-to-bl from-[#004d00] to-[#a8e6a2] opacity-40 blur-2xl"></div>
+									<div className="absolute bottom-20 right-20 h-[180px] w-[180px] bg-gradient-to-br from-[#009933] to-[#d0f0d0] opacity-50 blur-2xl"></div>
+									</div>
 
-							{/* Horizontal Lines */}
-							<div className="absolute inset-0 h-full w-full">
-								<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute top-8 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute bottom-8 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-								<div className="absolute bottom-16 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-							</div>
-							</div>
+									{/* Horizontal Lines */}
+									<div className="absolute inset-0 h-full w-full">
+									<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+									<div className="absolute top-8 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+									<div className="absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+									<div className="absolute top-24 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+									<div className="absolute top-32 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+									</div>
 
-							{/* Content */}
-							<div className="relative z-10 flex flex-col items-center justify-center h-full px-8 py-16 text-center lg:text-left">
-								<h2 className="text-4xl font-bold text-aurumwhite mb-4">Aurum Manufacturing Retrofit Solutions</h2>
-								<p className="text-lg lg:text-xl text-aurumwhite mb-8">Transform your old fan coil system into a modern, energy-efficient solution. Our retrofits are designed to provide unmatched comfort while saving you money on energy costs.</p>
-								<button className="bg-aurumwhite text-aurumgreen-800 py-2 px-6 rounded-lg text-xl">Learn More</button>
+									{/* Additional Gradient Layer for Depth */}
+									<div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-40 blur-3xl"></div>
+
+									{/* Concentric Rings Accent */}
+									<div className="absolute top-1/2 left-[20%] transform -translate-y-1/2 flex flex-col justify-center items-center">
+									<div className="absolute rounded-full border-2 border-aurumwhite h-[100px] w-[100px] opacity-30"></div>
+									<div className="absolute rounded-full border-2 border-aurumwhite h-[200px] w-[200px] opacity-30"></div>
+									<div className="absolute rounded-full border-2 border-aurumwhite h-[300px] w-[300px] opacity-30"></div>
+									<div className="absolute rounded-full border-2 border-aurumwhite h-[400px] w-[400px] opacity-30"></div>
+									<div className="absolute rounded-full border-2 border-aurumwhite h-[500px] w-[500px] opacity-30"></div>
+									</div>
+								</div>
+
+								{/* Introduction */}
+								<div className="relative z-10 grid grid-cols-3 p-8">
+									{/* Left Arrow */}
+									<div className="absolute left-0 top-1/2 transform -translate-y-1/2 px-4" onClick={itterateUp}>
+										<button className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition">
+											<FaArrowLeft className="text-white text-2xl" />
+										</button>
+									</div>
+
+									{/* Body text and image */}
+									<div className="col-span-3 md:col-span-2 grid grid-cols-3">
+										<div className="col-span-1">
+											<motion.img
+												key={RetrofitData[mainFit].images[1]}
+												src={RetrofitData[mainFit].images[1]}
+												className="w-full"
+												alt="Retrofit"
+												initial={{ opacity: 0 }}
+												animate={{ opacity: 1 }}
+												transition={{ duration: 0.5 }}
+											/>
+										</div>
+										<div className="col-span-2 flex items-center justify-center">
+											<div>
+												<h1 className="text-4xl text-white font-lufga">{RetrofitData[mainFit].name} Series</h1>
+												<p>{RetrofitData[mainFit].description}</p>
+											</div>
+										</div>
+									</div>
+
+									{/* Right Arrow */}
+									<div className="absolute right-0 top-1/2 transform -translate-y-1/2 px-4" onClick={itterateDown}>
+										<button className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition">
+											<FaArrowRight className="text-white text-2xl" />
+										</button>
+									</div>
+								</div>
 							</div>
-						</div>
+						</Reveal>
 					</div>
-				</Reveal>
+				</>
 
 				{/* Main3 */}
-				<div className="py-28 text-left max-w-7xl w-full space-y-16">
+				<div className="py-28 text-left max-w-7xl w-full space-y-16 px-8">
 					{/* Title */}
 					<Reveal className="flex justify-between items-center w-full">
 						<h1 className="text-5xl">What is Aurum Manufacturing</h1>
@@ -238,7 +225,7 @@ export default function Home() {
 				</div>
 
 				{/* Main4 */}
-				<div className="py-28 text-left max-w-7xl w-full space-y-16">
+				<div className="py-28 text-left max-w-7xl w-full space-y-16 px-8">
 					{/* Title */}
 					<Reveal className="flex flex-col lg:flex-row justify-between lg:items-center w-full">
 						<h1 className="text-5xl lg:w-3/5">Why buy Retrofits from Aurum Manufacturing</h1>
@@ -266,18 +253,17 @@ export default function Home() {
 				</div>
 
 				{/* Main5 */}
-				<div className="py-28 text-left max-w-7xl w-full space-y-16">
-
-					{/* Map */}
+				<div className="py-28 text-left max-w-7xl w-full space-y-16 px-8">
 					<Reveal className="flex overflow-x-auto w-full h-auto">
 						<div className="grid lg:grid-cols-3 gap-4 w-full">
 							<div className="flex flex-col  items-start w-full col-span-2">
 								<div className="lg:px-12 grid grid-cols-2 w-full gap-8">
                                     <div className='col-span-2'>
-                                        <p className='text-6xl'>Contact Us</p>
+                                        <p className='text-7xl'>Contact Us</p>
                                     </div>
                                     <div className="space-y-1">
                                         <h1 className="text-xl ">Call us</h1>
+										<p className="text-gray-500">Have questions? Call us personally</p>
                                         <div  className="flex items-center gap-x-2  underline">
                                                 <FaPhoneAlt/>
                                                 <p>905-597-4799 | info@aurum-m.com</p>
@@ -292,6 +278,19 @@ export default function Home() {
                                                 <p>200 Tesma Way #7, Vaughan, ON L4K 0J9</p>
                                         </div>
                                     </div>
+
+									{/* Social Media Icons */}
+									<div className="flex gap-x-6 col-span-2">
+										<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-700">
+											<FaLinkedin className="text-4xl" />
+										</a>
+										<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-500">
+											<FaInstagram className="text-4xl" />
+										</a>
+										<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
+											<FaFacebookF className="text-4xl" />
+										</a>
+									</div>
 								</div>
 							</div>
 							<div className="w-full aspect-w-1 aspect-h-1">
