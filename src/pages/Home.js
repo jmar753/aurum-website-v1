@@ -81,9 +81,94 @@ export default function Home() {
 
 
 			<div className="flex flex-col justify-center items-center px-8 font-lufga">
-				{/* Learn More */}
-				<Reveal className='pt-32'>
-					<div className="relative max-h-[60vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden mb-16">
+
+				{/* Main 1 */}
+				<Reveal className="flex justify-center pb-16 pt-28 w-full ">
+					<div className="flex flex-col lg:flex-row justify-between max-w-7xl w-full">
+						<h1 className="text-6xl lg:text-7xl">Retrofits</h1>
+						<div className="text-lg lg:text-right">
+							<p className="lg:text-4xl">Invisible Comfort, Unmatched Feel.</p>
+							<p className="lg:text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
+						</div>
+					</div>
+				</Reveal>
+				<div className='pb-28'>
+					<Reveal className="relative max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
+						<div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
+							{/* Vibrant Gradient Background */}
+							<div className="absolute inset-0 overflow-hidden">
+								{/* Main Gradient Background */}
+								<div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-80"></div>
+
+								{/* Lighter Green Accents */}
+								<div className="absolute inset-0 h-full w-full">
+								<div className="absolute top-10 left-10 h-[300px] w-[300px] bg-gradient-to-tl from-[#009933] to-[#b2e1b1] opacity-60 blur-2xl"></div>
+								<div className="absolute top-1/3 right-1/3 h-[250px] w-[250px] bg-gradient-to-tr from-[#004d00] to-[#80e0a1] opacity-50 blur-2xl"></div>
+								<div className="absolute bottom-10 left-1/4 h-[200px] w-[200px] bg-gradient-to-bl from-[#004d00] to-[#a8e6a2] opacity-40 blur-2xl"></div>
+								<div className="absolute bottom-20 right-20 h-[180px] w-[180px] bg-gradient-to-br from-[#009933] to-[#d0f0d0] opacity-50 blur-2xl"></div>
+								</div>
+
+								{/* Horizontal Lines */}
+								<div className="absolute inset-0 h-full w-full">
+								<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute top-8 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute top-24 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								<div className="absolute top-32 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
+								</div>
+
+								{/* Additional Gradient Layer for Depth */}
+								<div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-40 blur-3xl"></div>
+
+								{/* Concentric Rings Accent */}
+								<div className="absolute top-1/2 left-[20%] transform -translate-y-1/2 flex flex-col justify-center items-center">
+								<div className="absolute rounded-full border-2 border-aurumwhite h-[100px] w-[100px] opacity-30"></div>
+								<div className="absolute rounded-full border-2 border-aurumwhite h-[200px] w-[200px] opacity-30"></div>
+								<div className="absolute rounded-full border-2 border-aurumwhite h-[300px] w-[300px] opacity-30"></div>
+								<div className="absolute rounded-full border-2 border-aurumwhite h-[400px] w-[400px] opacity-30"></div>
+								<div className="absolute rounded-full border-2 border-aurumwhite h-[500px] w-[500px] opacity-30"></div>
+								</div>
+							</div>
+
+							{/* Introduction */}
+							<div className="relative z-10 grid grid-cols-3 p-8">
+								{/* Body text and image */}
+								<div>
+									<motion.img
+										key={mainImage}
+										src={mainImage}
+										className=""
+										alt="Retrofit"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ duration: 0.5 }}
+									/>
+								</div>
+								<div className="col-span-2">
+									<h1 className="text-4xl text-white font-lufga">CFC Series</h1>
+									<div>
+										<p>{RetrofitData[0].description}</p>
+									</div>
+									<div className="flex justify-between items-center">
+										{RetrofitData.map((item, index) => (
+										<div
+											key={index}
+											className="h-32 w-32 bg-aurumaqua-accent1 p-2 rounded-3xl cursor-pointer"
+											onClick={() => handleImageClick(item.images[1])}
+										>
+											<img src={item.images[1]} alt={`Thumbnail ${index}`} />
+										</div>
+										))}
+									</div>
+								</div>
+							</div>
+						</div>
+					</Reveal>
+				</div>
+
+				{/* Main2 */}
+				<Reveal className='py-28'>
+					<div className="relative max-h-[60vh] max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
 						<div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
 							{/* Vibrant Gradient Background */}
 							<div className="absolute inset-0 overflow-hidden">
@@ -119,96 +204,12 @@ export default function Home() {
 					</div>
 				</Reveal>
 
-
-				{/* Main1 */}
-				<Reveal className="flex justify-center py-16 w-full ">
-					<div className="flex flex-col lg:flex-row justify-between max-w-7xl w-full">
-						<h1 className="text-6xl lg:text-7xl">Retrofits</h1>
-						<div className="text-lg lg:text-right">
-							<p className="lg:text-4xl">Invisible Comfort, Unmatched Feel.</p>
-							<p className="lg:text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
-						</div>
-					</div>
-				</Reveal>
-				
-				{/* Main2 */}
-				<Reveal className="relative max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden mb-16">
-                    <div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
-                        {/* Vibrant Gradient Background */}
-                        <div className="absolute inset-0 overflow-hidden">
-                            {/* Main Gradient Background */}
-                            <div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-80"></div>
-
-                            {/* Lighter Green Accents */}
-                            <div className="absolute inset-0 h-full w-full">
-                            <div className="absolute top-10 left-10 h-[300px] w-[300px] bg-gradient-to-tl from-[#009933] to-[#b2e1b1] opacity-60 blur-2xl"></div>
-                            <div className="absolute top-1/3 right-1/3 h-[250px] w-[250px] bg-gradient-to-tr from-[#004d00] to-[#80e0a1] opacity-50 blur-2xl"></div>
-                            <div className="absolute bottom-10 left-1/4 h-[200px] w-[200px] bg-gradient-to-bl from-[#004d00] to-[#a8e6a2] opacity-40 blur-2xl"></div>
-                            <div className="absolute bottom-20 right-20 h-[180px] w-[180px] bg-gradient-to-br from-[#009933] to-[#d0f0d0] opacity-50 blur-2xl"></div>
-                            </div>
-
-                            {/* Horizontal Lines */}
-                            <div className="absolute inset-0 h-full w-full">
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-                            <div className="absolute top-8 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-                            <div className="absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-                            <div className="absolute top-24 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-                            <div className="absolute top-32 left-0 w-full h-1 bg-gradient-to-r from-transparent to-[#003300] opacity-40 blur-xl"></div>
-                            </div>
-
-                            {/* Additional Gradient Layer for Depth */}
-                            <div className="absolute inset-0 h-full w-full bg-gradient-to-br from-[#004d00] via-[#009933] to-[#FFEB3B] opacity-40 blur-3xl"></div>
-
-                            {/* Concentric Rings Accent */}
-                            <div className="absolute top-1/2 left-[20%] transform -translate-y-1/2 flex flex-col justify-center items-center">
-                            <div className="absolute rounded-full border-2 border-aurumwhite h-[100px] w-[100px] opacity-30"></div>
-                            <div className="absolute rounded-full border-2 border-aurumwhite h-[200px] w-[200px] opacity-30"></div>
-                            <div className="absolute rounded-full border-2 border-aurumwhite h-[300px] w-[300px] opacity-30"></div>
-                            <div className="absolute rounded-full border-2 border-aurumwhite h-[400px] w-[400px] opacity-30"></div>
-                            <div className="absolute rounded-full border-2 border-aurumwhite h-[500px] w-[500px] opacity-30"></div>
-                            </div>
-                        </div>
-
-                        {/* Introduction */}
-                        <div className="relative z-10 grid grid-cols-3 p-8">
-                            {/* Body text and image */}
-                            <div>
-                                <motion.img
-                                    key={mainImage}
-                                    src={mainImage}
-                                    className=""
-                                    alt="Retrofit"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.5 }}
-                                />
-                            </div>
-                            <div className="col-span-2">
-                                <h1 className="text-4xl text-white font-lufga">CFC Series</h1>
-                                <div>
-                                    <p>{RetrofitData[0].description}</p>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                    {RetrofitData.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className="h-32 w-32 bg-leafgreen p-6 rounded-full cursor-pointer"
-                                        onClick={() => handleImageClick(item.images[1])}
-                                    >
-                                        <img src={item.images[1]} alt={`Thumbnail ${index}`} />
-                                    </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-				</Reveal>
-
 				{/* Main3 */}
-				<div className="py-20 text-left max-w-7xl w-full space-y-16 bg-aurumgrey">
+				<div className="py-28 text-left max-w-7xl w-full space-y-16">
 					{/* Title */}
-					<Reveal className="flex justify-between items-end w-full">
+					<Reveal className="flex justify-between items-center w-full">
 						<h1 className="text-5xl">What is Aurum Manufacturing</h1>
+						<div className="border-t-2 border-white flex-grow ml-4"></div>
 					</Reveal>
 					<Reveal>
 						<p>Aurum Manufacturing, based in Canada, specializes in providing replacement solutions for outdated fan coil systems and retrofits in apartments, condos, businesses businesses. Join us on our journey to becoming a leading HVAC solutions company in Canada.
@@ -237,11 +238,11 @@ export default function Home() {
 				</div>
 
 				{/* Main4 */}
-				<div className="py-20 text-left max-w-7xl w-full space-y-16">
+				<div className="py-28 text-left max-w-7xl w-full space-y-16">
 					{/* Title */}
-					<Reveal className="flex flex-col lg:flex-row justify-between lg:items-end w-full">
-						<h1 className="text-5xl lg:w-3/4">Why buy Retrofits from Aurum Manufacturing</h1>
-						<p className="underline pt-8 lg:pt-0">Shop Retrofits &gt;</p>
+					<Reveal className="flex flex-col lg:flex-row justify-between lg:items-center w-full">
+						<h1 className="text-5xl lg:w-3/5">Why buy Retrofits from Aurum Manufacturing</h1>
+						<div className="border-t-2 border-white flex-grow ml-4"></div>
 					</Reveal>
 
 					{/* Card Sidescroll */}
@@ -265,26 +266,15 @@ export default function Home() {
 				</div>
 
 				{/* Main5 */}
-				<div className="py-20 text-left max-w-7xl w-full space-y-16">
+				<div className="py-28 text-left max-w-7xl w-full space-y-16">
 
 					{/* Map */}
 					<Reveal className="flex overflow-x-auto w-full h-auto">
 						<div className="grid lg:grid-cols-3 gap-4 w-full">
-							<div className="w-full aspect-w-1 aspect-h-1">
-								<div className='p-12'>
-									<iframe
-									title="Google Map"
-									className="absolute inset-0 w-full h-full border-0 rounded-3xl"
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.3780731200293!2d-79.52551568450297!3d43.82485507911507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2a3403aaf247%3A0xb71f8d3f4f3df8c1!2s200%20Tesma%20Way%20%237%2C%20Vaughan%2C%20ON%20L4K%200J9%2C%20Canada!5e0!3m2!1sen!2sus!4v1690645821577!5m2!1sen!2sus"
-									allowFullScreen=""
-									loading="lazy"
-									/>
-								</div>
-							</div>
 							<div className="flex flex-col  items-start w-full col-span-2">
 								<div className="lg:px-12 grid grid-cols-2 w-full gap-8">
                                     <div className='col-span-2'>
-                                        <p className='text-6xl'>Contact <span className='text-leafgreen'>Us</span></p>
+                                        <p className='text-6xl'>Contact Us</p>
                                     </div>
                                     <div className="space-y-1">
                                         <h1 className="text-xl ">Call us</h1>
@@ -302,6 +292,17 @@ export default function Home() {
                                                 <p>200 Tesma Way #7, Vaughan, ON L4K 0J9</p>
                                         </div>
                                     </div>
+								</div>
+							</div>
+							<div className="w-full aspect-w-1 aspect-h-1">
+								<div className='p-12'>
+									<iframe
+									title="Google Map"
+									className="absolute inset-0 w-full h-full border-0 rounded-3xl"
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.3780731200293!2d-79.52551568450297!3d43.82485507911507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2a3403aaf247%3A0xb71f8d3f4f3df8c1!2s200%20Tesma%20Way%20%237%2C%20Vaughan%2C%20ON%20L4K%200J9%2C%20Canada!5e0!3m2!1sen!2sus!4v1690645821577!5m2!1sen!2sus"
+									allowFullScreen=""
+									loading="lazy"
+									/>
 								</div>
 							</div>
 						</div>
