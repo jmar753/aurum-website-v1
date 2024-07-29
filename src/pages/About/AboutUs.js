@@ -60,7 +60,7 @@ export default function AboutUs(){
                 </Reveal>
 
                 {/* I wanna play yugioh so bad */}
-                <div className="bg-gradient-to-bl from-leafgreen to-naturegreen-900 text-white p-12 rounded-3xl w-full space-y-8">
+                <Reveal className="bg-gradient-to-bl from-leafgreen to-naturegreen-900 text-white p-12 rounded-3xl w-full space-y-8">
                     <div className="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-2 gap-12">
                         <div className="space-y-8">
                             <h1 className="text-4xl ">Our Acheivements</h1>
@@ -75,7 +75,7 @@ export default function AboutUs(){
                             ))}
                         </div>
                     </div>
-                </div>
+                </Reveal>
             </div>
 
             <div  className="h-auto w-full max-w-7xl px-8 pt-36">
