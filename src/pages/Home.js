@@ -62,7 +62,7 @@ export default function Home() {
 			</div>
 
 			{/* Banner */}
-			<div className='relative h-[150px] w-screen bg-[#079030dc] grid grid-cols-4'>
+			<div className='relative h-[150px] w-full bg-[#079030dc] grid grid-cols-4'>
 			{BannerArray.map((items, index) => (
 				<div className='flex justify-center items-center gap-4' key={index}>
 					<items.icon className='size-8'/>
@@ -244,10 +244,6 @@ export default function Home() {
 
 				{/* Main5 */}
 				<div className="py-20 text-left max-w-7xl w-full space-y-16">
-					{/* Title */}
-					<Reveal className="flex flex-col lg:flex-row justify-between lg:items-end w-full">
-						<h1 className="text-5xl">Contact our office</h1>
-					</Reveal>
 
 					{/* Map */}
 					<Reveal className="flex overflow-x-auto w-full h-auto">
@@ -257,30 +253,33 @@ export default function Home() {
 									<iframe
 									title="Google Map"
 									className="absolute inset-0 w-full h-full border-0 rounded-3xl"
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.500486162972!2d-122.42067938468168!3d37.77851897975986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818d32c9aefb%3A0x1f5d3e3f74f3a76e!2sGolden%20Gate%20Park!5e0!3m2!1sen!2sus!4v1618171220190!5m2!1sen!2sus"
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.3780731200293!2d-79.52551568450297!3d43.82485507911507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2a3403aaf247%3A0xb71f8d3f4f3df8c1!2s200%20Tesma%20Way%20%237%2C%20Vaughan%2C%20ON%20L4K%200J9%2C%20Canada!5e0!3m2!1sen!2sus!4v1690645821577!5m2!1sen!2sus"
 									allowFullScreen=""
 									loading="lazy"
 									/>
 								</div>
 							</div>
 							<div className="flex flex-col  items-start w-full col-span-2">
-								<div className="lg:px-12 py-6 grid grid-cols-2 w-full gap-8">
-										<div className="space-y-1">
-											<h1 className="text-xl ">Contact us</h1>
-											<div  className="flex items-center gap-x-2  underline">
-													<FaPhoneAlt/>
-													<p>905-597-4799 | info@aurum-m.com</p>
-											</div>
-										</div>
+								<div className="lg:px-12 grid grid-cols-2 w-full gap-8">
+                                    <div className='col-span-2'>
+                                        <p className='text-6xl'>Contact <span className='text-leafgreen'>Us</span></p>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <h1 className="text-xl ">Call us</h1>
+                                        <div  className="flex items-center gap-x-2  underline">
+                                                <FaPhoneAlt/>
+                                                <p>905-597-4799 | info@aurum-m.com</p>
+                                        </div>
+                                    </div>
 
-										<div className="space-y-1">
-											<h1 className="text-xl ">Visit us</h1>
-											<p className="text-gray-500">Talk to us in person at our Vaughan HQ</p>
-											<div  className="flex items-center gap-x-2  underline">
-													<FaLocationDot/>
-													<p>200 Tesma Way #7, Vaughan, ON L4K 0J9</p>
-											</div>
-										</div>
+                                    <div className="space-y-1">
+                                        <h1 className="text-xl ">Visit us</h1>
+                                        <p className="text-gray-500">Talk to us in person at our Vaughan HQ</p>
+                                        <div  className="flex items-center gap-x-2  underline">
+                                                <FaLocationDot/>
+                                                <p>200 Tesma Way #7, Vaughan, ON L4K 0J9</p>
+                                        </div>
+                                    </div>
 								</div>
 							</div>
 						</div>
