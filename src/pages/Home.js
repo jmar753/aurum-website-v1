@@ -84,13 +84,13 @@ export default function Home() {
 			</div>
 
 			{/* Banner */}
-			<div className='relative h-[150px] w-full bg-[#079030dc] grid grid-cols-4'>
+			<div className='relative h-auto lg:h-[150px] w-full py-6 lg:py-0 gap-8 lg:gap-0 px-6 lg:px-0 bg-[#079030dc] grid grid-cols-1 lg:grid-cols-4'>
 			{BannerArray.map((items, index) => (
-				<div className='flex justify-center items-center gap-4' key={index}>
+				<div className='flex justify-start lg:justify-center items-center gap-6 lg:gap-4' key={index}>
 					<items.icon className='size-8'/>
-					<div className='justify-center items-center text-aurumwhite'>
-						<p className='text-2xl'>{items.text1}</p>
-						<p>{items.text2}</p>
+					<div className='lg:justify-center lg:items-center text-aurumwhite'>
+						<p className='text-xl lg:text-2xl'>{items.text1}</p>
+						<p className='text-base'>{items.text2}</p>
 					</div>
 				</div>
 			))}
@@ -98,13 +98,12 @@ export default function Home() {
 
 
 			<div className="flex flex-col justify-center items-center font-lufga">
-
 				{/* Main 1 */}
 				<>
 					<div className="flex justify-center pb-16 pt-28 w-full px-8">
 						<div className="flex flex-col lg:flex-row justify-between max-w-7xl w-full">
-							<h1 className="text-6xl lg:text-7xl">Retrofits</h1>
-							<div className="text-lg lg:text-right">
+							<h1 className="text-5xl lg:text-7xl">Retrofits</h1>
+							<div className="hidden lg:block text-lg lg:text-right">
 								<p className="lg:text-4xl">Invisible Comfort, Unmatched Feel.</p>
 								<p className="lg:text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
 							</div>
@@ -195,8 +194,7 @@ export default function Home() {
 				<div className="py-28 text-left max-w-7xl w-full space-y-16 px-8">
 					{/* Title */}
 					<div className="flex justify-between items-center w-full">
-						<h1 className="text-5xl">What is Aurum Manufacturing</h1>
-						<div className="border-t-2 border-white flex-grow ml-4"></div>
+						<h1 className="text-4xl lg:text-5xl">What is Aurum <span className='hidden lg:block'>Manufacturing</span></h1>
 					</div>
 					<div>
 						<p>Aurum Manufacturing, based in Canada, specializes in providing replacement solutions for outdated fan coil systems and retrofits in apartments, condos, businesses businesses. Join us on our journey to becoming a leading HVAC solutions company in Canada.
@@ -228,8 +226,7 @@ export default function Home() {
 				<div className="py-28 text-left max-w-7xl w-full space-y-16 px-8">
 					{/* Title */}
 					<div className="flex flex-col lg:flex-row justify-between lg:items-center w-full">
-						<h1 className="text-5xl lg:w-3/5">Why buy Retrofits from Aurum Manufacturing</h1>
-						<div className="border-t-2 border-white flex-grow ml-4"></div>
+						<h1 className="text-5xl lg:w-3/5">Why Choose Aurum</h1>
 					</div>
 
 					{/* Card Sidescroll */}
