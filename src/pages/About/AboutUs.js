@@ -39,9 +39,9 @@ export default function AboutUs(){
 
     return(
         <div className="flex flex-col justify-center items-center text-gray-100 bg-aurumblack">
-            <div  className="h-auto w-full max-w-7xl px-8 pt-36">
+            <div  className="h-auto w-full max-w-7xl px-8 pt-28">
                 <div className="" propDelay={0}>
-                    <h1 className="text-4xl lg:text-7xl text-gray-100 ">Meet The Team</h1>
+                    <h1 className="text-2xl lg:text-7xl text-gray-100 ">Meet The Team</h1>
                 </div>
                 {/* Meet the Team */}
                 <div className="space-y-8 py-12" propDelay={0.1}>
