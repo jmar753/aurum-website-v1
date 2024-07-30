@@ -140,11 +140,8 @@ export default function Header() {
     ]
 
     return (
-        <motion.nav 
+        <nav 
             className="bg-aurumblack text-gray-100 h-[4rem] px-4 fixed -top-1 z-50 w-screen flex justify-center items-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
         >
             <div className="w-full h-full justify-between items-center flex px-8">
 
@@ -181,6 +178,6 @@ export default function Header() {
                     </button>
                 </div>
             </div>
-        </motion.nav>
+        </nav>
     )
 }
