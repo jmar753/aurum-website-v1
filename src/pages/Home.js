@@ -101,7 +101,7 @@ export default function Home() {
 
 				{/* Main 1 */}
 				<>
-					<Reveal className="flex justify-center pb-16 pt-28 w-full px-8">
+					<div className="flex justify-center pb-16 pt-28 w-full px-8">
 						<div className="flex flex-col lg:flex-row justify-between max-w-7xl w-full">
 							<h1 className="text-6xl lg:text-7xl">Retrofits</h1>
 							<div className="text-lg lg:text-right">
@@ -109,9 +109,9 @@ export default function Home() {
 								<p className="lg:text-xl text-zinc-300">Experience 40+ years of HVAC Excellence.</p>
 							</div>
 						</div>
-					</Reveal>
+					</div>
 					<div className='pb-28 px-8'>
-						<Reveal className="relative max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
+						<div className="relative max-w-7xl w-full bg-aurumgreen-800 rounded-3xl overflow-hidden">
 							<div className="relative flex flex-col justify-center items-center h-auto overflow-hidden">
 
 								{/* Vibrant Gradient Background */}
@@ -187,18 +187,18 @@ export default function Home() {
 									</div>
 								</div>
 							</div>
-						</Reveal>
+						</div>
 					</div>
 				</>
 
 				{/* Main3 */}
 				<div className="py-28 text-left max-w-7xl w-full space-y-16 px-8">
 					{/* Title */}
-					<Reveal className="flex justify-between items-center w-full">
+					<div className="flex justify-between items-center w-full">
 						<h1 className="text-5xl">What is Aurum Manufacturing</h1>
 						<div className="border-t-2 border-white flex-grow ml-4"></div>
-					</Reveal>
-					<Reveal>
+					</div>
+					<div>
 						<p>Aurum Manufacturing, based in Canada, specializes in providing replacement solutions for outdated fan coil systems and retrofits in apartments, condos, businesses businesses. Join us on our journey to becoming a leading HVAC solutions company in Canada.
 						</p>
 						<div className="flex flex-col md:flex-row pt-16 gap-4 relative">
@@ -221,19 +221,19 @@ export default function Home() {
 							</div>
 							<div className="absolute hidden bg-naturegreen-800 w-screen h-[300px] -bottom-32 -left-4 z-0"></div>
 						</div>
-					</Reveal>
+					</div>
 				</div>
 
 				{/* Main4 */}
 				<div className="py-28 text-left max-w-7xl w-full space-y-16 px-8">
 					{/* Title */}
-					<Reveal className="flex flex-col lg:flex-row justify-between lg:items-center w-full">
+					<div className="flex flex-col lg:flex-row justify-between lg:items-center w-full">
 						<h1 className="text-5xl lg:w-3/5">Why buy Retrofits from Aurum Manufacturing</h1>
 						<div className="border-t-2 border-white flex-grow ml-4"></div>
-					</Reveal>
+					</div>
 
 					{/* Card Sidescroll */}
-					<Reveal className="flex overflow-x-auto py-8 space-x-4">
+					<div className="flex overflow-x-auto py-8 space-x-4">
 						{AboutArray.map((item, index) => (
 							<motion.div
 								key={index}
@@ -249,12 +249,12 @@ export default function Home() {
 								</div>
 							</motion.div>
 						))}
-					</Reveal>
+					</div>
 				</div>
 
 				{/* Main5 */}
 				<div className="py-28 text-left max-w-7xl w-full space-y-16 px-8">
-					<Reveal className="flex overflow-x-auto w-full h-auto">
+					<div className="flex overflow-x-auto w-full h-auto">
 						<div className="grid lg:grid-cols-3 gap-4 w-full">
 							<div className="flex flex-col  items-start w-full col-span-2">
 								<div className="lg:px-12 grid grid-cols-2 w-full gap-8">
@@ -305,7 +305,7 @@ export default function Home() {
 								</div>
 							</div>
 						</div>
-					</Reveal>
+					</div>
 				</div>
 			</div>
 		</>
