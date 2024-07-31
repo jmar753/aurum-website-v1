@@ -148,8 +148,8 @@ export default function OurHistory(){
 
 				{/* Second Part */}
 				<div className="px-8">
-					<div className="pt-12" >
-						<h1 className="text-4xl lg:text-7xl text-gray-100 ">The Introduction of Aurum Manufacturing</h1>
+					<div className="pt-12 pb-10" >
+						<h1 className="text-3xl lg:text-7xl text-gray-100 ">The Introduction of Aurum Manufacturing</h1>
 					</div>
 
 					<div className="space-y-8 py-6" >
