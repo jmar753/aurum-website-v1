@@ -38,7 +38,7 @@ export default function OurHistory(){
 
 			{/* Intro */}
 			<div className="w-full pb-14 relative border-b text-white" >
-				<div className="flex justify-between pr-10 absolute h-28">
+				<div className="flex justify-between pr-4 absolute h-28">
 					<h1 className="text-lg text-gray-100 px-4 col-span-2">OUR HISTORY</h1>{/* Intro */}
 					<img src={"https://static.vecteezy.com/system/resources/previews/001/840/618/original/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"} className="rounded-full h-auto w-auto"/>
 				</div>
