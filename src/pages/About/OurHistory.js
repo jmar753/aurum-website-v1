@@ -174,6 +174,11 @@ export default function OurHistory(){
 					</div>
 				</div>
 
+				<div className="space-y-8 py-6 px-8 flex flex-col items-center justify-center" >
+					<img src="https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/Ornella.png"></img>
+					<p className="text-neutral-300 text-sm">Founder Adam (Left) and Ornella Zorzit (Right), 2020</p>
+				</div>
+
 				<div className="space-y-8 p-4 mx-8 mt-8 mb-24 border-leafgreen border-2 rounded-3xl relative">
 					<div>
 						<h1 className="border-b">Ornella</h1>
@@ -183,11 +188,6 @@ export default function OurHistory(){
 
 					<img src={tree} className="h-full w-full opacity-15 absolute inset-0 "/>
 				</div>
-
-				{/* <div className="space-y-8 py-6 flex flex-col items-center justify-center" >
-					<img src="https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/Adam_and_Stacy.png"></img>
-					<p className="text-neutral-300 text-sm">Founders Adam (Right) and Stacy Zorzit (Middle) with their brother Richard Zorzit (Left), 2017</p>
-				</div> */}
 
 			</div>
 		</>
