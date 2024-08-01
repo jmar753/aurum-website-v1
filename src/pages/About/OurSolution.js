@@ -3,7 +3,7 @@ export default function OurSolution(){
     const threats = [
         {
             id: 1,
-            title:"Threat 1 Rust",
+            title:"Rust",
             span1:"Risk of Flooding",
             text1: "Rust chips can clog drain pans and condensate hoses causing backup and overflow. This may result in water damage.",
             span2: "Health Hazard",
@@ -11,7 +11,7 @@ export default function OurSolution(){
         },
         {
             id: 2,
-            title:"Threat 2 Mold",
+            title:"Mold",
             span1:"Health Hazard",
             text1: "Airborne mold particles can cause major allergen irritations and in severe cases can lead to respiratory problems.",
             span2: "",
@@ -19,7 +19,7 @@ export default function OurSolution(){
         },
         {
             id: 3,
-            title:"Threat 3 Low Electrical Efficiency",
+            title:"Low Electrical Efficiency",
             span1:"Old Technology",
             text1: "Inefficient and outdated components cause unnecessary power consumption",
             span2: "Coil Clogging",
@@ -72,114 +72,128 @@ export default function OurSolution(){
         },
     ]
 
+    const pattents = [
+        {
+			patNumber: 8939826,
+			title: "HVAC apparatus with HRV/ERV unit and vertical fan coil unit",
+			abstract: "An apparatus for heating, ventilation and/or air conditioning of an interior space includes a heat exchanger core and a heating/cooling device in fluid connection with the heat exchanger core. A recirculation port is arranged between a supply air chamber and an outside air chamber. A damper is adapted to move between a first position in which the damper blocks the recirculation port and a second position in which the recirculation port is unblocked. When the damper is in the second position, at least a portion of supply air is guided to flow from the supply air chamber through the outside air chamber to the heat exchanger core so as to defrost the heat exchanger core.",
+			type: "Grant",
+			filed: "July 15, 2011",
+			DoP: "January 27, 2015",
+			inventors: "Vittorio Zorzit, Sheng Chu",
+        },
+        {
+			patNumber: 7334542,
+			title: "Compact high-efficiency boiler and method for producing steam",
+			abstract: "An apparatus for heating, ventilation and/or air conditioning of an interior space includes a heat exchanger core and a heating/cooling device in fluid connection with the heat exchanger core. A recirculation port is arranged between a supply air chamber and an outside air chamber. A damper is adapted to move between a first position in which the damper blocks the recirculation port and a second position in which the recirculation port is unblocked. When the damper is in the second position, at least a portion of supply air is guided to flow from the supply air chamber through the outside air chamber to the heat exchanger core so as to defrost the heat exchanger core.",
+			type: "Grant",
+			filed: "July 15, 2011",
+			DoP: "January 27, 2015",
+			inventors: "Vittorio Zorzit, Sheng Chu",
+        },
+        {
+			patNumber: 7137360,
+			title: "Tube assembly for a boiler",
+			abstract: "An apparatus for heating, ventilation and/or air conditioning of an interior space includes a heat exchanger core and a heating/cooling device in fluid connection with the heat exchanger core. A recirculation port is arranged between a supply air chamber and an outside air chamber. A damper is adapted to move between a first position in which the damper blocks the recirculation port and a second position in which the recirculation port is unblocked. When the damper is in the second position, at least a portion of supply air is guided to flow from the supply air chamber through the outside air chamber to the heat exchanger core so as to defrost the heat exchanger core.",
+			type: "Grant",
+			filed: "July 15, 2011",
+			DoP: "January 27, 2015",
+			inventors: "Vittorio Zorzit, Sheng Chu",
+        },
+      ];
+
     return(
-        <>
-            {/* Header Padding */}
-            <div className="pt-28 w-full"/>
+		<>
+			{/* Header Padding */}
+			<div className="pt-28 w-full"/>
 
-            {/* Intro */}
-            <div className="w-full pb-14 relative border-b text-white" >
-                <div className="flex justify-between pr-4 absolute h-28 w-full">
-                    <h1 className="text-lg text-gray-100 px-4 col-span-2 z-10">OUR SOLUTION</h1>
+			{/* Intro */}
+			<div className="w-full pb-14 relative border-b text-white" >
+				<div className="flex justify-between pr-4 absolute h-28 w-full">
+					<h1 className="text-lg text-gray-100 px-4 col-span-2 z-10">OUR SOLUTION</h1>{/* Intro */}
+				</div>
+			</div>
+
+			{/* Timeline Block 1 */}
+			<div className="flex flex-col justify-center items-center text-gray-200 bg-aurumblack">
+				<div className="h-auto w-auto max-w-7xl border-l mx-8 px-4">
+
+					<div className="pt-10 pb-6 text-white">
+						<p className="text-xl font-bold text-aurumgold-500">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
+						<p className="text-base lg:text-xl pt-4">This is the common misconception made by many homeowners regarding their outdated fan coil units. Your HVAC system is crucial in your everyday living and should be held at such standards. Retrofitting your fan coil unit drastically improves this essential system.</p>
+					</div>
+
+					<div className="pt-10 pb-6 text-white">
+						<p className="text-xl font-bold">Understanding Why to Retrofit</p>
+						<p className="text-base lg:text-xl pt-4">Aside from your fan coil system not look appealing there are also some threatening qualities that pictures cannot capture.</p>
+					</div>
+
+					<div className="pt-10 text-white">
+						<p className="text-xl font-bold">Three of the biggest threats of aging fan coils are:</p>
+                        <p className="text-aurumgold-500">Rust</p>
+                        <p className="text-aurumgold-500">Mold Growth</p>
+                        <p className="text-aurumgold-500">Low Electrical Efficiency</p>
+					</div>
+                </div>
+			</div>
+
+            <div className="p-8 space-y-8">
+                {threats.map((item, index) => (
+                    <div key={index} className="space-y-8 p-4 border-aurumgold-500 border-2 rounded-3xl grid">
+                        <h1 className="text-xl">Threat {item.id} <span className="text-aurumgold-500">{item.title}</span></h1>
+                        <p className="font-bold text-lg">{item.span1}</p>
+                        <p>{item.text1}</p>
+                        <p className="font-bold text-lg">{item.span2}</p>
+                        <p>{item.text2}</p>
+                    </div>
+                ))}
+            </div>
+
+            {/* Solution */}
+            <div className="p-8">
+                <div className="pt-12 pb-4" >
+                    <h1 className="text-3xl lg:text-7xl text-gray-100 ">The Aurum Solution</h1>
+                </div>
+
+                <div className="space-y-8 py-6" >
+                    <p className="text-base lg:text-xl">Aurum Manufacturing is proud to be one of the pioneers in retrofit development. This solution completely transforms your fan coil unit into an up-to-date modern and efficient system.</p>
+                </div>
+
+                <div className="relative grid grid-cols-2 gap-4">
+                    <div>
+                        <p className="pb-2 font-bold">Before</p>
+                        <img 
+                            src={"https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/autum_solution_product_before.png"} 
+                            className="w-full h-64 object-cover rounded-3xl"
+                        />
+                    </div>
+                    <div className="pb-12">
+                        <p className="pb-2 font-bold">After</p>
+                        <img 
+                            src={"https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/autum_solution_product_after.png"} 
+                            className="w-full h-64 object-cover rounded-3xl"
+                        />
+                    </div>
                 </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center text-gray-100 bg-aurumblack">
-                <div className="h-auto w-full max-w-7xl px-8 pt-10">
-
-                    {/* Written */}
-                    <div className="space-y-8 pb-20">
-                        <p className="text-center text-2xl text-aurumgold-700">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
-                        <p>This is the common misconception made by many homeowners regarding their outdated fan coil units. Your HVAC system is crucial in your everyday living and should be held at such standards. Retrofitting your fan coil unit drastically improves this essential system.</p>
-                    </div>
-
-                    {/* Retrofit Section */}
-                    <div className="space-y-8 pb-20">
-                        <h1 className="text-3xl">Understanding Why to Retrofit</h1>
-                        <p>Aside from your fan coil system not look appealing there are also some threatening qualities that pictures
-                        cannot capture.</p>
-                        <p>Three of the biggest threats of aging fan coils are:</p>
-                        <ul>
-                            <li>Rust</li>
-                            <li>Mold Growth</li>
-                            <li> Low Electrical Efficiency</li>
-                        </ul>
-                    </div>
-
-                    {/* Threat Section */}
-                    <div className="text-center space-y-8 pb-20">
-                        {threats.map((items, index) => (
-                            <div>
-                                <h1>{items.title}</h1>
-                                <p>{items.span1}</p>
-                                <p>{items.text1}</p>
-                                <p>{items.span2}</p>
-                                <p>{items.text2}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/*The Aurum Solution*/}
-                    <div className="text-center space-y-8 pb-20">
-                        <h1>THE AURUM SOLUTION</h1>
-                        <p>Aurum Manufacturing is proud to be one of the pioneers in retrofit development. This solution completely transforms your fan coil unit into an up-to-date modern and efficient system</p>
-                        <div className="grid grid-cols-2 space-x-8">
-                            <div className="bg-aurumgreen-600 w-auto h-[400px]"></div>
-                            <div className="bg-aurumgreen-600 w-auto h-[400px]"></div>
-                        </div>
-                    </div>
-
-                    {/*Homeowner Benefits*/}
-                    <div className="text-center space-y-8 pb-20">
-                        <h1>HOMEOWNER BENEFITS</h1>
-                        <p>Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
-                        <ul>
-                            <li>Increases air circulation in your home</li>
-                            <li>Increases efficiency in fan coil operations</li>
-                            <li>Includes safety features for flood prevention</li>
-                            <li>Creates and enhances optimal comfort in your home</li>
-                            <li>Reduces operational noise</li>
-                            <li>Lowers fan coil energy consumption</li>
-                        </ul>
-                    </div>
-
-                    {/* Essential Components */}
-                    <div className="text-center space-y-8 pb-20">
-                        <div className="grid grid-cols-2 gap-5">
-                            <h1>ECM MOTOR</h1>
-                            <h1>FLOAT SENSOR</h1>
-                            <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
-                            <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
-                            <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
-                            <div className="bg-aurumgreen-600 h-[300px] w-full"></div>
-                        </div>
-                    </div>
-
-                    {/* 6 grid */}
-                    <div className="text-center space-y-8 pb-20">
-                        <div className="grid grid-cols-2">
-                            {gridinfo.map((item, index) => (
-                                <div className="border-aurumgreen-1">
-                                    <h1>{item.title}</h1>
-                                    <p>{item.note1}</p>
-                                    <p>{item.note2}</p>
-                                    <p>{item.note3}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/*Optional Features */}
-                    <div className="text-center space-y-8 pb-20">
-                        <ul>
-                            <li>Audible Water Sensor</li>
-                            <li>Cabinet Floor Moisture Sensor</li>
-                            <li>Secondary Room Temperature Sensors</li>
-                            <li>Smart Thermostats</li>
-                        </ul>
-                    </div>
+            {/* Benefits */}
+            <div className="p-8 bg-aurumgrey py-24">
+                <div className="pb-12" >
+                    <h1 className="text-3xl lg:text-7xl text-gray-100 ">Homeowner Benefits</h1>
+                    <p className="text-neutral-300 ">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
                 </div>
+                <ul className="bg-leafgreen p-4 rounded-3xl shadow-xl shadow-aurumblack">
+                    <li className="pb-2">Increases air circulation in your home</li>
+                    <li className="pb-2">Increases efficiency in fan coil operations</li>
+                    <li className="pb-2">Includes safety features for flood prevention</li>
+                    <li className="pb-2">Creates and enhances optimal comfort in your home</li>
+                    <li className="pb-2">Reduces operational noise</li>
+                    <li className="pb-2">Lowers fan coil energy consumption</li>
+                </ul>
             </div>
-        </>
+
+            {/* Components */}
+		</>
     )
 }
