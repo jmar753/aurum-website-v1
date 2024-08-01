@@ -40,16 +40,16 @@ export default function Resources(){
         },
     ]
     return(
-        <div className="flex flex-col justify-center items-center text-gray-100 bg-gradient-to-bl from-naturegreen-400 to-naturegreen-900 ">
+        <div className="flex flex-col justify-center items-center  bg-gradient-to-bl from-naturegreen-400 to-naturegreen-900 ">
             <div className="h-auto w-full max-w-7xl px-8 py-36">
                 <div className="">
-                    <h1 className="text-4xl lg:text-7xl text-gray-100 ">Resources</h1>
+                    <h1 className="text-4xl lg:text-7xl  ">Resources</h1>
                 </div>
 
                 <div className="py-20 gap-4 grid grid-cols-1 divide-y-2">
                     {Tabs.map((item, index) => (
                         <div className="py-8 space-y-4">
-                            <h1 className="text-3xl text-gray-100 ">{item.name}</h1>
+                            <h1 className="text-3xl  ">{item.name}</h1>
                             <p>{item.description}</p>
                             <div className="relative w-full h-[300px]">
                                 <img src={item.pic1} className="absolute h-[200px] z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-black"/>

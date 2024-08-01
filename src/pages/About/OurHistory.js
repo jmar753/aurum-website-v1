@@ -40,7 +40,7 @@ export default function OurHistory(){
 			{/* Intro */}
 			<div className="w-full pb-14 relative border-b text-white" >
 				<div className="flex justify-between pr-4 absolute h-28 w-full">
-					<h1 className="text-lg text-gray-100 px-4 col-span-2 z-10">OUR HISTORY</h1>{/* Intro */}
+					<h1 className="text-lg  px-4 col-span-2 z-10">OUR HISTORY</h1>{/* Intro */}
 					<img src={"https://static.vecteezy.com/system/resources/previews/001/840/618/original/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"} className="rounded-full h-auto w-auto"/>
 				</div>
 			</div>
@@ -130,7 +130,7 @@ export default function OurHistory(){
 							<p className="w-4">1.</p>
 							<div className="space-y-4">
 								<p>“What is your greatest success?”</p>
-								<p className="text-base lg:text-xl text-neutral-50">It’s hard to narrow down my greatest success. The thing is when you do things, to me it didn’t sound like a big deal. It was a big deal for someone who didn’t know anything about it. I was one of the few leaders in the industry while being honest.</p>
+								<p className="text-base lg:text-xl text-neutral-300">It’s hard to narrow down my greatest success. The thing is when you do things, to me it didn’t sound like a big deal. It was a big deal for someone who didn’t know anything about it. I was one of the few leaders in the industry while being honest.</p>
 							</div>
 						</div>
 					</div>
@@ -149,7 +149,7 @@ export default function OurHistory(){
 				{/* Second Part */}
 				<div className="px-8">
 					<div className="pt-12 pb-4" >
-						<h1 className="text-3xl lg:text-7xl text-gray-100 ">The Introduction of Aurum Manufacturing</h1>
+						<h1 className="text-3xl lg:text-7xl ">The Introduction of Aurum Manufacturing</h1>
 					</div>
 
 					<div className="space-y-8 py-6" >

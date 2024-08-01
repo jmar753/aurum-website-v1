@@ -45,15 +45,15 @@ export default function AboutUs(){
             {/* Intro */}
             <div className="w-full pb-14 relative border-b text-white" >
                 <div className="flex justify-between pr-4 absolute h-28 w-full">
-                    <h1 className="text-lg text-gray-100 px-4 col-span-2 z-10">ABOUT US</h1>{/* Intro */}
+                    <h1 className="text-lg  px-4 col-span-2 z-10">ABOUT US</h1>{/* Intro */}
                 </div>
             </div>
 
             {/*  */}
-            <div className="flex flex-col justify-center items-center text-gray-100 bg-aurumblack">
+            <div className="flex flex-col justify-center items-center  bg-aurumblack">
                 <div  className="h-auto w-full max-w-7xl px-8 pt-12 pb-12">
                     <div className="" propDelay={0}>
-                        <h1 className="text-3xl text-gray-100 ">Meet The Team</h1>
+                        <h1 className="text-3xl  ">Meet The Team</h1>
                     </div>
                     {/* Meet the Team */}
                     <div className="space-y-8 pt-6 pb-10" propDelay={0.1}>
@@ -95,7 +95,7 @@ export default function AboutUs(){
 
                 <div  className="h-auto w-full max-w-7xl px-8 pt-12 ">
                     <div className="" propDelay={0}>
-                        <h1 className="text-3xl lg:text-7xl text-gray-100 ">Who We Are</h1>
+                        <h1 className="text-3xl lg:text-7xl  ">Who We Are</h1>
                     </div>
                     {/* Meet the Team */}
                     <div className="space-y-8 pt-6 pb-12" propDelay={0.1}>

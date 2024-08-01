@@ -17,7 +17,7 @@ export default function Footer(){
                     <p>Subscribe to our newsletter to keep up to date with all things Aurum!</p>
                     <div className="flex items-center mt-1">
                         <input type="email" id="input-9" className="w-full h-10 px-3 text-sm text-gray-700 border border-r-0 rounded-r-none focus:outline-none rounded-3xl shadow-sm bg-gray-100" placeholder="user@mail.com"/>
-                        <button className="h-10 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-3xl shadow-sm text-gray-100 hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
+                        <button className="h-10 px-4 text-sm bg-naturegreen-500 border border-l-0  rounded-r-3xl shadow-sm  hover:text-white hover:bg-blue-400 hover:border-naturegreen-200 focus:outline-none">Subscribe</button>
                     </div>
                 </div>
 

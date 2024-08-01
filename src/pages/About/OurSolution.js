@@ -1,3 +1,5 @@
+import { IoIosCheckmark } from "react-icons/io";
+
 export default function OurSolution(){
 
     const threats = [
@@ -110,7 +112,7 @@ export default function OurSolution(){
 			{/* Intro */}
 			<div className="w-full pb-14 relative border-b text-white" >
 				<div className="flex justify-between pr-4 absolute h-28 w-full">
-					<h1 className="text-lg text-gray-100 px-4 col-span-2 z-10">OUR SOLUTION</h1>{/* Intro */}
+					<h1 className="text-lg  px-4 col-span-2 z-10">OUR SOLUTION</h1>{/* Intro */}
 				</div>
 			</div>
 
@@ -152,14 +154,14 @@ export default function OurSolution(){
             {/* Solution */}
             <div className="p-8">
                 <div className="pt-12 pb-4" >
-                    <h1 className="text-3xl lg:text-7xl text-gray-100 ">The Aurum Solution</h1>
+                    <h1 className="text-3xl lg:text-7xl">The Aurum Solution</h1>
                 </div>
 
-                <div className="space-y-8 py-6" >
+                <div className="space-y-8 pb-6" >
                     <p className="text-base lg:text-xl">Aurum Manufacturing is proud to be one of the pioneers in retrofit development. This solution completely transforms your fan coil unit into an up-to-date modern and efficient system.</p>
                 </div>
 
-                <div className="relative grid grid-cols-2 gap-4">
+                <div className="relative grid grid-cols-2 gap-4 pt-8">
                     <div>
                         <p className="pb-2 font-bold">Before</p>
                         <img 
@@ -178,22 +180,81 @@ export default function OurSolution(){
             </div>
 
             {/* Benefits */}
-            <div className="p-8 bg-aurumgrey py-24">
-                <div className="pb-12" >
-                    <h1 className="text-3xl lg:text-7xl text-gray-100 ">Homeowner Benefits</h1>
-                    <p className="text-neutral-300 ">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
+            <div className="px-8 bg-aurumgrey py-24 text-center">
+                <div className="bg-leafgreen p-4 rounded-3xl shadow-xl shadow-aurumblack text-left">
+                    <div className="pb-12" >
+                        <h1 className="text-3xl lg:text-7xl pb-4">Homeowner Benefits</h1>
+                        <p className="text-neutral-300">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
+                    </div>
+
+                    <ul>
+                        <li className="flex mb-6 items-center">
+                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span className="ml-2">Increases air circulation in your home</span>
+                        </li>
+                        <li className="flex mb-6 items-center">
+                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span className="ml-2">Increases efficiency in fan coil operations</span>
+                        </li>
+                        <li className="flex mb-6 items-center">
+                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span className="ml-2">Includes safety features for flood prevention</span>
+                        </li>
+                        <li className="flex mb-6 items-center">
+                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span className="ml-2">Creates and enhances optimal comfort in your home</span>
+                        </li>
+                        <li className="flex mb-6 items-center">
+                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span className="ml-2">Reduces operational noise</span>
+                        </li>
+                        <li className="flex mb-6 items-center">
+                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span className="ml-2">Lowers fan coil energy consumption</span>
+                        </li>
+                    </ul>
                 </div>
-                <ul className="bg-leafgreen p-4 rounded-3xl shadow-xl shadow-aurumblack">
-                    <li className="pb-2">Increases air circulation in your home</li>
-                    <li className="pb-2">Increases efficiency in fan coil operations</li>
-                    <li className="pb-2">Includes safety features for flood prevention</li>
-                    <li className="pb-2">Creates and enhances optimal comfort in your home</li>
-                    <li className="pb-2">Reduces operational noise</li>
-                    <li className="pb-2">Lowers fan coil energy consumption</li>
-                </ul>
             </div>
 
             {/* Components */}
+            <div className="py-20 px-8">
+                <div className="pb-12" >
+                    <h1 className="text-3xl lg:text-7xl pb-4">Our Essential Components</h1>
+                    <p className="text-neutral-300">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
+                </div>
+                <ul className="bg-leafgreen p-4 rounded-3xl shadow-xl shadow-aurumblack text-left">
+                    <p className="pb-2">Increases air circulation in your home</p>
+                    <p className="pb-2">Increases efficiency in fan coil operations</p>
+                    <p className="pb-2">Includes safety features for flood prevention</p>
+                    <p className="pb-2">Creates and enhances optimal comfort in your home</p>
+                    <p className="pb-2">Reduces operational noise</p>
+                    <p className="pb-2">Lowers fan coil energy consumption</p>
+                </ul>
+            </div>
 		</>
     )
 }

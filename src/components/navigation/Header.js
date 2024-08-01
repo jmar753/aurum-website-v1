@@ -141,7 +141,7 @@ export default function Header() {
 
     return (
         <nav 
-            className="bg-aurumblack text-gray-100 h-[4rem] px-8 fixed -top-1 z-50 w-screen flex justify-center items-center"
+            className="bg-aurumblack  h-[4rem] px-8 fixed -top-1 z-50 w-screen flex justify-center items-center"
         >
             <div className="w-full h-full justify-between items-center flex">
 

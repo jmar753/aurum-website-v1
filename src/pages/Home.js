@@ -65,7 +65,7 @@ export default function Home() {
 				<div className="flex flex-col gap-8 justify-center z-30 h-auto w-auto m-8 lg:m-0 lg:h-screen lg:w-1/2 pl-0 lg:pl-16 text-xl">
 					<SideReveal propDelay={7.9} className="">
 					<div className="pt-10 lg:pt-2 text-center lg:text-left space-y-2">
-						<h1 className="text-4xl lg:text-7xl text-gray-100">Old School Values With A New School Touch</h1>
+						<h1 className="text-4xl lg:text-7xl ">Old School Values With A New School Touch</h1>
 						<h1 className="py-2 text-aurumgold-700">"40 Years of Excellence in HVAC Solutions for Apartments and Businesses"</h1>
 						<div className="grid grid-cols-2 gap-4 pt-4">
 							<button className="w-full h-12 rounded-lg bg-leafgreen text-white">Our Products</button>
@@ -203,7 +203,7 @@ export default function Home() {
 							<div className="relative h-80 w-full md:w-1/2 rounded-xl">
 								<div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
 								<img alt="Aurum Office" src={OfficeBuilding} className="absolute h-full w-full rounded-xl object-cover" />
-								<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-20">
+								<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-20">
 									<p className=" text-2xl">About Us</p>
 									<p className="underline">Read our Journey</p>
 								</div>
@@ -212,7 +212,7 @@ export default function Home() {
 							<div className="relative h-80 w-full md:w-1/2 rounded-xl">
 								<div className="absolute h-full w-full z-20 rounded-xl bg-gradient-to-t from-black to-naturegreen-500/0"></div>
 								<img src={AdamChillin} alt="Aurum Office" className="absolute h-full w-full rounded-xl object-cover z-10" />
-								<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-100 z-30">
+								<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-30">
 									<p className=" text-2xl">Our Story</p>
 									<p className="underline">Read our Journey</p>
 								</div>
