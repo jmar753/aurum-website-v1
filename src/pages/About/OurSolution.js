@@ -84,25 +84,18 @@ export default function OurSolution(){
                 </div>
             </div>
 
-
-
-
             <div className="flex flex-col justify-center items-center text-gray-100 bg-aurumblack">
-                <div  className="h-auto w-full max-w-7xl px-8 pt-36">
-                    {/* About Banner */}
-                    <div className="" propDelay={0}>
-                        <h1 className="text-4xl lg:text-7xl text-gray-100 ">Our Solution</h1>
-                    </div>
+                <div className="h-auto w-full max-w-7xl px-8 pt-10">
 
                     {/* Written */}
-                    <div className="text-center space-y-8 pb-20">
-                        <p className="text-2xl  text-aurumgold-700">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
+                    <div className="space-y-8 pb-20">
+                        <p className="text-center text-2xl text-aurumgold-700">“Can’t See It, Can’t Feel It, Can’t Be Bothered by It”</p>
                         <p>This is the common misconception made by many homeowners regarding their outdated fan coil units. Your HVAC system is crucial in your everyday living and should be held at such standards. Retrofitting your fan coil unit drastically improves this essential system.</p>
                     </div>
 
                     {/* Retrofit Section */}
-                    <div className="text-center space-y-8 pb-20">
-                        <h1>Understanding Why to Retrofi</h1>
+                    <div className="space-y-8 pb-20">
+                        <h1 className="text-3xl">Understanding Why to Retrofit</h1>
                         <p>Aside from your fan coil system not look appealing there are also some threatening qualities that pictures
                         cannot capture.</p>
                         <p>Three of the biggest threats of aging fan coils are:</p>

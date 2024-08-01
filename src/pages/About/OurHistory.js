@@ -120,7 +120,7 @@ export default function OurHistory(){
 				
 				{/* QnA */}
 				<div className="px-8 pb-12">
-					<div className="pt-24 pb-10">
+					<div className="pt-24 pb-6">
 						<h1 className="text-3xl">Questions and Answers</h1>
 						<h1 className="text-neutral-300">With Vittorio Zorzit</h1>
 					</div>
@@ -148,7 +148,7 @@ export default function OurHistory(){
 
 				{/* Second Part */}
 				<div className="px-8">
-					<div className="pt-12 pb-10" >
+					<div className="pt-12 pb-4" >
 						<h1 className="text-3xl lg:text-7xl text-gray-100 ">The Introduction of Aurum Manufacturing</h1>
 					</div>
 
@@ -165,7 +165,7 @@ export default function OurHistory(){
 					</div>
 
 					<div className="space-y-8 py-6 flex flex-col items-center justify-center" >
-						<img src="https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/Adam_and_Stacy.png"></img>
+						<img src="https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/Adam_and_Stacy.png" className="rounded-3xl"></img>
 						<p className="text-neutral-300 text-sm">Founders Adam (Right) and Stacy Zorzit (Middle) with their brother Richard Zorzit (Left), 2017</p>
 					</div>
 
@@ -175,7 +175,7 @@ export default function OurHistory(){
 				</div>
 
 				<div className="space-y-8 py-6 px-8 flex flex-col items-center justify-center" >
-					<img src="https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/Ornella.png"></img>
+					<img src="https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/Ornella.png"  className="rounded-3xl"></img>
 					<p className="text-neutral-300 text-sm">Founder Adam (Left) and Ornella Zorzit (Right), 2020</p>
 				</div>
 
