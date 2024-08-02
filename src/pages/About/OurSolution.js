@@ -98,6 +98,33 @@ export default function OurSolution(){
         },
     ]
 
+    const features = [
+        {
+            title: "ECM Technology",
+            notes: [" 80% electrically efficient (3040% increase)", " 90,000+ hours operating life span"]
+        },
+        {
+            title: "20 Gauge Stainless Steel Construction",
+            notes: [" Virtually eliminates the possibility of rust occurrence"]
+        },,
+        {
+            title: "Control Valve and Actuator",
+            notes: [" Zero Leakage - Self-cleaning technology to be clog resistance", " Consumes 95% less power than conventional actuator"]
+        },,
+        {
+            title: "24V Control Centre",
+            notes: [" Easy plug and play compatible with most smart thermostats on the market"]
+        },,
+        {
+            title: "Safety Features",
+            notes: [" Float Sensor to detect drain pan water backup"]
+        },,
+        {
+            title: "Easy Future Serviceability",
+            notes: [" Union connections from valve bodies", " Braided stainless steel hoses are equipped with union connections for easy connect/disconnect from building supply and return"]
+        },
+    ]
+
     const [selectedItem, setSelectedItem] = useState(null);
 
     const handleItemClick = (item) => {
@@ -121,7 +148,7 @@ export default function OurSolution(){
 				</div>
 			</div>
 
-			{/* Timeline Block 1 */}
+			{/* Line Block 1 */}
 			<div className="flex flex-col justify-center items-center text-gray-200 bg-aurumblack">
 				<div className="h-auto w-auto max-w-7xl border-l mx-8 px-4">
 
@@ -206,7 +233,7 @@ export default function OurSolution(){
             </div>
 
             {/* Components */}
-            <div className="py-20 px-8">
+            <div className="pt-20 pb-10 px-8">
                 <div className="pb-12" >
                     <h1 className="text-3xl lg:text-7xl pb-4">Our Essential Components</h1>
                     <p className="text-neutral-300">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
@@ -274,6 +301,43 @@ export default function OurSolution(){
                     )}
 
                 </div>
+            </div>
+
+
+			{/* Line Block 2 */}
+			<div className="w-full pt-10 pb-8 relative border-b text-white" >
+				<div className="flex justify-between pl-4 absolute h-28 w-full">
+					<h1 className="text-lg px-4 col-span-2 z-10 text-aurumgold-500">Features</h1>{/* Intro */}
+				</div>
+			</div>
+			<div className="flex flex-col justify-center items-center text-gray-200 bg-aurumblack">
+
+                {/* Features Container */}
+				<div className="h-auto w-auto max-w-7xl border-l mx-8 px-4">
+                    {features.map((item, index) => (
+                        <div className="pt-10 pb-6 text-white flex gap-3 -ml-6" key={index}>
+                            <div className="p-2 h-2 mt-1.5 w-2 rounded-full bg-aurumgold-500"/>
+                            <div>
+                                <p className="text-lg font-bold text-aurumgold-500">{item.title}</p>
+                                <div className="text-base lg:text-xl pt-4 pl-4">
+                                    {item.notes.map((item, index) => (
+                                        <div className="flex space-x-2">
+                                            <p>-</p><p>{item}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+			</div>
+
+            <div className="py-20 px-8">
+                <h1 className="font-bold text-lg pb-6">Optional Features include but are not limited to</h1>
+                <p>- Audible Water Sensor</p>
+                <p>- Cabinet Floor Moisture Sensor</p>
+                <p>- Secondary Room Temperature Sensors</p>
+                <p>- Smart Thermostats</p>
             </div>
 		</>
     )
