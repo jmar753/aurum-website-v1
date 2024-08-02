@@ -1,4 +1,8 @@
-import { IoIosCheckmark } from "react-icons/io";
+//react libraries
+import { motion } from "framer-motion";
+
+//icons
+import { IoIosArrowForward, IoIosCheckmark } from "react-icons/io";
 
 export default function OurSolution(){
 
@@ -29,80 +33,69 @@ export default function OurSolution(){
         },
     ]
 
-    const gridinfo = [
+    const items = [
+        "Increases air circulation in your home",
+        "Increases efficiency in fan coil operations",
+        "Includes safety features for flood prevention",
+        "Creates and enhances optimal comfort in your home",
+        "Reduces operational noise",
+        "Lowers fan coil energy consumption",
+    ];
+
+    const essentialComponents = [
         {
-            id: 1,
-            title: "ECM Technology",
-            note1: "- 80% electrically efficient (30-40% increase)",
-            note2: "- 90,000+ hours operating life span",
-            note3: "",
+            name: "ECM MOTOR",
+            image: "https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/aurum_manufacturing_ecm-motor.png",
+
+            title: "What is an ECM Motor and How Does it Benefit HVAC Systems?",
+            description: "Electronically Commutated Motors (ECM) are advanced electric motors used in modern HVAC systems to enhance efficiency, comfort, and overall performance. Unlike traditional motors, ECM motors are designed with sophisticated electronics that allow them to operate at variable speeds, providing several key advantages:",
+            tpoint1: "Energy Efficiency",
+            point1: "ECM motors are highly energy-efficient, often reducing energy consumption by up to 60% compared to conventional motors. They adjust their speed based on the system's demand, ensuring that the motor only uses the necessary amount of power, leading to significant energy savings and lower utility bills.",
+            tpoint2: "Variable Speed Operation",
+            point2: "One of the standout features of ECM motors is their ability to operate at variable speeds. This means they can precisely control the airflow and system performance, maintaining consistent indoor comfort levels. Whether it's heating, cooling, or ventilation, ECM motors provide the exact amount of airflow needed, optimizing system performance.",
+            tpoint3: "Improved Air Quality",
+            point3: "By maintaining consistent and optimal airflow, ECM motors help in improving indoor air quality. They allow for better filtration and more effective removal of contaminants, contributing to a healthier indoor environment.",
         },
         {
-            id: 2,
-            title: "20 Gauge Stainless Steel Construction",
-            note1: "- Virtually eliminates the possibility of rust occurrence",
-            note2: "",
-            note3: "",
+            name: "AQUASTAT",
+            image: "https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/aurum_manufacturing_aquastat.png",
+
+            title: "What is an Aquastat and How Does it Benefit HVAC Systems?",
+            description: "Aquastats are vital components in HVAC systems, specifically designed to control the temperature of water in boilers and hydronic heating systems. They function as a type of thermostat, ensuring that water temperatures are maintained within a specified range to optimize system performance and efficiency.",
+            tpoint1: "Temperature Regulation",
+            point1: "An aquastat monitors and regulates the water temperature in a heating system. It ensures that the water temperature remains within the desired range, preventing overheating or underheating. This precise temperature control is crucial for maintaining consistent indoor comfort and protecting the system from damage due to extreme temperatures.",
+            tpoint2: "Energy Efficiency",
+            point2: "By accurately controlling the water temperature, aquastats help in reducing energy consumption. They prevent the boiler from running unnecessarily, thereby saving fuel and reducing operational costs. This efficiency translates into lower utility bills and a more environmentally friendly heating system.",
+            tpoint3: "System Protection",
+            point3: "Aquastats play a key role in protecting the HVAC system. By maintaining optimal water temperatures, they prevent potential damage to the boiler and other components caused by excessive heat or freezing conditions. This protection extends the lifespan of the system and reduces the need for costly repairs.",
         },
         {
-            id: 3,
-            title: "Control Valve and Actuato",
-            note1: "- Zero Leakage ",
-            note2: "- Self-cleaning technology to be clog resistance",
-            note3: "- Consumes 95% less power than conventional actuator ",
+            name: "FLOAT SENSOR",
+            image: "https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/aurum_manufacturing_float-sensor.png",
+
+            title: "What is a Float Sensor and How Does it Benefit HVAC Systems?",
+            description: "Float sensors are critical components used in HVAC systems to monitor and control the level of liquids within various components, such as condensate pans, boilers, and cooling towers. They operate by detecting the level of liquid and triggering actions to maintain optimal performance and prevent potential issues.",
+            tpoint1: "Liquid Level Monitoring",
+            point1: "Float sensors provide precise monitoring of liquid levels in HVAC systems. They detect changes in the liquid level and send signals to the control system, ensuring that the levels remain within the desired range. This is essential for maintaining the efficiency and safety of the system.",
+            tpoint2: "Prevention of Overflow and Flooding",
+            point2: "By accurately monitoring liquid levels, float sensors help prevent overflow and flooding. When the liquid reaches a critical level, the sensor can trigger a pump to remove excess liquid or shut down the system to prevent damage. This proactive control helps avoid costly repairs and water damage.",
+            tpoint3: "System Protection",
+            point3: "Float sensors play a vital role in protecting HVAC systems. They prevent situations where low liquid levels could cause damage to pumps, boilers, or other components by ensuring there is always an adequate supply of liquid. This protection extends the lifespan of the system and enhances reliability.",
         },
         {
-            id: 4,
-            title: "24V Control Centre",
-            note1: "- Easy plug and play compatible with most smart thermostats on the market",
-            note2: "",
-            note3: "",
-        },
-        {
-            id: 5,
-            title: "Safety Features",
-            note1: "- Float Sensor to detect drain pan water backup",
-            note2: "",
-            note3: "",
-        },
-        {
-            id: 6,
-            title: "Easy Future Serviceability",
-            note1: "- Union connections from valve bodies",
-            note2: "- Braided stainless steel hoses are equipped with union connections for easy connect/disconnect from building supply and return. ",
-            note3: "",
+            name: "CONTROL VALVE & ACTUATOR",
+            image: "https://www.aurum-m.ca/wp-content/themes/twentyseventeen-child/assets/images/aurum_manufacturing_actuator.png",
+
+            title: "What are Control Valves & Actuators and How Do They Benefit HVAC Systems?",
+            description: "Control valves and actuators are integral components in HVAC systems, responsible for regulating the flow of fluids such as water, steam, or refrigerants. Together, they ensure precise control of temperature, pressure, and flow rates, enhancing the overall efficiency and performance of HVAC systems.",
+            tpoint1: "Control Valves",
+            point1: "Control valves modulate the flow of fluid within HVAC systems based on signals received from the system's control unit. They can adjust the flow rate to maintain the desired temperature, pressure, or humidity levels.",
+            tpoint2: "Actuators",
+            point2: "Actuators are devices that control the movement of the valves. They receive signals from the HVAC control system and convert them into mechanical motion to open, close, or modulate the valve.",
+            tpoint3: "Precise Temperature and Flow Control",
+            point3: "Control valves and actuators enable precise regulation of fluid flow, ensuring that the HVAC system maintains the desired temperature and comfort levels. This precision improves system efficiency and responsiveness.",
         },
     ]
-
-    const pattents = [
-        {
-			patNumber: 8939826,
-			title: "HVAC apparatus with HRV/ERV unit and vertical fan coil unit",
-			abstract: "An apparatus for heating, ventilation and/or air conditioning of an interior space includes a heat exchanger core and a heating/cooling device in fluid connection with the heat exchanger core. A recirculation port is arranged between a supply air chamber and an outside air chamber. A damper is adapted to move between a first position in which the damper blocks the recirculation port and a second position in which the recirculation port is unblocked. When the damper is in the second position, at least a portion of supply air is guided to flow from the supply air chamber through the outside air chamber to the heat exchanger core so as to defrost the heat exchanger core.",
-			type: "Grant",
-			filed: "July 15, 2011",
-			DoP: "January 27, 2015",
-			inventors: "Vittorio Zorzit, Sheng Chu",
-        },
-        {
-			patNumber: 7334542,
-			title: "Compact high-efficiency boiler and method for producing steam",
-			abstract: "An apparatus for heating, ventilation and/or air conditioning of an interior space includes a heat exchanger core and a heating/cooling device in fluid connection with the heat exchanger core. A recirculation port is arranged between a supply air chamber and an outside air chamber. A damper is adapted to move between a first position in which the damper blocks the recirculation port and a second position in which the recirculation port is unblocked. When the damper is in the second position, at least a portion of supply air is guided to flow from the supply air chamber through the outside air chamber to the heat exchanger core so as to defrost the heat exchanger core.",
-			type: "Grant",
-			filed: "July 15, 2011",
-			DoP: "January 27, 2015",
-			inventors: "Vittorio Zorzit, Sheng Chu",
-        },
-        {
-			patNumber: 7137360,
-			title: "Tube assembly for a boiler",
-			abstract: "An apparatus for heating, ventilation and/or air conditioning of an interior space includes a heat exchanger core and a heating/cooling device in fluid connection with the heat exchanger core. A recirculation port is arranged between a supply air chamber and an outside air chamber. A damper is adapted to move between a first position in which the damper blocks the recirculation port and a second position in which the recirculation port is unblocked. When the damper is in the second position, at least a portion of supply air is guided to flow from the supply air chamber through the outside air chamber to the heat exchanger core so as to defrost the heat exchanger core.",
-			type: "Grant",
-			filed: "July 15, 2011",
-			DoP: "January 27, 2015",
-			inventors: "Vittorio Zorzit, Sheng Chu",
-        },
-      ];
 
     return(
 		<>
@@ -187,55 +180,15 @@ export default function OurSolution(){
                         <p className="text-neutral-300">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
                     </div>
 
-                    <ul>
-                        <li className="flex mb-6 items-center">
-                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <span className="ml-2">Increases air circulation in your home</span>
-                        </li>
-                        <li className="flex mb-6 items-center">
-                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <span className="ml-2">Increases efficiency in fan coil operations</span>
-                        </li>
-                        <li className="flex mb-6 items-center">
-                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <span className="ml-2">Includes safety features for flood prevention</span>
-                        </li>
-                        <li className="flex mb-6 items-center">
-                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <span className="ml-2">Creates and enhances optimal comfort in your home</span>
-                        </li>
-                        <li className="flex mb-6 items-center">
-                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <span className="ml-2">Reduces operational noise</span>
-                        </li>
-                        <li className="flex mb-6 items-center">
-                            <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 text-aurumgold-800">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <span className="ml-2">Lowers fan coil energy consumption</span>
-                        </li>
+                    <ul className="space-y-4">
+                        {items.map((item, index) => (
+                            <li key={index} className="flex items-center">
+                                <div className="h-5 w-5 bg-aurumgold-500 rounded-full flex items-center justify-center">
+                                    <IoIosCheckmark className="text-aurumgold-800 h-6 w-6" />
+                                </div>
+                                <span className="ml-4 text-white">{item}</span>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -246,14 +199,25 @@ export default function OurSolution(){
                     <h1 className="text-3xl lg:text-7xl pb-4">Our Essential Components</h1>
                     <p className="text-neutral-300">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
                 </div>
-                <ul className="bg-leafgreen p-4 rounded-3xl shadow-xl shadow-aurumblack text-left">
-                    <p className="pb-2">Increases air circulation in your home</p>
-                    <p className="pb-2">Increases efficiency in fan coil operations</p>
-                    <p className="pb-2">Includes safety features for flood prevention</p>
-                    <p className="pb-2">Creates and enhances optimal comfort in your home</p>
-                    <p className="pb-2">Reduces operational noise</p>
-                    <p className="pb-2">Lowers fan coil energy consumption</p>
-                </ul>
+                
+                <div className="space-y-8">
+                    {essentialComponents.map((item, index) => (
+                        <div key={index} className="relative rounded-3xl shadow-xl shadow-aurumblack text-left overflow-hidden group hover:cursor-pointer">
+                            <motion.img
+                                src={item.image}
+                                className="rounded-3xl w-full h-64 object-cover transition-transform duration-200 transform group-hover:scale-110"
+                                initial={{ scale: 1 }}
+                                whileHover={{ scale: 1.1 }}
+                            />
+                            <div className="absolute bottom-0 px-4 left-0 flex justify-between items-center w-full bg-black bg-opacity-60 group-hover:bg-opacity-100 duration-300 text-white py-2 text-center rounded-b-3xl">
+                                <p>{item.name}</p>
+                                <div className="rounded-full h-12 w-12 bg-aurumgrey transition duration-100 -mr-2 flex items-center justify-center">
+                                    <IoIosArrowForward className="size-6 fill-white group-hover:fill-white transition duration-100"/>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 		</>
     )
