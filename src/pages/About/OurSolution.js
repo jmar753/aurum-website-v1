@@ -203,14 +203,14 @@ export default function OurSolution(){
                 <div className="space-y-8">
                     {essentialComponents.map((item, index) => (
                         <div key={index} className="relative rounded-3xl shadow-xl shadow-aurumblack text-left overflow-hidden group hover:cursor-pointer">
-                            <motion.img
+                            <img
                                 src={item.image}
-                                className="rounded-3xl w-full h-64 object-cover transition-transform duration-200 transform group-hover:scale-110"
-                                initial={{ scale: 1 }}
-                                whileHover={{ scale: 1.1 }}
+                                className="rounded-3xl w-full h-64 object-cover duration-300 transform group-hover:scale-110"
                             />
+
+                            {/* Banner */}
                             <div className="absolute bottom-0 px-4 left-0 flex justify-between items-center w-full bg-black bg-opacity-60 group-hover:bg-opacity-100 duration-300 text-white py-2 text-center rounded-b-3xl">
-                                <p>{item.name}</p>
+                                <p className="text-left">{item.name}</p>
                                 <div className="rounded-full h-12 w-12 bg-aurumgrey transition duration-100 -mr-2 flex items-center justify-center">
                                     <IoIosArrowForward className="size-6 fill-white group-hover:fill-white transition duration-100"/>
                                 </div>
