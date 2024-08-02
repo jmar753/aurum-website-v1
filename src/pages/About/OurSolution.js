@@ -1,8 +1,9 @@
 //react libraries
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 //icons
-import { IoIosArrowForward, IoIosCheckmark } from "react-icons/io";
+import { IoIosArrowForward, IoIosCheckmark, IoIosClose } from "react-icons/io";
 
 export default function OurSolution(){
 
@@ -96,6 +97,17 @@ export default function OurSolution(){
             point3: "Control valves and actuators enable precise regulation of fluid flow, ensuring that the HVAC system maintains the desired temperature and comfort levels. This precision improves system efficiency and responsiveness.",
         },
     ]
+
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    const handleItemClick = (item) => {
+        console.log(item)
+      setSelectedItem(item);
+    };
+  
+    const handleClosePopup = () => {
+      setSelectedItem(null);
+    };
 
     return(
 		<>
@@ -200,23 +212,67 @@ export default function OurSolution(){
                     <p className="text-neutral-300">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
                 </div>
                 
+                {/* Component Cards */}
                 <div className="space-y-8">
                     {essentialComponents.map((item, index) => (
-                        <div key={index} className="relative rounded-3xl shadow-xl shadow-aurumblack text-left overflow-hidden group hover:cursor-pointer">
+                        <div
+                            key={index}
+                            className="relative rounded-3xl shadow-xl shadow-aurumblack text-left overflow-hidden group hover:cursor-pointer"
+                            onClick={() => handleItemClick(item)}
+                        >
                             <img
                                 src={item.image}
                                 className="rounded-3xl w-full h-64 object-cover duration-300 transform group-hover:scale-110"
+                                alt={item.name}
                             />
-
                             {/* Banner */}
-                            <div className="absolute bottom-0 px-4 left-0 flex justify-between items-center w-full bg-black bg-opacity-60 group-hover:bg-opacity-100 duration-300 text-white py-2 text-center rounded-b-3xl">
+                            <div className="absolute bottom-0 px-4 left-0 flex justify-between items-center w-full bg-black bg-opacity-60 group-hover:bg-opacity-90 duration-300 text-white py-2 text-center rounded-b-3xl">
                                 <p className="text-left">{item.name}</p>
                                 <div className="rounded-full h-12 w-12 bg-aurumgrey transition duration-100 -mr-2 flex items-center justify-center">
-                                    <IoIosArrowForward className="size-6 fill-white group-hover:fill-white transition duration-100"/>
+                                    <IoIosArrowForward className="h-6 w-6 text-white"/>
                                 </div>
                             </div>
                         </div>
                     ))}
+
+                    {/* Popup */}
+                    {selectedItem && (
+                        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" onClick={handleClosePopup}>
+                            <div className="bg-aurumgrey p-6 rounded-lg w-full h-full max-w-screen-lg max-h-screen-lg mx-8 my-8 overflow-hidden relative">
+                                <div className="flex justify-end absolute right-2 top-4">
+                                    <button onClick={handleClosePopup} className="">
+                                        <IoIosClose className="fill-white size-11 hover:cursor-pointer" />
+                                    </button>
+                                </div>
+                                <div className="w-full h-full overflow-auto scrollbar-hidden pr-6">
+                                    <div className="space-y-8">
+                                        <div className="text-white">
+                                            <h2 className="text-xl font-bold">{selectedItem.title}</h2>
+                                            <p className="text-base lg:text-xl pt-4">{selectedItem.description}</p>
+                                        </div>
+
+                                        <img src={selectedItem.image} className="w-full object-cover"/>
+
+                                        <div className="text-white">
+                                            <p className="text-xl font-bold">{selectedItem.tpoint1}</p>
+                                            <p className="text-base lg:text-xl pt-4">{selectedItem.point1}</p>
+                                        </div>    
+
+                                        <div className="text-white">
+                                            <p className="text-xl font-bold">{selectedItem.tpoint2}</p>
+                                            <p className="text-base lg:text-xl pt-4">{selectedItem.point2}</p>
+                                        </div>
+
+                                        <div className="text-white">
+                                            <p className="text-xl font-bold">{selectedItem.tpoint3}</p>
+                                            <p className="text-base lg:text-xl pt-4">{selectedItem.point3}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                 </div>
             </div>
 		</>
