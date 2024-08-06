@@ -30,7 +30,7 @@ export default function Header() {
                         style={{ 
                             transform: open ? "scaleX(1)" : "scaleX(0)",
                         }}
-                        className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-aurumgreen-800 transition-transform duration-300 ease-out"
+                        className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-leafgreen transition-transform duration-300 ease-out"
                     />
                 </a>
                 <AnimatePresence>
@@ -159,7 +159,7 @@ export default function Header() {
                             <div className="flex justify-center items-center space-x-2 group">
                                 <p className="font-medium text-base">{item.name}</p>
                                 {item.name === "About" || item.name === "Contact" || item.name === "Products" ? (
-                                    <IoIosArrowDown className="group-hover:text-aurumgreen-800 duration-200" />
+                                    <IoIosArrowDown className="group-hover:text-leafgreen duration-200" />
                                 ) : null}
                             </div>
                         </FlyoutLink>
