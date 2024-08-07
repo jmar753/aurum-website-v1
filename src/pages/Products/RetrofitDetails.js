@@ -29,9 +29,6 @@ export default function RetrofitDetails() {
         xaxis: retrofit.xaxis,
         yaxis: retrofit.yaxis,
         colors: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1'],
-        markers: {
-            size: 5
-        },
         legend: {
             position: 'top',
             horizontalAlign: 'center'
@@ -172,9 +169,62 @@ export default function RetrofitDetails() {
 
 				{/* Mobile */}
                 <div className="py-20 px-4 block lg:hidden rounded-t-3xl bg-aurumblack">
-                    {/* Table Header */}
-                    <div className="text-center text-lg font-bold mb-8">{retrofit.name} Series Replacement Capacity</div>
+                    {/* General Information */}
+                    <div className="text-center text-lg font-bold mb-8">{retrofit.name} General Information</div>
+                    <div className="md:hidden space-y-4">
+                        {/* General information */}
+                        <div className="font-bold text-center text-aurumgold-500">CFC Series Low Profile Vertical Fan Coil Unit Replacement Capacity</div>
+                                    
+                        {/* Cooling Card */}
+                        <div className="rounded-lg">
 
+                            {/* Title */}
+                            <div className="rounded-t-lg bg-blue-500">
+                                <h1 className="text-center py-2 font-semibold">Cooling</h1>
+                            </div>
+
+                            {/* Values */}
+                            <div className="grid grid-cols-2 rounded-b-lg">
+                                <div className="bg-white p-2 text-black border-r">Pressure Drop (Ft)</div>
+                                <div className="bg-white p-2 text-black">{retrofit.coolingHeating[0].measurements[0]}</div>
+                                
+                                <div className="bg-zinc-100 p-2 text-black border-r">Water Flow (GPM)</div>
+                                <div className="bg-zinc-100 p-2 text-black">{retrofit.coolingHeating[0].measurements[1]}</div>
+                                
+                                <div className="bg-white p-2 text-black border-r rounded-bl-lg">Total Cooling Capacity (BTUH)</div>
+                                <div className="bg-white p-2 text-black rounded-br-lg">{retrofit.coolingHeating[0].measurements[2]}</div>
+                            </div>
+                        </div>
+
+                        {/* Heating Card */}
+                        <div className="rounded-lg">
+                            
+                            {/* Title */}
+                            <div className="rounded-t-lg bg-rose-600">
+                                <h1 className="text-center py-2 font-semibold">Heating</h1>
+                            </div>
+
+                            {/* Values */}
+                            <div className="grid grid-cols-2 rounded-b-lg">
+                                <div className="bg-white p-2 text-black border-r">Pressure Drop (Ft)</div>
+                                <div className="bg-white p-2 text-black">{retrofit.coolingHeating[1].measurements[0]}</div>
+                                
+                                <div className="bg-zinc-100 p-2 text-black border-r">Water Flow (GPM)</div>
+                                <div className="bg-zinc-100 p-2 text-black">{retrofit.coolingHeating[1].measurements[1]}</div>
+                                
+                                <div className="bg-white p-2 text-black border-r rounded-bl-lg">Total Cooling Capacity (BTUH)</div>
+                                <div className="bg-white p-2 text-black rounded-br-lg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Line Graph */}
+                    <div className="py-20">
+                        <ApexCharts options={options} series={series} type="line" height={400} />
+                    </div>
+
+                    {/* Table Header */}
+                    <div className="text-center text-lg font-bold mb-8 pt-20">{retrofit.name} Series Replacement Capacity</div>
                     {/* Cards for smaller screens */}
                     <div className="space-y-16">
                         {retrofit.capacityChart.map((item, index) => (
@@ -268,28 +318,6 @@ export default function RetrofitDetails() {
                             </div>
                         ))}
                     </div>
-
-
-
-                    <div className="md:hidden space-y-4">
-                        {/* General information */}
-                        {retrofit.coolingHeating.map((item, index) => (
-                            <div key={index} className="border border-white p-4 rounded-lg">
-                                <div className="font-bold text-center mb-2">{item.title}</div>
-                                {item.measurements.map((measurement, idx) => (
-                                    <div key={idx} className="flex justify-between border-t border-white py-2">
-                                        <span className="font-medium">{measurement.label}</span>
-                                        <span>{measurement.value}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Line Graph */}
-                <div>
-                    <ApexCharts options={options} series={series} type="line" height={400} />
                 </div>
             </div>
         </>
