@@ -173,7 +173,7 @@ export default function OurSolution(){
 
             <div className="p-8 space-y-8">
                 {threats.map((item, index) => (
-                    <div key={index} className="space-y-8 p-4 border-aurumgold-500 border-2 rounded-3xl grid">
+                    <div key={index} className="space-y-8 p-4 border-aurumgold-500 bg-aurumgrey border-2 rounded-3xl grid">
                         <h1 className="text-xl">Threat {item.id} <span className="text-aurumgold-500">{item.title}</span></h1>
                         <p className="font-bold text-lg">{item.span1}</p>
                         <p>{item.text1}</p>

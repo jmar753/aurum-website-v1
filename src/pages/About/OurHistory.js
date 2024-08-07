@@ -75,7 +75,7 @@ export default function OurHistory(){
 					</div>
 
 					<div className="space-y-8 py-6" >
-						<p className="text-base lg:text-xl">Vittorio was also one of the first to develop the integrated HRV/Fan coil unit. Vittorio worked closely with his suppliers to better the entire industry. Vittorio flew back and forth from California to visit the Honeywell headquarters to assist in the design improvement of several fan coil thermostats. He was also one of the few people in the industry to work alongside ETL to find the absolute destruction pressure of a vertical fan coil unit. </p>
+						<p className="text-base lg:text-xl">Vittorio was also one of the first to develop the integrated HRV/Fan coil unit. He was also one of the few people in the industry to work alongside ETL to find the absolute destruction pressure of a vertical fan coil unit. </p>
 					</div>
 
 					<div className="space-y-8 py-6" >
@@ -119,7 +119,7 @@ export default function OurHistory(){
 				</div>
 				
 				{/* QnA */}
-				<div className="px-8 pb-12">
+				{/* <div className="px-8 pb-12">
 					<div className="pt-24 pb-6">
 						<h1 className="text-3xl">Questions and Answers</h1>
 						<h1 className="text-neutral-300">With Vittorio Zorzit</h1>
@@ -144,7 +144,7 @@ export default function OurHistory(){
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 				{/* Second Part */}
 				<div className="px-8">

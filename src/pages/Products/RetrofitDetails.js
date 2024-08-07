@@ -28,7 +28,7 @@ export default function RetrofitDetails() {
         },
         xaxis: retrofit.xaxis,
         yaxis: retrofit.yaxis,
-        colors: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1'],
+        colors: ['#8FBC8F', '#66CDAA', '#20B2AA', '#FFDF00'],
         legend: {
             position: 'top',
             horizontalAlign: 'center'
