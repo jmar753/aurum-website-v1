@@ -171,7 +171,7 @@ export default function OurSolution(){
                 </div>
 			</div>
 
-            <div className="p-8 space-y-8">
+            <div className="p-8 space-y-8 bg-aurumblack">
                 {threats.map((item, index) => (
                     <div key={index} className="space-y-8 p-4 border-aurumgold-500 bg-aurumgrey border-2 rounded-3xl grid">
                         <h1 className="text-xl">Threat {item.id} <span className="text-aurumgold-500">{item.title}</span></h1>
@@ -184,7 +184,7 @@ export default function OurSolution(){
             </div>
 
             {/* Solution */}
-            <div className="p-8">
+            <div className="p-8 bg-aurumblack">
                 <div className="pt-12 pb-4" >
                     <h1 className="text-3xl lg:text-7xl">The Aurum Solution</h1>
                 </div>
@@ -233,7 +233,7 @@ export default function OurSolution(){
             </div>
 
             {/* Components */}
-            <div className="pt-20 pb-10 px-8">
+            <div className="pt-20 pb-10 px-8 bg-aurumblack">
                 <div className="pb-12" >
                     <h1 className="text-3xl lg:text-7xl pb-4">Our Essential Components</h1>
                     <p className="text-neutral-300">Besides being cosmetically appealing and sleek, there are benefits and features of this new system that pictures cannot capture.</p>
@@ -305,7 +305,7 @@ export default function OurSolution(){
 
 
 			{/* Line Block 2 */}
-			<div className="w-full pt-10 pb-8 relative border-b text-white" >
+			<div className="w-full pt-10 pb-8 relative border-b text-white bg-aurumblack" >
 				<div className="flex justify-between pl-4 absolute h-28 w-full">
 					<h1 className="text-lg px-4 col-span-2 z-10 text-aurumgold-500">Features</h1>{/* Intro */}
 				</div>
@@ -332,7 +332,7 @@ export default function OurSolution(){
                 </div>
 			</div>
 
-            <div className="py-20 px-8">
+            <div className="py-20 px-8 bg-aurumblack">
                 <h1 className="font-bold text-lg pb-6">Optional Features include but are not limited to</h1>
                 <p>- Audible Water Sensor</p>
                 <p>- Cabinet Floor Moisture Sensor</p>

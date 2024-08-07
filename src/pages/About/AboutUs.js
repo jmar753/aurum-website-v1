@@ -4,10 +4,6 @@ export default function AboutUs(){
 
     const ceoCard = [
         {
-            name: "Vittorio Zorzit",
-            pos: "Co-Founder / CEO"
-        },
-        {
             name: "Adam Zorzit",
             pos: "Co-Founder / CEO"
         },

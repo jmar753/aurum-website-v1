@@ -4,7 +4,7 @@ import Header from "../navigation/Header"
 
 export default function Layout(props){
     return(
-        <div className="bg-aurumblack text-white font-lufga">
+        <div className="bg-gradient-to-bl from-naturegreen-400 to-naturegreen-900  text-white font-lufga">
             <Header/>
             {props.children}
             {/* <Footer/> */}
