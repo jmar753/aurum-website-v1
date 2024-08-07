@@ -16,25 +16,6 @@ export default function RetrofitDetails() {
         return <NoPage />;
     }
 
-    const series = retrofit.lines
-
-    const options = {
-        chart: {
-            type: 'line',
-            height: 400,
-            zoom: {
-                enabled: false
-            }
-        },
-        xaxis: retrofit.xaxis,
-        yaxis: retrofit.yaxis,
-        colors: ['#8FBC8F', '#66CDAA', '#20B2AA', '#FFDF00'],
-        legend: {
-            position: 'top',
-            horizontalAlign: 'center'
-        }
-    }
-
     return (
         <>
             <div className="pt-[3rem] h-auto w-full grid grid-cols-1 gap-4 bg-white">
@@ -216,11 +197,6 @@ export default function RetrofitDetails() {
                                 <div className="bg-white p-2 text-black rounded-br-lg"></div>
                             </div>
                         </div>
-                    </div>
-
-                    {/* Line Graph */}
-                    <div className="py-20">
-                        <ApexCharts options={options} series={series} type="line" height={400} />
                     </div>
 
                     {/* Table Header */}
