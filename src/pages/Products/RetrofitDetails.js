@@ -46,7 +46,7 @@ export default function RetrofitDetails() {
                     {retrofit.name} <span className="text-3xl ">Series</span>
                 </h1> */}
 
-                <div className="relative w-full flex flex-col justify-center items-center bg-gradient-to-br from-[#70ff70] to-[#ebfa14]">
+                <div className="relative w-full flex flex-col justify-center items-center bg-gradient-to-br from-leafgreen to-gol">
                     {/* Main Image */}
                     <img src={retrofit.images[0]} className="p-4 object-contain w-full h-[350px]" alt={`${retrofit.name} Series`} />
                     {/* Information Section */}
@@ -170,39 +170,109 @@ export default function RetrofitDetails() {
                     }
                 </div>
 
-				
+				{/* Mobile */}
                 <div className="py-20 px-4 block lg:hidden rounded-t-3xl bg-aurumblack">
                     {/* Table Header */}
-                    <div className="text-center text-lg font-bold mb-4">{retrofit.name} Series Replacement Capacity</div>
+                    <div className="text-center text-lg font-bold mb-8">{retrofit.name} Series Replacement Capacity</div>
 
                     {/* Cards for smaller screens */}
-                    <div className="space-y-4">
+                    <div className="space-y-16">
                         {retrofit.capacityChart.map((item, index) => (
-                            <div key={index} className="border border-white p-4 rounded-lg">
-                                <div className="font-bold text-center mb-2">{item.title}</div>
-                                {item.measurements.map((measurement, idx) => (
-                                    <div key={idx} className="flex justify-between border-t border-white py-2">
-                                        <span className="font-medium">{measurement.label}</span>
-                                        <span>{measurement.value}</span>
+                            <div>
+                                <p className="font-bold text-center pb-4">Modal #{index + 1}: {item.title}</p>
+                                <div key={index} className="border border-white p-4 rounded-lg grid gap-4">
+                                    <div className="font-bold text-center text-aurumgold-500">CFC Series Low Profile Vertical Fan Coil Unit Replacement Capacity</div>
+                                    
+                                    {/* Features Card */}
+                                    <div className="rounded-lg">
+
+                                        {/* Title */}
+                                        <div className="rounded-t-lg bg-green-600">
+                                            <h1 className="text-center py-2 font-semibold">Features</h1>
+                                        </div>
+
+                                        {/* Values */}
+                                        <div className="grid grid-cols-2 rounded-b-lg">
+                                            <div className="bg-white p-2 text-black border-r"># of Rows X Circuits</div>
+                                            <div className="bg-white p-2 text-black">{item.measurements[0]}</div>
+                                            
+                                            <div className="bg-zinc-100 p-2 text-black border-r  rounded-bl-lg">E.S.P (In WC)</div>
+                                            <div className="bg-zinc-100 p-2 text-black  rounded-br-lg">{item.measurements[1]}</div>
+                                        </div>
                                     </div>
-                                ))}
+                                    
+                                    {/* Cooling Card */}
+                                    <div className="rounded-lg">
+
+                                        {/* Title */}
+                                        <div className="rounded-t-lg bg-sky-400">
+                                            <h1 className="text-center py-2 font-semibold">Cooling</h1>
+                                        </div>
+
+                                        {/* Values */}
+                                        <div className="grid grid-cols-2 rounded-b-lg">
+                                            <div className="bg-white p-2 text-black border-r">Pressure Drop (Ft)</div>
+                                            <div className="bg-white p-2 text-black">{item.measurements[5]}</div>
+                                            
+                                            <div className="bg-zinc-100 p-2 text-black border-r">Water Flow (GPM)</div>
+                                            <div className="bg-zinc-100 p-2 text-black">{item.measurements[6]}</div>
+                                            
+                                            <div className="bg-white p-2 text-black border-r rounded-bl-lg">Total Cooling Capacity (BTUH)</div>
+                                            <div className="bg-white p-2 text-black rounded-br-lg">{item.measurements[7]}</div>
+                                        </div>
+                                    </div>
+
+                                    {/* Heating Card */}
+                                    <div className="rounded-lg">
+                                        
+                                        {/* Title */}
+                                        <div className="rounded-t-lg bg-red-600">
+                                            <h1 className="text-center py-2 font-semibold">Heating</h1>
+                                        </div>
+
+                                        {/* Values */}
+                                        <div className="grid grid-cols-2 rounded-b-lg">
+                                            <div className="bg-white p-2 text-black border-r">Pressure Drop (Ft)</div>
+                                            <div className="bg-white p-2 text-black">{item.measurements[2]}</div>
+                                            
+                                            <div className="bg-zinc-100 p-2 text-black border-r">Water Flow (GPM)</div>
+                                            <div className="bg-zinc-100 p-2 text-black">{item.measurements[3]}</div>
+                                            
+                                            <div className="bg-white p-2 text-black border-r rounded-bl-lg">Total Cooling Capacity (BTUH)</div>
+                                            <div className="bg-white p-2 text-black rounded-br-lg">{item.measurements[4]}</div>
+                                        </div>
+                                    </div>
+
+                                    {/* Electrical Card */}
+                                    <div className="rounded-lg">
+                                        
+                                        {/* Title */}
+                                        <div className="rounded-t-lg bg-yellow-500">
+                                            <h1 className="text-center py-2 font-semibold">Electrical</h1>
+                                        </div>
+
+                                        {/* Values */}
+                                        <div className="grid grid-cols-2 rounded-b-lg">
+                                            <div className="bg-white p-2 text-black border-r">UNIT FLA (A)</div>
+                                            <div className="bg-white p-2 text-black">{item.measurements[8]}</div>
+                                            
+                                            <div className="bg-zinc-100 p-2 text-black border-r">UNIT MCA (A)</div>
+                                            <div className="bg-zinc-100 p-2 text-black">{item.measurements[9]}</div>
+                                            
+                                            <div className="bg-white p-2 text-black border-r rounded-bl-lg">UNIT MOP (A)</div>
+                                            <div className="bg-white p-2 text-black rounded-br-lg">{item.measurements[10]}</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Heating / Cooling */}
-                    <div className="text-center text-lg font-bold mt-8 mb-4">Heating / Cooling</div>
-                    <div className="hidden md:grid md:grid-cols-12 gap-4 border border-white">
-                        <div className="col-span-3 row-span-2 border border-white text-center p-2">MODE</div>
-                        <div className="col-span-3 col-start-4 border border-white text-center p-2">EWT/LWT</div>
-                        <div className="col-span-3 col-start-7 border border-white text-center p-2">EAT (DB)</div>
-                        <div className="col-span-3 col-start-10 border border-white text-center p-2">EAT (WB)</div>
-                        <div className="col-span-3 col-start-4 row-start-2 border border-white text-center p-2">DEGREE (°F)</div>
-                        <div className="col-span-3 col-start-7 row-start-2 border border-white text-center p-2">DEGREE (°F)</div>
-                        <div className="col-span-3 col-start-10 row-start-2 border border-white text-center p-2">DEGREE (°F)</div>
-                    </div>
+
 
                     <div className="md:hidden space-y-4">
+                        {/* General information */}
                         {retrofit.coolingHeating.map((item, index) => (
                             <div key={index} className="border border-white p-4 rounded-lg">
                                 <div className="font-bold text-center mb-2">{item.title}</div>
