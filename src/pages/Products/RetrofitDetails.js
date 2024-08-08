@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { RetrofitData } from "../../data/RetrofitData";
 import { useEffect, useState } from "react";
 import NoPage from "../NoPage";
-import ApexCharts from 'react-apexcharts';
+import { IoShareSocialOutline, IoBookmarkOutline } from "react-icons/io5";
 
 export default function RetrofitDetails() {
     const [retrofit, setRetrofit] = useState(null);
@@ -17,139 +17,37 @@ export default function RetrofitDetails() {
     }
 
     return (
-        <>
-            <div className="pt-[3rem] h-auto w-full grid grid-cols-1 gap-4 bg-white">
+        <div className="pt-[5rem] h-auto w-full bg-gradient-to-br from-leafgreen to-aurumblack">
 
-                {/* <h1 className="text-3xl -my-1">
-                    {retrofit.name} <span className="text-3xl ">Series</span>
-                </h1> */}
-
-                <div className="relative w-full flex flex-col justify-center items-center bg-gradient-to-br from-leafgreen to-gol">
+            <div className="w-full flex flex-col justify-center items-center p-4 relative">
+                {/* Product Image Card */}
+                <div className="w-full aspect-w-1 aspect-h-1 bg-gradient-to-br from-leafgreen to-zinc-50 relative rounded-3xl">
                     {/* Main Image */}
-                    <img src={retrofit.images[0]} className="p-4 object-contain w-full h-[350px]" alt={`${retrofit.name} Series`} />
-                    {/* Information Section */}
-                    <div className='text-black relative w-auto h-auto p-8  rounded-t-3xl bg-zinc-50 border-white space-y-4'>
-						<h1 className="text-2xl">{retrofit.name} Series</h1>
-                        <p>{retrofit.description}</p>
-                    </div>
+                    <img 
+                        src={retrofit.images[0]} 
+                        className="object-contain w-full h-full pr-4 pt-2" 
+                        alt={`${retrofit.name} Series`} 
+                    />
                 </div>
 
-                {/* Desktop */}
-                <div className="hidden lg:block">
-                    {/* Temperature / Power Table */}
-                    <div className="grid grid-cols-12 py-20">
-                        {/* Table Header */}
-                        <div className="row-span-3 col-start-1 row-start-2 border border-white text-center">Model</div>
-                        <div className="col-span-12 col-start-1 row-start-1 border border-white text-center">{retrofit.name} Series Replacement Capacity</div>
-                        <div className="row-span-3 row-start-2 border border-white text-center"># of Rows X Circuits</div>
-                        <div className="row-span-2 row-start-2 border border-white text-center">E.S.P</div>
-                        <div className="col-start-3 row-start-4 border border-white text-center">(IN WC)</div>
-                        <div className="col-span-3 col-start-4 row-start-2 border border-white text-center">COOLING</div>
-                        <div className="col-span-3 col-start-7 row-start-2 border border-white text-center">HEATING</div>
-                        <div className="col-start-4 row-start-3 border border-white text-center">Pressure Drop</div>
-                        <div className="col-start-5 row-start-3 border border-white text-center">Water Flow</div>
-                        <div className="col-start-6 row-start-3 border border-white text-center">Total Cooling Capacity</div>
-                        <div className="col-start-4 row-start-4 border border-white text-center">(Ft)</div>
-                        <div className="col-start-5 row-start-4 border border-white text-center">(GPM)</div>
-                        <div className="col-start-6 row-start-4 border border-white text-center">(BTUH)</div>
-                        <div className="col-span-3 col-start-10 row-start-2 border border-white text-center">ELECTRICAL</div>
-                        <div className="col-start-7 row-start-3 border border-white text-center">Pressure Drop</div>
-                        <div className="col-start-7 row-start-4 border border-white text-center">(Ft)</div>
-                        <div className="col-start-8 row-start-4 border border-white text-center">(GPM)</div>
-                        <div className="col-start-8 row-start-3 border border-white text-center">Water Flow</div>
-                        <div className="col-start-9 row-start-3 border border-white text-center">Total Heating Capacity</div>
-                        <div className="col-start-9 row-start-4 border border-white text-center">(BTUH)</div>
-                        <div className="col-start-10 row-start-3 border border-white text-center">UNIT FLA</div>
-                        <div className="col-start-10 row-start-4 border border-white text-center">(A)</div>
-                        <div className="col-start-11 row-start-3 border border-white text-center">UNIT MCA</div>
-                        <div className="col-start-11 row-start-4 border border-white text-center">(A)</div>
-                        <div className="col-start-12 row-start-3 border border-white text-center">UNIT MOP</div>
-                        <div className="col-start-12 row-start-4 border border-white text-center">(A)</div>
+                {/* Absolute Assets */}
+                <div className="absolute top-8 right-8 h-12 w-12 bg-aurumblack/70 rounded-full flex justify-center items-center">
+                    <IoShareSocialOutline className="size-8 pr-1"/>
+                </div>        
+                <div className="absolute bottom-8 right-8 h-12 w-12 bg-aurumblack/70 rounded-full flex justify-center items-center">
+                    <IoBookmarkOutline className="size-7"/>
+                </div>        
+            </div>
 
-                        {/* Measurements */}
-                        {retrofit.capacityChart.map((item, index) => (
-                            <div className="col-span-12 grid grid-cols-12 text-center">
-                                <div className="col-span-1 border border-white">{item.title}</div>
-                                {item.measurements.map((item, index) => (
-                                    <div className="col-span-1 border border-white">{item}</div>
-                                ))}
-                            </div>
-                        ))}
 
-                        {/* Heating / Cooling */}
-                        <div className="col-span-12 grid grid-cols-12 border border-white text-center">
-                            <div className="col-span-3 row-span-2 border border-white flex justify-center items-center">MODE</div>
-                            <div className="col-span-3 col-start-4 border border-white">EWT/LWT</div>
-                            <div className="col-span-3 col-start-7 border border-white">EAT (DB)</div>
-                            <div className="col-span-3 col-start-10 border border-white">EAT (WB)</div>
-                            <div className="col-span-3 col-start-4 row-start-2 border border-white">DEGREE (°F)</div>
-                            <div className="col-span-3 col-start-7 row-start-2 border border-white">DEGREE (°F)</div>
-                            <div className="col-span-3 col-start-10 row-start-2 border border-white">DEGREE (°F)</div>
-                        </div>
+            {/* Information Section */}
+            <div className='text-black relative w-auto h-auto p-8 rounded-t-3xl bg-zinc-50 border-white space-y-4'>
+                <h1 className="text-2xl">{retrofit.name} Series</h1>
+                <p>{retrofit.description}</p>
+            </div>   
 
-                        {/* Measurement */}
-                        {retrofit.coolingHeating.map((item, index) => (
-                            <div className="col-span-12 grid grid-cols-12 text-center">
-                                <div className="col-span-3 border border-white">{item.title}</div>
-                                {item.measurements.map((item, index) => (
-                                    <div className="col-span-3 border border-white">{item}</div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Measurement Tables */}
-                    {retrofit.tabletype === 1 ?
-                        <div className="grid grid-cols-11 text-center py-20">
-                            <div className="border border-white">Logo</div>
-                            <div className="border border-white">A</div>
-                            <div className="border border-white">B</div>
-                            <div className="border border-white">C</div>
-                            <div className="border border-white">AA</div>
-                            <div className="border border-white">AB</div>
-                            <div className="border border-white">AC</div>
-                            <div className="border border-white">AD</div>
-                            <div className="border border-white">AE</div>
-                            <div className="border border-white">AF</div>
-                            <div className="border border-white">AG</div>
-                            {retrofit.measurementChart.map((item, index) => (
-                                <div className="grid grid-cols-11 col-span-11">
-                                    <div className="border border-white">{item.title}</div>
-                                    {item.measurements.map((item, index) => (
-                                        <div className="border border-white">{item}</div>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
-                        :
-                        <div className="grid grid-cols-13 text-center py-20">
-                            <div className="border border-white">Logo</div>
-                            <div className="border border-white">A</div>
-                            <div className="border border-white">B</div>
-                            <div className="border border-white">C</div>
-                            <div className="border border-white">D</div>
-                            <div className="border border-white">E</div>
-                            <div className="border border-white">AA</div>
-                            <div className="border border-white">AB</div>
-                            <div className="border border-white">AC</div>
-                            <div className="border border-white">AD</div>
-                            <div className="border border-white">AE</div>
-                            <div className="border border-white">AF</div>
-                            <div className="border border-white">AG</div>
-                            {retrofit.measurementChart.map((item, index) => (
-                                <div className="grid grid-cols-13 col-span-13">
-                                    <div className="border border-white">{item.title}</div>
-                                    {item.measurements.map((item, index) => (
-                                        <div className="border border-white">{item}</div>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
-                    }
-                </div>
-
-				{/* Mobile */}
-                <div className="py-20 px-4 block lg:hidden rounded-t-3xl bg-aurumblack">
+            <div className="bg-zinc-50">
+                <div className="py-20 px-4 rounded-t-3xl bg-aurumblack">
                     {/* General Information */}
                     <div className="text-center text-lg font-bold mb-8">{retrofit.name} General Information</div>
                     <div className="md:hidden space-y-4">
@@ -296,6 +194,6 @@ export default function RetrofitDetails() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
