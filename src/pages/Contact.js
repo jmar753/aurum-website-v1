@@ -4,7 +4,8 @@ import { FaLocationDot } from "react-icons/fa6";
 export default function Contact(){
     return(
         <div className="h-full w-full  text-white">
-            <div className="h-[5rem] lg:h-[3rem]"/>
+            {/* Header Padding */}
+            <div className="h-[6rem] lg:h-[3rem]"/>
             
             <div className="w-screen h-auto">
 
@@ -46,7 +47,7 @@ export default function Contact(){
                     </div>
 
                     {/* Contact List */}
-                    <div className="px-8 pb-20 lg:pb-0 lg:px-12 py-6 space-y-8">
+                    <div className="px-8 pb-20 lg:pb-0 lg:px-12 py-6 space-y-8 max-w-3xl w-full mx-auto">
                         <div className="space-y-1">
                             <h1 className="text-xl ">Chat with us</h1>
                             <p className="text-neutral-400">Speak to our friendly team VIA phone or email</p>
