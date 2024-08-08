@@ -25,7 +25,7 @@ export default function RetrofitDetails() {
                     {/* Main Image */}
                     <img 
                         src={retrofit.images[0]} 
-                        className="object-contain w-full h-full pr-4 pt-2" 
+                        className="object-contain w-full h-full pr-6 pt-2" 
                         alt={`${retrofit.name} Series`} 
                     />
                 </div>
@@ -39,13 +39,18 @@ export default function RetrofitDetails() {
                 </div>        
             </div>
 
+            <h1 className="text-2xl font-semibold pt-4 pb-5 text-center w-full">Aurum {retrofit.name} Series</h1>
 
-            {/* Information Section */}
-            <div className='text-black relative w-auto h-auto p-8 rounded-t-3xl bg-zinc-50 border-white space-y-4'>
-                <h1 className="text-2xl">{retrofit.name} Series</h1>
+            {/* White Section */}
+            <div className='text-black relative w-auto h-auto px-4 py-8 rounded-t-3xl bg-zinc-50 border-white space-y-4'>
+                <div className="grid grid-cols-2 gap-2">
+                    <button className="rounded-lg bg-black w-full h-10 text-white"> View Modal</button>
+                    <button className="rounded-lg bg-neutral-500 w-full h-10 text-white">Contact Us</button>
+                </div>
                 <p>{retrofit.description}</p>
             </div>   
 
+            {/* Black Section */}
             <div className="bg-zinc-50">
                 <div className="py-20 px-4 rounded-t-3xl bg-aurumblack">
                     {/* General Information */}
