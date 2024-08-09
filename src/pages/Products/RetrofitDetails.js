@@ -3,10 +3,20 @@ import { RetrofitData } from "../../data/RetrofitData";
 import { useEffect, useState } from "react";
 import NoPage from "../NoPage";
 import { IoShareSocialOutline, IoBookmarkOutline } from "react-icons/io5";
+import { IoIosClose } from "react-icons/io";
 
 export default function RetrofitDetails() {
     const [retrofit, setRetrofit] = useState(null);
     const { retrofitId } = useParams();
+    const [popUp, setPopUp] = useState(false);
+
+    const handleItemClick = () => {
+        setPopUp(true);
+    };
+  
+    const handleClosePopup = () => {
+        setPopUp(false);
+    };
 
     useEffect(() => {
         setRetrofit(RetrofitData.find((item) => retrofitId === item.id));
@@ -25,17 +35,17 @@ export default function RetrofitDetails() {
                     {/* Main Image */}
                     <img 
                         src={retrofit.images[0]} 
-                        className="object-contain w-full h-full pr-6 pt-2" 
+                        className="object-contain w-full h-full pr-4 pt-2" 
                         alt={`${retrofit.name} Series`} 
                     />
                 </div>
 
                 {/* Absolute Assets */}
-                <div className="absolute top-8 right-8 h-12 w-12 bg-aurumblack/70 rounded-full flex justify-center items-center">
-                    <IoShareSocialOutline className="size-8 pr-1"/>
+                <div className="absolute top-6 right-6 h-14 w-14 bg-aurumblack/70 rounded-full flex justify-center items-center">
+                    <IoShareSocialOutline className="size-10 pr-1"/>
                 </div>        
-                <div className="absolute bottom-8 right-8 h-12 w-12 bg-aurumblack/70 rounded-full flex justify-center items-center">
-                    <IoBookmarkOutline className="size-7"/>
+                <div className="absolute bottom-6 right-6 h-14 w-14 bg-aurumblack/70 rounded-full flex justify-center items-center">
+                    <IoBookmarkOutline className="size-9"/>
                 </div>        
             </div>
 
@@ -44,7 +54,11 @@ export default function RetrofitDetails() {
             {/* White Section */}
             <div className='text-black relative w-auto h-auto px-4 py-8 rounded-t-3xl bg-zinc-50 border-white space-y-4'>
                 <div className="grid grid-cols-2 gap-2">
-                    <button className="rounded-lg bg-black w-full h-10 text-white"> View Modal</button>
+                    <button 
+                        className="rounded-lg bg-black w-full h-10 text-white"
+                        onClick={() => handleItemClick()}
+                    > View Modal
+                    </button>
                     <button className="rounded-lg bg-neutral-500 w-full h-10 text-white">Contact Us</button>
                 </div>
                 <p>{retrofit.description}</p>
@@ -199,6 +213,19 @@ export default function RetrofitDetails() {
                     </div>
                 </div>
             </div>
+
+            {/* Popup */}
+            {popUp && (
+                <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" onClick={handleClosePopup}>
+                    <div className="bg-aurumgrey p-6 w-full h-full max-w-screen-lg max-h-screen-lg  overflow-hidden relative">
+                        <div className="flex justify-end absolute right-4 top-2">
+                            <button onClick={handleClosePopup} className=" bg-neutral-500/50 rounded-full">
+                                <IoIosClose className="fill-white size-11 hover:cursor-pointer" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

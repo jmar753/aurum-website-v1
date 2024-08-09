@@ -311,7 +311,6 @@ export default function OurSolution(){
 				</div>
 			</div>
 			<div className="flex flex-col justify-center items-center text-gray-200 bg-aurumblack">
-
                 {/* Features Container */}
 				<div className="h-auto w-auto max-w-7xl border-l mx-8 px-4">
                     {features.map((item, index) => (
