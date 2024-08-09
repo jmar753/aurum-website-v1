@@ -42,7 +42,7 @@ export default function AboutUs(){
             </div>
 
 			{/* Line Block 1 */}
-			<div className="flex flex-col justify-center items-center text-gray-200 bg-aurumblack">
+			<div className="flex flex-col justify-center items-center text-gray-200 bg-aurumblack pb-10">
 				<div className="h-auto w-auto max-w-7xl border-l mx-8 px-4">
 
 					<div className="pt-10 pb-6 text-white">
